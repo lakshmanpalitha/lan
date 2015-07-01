@@ -14,5 +14,5 @@ RewriteCond %{REQUEST_FILENAME} !-l
 #RewriteRule ^admin/$ index.php?url=admin/dashbord [QSA,L]
 #RewriteRule ^(.+) reservation/index.php [QSA,L]
 
-RewriteRule ^res/  reservation/index.php [QSA,L]
+RewriteRule ^template/  template/index.php [QSA,L]
 RewriteRule ^admin/  runtime/index.php?url=admin/dashbord  [QSA,L]

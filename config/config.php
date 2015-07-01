@@ -11,9 +11,9 @@ date_default_timezone_set("Asia/Calcutta");
 /**
  * Configuration for: Base URL
  */
-define('URL', '//localhost/lansuwa/');
-define('FILE_URL', '//localhost/lansuwa/');
-define('DOC_PATH', 'D:/xampp/htdocs/lansuwa/');
+define('URL', 'localhost/www.lansuwa.com/lan/');
+define('FILE_URL', '//localhost/www.lansuwa.com/lan/');
+define('DOC_PATH', 'D:/xampp/htdocs/www.lansuwa.com/lan');
 
 /**
  * Configuration for: Folders
