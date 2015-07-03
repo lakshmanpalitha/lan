@@ -115,7 +115,7 @@ class application {
              * Set defaul
              */
             if (empty($this->url_module)) {
-                var_dump("frontend");
+                 header('location: ' . URL . 'template'); 
             } else if ($this->url_module == 'admin') {
                 if (empty($this->url_controller)) {
                     $this->url_controller = 'dashbord';
