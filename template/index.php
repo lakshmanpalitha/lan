@@ -123,9 +123,6 @@
             <div class="row">
               <div class="col-sm-6">
                 <div class="deal-entry green">
-                  <div class="offer-discount">
-                    -55%
-                  </div>
                   <div class="image ripple-effect">
                     <a href="#" target="_blank" title="#">
                       <img src="images/affiliate-12.jpg" alt="#" class="img-responsive">
@@ -133,7 +130,7 @@
                     <span class="bought">
                       <i class="ti-tag">
                       </i>
-                      169
+                      169 bids
                     </span>
                   </div>
                   <!-- /.image -->
@@ -143,26 +140,7 @@
                     </a>
                   </div>
                   <div class="entry-content">
-                    <div class="prices clearfix">
-                      <div class="procent">
-                        -65%
-                      </div>
-                      <div class="price">
-                        <i class="ti-money">
-                        </i>
-                        
-                        <b>
-                          60,00
-                        </b>
-                      </div>
-                      <div class="old-price">
-                        <span>
-                          <i class="ti-money">
-                          </i>
-                          171,00
-                        </span>
-                      </div>
-                    </div>
+                    
                     <p>
                       Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World’s Finest Hotels!
                     </p>
@@ -185,10 +163,15 @@
                           58
                         </b>
                         min.
+                        
+                        <b>
+                          18
+                        </b>
+                        sec.
                       </li>
                       <li class="info_link col-sm-5 col-xs-6 col-lg-4">
                         <a href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
-                          View Deal
+                          Bid Now
                         </a>
                       </li>
                     </ul>
@@ -196,253 +179,16 @@
                 </div>
               </div>
               <!--/.col -->
-              <div class="col-sm-6">
-                <div class="deal-entry  green">
-                  <div class="offer-discount">
-                    -54%
-                  </div>
-                  <div class="image">
-                    <a href="#" target="_blank" title="#">
-                      <img src="images/affiliate-13.jpg" alt="#" class="img-responsive">
-                    </a>
-                    <span class="bought">
-                      <i class="ti-tag">
-                      </i>
-                      21
-                    </span>
-                  </div>
-                  <!-- /.image -->
-                  <div class="title">
-                    <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
-                      3-dnevni oddih za 2 v hotelu Ferienhotel Alber 4*
-                    </a>
-                  </div>
-                  <div class="entry-content">
-                    <div class="prices clearfix">
-                      <div class="procent">
-                        -54%
-                      </div>
-                      <div class="price">
-                        <i class="ti-money">
-                        </i>
-                        
-                        <b>
-                          82,00
-                        </b>
-                      </div>
-                      <div class="old-price">
-                        <span>
-                          <i class="ti-money">
-                          </i>
-                          121,00
-                        </span>
-                      </div>
-                    </div>
-                    <p>
-                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World’s Finest Hotels!
-                    </p>
-                  </div>
-                  <!--/.entry content -->
-                  <footer class="info_bar clearfix">
-                    <ul class="unstyled list-inline row">
-                      <li class="time col-sm-7 col-xs-6 col-lg-8">
-                        <i class="ti-timer">
-                        </i>
-                        <b>
-                          8
-                        </b>
-                        d.
-                        <b>
-                          20
-                        </b>
-                        st.
-                        <b>
-                          58
-                        </b>
-                        min.
-                      </li>
-                      <li class="info_link col-sm-5 col-xs-6 col-lg-4">
-                        <a href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
-                          View Deal
-                        </a>
-                      </li>
-                    </ul>
-                  </footer>
-                </div>
-              </div>
-            </div>
-            <!--/row -->
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="deal-entry  green">
-                  <div class="offer-discount">
-                    -81%
-                  </div>
-                  <div class="image">
-                    <a href="#" target="_blank" title="#">
-                      <img src="images/affiliate-3.jpg" alt="#" class="img-responsive">
-                    </a>
-                    <span class="bought">
-                      <i class="ti-tag">
-                      </i>
-                      19
-                    </span>
-                  </div>
-                  <!-- /.image -->
-                  <div class="title">
-                    <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
-                      US$349 -- Bermuda This Summer: 4-Star Resort w/$200 Credit*
-                    </a>
-                  </div>
-                  <div class="entry-content">
-                    <div class="prices clearfix">
-                      <div class="procent">
-                        -81%
-                      </div>
-                      <div class="price">
-                        <i class="ti-money">
-                        </i>
-                        
-                        <b>
-                          78,00
-                        </b>
-                      </div>
-                      <div class="old-price">
-                        <span>
-                          <i class="ti-money">
-                          </i>
-                          171,00
-                        </span>
-                      </div>
-                    </div>
-                    <p>
-                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World’s Finest Hotels!
-                    </p>
-                  </div>
-                  <!--/.entry content -->
-                  <footer class="info_bar clearfix">
-                    <ul class="unstyled list-inline row">
-                      <li class="time col-sm-7 col-xs-6 col-lg-8">
-                        <i class="ti-timer">
-                        </i>
-                        <b>
-                          8
-                        </b>
-                        d.
-                        <b>
-                          20
-                        </b>
-                        st.
-                        <b>
-                          58
-                        </b>
-                        min.
-                      </li>
-                      <li class="info_link col-sm-5 col-xs-6 col-lg-4">
-                        <a href="#" class="btn btn-block btn-default btn-raised btn-sm">
-                          View Deal
-                        </a>
-                      </li>
-                    </ul>
-                  </footer>
-                </div>
-              </div>
               <div class="col-sm-6">
                 <div class="deal-entry green">
-                  <div class="offer-discount">
-                    -58%
-                  </div>
-                  <div class="image">
+                  <div class="image ripple-effect">
                     <a href="#" target="_blank" title="#">
-                      <img src="images/affiliate-4.jpg" alt="#" class="img-responsive">
+                      <img src="images/affiliate-12.jpg" alt="#" class="img-responsive">
                     </a>
                     <span class="bought">
                       <i class="ti-tag">
                       </i>
-                      79
-                    </span>
-                  </div>
-                  <!-- /.image -->
-                  <div class="title">
-                    <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
-                      $479 & up -- Riviera Maya All-Inclusive w/Air from 9 Cities 5*
-                    </a>
-                  </div>
-                  <div class="entry-content">
-                    <div class="prices clearfix">
-                      <div class="procent">
-                        -65%
-                      </div>
-                      <div class="price">
-                        <i class="ti-money">
-                        </i>
-                        
-                        <b>
-                          79,00
-                        </b>
-                      </div>
-                      <div class="old-price">
-                        <span>
-                          <i class="ti-money">
-                          </i>
-                          171,00
-                        </span>
-                      </div>
-                    </div>
-                    <p>
-                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World’s Finest Hotels!
-                    </p>
-                  </div>
-                  <!--/.entry content -->
-                  <footer class="info_bar clearfix">
-                    <ul class="unstyled list-inline row">
-                      <li class="time col-sm-7 col-xs-6 col-lg-8">
-                        <i class="ti-timer">
-                        </i>
-                        <b>
-                          8
-                        </b>
-                        d.
-                        <b>
-                          20
-                        </b>
-                        st.
-                        <b>
-                          58
-                        </b>
-                        min.
-                      </li>
-                      <li class="info_link col-sm-5 col-xs-6 col-lg-4">
-                        <a href="details.html" class="btn btn-block btn-default btn-raised btn-sm">
-                          View Deal
-                        </a>
-                      </li>
-                    </ul>
-                  </footer>
-                </div>
-              </div>
-              <!--/.col -->
-            </div>
-            <!--/row -->
-            <div class="row">
-              <div class="col-sm-12 clearfix">
-                <hr class="hr-grid-space" data-symbol="POPULAR DEALS">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="deal-entry  orange">
-                  <div class="offer-discount">
-                    -55%
-                  </div>
-                  <div class="image">
-                    <a href="#" target="_blank" title="#">
-                      <img src="images/affiliate-5.jpg" alt="#" class="img-responsive">
-                    </a>
-                    <span class="bought">
-                      <i class="ti-tag">
-                      </i>
-                      169
+                      169 bids
                     </span>
                   </div>
                   <!-- /.image -->
@@ -452,28 +198,9 @@
                     </a>
                   </div>
                   <div class="entry-content">
-                    <div class="prices clearfix">
-                      <div class="procent">
-                        -65%
-                      </div>
-                      <div class="price">
-                        <i class="ti-money">
-                        </i>
-                        
-                        <b>
-                          60,00
-                        </b>
-                      </div>
-                      <div class="old-price">
-                        <span>
-                          <i class="ti-money">
-                          </i>
-                          171,00
-                        </span>
-                      </div>
-                    </div>
+                    
                     <p>
-                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World’s Finest Hotels!
+                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World's Finest Hotels!
                     </p>
                   </div>
                   <!--/.entry content -->
@@ -494,85 +221,15 @@
                           58
                         </b>
                         min.
-                      </li>
-                      <li class="info_link col-sm-5 col-xs-6 col-lg-4">
-                        <a href="details.html" class="btn btn-block btn-default btn-raised btn-sm">
-                          View Deal
-                        </a>
-                      </li>
-                    </ul>
-                  </footer>
-                </div>
-              </div>
-              <!--/.col -->
-              <div class="col-sm-6">
-                <div class="deal-entry orange">
-                  <div class="offer-discount">
-                    -74%
-                  </div>
-                  <div class="image">
-                    <a href="#" target="_blank" title="#">
-                      <img src="images/affiliate-6.jpg" alt="#" class="img-responsive">
-                    </a>
-                    <span class="bought">
-                      <i class="ti-tag">
-                      </i>
-                      169
-                    </span>
-                  </div>
-                  <!-- /.image -->
-                  <div class="title">
-                    <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
-                      3-dnevni oddih za 2 v hotelu Ferienhotel Alber 4*
-                    </a>
-                  </div>
-                  <div class="entry-content">
-                    <div class="prices clearfix">
-                      <div class="procent">
-                        -65%
-                      </div>
-                      <div class="price">
-                        <i class="ti-money">
-                        </i>
                         
                         <b>
-                          60,00
+                          18
                         </b>
-                      </div>
-                      <div class="old-price">
-                        <span>
-                          <i class="ti-money">
-                          </i>
-                          171,00
-                        </span>
-                      </div>
-                    </div>
-                    <p>
-                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World’s Finest Hotels!
-                    </p>
-                  </div>
-                  <!--/.entry content -->
-                  <footer class="info_bar clearfix">
-                    <ul class="unstyled list-inline row">
-                      <li class="time col-sm-7 col-xs-6 col-lg-8">
-                        <i class="ti-timer">
-                        </i>
-                        <b>
-                          8
-                        </b>
-                        d.
-                        <b>
-                          20
-                        </b>
-                        st.
-                        <b>
-                          58
-                        </b>
-                        min.
+                        sec.
                       </li>
                       <li class="info_link col-sm-5 col-xs-6 col-lg-4">
-                        <a href="#" class="btn btn-block btn-default btn-raised btn-sm">
-                          View Deal
+                        <a href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
+                          Bid Now
                         </a>
                       </li>
                     </ul>
@@ -583,18 +240,15 @@
             <!--/row -->
             <div class="row">
               <div class="col-sm-6">
-                <div class="deal-entry orange">
-                  <div class="offer-discount">
-                    -74%
-                  </div>
-                  <div class="image">
+                <div class="deal-entry green">
+                  <div class="image ripple-effect">
                     <a href="#" target="_blank" title="#">
-                      <img src="images/affiliate-7.jpg" alt="#" class="img-responsive">
+                      <img src="images/affiliate-12.jpg" alt="#" class="img-responsive">
                     </a>
                     <span class="bought">
                       <i class="ti-tag">
                       </i>
-                      169
+                      169 bids
                     </span>
                   </div>
                   <!-- /.image -->
@@ -604,26 +258,7 @@
                     </a>
                   </div>
                   <div class="entry-content">
-                    <div class="prices clearfix">
-                      <div class="procent">
-                        -65%
-                      </div>
-                      <div class="price">
-                        <i class="ti-money">
-                        </i>
-                        
-                        <b>
-                          60,00
-                        </b>
-                      </div>
-                      <div class="old-price">
-                        <span>
-                          <i class="ti-money">
-                          </i>
-                          171,00
-                        </span>
-                      </div>
-                    </div>
+                    
                     <p>
                       Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World’s Finest Hotels!
                     </p>
@@ -646,167 +281,15 @@
                           58
                         </b>
                         min.
-                      </li>
-                      <li class="info_link col-sm-5 col-xs-6 col-lg-4">
-                        <a href="#" class="btn btn-block btn-default btn-raised btn-sm">
-                          View Deal
-                        </a>
-                      </li>
-                    </ul>
-                  </footer>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="deal-entry orange">
-                  <div class="offer-discount">
-                    -55%
-                  </div>
-                  <div class="image">
-                    <a href="#" target="_blank" title="#">
-                      <img src="images/affiliate-8.jpg" alt="#" class="img-responsive">
-                    </a>
-                    <span class="bought">
-                      <i class="ti-tag">
-                      </i>
-                      169
-                    </span>
-                  </div>
-                  <!-- /.image -->
-                  <div class="title">
-                    <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
-                      3-dnevni oddih za 2 v hotelu Ferienhotel Alber 4*
-                    </a>
-                  </div>
-                  <div class="entry-content">
-                    <div class="prices clearfix">
-                      <div class="procent">
-                        -65%
-                      </div>
-                      <div class="price">
-                        <i class="ti-money">
-                        </i>
                         
                         <b>
-                          60,00
+                          18
                         </b>
-                      </div>
-                      <div class="old-price">
-                        <span>
-                          <i class="ti-money">
-                          </i>
-                          171,00
-                        </span>
-                      </div>
-                    </div>
-                    <p>
-                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World’s Finest Hotels!
-                    </p>
-                  </div>
-                  <!--/.entry content -->
-                  <footer class="info_bar clearfix">
-                    <ul class="unstyled list-inline row">
-                      <li class="time col-sm-7 col-xs-6 col-lg-8">
-                        <i class="ti-timer">
-                        </i>
-                        <b>
-                          8
-                        </b>
-                        d.
-                        <b>
-                          20
-                        </b>
-                        st.
-                        <b>
-                          58
-                        </b>
-                        min.
+                        sec.
                       </li>
                       <li class="info_link col-sm-5 col-xs-6 col-lg-4">
-                        <a href="#" class="btn btn-block btn-default btn-raised btn-sm">
-                          View Deal
-                        </a>
-                      </li>
-                    </ul>
-                  </footer>
-                </div>
-              </div>
-              <!--/.col -->
-            </div>
-            <!--/.row -->
-            <div class="row">
-              <div class="col-sm-12 clearfix">
-                <hr class="hr-grid-space" data-symbol="LAST MINUTE DEALS">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="deal-entry blue">
-                  <div class="offer-discount">
-                    -55%
-                  </div>
-                  <div class="image">
-                    <a href="#" target="_blank" title="#">
-                      <img src="images/affiliate-10.jpg" alt="#" class="img-responsive">
-                    </a>
-                    <span class="bought">
-                      <i class="ti-tag">
-                      </i>
-                      169
-                    </span>
-                  </div>
-                  <!-- /.image -->
-                  <div class="title">
-                    <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
-                      3-dnevni oddih za 2 v hotelu Ferienhotel Alber 4*
-                    </a>
-                  </div>
-                  <div class="entry-content">
-                    <div class="prices clearfix">
-                      <div class="procent">
-                        -65%
-                      </div>
-                      <div class="price">
-                        <i class="ti-money">
-                        </i>
-                        
-                        <b>
-                          60,00
-                        </b>
-                      </div>
-                      <div class="old-price">
-                        <span>
-                          <i class="ti-money">
-                          </i>
-                          171,00
-                        </span>
-                      </div>
-                    </div>
-                    <p>
-                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World’s Finest Hotels!
-                    </p>
-                  </div>
-                  <!--/.entry content -->
-                  <footer class="info_bar clearfix">
-                    <ul class="unstyled list-inline row">
-                      <li class="time col-sm-7 col-xs-6 col-lg-8">
-                        <i class="ti-timer">
-                        </i>
-                        <b>
-                          8
-                        </b>
-                        d.
-                        <b>
-                          20
-                        </b>
-                        st.
-                        <b>
-                          58
-                        </b>
-                        min.
-                      </li>
-                      <li class="info_link col-sm-5 col-xs-6 col-lg-4">
-                        <a href="#" class="btn btn-block btn-default btn-raised btn-sm">
-                          View Deal
+                        <a href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
+                          Bid Now
                         </a>
                       </li>
                     </ul>
@@ -815,18 +298,15 @@
               </div>
               <!--/.col -->
               <div class="col-sm-6">
-                <div class="deal-entry blue">
-                  <div class="offer-discount">
-                    -74%
-                  </div>
-                  <div class="image">
+                <div class="deal-entry green">
+                  <div class="image ripple-effect">
                     <a href="#" target="_blank" title="#">
-                      <img src="images/affiliate-11.jpg" alt="#" class="img-responsive">
+                      <img src="images/affiliate-12.jpg" alt="#" class="img-responsive">
                     </a>
                     <span class="bought">
                       <i class="ti-tag">
                       </i>
-                      169
+                      169 bids
                     </span>
                   </div>
                   <!-- /.image -->
@@ -836,28 +316,9 @@
                     </a>
                   </div>
                   <div class="entry-content">
-                    <div class="prices clearfix">
-                      <div class="procent">
-                        -65%
-                      </div>
-                      <div class="price">
-                        <i class="ti-money">
-                        </i>
-                        
-                        <b>
-                          60,00
-                        </b>
-                      </div>
-                      <div class="old-price">
-                        <span>
-                          <i class="ti-money">
-                          </i>
-                          171,00
-                        </span>
-                      </div>
-                    </div>
+                    
                     <p>
-                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World’s Finest Hotels!
+                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World's Finest Hotels!
                     </p>
                   </div>
                   <!--/.entry content -->
@@ -878,10 +339,15 @@
                           58
                         </b>
                         min.
+                        
+                        <b>
+                          18
+                        </b>
+                        sec.
                       </li>
                       <li class="info_link col-sm-5 col-xs-6 col-lg-4">
-                        <a href="#" class="btn btn-block btn-default btn-raised btn-sm">
-                          View Deal
+                        <a href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
+                          Bid Now
                         </a>
                       </li>
                     </ul>
@@ -890,7 +356,361 @@
               </div>
             </div>
             <!--/row -->
-            
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="deal-entry green">
+                  <div class="image ripple-effect">
+                    <a href="#" target="_blank" title="#">
+                      <img src="images/affiliate-12.jpg" alt="#" class="img-responsive">
+                    </a>
+                    <span class="bought">
+                      <i class="ti-tag">
+                      </i>
+                      169 bids
+                    </span>
+                  </div>
+                  <!-- /.image -->
+                  <div class="title">
+                    <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
+                      3-dnevni oddih za 2 v hotelu Ferienhotel Alber 4*
+                    </a>
+                  </div>
+                  <div class="entry-content">
+                    
+                    <p>
+                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World’s Finest Hotels!
+                    </p>
+                  </div>
+                  <!--/.entry content -->
+                  <footer class="info_bar clearfix">
+                    <ul class="unstyled list-inline row">
+                      <li class="time col-sm-7 col-xs-6 col-lg-8">
+                        <i class="ti-timer">
+                        </i>
+                        <b>
+                          8
+                        </b>
+                        d.
+                        <b>
+                          20
+                        </b>
+                        st.
+                        <b>
+                          58
+                        </b>
+                        min.
+                        
+                        <b>
+                          18
+                        </b>
+                        sec.
+                      </li>
+                      <li class="info_link col-sm-5 col-xs-6 col-lg-4">
+                        <a href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
+                          Bid Now
+                        </a>
+                      </li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+              <!--/.col -->
+              <div class="col-sm-6">
+                <div class="deal-entry green">
+                  <div class="image ripple-effect">
+                    <a href="#" target="_blank" title="#">
+                      <img src="images/affiliate-12.jpg" alt="#" class="img-responsive">
+                    </a>
+                    <span class="bought">
+                      <i class="ti-tag">
+                      </i>
+                      169 bids
+                    </span>
+                  </div>
+                  <!-- /.image -->
+                  <div class="title">
+                    <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
+                      3-dnevni oddih za 2 v hotelu Ferienhotel Alber 4*
+                    </a>
+                  </div>
+                  <div class="entry-content">
+                    
+                    <p>
+                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World's Finest Hotels!
+                    </p>
+                  </div>
+                  <!--/.entry content -->
+                  <footer class="info_bar clearfix">
+                    <ul class="unstyled list-inline row">
+                      <li class="time col-sm-7 col-xs-6 col-lg-8">
+                        <i class="ti-timer">
+                        </i>
+                        <b>
+                          8
+                        </b>
+                        d.
+                        <b>
+                          20
+                        </b>
+                        st.
+                        <b>
+                          58
+                        </b>
+                        min.
+                        
+                        <b>
+                          18
+                        </b>
+                        sec.
+                      </li>
+                      <li class="info_link col-sm-5 col-xs-6 col-lg-4">
+                        <a href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
+                          Bid Now
+                        </a>
+                      </li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+            </div>
+            <!--/row -->
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="deal-entry green">
+                  <div class="image ripple-effect">
+                    <a href="#" target="_blank" title="#">
+                      <img src="images/affiliate-12.jpg" alt="#" class="img-responsive">
+                    </a>
+                    <span class="bought">
+                      <i class="ti-tag">
+                      </i>
+                      169 bids
+                    </span>
+                  </div>
+                  <!-- /.image -->
+                  <div class="title">
+                    <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
+                      3-dnevni oddih za 2 v hotelu Ferienhotel Alber 4*
+                    </a>
+                  </div>
+                  <div class="entry-content">
+                    
+                    <p>
+                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World’s Finest Hotels!
+                    </p>
+                  </div>
+                  <!--/.entry content -->
+                  <footer class="info_bar clearfix">
+                    <ul class="unstyled list-inline row">
+                      <li class="time col-sm-7 col-xs-6 col-lg-8">
+                        <i class="ti-timer">
+                        </i>
+                        <b>
+                          8
+                        </b>
+                        d.
+                        <b>
+                          20
+                        </b>
+                        st.
+                        <b>
+                          58
+                        </b>
+                        min.
+                        
+                        <b>
+                          18
+                        </b>
+                        sec.
+                      </li>
+                      <li class="info_link col-sm-5 col-xs-6 col-lg-4">
+                        <a href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
+                          Bid Now
+                        </a>
+                      </li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+              <!--/.col -->
+              <div class="col-sm-6">
+                <div class="deal-entry green">
+                  <div class="image ripple-effect">
+                    <a href="#" target="_blank" title="#">
+                      <img src="images/affiliate-12.jpg" alt="#" class="img-responsive">
+                    </a>
+                    <span class="bought">
+                      <i class="ti-tag">
+                      </i>
+                      169 bids
+                    </span>
+                  </div>
+                  <!-- /.image -->
+                  <div class="title">
+                    <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
+                      3-dnevni oddih za 2 v hotelu Ferienhotel Alber 4*
+                    </a>
+                  </div>
+                  <div class="entry-content">
+                    
+                    <p>
+                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World's Finest Hotels!
+                    </p>
+                  </div>
+                  <!--/.entry content -->
+                  <footer class="info_bar clearfix">
+                    <ul class="unstyled list-inline row">
+                      <li class="time col-sm-7 col-xs-6 col-lg-8">
+                        <i class="ti-timer">
+                        </i>
+                        <b>
+                          8
+                        </b>
+                        d.
+                        <b>
+                          20
+                        </b>
+                        st.
+                        <b>
+                          58
+                        </b>
+                        min.
+                        
+                        <b>
+                          18
+                        </b>
+                        sec.
+                      </li>
+                      <li class="info_link col-sm-5 col-xs-6 col-lg-4">
+                        <a href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
+                          Bid Now
+                        </a>
+                      </li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+            </div>
+            <!--/row -->
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="deal-entry green">
+                  <div class="image ripple-effect">
+                    <a href="#" target="_blank" title="#">
+                      <img src="images/affiliate-12.jpg" alt="#" class="img-responsive">
+                    </a>
+                    <span class="bought">
+                      <i class="ti-tag">
+                      </i>
+                      169 bids
+                    </span>
+                  </div>
+                  <!-- /.image -->
+                  <div class="title">
+                    <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
+                      3-dnevni oddih za 2 v hotelu Ferienhotel Alber 4*
+                    </a>
+                  </div>
+                  <div class="entry-content">
+                    
+                    <p>
+                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World’s Finest Hotels!
+                    </p>
+                  </div>
+                  <!--/.entry content -->
+                  <footer class="info_bar clearfix">
+                    <ul class="unstyled list-inline row">
+                      <li class="time col-sm-7 col-xs-6 col-lg-8">
+                        <i class="ti-timer">
+                        </i>
+                        <b>
+                          8
+                        </b>
+                        d.
+                        <b>
+                          20
+                        </b>
+                        st.
+                        <b>
+                          58
+                        </b>
+                        min.
+                        
+                        <b>
+                          18
+                        </b>
+                        sec.
+                      </li>
+                      <li class="info_link col-sm-5 col-xs-6 col-lg-4">
+                        <a href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
+                          Bid Now
+                        </a>
+                      </li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+              <!--/.col -->
+              <div class="col-sm-6">
+                <div class="deal-entry green">
+                  <div class="image ripple-effect">
+                    <a href="#" target="_blank" title="#">
+                      <img src="images/affiliate-12.jpg" alt="#" class="img-responsive">
+                    </a>
+                    <span class="bought">
+                      <i class="ti-tag">
+                      </i>
+                      169 bids
+                    </span>
+                  </div>
+                  <!-- /.image -->
+                  <div class="title">
+                    <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
+                      3-dnevni oddih za 2 v hotelu Ferienhotel Alber 4*
+                    </a>
+                  </div>
+                  <div class="entry-content">
+                    
+                    <p>
+                      Immerse Yourself in the Magic of Cambodia with a Luxurious Eight Day/Seven Night Escape at Two of the World's Finest Hotels!
+                    </p>
+                  </div>
+                  <!--/.entry content -->
+                  <footer class="info_bar clearfix">
+                    <ul class="unstyled list-inline row">
+                      <li class="time col-sm-7 col-xs-6 col-lg-8">
+                        <i class="ti-timer">
+                        </i>
+                        <b>
+                          8
+                        </b>
+                        d.
+                        <b>
+                          20
+                        </b>
+                        st.
+                        <b>
+                          58
+                        </b>
+                        min.
+                        
+                        <b>
+                          18
+                        </b>
+                        sec.
+                      </li>
+                      <li class="info_link col-sm-5 col-xs-6 col-lg-4">
+                        <a href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
+                          Bid Now
+                        </a>
+                      </li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+            </div>
+            <!--/row -->
+
           </div>
           <!-- /col 8 -->
           <div class="col-sm-4 sidebar">
@@ -1019,57 +839,6 @@
                 </ul>
                 <!-- Sidebar divider -->
               </div>
-              <!-- /.widget -->
-              <div class="widget widget-tags">
-                <hr class="mBtm-50 mTop-30" data-symbol="POPULAR TAGS">
-                <ul class="tags">
-                  <li>
-                    <a href="#" class="tag">
-                      Vacation
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="tag">
-                      Travel
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="tag">
-                      Discount
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="tag">
-                      Croatia
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="tag">
-                      Adriatic
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="tag">
-                      Europe
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="tag">
-                      Monte Negro
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="tag">
-                      New York
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="tag">
-                      Paris
-                    </a>
-                  </li>
-                </ul>
-              </div>
               <!-- /widget -->
               <div class="widget widget-featured">
                 <hr data-symbol="BEST RATED">
@@ -1186,269 +955,6 @@
                 <!-- /entry rating -->
               </div>
               <!-- /widget -->
-              <div class="widget widget-tabs">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div role="tabpanel" id="tabs" class="tabbable responsive">
-                      <!-- Nav tabs -->
-                      <ul class="nav nav-tabs" role="tablist">
-                        
-                        <li role="presentation" class="active">
-                          <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
-                            Latest
-                          </a>
-                        </li>
-                        <li role="presentation">
-                          <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
-                            Comments
-                          </a>
-                        </li>
-                      </ul>
-                      <!-- Tab panes -->
-                      <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="home">
-                          <div class="deal-entry green deal-entry-sm">
-                            <div class="offer-discount">
-                              $347
-                            </div>
-                            <div class="image ripple-effect">
-                              <a href="#" target="_blank" title="#">
-                                <img src="images/affiliate-12.jpg" alt="#" class="img-responsive">
-                              </a>
-                              <span class="bought">
-                                <i class="ti-tag">
-                                </i>
-                                21
-                              </span>
-                              <div class="caption">
-                                <h5 class="media-heading">
-                                  <a href="#">
-                                    Plaza Resort Hotel &amp; SPA
-                                  </a>
-                                </h5>
-                                <p class="stars">
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-start">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                </p>
-                              </div>
-                            </div>
-                            <footer class="clearfix">
-                              <div class="valueInfo shadow">
-                                <div class="value">
-                                  <p class="value">
-                                    $422
-                                  </p>
-                                  <p class="text">
-                                    Value
-                                  </p>
-                                </div>
-                                <div class="discount">
-                                  <p class="value">
-                                    64%
-                                  </p>
-                                  <p class="text">
-                                    Discount
-                                  </p>
-                                </div>
-                                <div class="save">
-                                  <p class="value">
-                                    $76
-                                  </p>
-                                  <p class="text">
-                                    SAVINGS
-                                  </p>
-                                </div>
-                              </div>
-                            </footer>
-                          </div>
-                          <!--/.deal entry -->
-                          <div class="deal-entry green deal-entry-sm">
-                            <div class="offer-discount">
-                              $245
-                            </div>
-                            <div class="image ripple-effect">
-                              <a href="#" target="_blank" title="#">
-                                <img src="images/affiliate-1.jpg" alt="#" class="img-responsive">
-                              </a>
-                              <span class="bought">
-                                <i class="ti-tag">
-                                </i>
-                                21
-                              </span>
-                              <div class="caption">
-                                <h5 class="media-heading">
-                                  <a href="#">
-                                    Plaza Resort Hotel &amp; SPA
-                                  </a>
-                                </h5>
-                                <p class="stars">
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-start">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                </p>
-                              </div>
-                            </div>
-                            <footer class="clearfix">
-                              <div class="valueInfo shadow">
-                                <div class="value">
-                                  <p class="value">
-                                    $1,422
-                                  </p>
-                                  <p class="text">
-                                    Value
-                                  </p>
-                                </div>
-                                <div class="discount">
-                                  <p class="value">
-                                    59%
-                                  </p>
-                                  <p class="text">
-                                    Discount
-                                  </p>
-                                </div>
-                                <div class="save">
-                                  <p class="value">
-                                    $976
-                                  </p>
-                                  <p class="text">
-                                    SAVINGS
-                                  </p>
-                                </div>
-                              </div>
-                            </footer>
-                          </div>
-                          <!--/.deal entry -->
-                        </div>
-                        <!-- /tab content -->
-                        <div role="tabpanel" class="tab-pane" id="profile">
-                          <div class="wrap mTop-20">
-                            <div class="comment clearfix">
-                              <div class="comment-avatar">
-                                <img src="images/avatar-2.jpg" alt="avatar">
-                              </div>
-                              <header>
-                                <h5>
-                                  Really Nice Vacation!
-                                </h5>
-                                <div class="comment-meta stars">
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-start">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                  | Today, 10:31
-                                </div>
-                                <!--/.stars -->
-                              </header>
-                              
-                            </div>
-                            <!--/.comments -->
-                            <div class="mTop-20">
-                            </div>
-                            <div class="comment clearfix">
-                              <div class="comment-avatar">
-                                <img src="images/avatar-1.jpg" alt="avatar">
-                              </div>
-                              <header>
-                                <h5>
-                                  Great deal guys
-                                </h5>
-                                <div class="comment-meta stars">
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-start">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                  | Today, 20:47
-                                </div>
-                                <!--/.stars -->
-                              </header>
-                              
-                            </div>
-                            <!--/.comments -->
-                            <div class="mTop-20">
-                            </div>
-                            <div class="comment clearfix">
-                              <div class="comment-avatar">
-                                <img src="images/avatar-2.jpg" alt="avatar">
-                              </div>
-                              <header>
-                                <h5>
-                                  This is Your ratings comment!
-                                </h5>
-                                <div class="comment-meta stars">
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                  <i class="ti-start">
-                                  </i>
-                                  <i class="ti-star">
-                                  </i>
-                                  | Today, 20:47
-                                </div>
-                                <!--/.stars -->
-                              </header>
-                              
-                            </div>
-                            <!--/.comments -->
-                            
-                          </div>
-                          <!--/wrap -->
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </div>
-              <!--/.widget -->
-              <div class="widget">
-                <div class="box-icon">
-                  <div class="icon-wrap">
-                    <i class="ti-star">
-                    </i>
-                  </div>
-                  <div class="text">
-                    <h4>
-                      share & get $5 in Deals 
-                    </h4>
-                    
-                    <p>
-                      earn $5 in Bosnus Deal when a friend buys this Deal from your personalised link full terms apply
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!--/.widget -->
             </div>
             <!-- /col 4 - sidebar -->
           </div>
@@ -1463,12 +969,12 @@
               <a href="#" class="btn btn-raised btn-primary ripple-effect btn-lg" data-original-title="" title="">
                 <i class="ti-shopping-cart">
                 </i>
-                &nbsp; Purchase Now
+                &nbsp; Find your bid Now
               </a>
             </div>
             <div class="col-md-9 col-sm-9 col-xs-12">
               <h3>
-                Welcome to Kupon. Responsive Deal Template
+                Welcome to Lansuwa..
               </h3>
               <p>
                 Carefully designed to bring you the best performance, usage and customization experience!

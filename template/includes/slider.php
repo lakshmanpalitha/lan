@@ -153,29 +153,19 @@
                           <!-- /.value info -->
                           <div class="timeLeft text-center">
                             <p>
-                              Hurry up Only a few time left
+                              Hurry up Only a few Bid left
                             </p>
                             <span class="time">
                               <i class="ti-timer color-green">
                               </i>
-                              Bid Limit
                               <b>
-                                500000
+                                50000
                               </b>
-                               
-                               Current Bids:
+                              Bid limit 
                               <b>
-                                20
+                                500
                               </b>
-                              st. 
-                              <b>
-                                58
-                              </b>
-                              min.
-                              <b>
-                                20
-                              </b>
-                              sec.
+                              Bid left 
                             </span>
                           </div>
                           <ul class="statistic list-unstyled list-inline">
@@ -184,7 +174,7 @@
                                 <i class="ti-user">
                                 </i>
                                 <b>
-                                  for 2
+                                  2500
                                 </b>
                                 Person
                               </p>
@@ -193,15 +183,11 @@
                               <i class="ti-tag">
                               </i>
                               <b>
-                                169
+                                8245
                               </b>
-                              Bought
+                              Bids
                             </li>
                             <li>
-                              <i class="ti-face-smile">
-                              </i>
-                              Offer success
-                            </li>
                           </ul>
                           <div class="social-sharing text-center" data-permalink="http://labs.carsonshold.com/social-sharing-buttons">
                             <!-- https://developers.facebook.com/docs/plugins/share-button/ -->
