@@ -87,5 +87,19 @@ function isOnlyNumberKey(evt) {
     return !(charCode > 31 && (charCode < 48 || charCode > 57));
 }
 
+function loading(div) {
+    if (document.getElementById(div)) {
+        document.getElementById(div).innerHTML = '';
+        document.getElementById(div).innerHTML = '<div id="loding_img"><img src="' + URL + 'public/img/loading.gif"/></div>';
+
+    }
+}
+function endLoading(div) {
+    if (document.getElementById(div)) {
+        document.getElementById(div).innerHTML = '';
+    }
+    return true;
+}
+
 
 

@@ -13,16 +13,19 @@
 
         <!-- Bootstrap Core CSS -->
         <link href="<?php echo FILE_URL ?>public/theme/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!--Custom CSS -->
+        <link href="<?php echo FILE_URL ?>public/theme/css/custom.css" rel="stylesheet">
 
         <!-- MetisMenu CSS -->
         <link href="<?php echo FILE_URL ?>public/theme/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
 
         <!-- Timeline CSS -->
         <link href="<?php echo FILE_URL ?>public/theme/css/plugins/timeline.css" rel="stylesheet">
-
+      
         <!-- Custom CSS -->
         <link href="<?php echo FILE_URL ?>public/theme/css/sb-admin-2.css" rel="stylesheet">
-
+          
         <!-- Morris Charts CSS -->
         <link href="<?php echo FILE_URL ?>public/theme/css/plugins/morris.css" rel="stylesheet">
 

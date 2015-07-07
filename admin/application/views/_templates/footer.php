@@ -10,6 +10,9 @@
 <!-- Metis Menu Plugin JavaScript -->
 <script src="<?php echo FILE_URL ?>public/theme/js/plugins/metisMenu/metisMenu.min.js"></script>
 
+<!-- Editor -->
+<script src="<?php echo FILE_URL ?>public/ckeditor/ckeditor.js"></script>
+<script src="<?php echo FILE_URL ?>public/ckeditor/samples/js/sample.js"></script>
 
 
 <!-- DataTables JavaScript -->

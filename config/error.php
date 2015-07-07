@@ -46,4 +46,7 @@ define("FEEDBACK_ORI_IMAGE_UPLOAD_PARH_ERROR", "Original image upload path error
 define("FEEDBACK_THUMB_IMAGE_UPLOAD_PARH_ERROR", "Thumb image upload path error");
 define("FEEDBACK_MEDIUM_IMAGE_UPLOAD_PARH_ERROR", "Medium image upload path error");
 define("FEEDBACK_IMG_UPLOAD_FAIL", " is successfully added,image upload failed!");
+
+
+define("FEEDBACK_INVALID_REQUEST", " Invalid request action!");
 ?>
