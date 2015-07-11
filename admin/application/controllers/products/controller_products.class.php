@@ -104,6 +104,8 @@ class products extends controller {
             if ($valid)
                 $proMaxCount = $productMaxBidCount;
         } else if ($productBidType === 'T') {
+            if (!$productMaxBidDays = $this->read->get("product_max_days", "POST", 'INT', 20, false))
+                $valid = false;
             if (!$productMaxBidHour = $this->read->get("product_max_hour", "POST", 'INT', 20, false))
                 $valid = false;
             if (!$productMaxBidMin = $this->read->get("product_max_min", "POST", 'INT', 2, false))
@@ -111,13 +113,15 @@ class products extends controller {
             if (!$productMaxBidSec = $this->read->get("product_max_sec", "POST", 'INT', 2, false))
                 $valid = false;
             if ($valid) {
+                $productMaxBidDays = ($productMaxBidDays === true ? 0 : $productMaxBidDays);
                 $productMaxBidHour = ($productMaxBidHour === true ? 0 : $productMaxBidHour);
                 $productMaxBidMin = ($productMaxBidMin === true ? 0 : $productMaxBidMin);
                 $productMaxBidSec = ($productMaxBidSec === true ? 0 : $productMaxBidSec);
-                $proMaxCount = ( $productMaxBidHour * 60 * 60) + ( $productMaxBidMin * 60) + $productMaxBidSec;
+                $proMaxCount = ($productMaxBidDays * 24 * 60 * 60) + ($productMaxBidHour * 60 * 60) + ( $productMaxBidMin * 60) + $productMaxBidSec;
             }
         }
-
+        if (!$productBidIntDays = $this->read->get("product_bid_int_days", "POST", 'INT', 20, false))
+            $valid = false;
         if (!$productBidIntHour = $this->read->get("product_bid_int_hour", "POST", 'INT', 20, false))
             $valid = false;
         if (!$productBidIntMin = $this->read->get("product_bid_int_min", "POST", 'INT', 2, false))
@@ -125,10 +129,11 @@ class products extends controller {
         if (!$productBidIntSec = $this->read->get("product_bid_int_sec", "POST", 'INT', 2, false))
             $valid = false;
         if ($valid) {
+            $productBidIntDays = ($productBidIntDays === true ? 0 : $productBidIntDays);
             $productBidIntHour = ($productBidIntHour === true ? 0 : $productBidIntHour);
             $productBidIntMin = ($productBidIntMin === true ? 0 : $productBidIntMin);
             $productBidIntSec = ($productBidIntSec === true ? 0 : $productBidIntSec);
-            $proBidInterval = ($productBidIntHour * 60 * 60) + ($productBidIntMin * 60) + $productBidIntSec;
+            $proBidInterval = ($productBidIntDays * 24 * 60 * 60) + ($productBidIntHour * 60 * 60) + ($productBidIntMin * 60) + $productBidIntSec;
         }
 
 
@@ -137,7 +142,8 @@ class products extends controller {
                 $res = $login_model->addNewProduct($productName, $productCategory, $productVedioLink, $productMktPrice, $productBidType, $proMaxCount, $proBidInterval);
             } else if ($product_action == 'modify') {
                 $status = $login_model->getProductStatus($product_id);
-                if ($status == 'I') {
+                $bid_status = $login_model->getProductBidStatus($product_id);
+                if ($bid_status == 'P' && $status='A') {
                     $res = $login_model->updateProduct($productName, $productCategory, $productVedioLink, $productMktPrice, $productBidType, $proMaxCount, $proBidInterval, $product_id);
                 }
             }
@@ -161,7 +167,7 @@ class products extends controller {
         if (!$action = $this->read->get("action", "POST", 'STRING', 1, true))
             $valid = false;
 
-        if ($action == 'A' OR $action == 'I' OR $action == 'D') {
+        if ($action == 'R' OR $action == 'S' OR $action == 'D') {
             if (!is_array($select_products) OR empty($select_products))
                 $valid = false;
             if ($valid) {

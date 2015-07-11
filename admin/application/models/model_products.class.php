@@ -106,7 +106,7 @@ class productsModel extends model {
             UPDATE 
                 tbl_product 
             SET 
-                product_status='" . mysql_real_escape_string($status) . "' 
+                " . ($status == 'D' ? 'product_status' : 'product_bid_status') . "='" . mysql_real_escape_string($status) . "' 
             WHERE  
                 product_id IN ($proIdList)";
         $result = $this->db->execute($update_qry);
@@ -118,7 +118,6 @@ class productsModel extends model {
         if ($product_id) {
             $where = "AND product_id='" . mysql_real_escape_string($product_id) . "'";
         }
-
         $query = "
             SELECT 
                 pro.product_id,
@@ -133,7 +132,9 @@ class productsModel extends model {
                (SELECT SEC_TO_TIME(pro.product_max_bid_runtime))bit_time,
                 pro.product_max_bid_runtime as bid_count,
                (SELECT SEC_TO_TIME(pro.product_bid_interval)) product_bid_interval,               
-                pro.product_status
+                pro.product_status,
+                pro.product_bid_status
+
             FROM 
                 tbl_product pro
             WHERE pro.product_status NOT IN ('D') " . ($where ? $where : '');
@@ -165,7 +166,8 @@ class productsModel extends model {
                 '" . mysql_real_escape_string($proBidTyp) . "',
                 '" . mysql_real_escape_string($proMaxCount) . "',
                 '" . mysql_real_escape_string($proBidInterval) . "',
-                'I'
+                'A',
+                'P'
                 )";
 
         $result = $this->db->execute($query);
@@ -300,6 +302,20 @@ class productsModel extends model {
         $get_qry = "
             SELECT 
                 product_status
+            FROM 
+                tbl_product
+            WHERE 
+                product_id='" . mysql_real_escape_string($product_id) . "'";
+        $result = $this->db->queryUniqueValue($get_qry);
+        return ($result ? $result : false);
+    }
+
+    function getProductBidStatus($product_id) {
+        if (!$product_id)
+            return false;
+        $get_qry = "
+            SELECT 
+                product_bid_status
             FROM 
                 tbl_product
             WHERE 

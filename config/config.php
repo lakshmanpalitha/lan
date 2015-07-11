@@ -11,6 +11,10 @@ date_default_timezone_set("Asia/Calcutta");
 /**
  * Configuration for: Base URL
  */
+
+define('BACKEND','admin/');
+define('FRONTEND','front/');
+
 define('URL', '//localhost/lansuwa/');
 define('FILE_URL', '//localhost/lansuwa/');
 define('DOC_PATH', 'D:/xampp/htdocs/lansuwa/');
@@ -40,6 +44,8 @@ define('DB_HOST', '127.0.0.1');
 define('DB_NAME', 'db_lansuwa');
 define('DB_USER', 'root');
 define('DB_PASS', '');
+
+
 
 
 

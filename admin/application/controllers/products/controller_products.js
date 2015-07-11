@@ -1,4 +1,4 @@
-$('#dataTables-example').dataTable();
+$('#dataTables-example-pro').dataTable();
 
 $(".pro_img").css("display", "none");
 
@@ -7,7 +7,12 @@ function newProduct() {
         document.getElementById('myModalLabel_pro').innerHTML = 'New Product';
         document.getElementById('pro_action').value = 'new';
         document.getElementById('pro_id').value = '';
-
+        $("#new_product :input").prop('readonly', false);
+        $("#new_product :input").attr("disabled", false);
+        document.getElementById("pro_add_button").style.display = "block";
+        document.getElementById("bid_time_lbl").style.display = "none";
+        document.getElementById("control_bid_count").style.display = "none";
+        document.getElementById("control_bid_time").style.display = "none";
         $('#myModal').modal('show', {backdrop: 'static'});
         document.getElementById("new_product").reset();
     } catch (err) {
@@ -17,7 +22,6 @@ function newProduct() {
 }
 function chkAll(e) {
     try {
-
         if (e.checked == true) {
             $('.chk_each').attr('checked', 'checked');
             document.getElementById("action_btn").style.display = "block";
@@ -31,10 +35,25 @@ function chkAll(e) {
     }
 
 }
-function chkEach(e) {
+function chkEach(e, val) {
     try {
+
         if (e.checked == true) {
+            if (val == 'P') {
+                document.getElementById("bid_start").style.display = "block";
+                document.getElementById("bid_peause").style.display = "none";
+                document.getElementById("bid_delete").style.display = "block";
+            } else if (val == 'R') {
+                document.getElementById("bid_start").style.display = "none";
+                document.getElementById("bid_peause").style.display = "block";
+                document.getElementById("bid_delete").style.display = "none";
+            } else if (val == 'S') {
+                document.getElementById("bid_start").style.display = "block";
+                document.getElementById("bid_peause").style.display = "none";
+                document.getElementById("bid_delete").style.display = "block";
+            }
             document.getElementById("action_btn").style.display = "block";
+
         } else {
             if ($('input[name="chk_each[]"]:checked').length > 0) {
                 document.getElementById("action_btn").style.display = "block";
@@ -94,10 +113,21 @@ function viewProducts(responseText) {
         if (jsonData) {
             if (jsonData.success == true) {
                 for (var i in jsonData.data) {
-                    var bg_color = (jsonData.data[i]['product_status'] == 'I' ? '#f2dede' : '');
+                    var bg_color = (jsonData.data[i]['product_status'] == 'P' ? '#f2dede' : '');
+                    var status = '';
+
+                    if (jsonData.data[i]['product_bid_status'] == 'P') {
+                        status = '<button disabled class="btn btn-warning btn-xs" type="button">Pending</button>';
+                    } else if (jsonData.data[i]['product_bid_status'] == 'R') {
+                        status = '<button disabled class="btn btn-info btn-xs" type="button">Running</button>';
+                    } else if (jsonData.data[i]['product_bid_status'] == 'S') {
+                        status = '<button disabled class="btn btn-danger btn-xs" type="button">Pause</button>';
+                    } else if (jsonData.data[i]['product_bid_status'] == 'E') {
+                        status = '<button disabled class="btn btn-success btn-xs" type="button">End</button>';
+                    }
 
                     html = html + "<tr style='background-color:" + bg_color + ";'>";
-                    html = html + "<td><input onchange='chkEach(this)' class='chk_each' name='chk_each[]' id='shop_chk_" + jsonData.data[i]['product_id'] + "' type='checkbox' value='" + jsonData.data[i]['product_id'] + "'></td>";
+                    html = html + "<td><input onchange=chkEach(this,'" + jsonData.data[i]['product_bid_status'] + "') class='chk_each' name='chk_each[]' id='shop_chk_" + jsonData.data[i]['product_id'] + "' type='radio' value='" + jsonData.data[i]['product_id'] + "'></td>";
                     html = html + "<td>" + jsonData.data[i]['product_name'] + "</td>";
                     html = html + "<td>" + jsonData.data[i]['cat_name'] + "</td>";
                     html = html + "<td>" + jsonData.data[i]['product_real_price'] + "</td>";
@@ -105,7 +135,7 @@ function viewProducts(responseText) {
                     html = html + "<td>" + (jsonData.data[i]['product_bid_type'] === 'C' ? jsonData.data[i]['bid_count'] : jsonData.data[i]['bit_time']) + "</td>";
                     html = html + "<td>" + jsonData.data[i]['product_bid_interval'] + "</td>";
                     html = html + "<td>" + jsonData.data[i]['product_create_date'] + "</td>";
-                    html = html + "<td>" + (jsonData.data[i]['product_status'] == 'A' ? '<button class="btn btn-success btn-xs" type="button">Activate</button>' : '<button class="btn btn-warning btn-xs" type="button">Inactivate</button>') + "</td>";
+                    html = html + "<td>" + status + "</td>";
                     html = html + "<td>" + jsonData.data[i]['product_bid_start_date'] + "</td>";
                     html = html + '<td><button onclick=showProductDesc("' + jsonData.data[i]['product_id'] + '") class="btn btn-primary btn-xs" type="button">Add more</button>&nbsp;<button onclick=showImgModel("' + jsonData.data[i]['product_id'] + '") class="btn btn-primary btn-xs" type="button">Image</button>&nbsp;<button onclick=viewEachProduct("' + jsonData.data[i]['product_id'] + '")  class="btn btn-primary btn-xs" type="button">View</button></td>';
                     html = html + "</tr>";
@@ -119,7 +149,7 @@ function viewProducts(responseText) {
                 if (document.getElementById('new_product')) {
                     document.getElementById("new_product").reset();
                 }
-
+           
             } else {
                 if (document.getElementById('error_msg'))
                     document.getElementById('error_msg').innerHTML = jsonData.error;
@@ -150,7 +180,7 @@ function viewEachProduct(val) {
             var jsonData = JSON.parse(responseText);
         if (jsonData) {
             if (jsonData.success == true) {
-                if (jsonData.data[0]['product_status'] == 'A') {
+                if (jsonData.data[0]['product_bid_status'] != 'P') {
                     $("#new_product :input").prop('readonly', true);
                     $("#new_product :input").attr("disabled", true);
                     document.getElementById("pro_add_button").style.display = "none";
@@ -168,22 +198,32 @@ function viewEachProduct(val) {
 
                 var bid_time = jsonData.data[0]['product_bid_interval'];
                 var arr = bid_time.split(':');
-                document.getElementById('product_bid_int_hour').value = arr[0];
+                var days = (Math.floor(arr[0] / 24));
+                var hours = (arr[0] % 24);
+
+                document.getElementById('product_bid_int_days').value = days;
+                document.getElementById('product_bid_int_hour').value = hours;
                 document.getElementById('product_bid_int_min').value = arr[1];
                 document.getElementById('product_bid_int_sec').value = arr[2];
 
                 if (jsonData.data[0]['product_bid_type'] == 'T') {
                     var bid_interval = jsonData.data[0]['bit_time'];
                     var arr = bid_interval.split(':');
-                    document.getElementById('product_max_hour').value = arr[0];
+                    var days = (Math.floor(arr[0] / 24));
+                    var hours = (arr[0] % 24);
+
+                    document.getElementById('product_max_days').value = days;
+                    document.getElementById('product_max_hour').value = hours;
                     document.getElementById('product_max_min').value = arr[1];
                     document.getElementById('product_max_sec').value = arr[2];
                     document.getElementById("control_bid_time").style.display = "block";
+                    document.getElementById("bid_time_lbl").style.display = "block";
                     document.getElementById("control_bid_count").style.display = "none";
 
                 } else {
                     document.getElementById('product_max_count').value = jsonData.data[0]['bid_count'];
                     document.getElementById("control_bid_time").style.display = "none";
+                    document.getElementById("bid_time_lbl").style.display = "none";
                     document.getElementById("control_bid_count").style.display = "block";
 
                 }
@@ -221,13 +261,11 @@ function changeCategoryState(e) {
 function changeProductState(e) {
     try {
         var msg = '';
-        if (e == 'A') {
-            msg = CONFIRM_ACTIVATE;
-        } else if (e == 'I') {
-            msg = CONFIRM_INACTIVATE;
-        } else if (e == 'P') {
-            msg = CONFIRM_PUBLISH;
-        } else {
+        if (e == 'R') {
+            msg = CONFIRM_BID_START;
+        } else if (e == 'S') {
+            msg = CONFIRM_BID_STOP;
+        } else if (e == 'D') {
             msg = CONFIRM_DELETE;
         }
         if (doConfirm(msg)) {
@@ -235,7 +273,7 @@ function changeProductState(e) {
             params = params + "&action=" + e;
             var nURL = URL + "admin/products/changeProductState/";
             xmlRequest(nURL, params, null, function(responseText) {
-                viewProducts(responseText);
+               viewProducts(responseText);
             });
         }
     } catch (err) {
@@ -275,12 +313,15 @@ function setBidTypeControll(e) {
     try {
         if (e === 'C') {
             document.getElementById("control_bid_time").style.display = "none";
+            document.getElementById("bid_time_lbl").style.display = "none";
             document.getElementById("control_bid_count").style.display = "block";
         } else if (e === 'T') {
             document.getElementById("control_bid_time").style.display = "block";
+            document.getElementById("bid_time_lbl").style.display = "block";
             document.getElementById("control_bid_count").style.display = "none";
         } else {
             document.getElementById("control_bid_time").style.display = "none";
+            document.getElementById("bid_time_lbl").style.display = "none";
             document.getElementById("control_bid_count").style.display = "none";
         }
     } catch (err) {

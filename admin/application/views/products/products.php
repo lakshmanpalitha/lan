@@ -54,38 +54,60 @@
                                     <label>Real Price</label>
                                     <input onkeypress='return isOnlyNumberKey(event)' name='product_market_price' id="product_market_price" class="form-control" placeholder="Category name">
                                 </div>
-                                <div  class="form-group">
-                                    <label>Bid Interval</label>
-                                    <label class="checkbox-inline">
-                                        <select name='product_bid_int_hour' id="product_bid_int_hour" class="form-control">
-                                            <option value=''>-Max hour-</option>
-                                            <?php
-                                            for ($i = 0; $i <= 120; $i++) {
-                                                ?>
-                                                <option value='<?php echo ($i <= 9 ? 0 : '') . $i ?>'><?php echo $i ?>(hr)</option>
-                                            <?php } ?>
-                                        </select>
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <select name='product_bid_int_min' id="product_bid_int_min" class="form-control">
-                                            <option value=''>-Max minute-</option>
-                                            <?php
-                                            for ($i = 0; $i <= 60; $i++) {
-                                                ?>
-                                                <option value='<?php echo ($i <= 9 ? 0 : '') . $i ?>'><?php echo $i ?>(min)</option>
-                                            <?php } ?>
-                                        </select>
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <select name='product_bid_int_sec' id="product_bid_int_sec"class="form-control">
-                                            <option value=''>-Max second-</option>
-                                            <?php
-                                            for ($i = 0; $i <= 60; $i++) {
-                                                ?>
-                                                <option value='<?php echo ($i <= 9 ? 0 : '') . $i ?>'><?php echo $i ?>(sec)</option>
-                                            <?php } ?>
-                                        </select>
-                                    </label>
+                                <div class="row">    
+                                    <div class="col-md-12">
+                                        <label>Bid Interval</label>  
+                                    </div>
+                                </div>
+                                <div class="row"> 
+                                    <div class="col-md-3">
+                                        <div  class="form-group">                                          
+                                            <select name='product_bid_int_days' id="product_bid_int_days" class="form-control">
+                                                <option value=''>-Max Days-</option>
+                                                <?php
+                                                for ($i = 0; $i <= 30; $i++) {
+                                                    ?>
+                                                    <option value='<?php echo $i ?>'><?php echo $i ?>(Days)</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div  class="form-group">                                          
+                                            <select name='product_bid_int_hour' id="product_bid_int_hour" class="form-control">
+                                                <option value=''>-Max hour-</option>
+                                                <?php
+                                                for ($i = 0; $i <= 23; $i++) {
+                                                    ?>
+                                                    <option value='<?php echo $i ?>'><?php echo $i ?>(hr)</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div  class="form-group">
+                                            <select name='product_bid_int_min' id="product_bid_int_min" class="form-control">
+                                                <option value=''>-Max minute-</option>
+                                                <?php
+                                                for ($i = 0; $i <= 60; $i++) {
+                                                    ?>
+                                                    <option value='<?php echo ($i <= 9 ? 0 : '') . $i ?>'><?php echo $i ?>(min)</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div  class="form-group">
+                                            <select name='product_bid_int_sec' id="product_bid_int_sec"class="form-control">
+                                                <option value=''>-Max second-</option>
+                                                <?php
+                                                for ($i = 0; $i <= 60; $i++) {
+                                                    ?>
+                                                    <option value='<?php echo ($i <= 9 ? 0 : '') . $i ?>'><?php echo $i ?>(sec)</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
 
                                 </div>
 
@@ -97,39 +119,60 @@
                                         <option value='T'>Bid time</option>
                                     </select>
                                 </div>
-                                <div style="display:none;" id="control_bid_time" class="form-group">
-                                    <label>Max bid time</label>
-                                    <label class="checkbox-inline">
-                                        <select name='product_max_hour' id="product_max_hour" class="form-control">
-                                            <option value=''>-Max hour-</option>
-                                            <?php
-                                            for ($i = 0; $i <= 120; $i++) {
-                                                ?>
-                                                <option value='<?php echo ($i <= 9 ? 0 : '') . $i ?>'><?php echo $i ?>(hr)</option>
-                                            <?php } ?>
-                                        </select>
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <select name='product_max_min' id="product_max_min" class="form-control">
-                                            <option value=''>-Max minute-</option>
-                                            <?php
-                                            for ($i = 0; $i <= 60; $i++) {
-                                                ?>
-                                                <option value='<?php echo ($i <= 9 ? 0 : '') . $i ?>'><?php echo $i ?>(min)</option>
-                                            <?php } ?>
-                                        </select>
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <select name='product_max_sec' id="product_max_sec"class="form-control">
-                                            <option value=''>-Max second-</option>
-                                            <?php
-                                            for ($i = 0; $i <= 60; $i++) {
-                                                ?>
-                                                <option value='<?php echo ($i <= 9 ? 0 : '') . $i ?>'><?php echo $i ?>(sec)</option>
-                                            <?php } ?>
-                                        </select>
-                                    </label>
-
+                                <div style="display:none;" id="bid_time_lbl" class="row">    
+                                    <div class="col-md-12">
+                                        <label>Bid Time</label>  
+                                    </div>
+                                </div>
+                                <div style="display:none;" id="control_bid_time" class="row"> 
+                                    <div class="col-md-3">
+                                        <div  class="form-group"> 
+                                            <select name='product_max_days' id="product_max_days" class="form-control">
+                                                <option value=''>-Max Days-</option>
+                                                <?php
+                                                for ($i = 0; $i <= 30; $i++) {
+                                                    ?>
+                                                    <option value='<?php echo $i ?>'><?php echo $i ?>(Days)</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div  class="form-group"> 
+                                            <select name='product_max_hour' id="product_max_hour" class="form-control">
+                                                <option value=''>-Max hour-</option>
+                                                <?php
+                                                for ($i = 0; $i <= 23; $i++) {
+                                                    ?>
+                                                    <option value='<?php echo $i ?>'><?php echo $i ?>(hr)</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div  class="form-group"> 
+                                            <select name='product_max_min' id="product_max_min" class="form-control">
+                                                <option value=''>-Max minute-</option>
+                                                <?php
+                                                for ($i = 0; $i <= 60; $i++) {
+                                                    ?>
+                                                    <option value='<?php echo ($i <= 9 ? 0 : '') . $i ?>'><?php echo $i ?>(min)</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div  class="form-group"> 
+                                            <select name='product_max_sec' id="product_max_sec"class="form-control">
+                                                <option value=''>-Max second-</option>
+                                                <?php
+                                                for ($i = 0; $i <= 60; $i++) {
+                                                    ?>
+                                                    <option value='<?php echo ($i <= 9 ? 0 : '') . $i ?>'><?php echo $i ?>(sec)</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div style="display:none;" id="control_bid_count" class="form-group">
                                     <label>Max bid count</label>
@@ -241,19 +284,19 @@
                     Products list
                     <div id="action_btn" style="float:right;display:none;">
 
-                        <button onclick="changeProductState('A')" class="btn btn-success btn-xs" type="button">Activate</button>
-                        <button onclick="changeProductState('I')" class="btn btn-warning btn-xs" type="button">Inactivate</button>
-                        <button onclick="changeProductState('D')" class="btn btn-danger btn-xs" type="button">Delete</button>
+                        <button style="display:none;float:right;margin:1px;" id="bid_start" onclick="changeProductState('R')" class="btn btn-success btn-xs" type="button">Start</button>
+                        <button style="display:none;float:right;margin:1px;" id="bid_peause" onclick="changeProductState('S')" class="btn btn-warning btn-xs" type="button">Pause</button>
+                        <button style="display:none;float:right;margin:1px;" id="bid_delete" onclick="changeProductState('D')" class="btn btn-danger btn-xs" type="button">Delete</button>
                     </div>
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
                     <div class="table-responsive">
                         <form id="products_list_form">
-                            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                            <table class="table table-striped table-bordered table-hover" id="dataTables-example-pro">
                                 <thead>
                                     <tr>
-                                        <th><input onchange="chkAll(this)" id="shop_chk_all" type="checkbox" value=""></th>
+                                        <th></th>
                                         <th>Product Name</th>
                                         <th>Category</th>
                                         <th>Market Price</th>
@@ -261,9 +304,10 @@
                                         <th>Max Bid Control</th>
                                         <th>Bid Interval</th>
                                         <th>Add Date</th>
-                                        <th>Status</th>
+                                        <th>Bid Status</th>
                                         <th>Publish Date</th>
-                                        <th width="20%">Action</th>
+                                        <th width="18%">Action</th>
+
                                     </tr>
                                 </thead>
                                 <tbody id='products_list_body'>
@@ -271,8 +315,8 @@
                                     if (!empty($this->products)) {
                                         foreach ($this->products as $pro) {
                                             ?>
-                                            <tr style="background-color: <?php echo ($pro->product_status == 'I' ? '#f2dede' : ''); ?>" class="odd gradeX">
-                                                <td><input onchange="chkEach(this)" class="chk_each" name="chk_each[]" id="shop_chk_<?php echo $pro->product_id ?>" type="checkbox" value="<?php echo $pro->product_id ?>"></td>
+                                            <tr id="tr_pro_<?php echo $pro->product_id ?>" style="background-color: <?php echo ($pro->product_status == 'I' ? '#f2dede' : ''); ?>" class="odd gradeX">
+                                                <td><input onchange="chkEach(this, '<?php echo $pro->product_bid_status ?>')" class="chk_each" name="chk_each[]" id="shop_chk_<?php echo $pro->product_id ?>" type="radio" value="<?php echo $pro->product_id ?>"></td>
                                                 <td><?php echo $pro->product_name ?></td>
                                                 <td><?php echo $pro->cat_name ?></td>
                                                 <td><?php echo $pro->product_real_price ?></td>
@@ -282,13 +326,18 @@
                                                 <td><?php echo $pro->product_create_date ?></td>
                                                 <td>
                                                     <?php
-                                                    if ($pro->product_status == 'A') {
-                                                        echo '<button class="btn btn-success btn-xs" type="button">Activate</button>';
-                                                    } else {
-                                                        echo '<button class="btn btn-warning btn-xs" type="button">Inactivate</button>';
+                                                    if ($pro->product_bid_status == 'P') {
+                                                        echo '<button disabled class="btn btn-warning btn-xs" type="button">Pending</button>';
+                                                    } else if ($pro->product_bid_status == 'R') {
+                                                        echo '<button disabled class="btn btn-info btn-xs" type="button">Running</button>';
+                                                    } else if ($pro->product_bid_status == 'S') {
+                                                        echo '<button disabled class="btn btn-danger btn-xs" type="button">Pause</button>';
+                                                    } else if ($pro->product_bid_status == 'E') {
+                                                        echo '<button disabled class="btn btn-success btn-xs" type="button">End</button>';
                                                     }
                                                     ?>
                                                 </td>
+
                                                 <td><?php echo $pro->product_bid_start_date ?></td>
                                                 <td>
                                                     <p>
@@ -297,6 +346,7 @@
                                                         <button onclick="viewEachProduct('<?php echo $pro->product_id ?>')" class="btn btn-primary btn-xs" type="button">View</button>
                                                     </p>
                                                 </td>
+
                                             </tr>
                                             <?php
                                         }
