@@ -5,15 +5,19 @@
  * Useful to show every little problem during development, but only show hard errors in production
  */
 error_reporting(E_ALL);
-ini_set("display_errors", -1);
+//ini_set("display_errors", -1);
 date_default_timezone_set("Asia/Calcutta");
 
 /**
  * Configuration for: Base URL
  */
-define('URL', 'localhost/www.lansuwa.com/lan/');
-define('FILE_URL', '//localhost/www.lansuwa.com/lan/');
-define('DOC_PATH', 'D:/xampp/htdocs/www.lansuwa.com/lan');
+
+define('BACKEND','admin/');
+define('FRONTEND','front/');
+
+define('URL', '//localhost/lansuwa/');
+define('FILE_URL', '//localhost/lansuwa/');
+define('DOC_PATH', 'D:/xampp/htdocs/lansuwa/');
 
 /**
  * Configuration for: Folders
@@ -43,6 +47,8 @@ define('DB_PASS', '');
 
 
 
+
+
 /**
  * Configuration for: Email server credentials
  */
@@ -65,7 +71,7 @@ define("EMAIL_SMTP_ENCRYPTION", 'ssl');
 
 /* image upload setting */
 define("MAX_UPLOAD_SIZE", 5000 * 1024);
-
+/* Category icon */
 define("CAT_THUMB_WIDTH", 100);
 define("CAT_THUMB_HEIGHT", 70);
 define("CAT_MEDIUM_WIDTH", 300);
@@ -76,15 +82,20 @@ define("CAT_MEDIUM_UPLOAD_PATH", DOC_PATH . "public/uploads/product_category/med
 define("CAT_ALLOW_THUMB", true);
 define("CAT_ALLOW_MEDIUM", true);
 
-define("PRODUCT_THUMB_WIDTH", 100);
-define("PRODUCT_THUMB_HEIGHT", 70);
-define("PRODUCT_MEDIUM_WIDTH", 300);
-define("PRODUCT_MEDIUM_HEIGHT", 180);
-define("PRODUCT_ORIGINAL_UPLOAD_PATH", '');
-define("PRODUCT_THUMB_UPLOAD_PATH", '');
-define("PRODUCT_MEDIUM_UPLOAD_PATH", '');
-define("PRODUCT_ALLOW_THUMB", '');
-define("PRODUCT_ALLOW_MEDIUM", '');
+
+
+/* product image */
+define("PRO_THUMB_WIDTH", 100);
+define("PRO_THUMB_HEIGHT", 70);
+define("PRO_MEDIUM_WIDTH", 300);
+define("PRO_MEDIUM_HEIGHT", 180);
+define("PRO_ORIGINAL_UPLOAD_PATH", DOC_PATH . "public/uploads/product/large/");
+define("PRO_THUMB_UPLOAD_PATH", DOC_PATH . "public/uploads/product/thumb/");
+define("PRO_MEDIUM_UPLOAD_PATH", DOC_PATH . "public/uploads/product/medium/");
+define("PRO_ALLOW_THUMB", true);
+define("PRO_ALLOW_MEDIUM", true);
+
+
 
 
 

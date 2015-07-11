@@ -1,0 +1,22 @@
+#ul_pro_img{
+    width: 90%;
+}
+#ul_pro_img li{
+    border: thin solid;
+    float: left;
+    list-style: outside none none;
+    margin: 5px;
+    padding: 2px;
+    width: 65px;
+    
+}
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+#loding_img{
+    text-align: center;
+}

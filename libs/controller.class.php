@@ -31,9 +31,9 @@ class controller extends common {
     public function loadModel($name,$module=null) {
 
         $this->module=($module?$module:$this->module);
-        $path = $this->module . "/" . MODELS_PATH . "model_" . strtolower($name) . '.class.php';
+        $path = DOC_PATH . $this->module . "/" . MODELS_PATH . "model_" . strtolower($name) . '.class.php';
         if (file_exists($path)) {
-            require $this->module . "/" . MODELS_PATH . "model_" . strtolower($name) . '.class.php';
+            require DOC_PATH . $this->module . "/" . MODELS_PATH . "model_" . strtolower($name) . '.class.php';
             // The "Model" has a capital letter as this is the second part of the model class name,
             // all models have names like "LoginModel"
             $modelName = $name . 'Model';

@@ -100,6 +100,25 @@ class model extends common {
         }
     }
 
+    function primaryKeyGenarator($table = null, $primaryKeyCol = null) {
+        if (!$table OR !$primaryKeyCol)
+            return false;
+        $query = "SELECT " . $primaryKeyCol . " FROM " . $table . " ORDER BY " . $primaryKeyCol . " DESC";
+        $res = $this->db->queryUniqueValue($query);
+
+        if ($res === null) {
+            $key = 1;
+            $key = str_pad($key, 3, "0", STR_PAD_LEFT);
+            return $key ? $key : false;
+        } else if ($res) {
+            $key = (int) ($res);
+            $key+=1;
+            $key = str_pad($key, 3, "0", STR_PAD_LEFT);
+            return $key ? $key : false;
+        }
+        return false;
+    }
+
 }
 
 ?>

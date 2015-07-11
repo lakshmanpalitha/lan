@@ -24,23 +24,23 @@ class view {
         $this->module = $module;
         $jsFile = explode('/', $filename);
         $this->mainMenuItem = $jsFile[0];
-        $jsController = "../".$this->module . "/" . CONTROLLER_PATH . $jsFile[0] . "/controller_" . $jsFile[0] . '.js';
-        $jsView = "../".$this->module . "/" . VIEWS_PATH . $jsFile[0] . "/view_" . $jsFile[0] . '.js';
+        $jsController = $this->module . "/" . CONTROLLER_PATH . $jsFile[0] . "/controller_" . $jsFile[0] . '.js';
+        $jsView = $this->module . "/" . VIEWS_PATH . $jsFile[0] . "/view_" . $jsFile[0] . '.js';
         // page without header and footer, for whatever reason
 
         if ($render_with_header_and_footer == false) {
-            require "../".$this->module . "/" . VIEWS_PATH . $filename . '.php';
+            require DOC_PATH . $this->module . "/" . VIEWS_PATH . $filename . '.php';
         } else {
 
-            require "../".$this->module . "/" . VIEWS_PATH . '_templates/header.php';
-            ($render_with_menu ? require "../".$this->module . "/" . VIEWS_PATH . '_templates/navigation.php' : '');
-            require "../".$this->module . "/" . VIEWS_PATH . $filename . '.php';
-            require "../".$this->module . "/" . VIEWS_PATH . '_templates/footer.php';
+            require DOC_PATH . $this->module . "/" . VIEWS_PATH . '_templates/header.php';
+            ($render_with_menu ? require DOC_PATH . $this->module . "/" . VIEWS_PATH . '_templates/navigation.php' : '');
+            require DOC_PATH . $this->module . "/" . VIEWS_PATH . $filename . '.php';
+            require DOC_PATH . $this->module . "/" . VIEWS_PATH . '_templates/footer.php';
         }
     }
 
     function getContent($filename) {
-        $content= file_get_contents($this->module . "/" . VIEWS_PATH . $filename . '.php');
+        $content = file_get_contents($this->module . "/" . VIEWS_PATH . $filename . '.php');
         return $content;
     }
 
@@ -55,7 +55,7 @@ class view {
         // echo out the feedback messages (errors and success messages etc.),
         // they are in $_SESSION["feedback_positive"] and $_SESSION["feedback_negative"]
 
-        require $this->module . "/" . VIEWS_PATH . '_templates/feedback.php';
+        require DOC_PATH . $this->module . "/" . VIEWS_PATH . '_templates/feedback.php';
 
         // delete these messages (as they are not needed anymore and we want to avoid to show them twice
         Session::set('feedback_positive', null);

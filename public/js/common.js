@@ -1,5 +1,3 @@
-var URL = "http://localhost/lansuwa/branches/develop/";
-
 
 $('#myModal').on('show.bs.modal', function(e) {
     if (document.getElementById('error_msg'))
@@ -87,6 +85,20 @@ function isNumberKey(evt)
 function isOnlyNumberKey(evt) {
     var charCode = (evt.which) ? evt.which : event.keyCode
     return !(charCode > 31 && (charCode < 48 || charCode > 57));
+}
+
+function loading(div) {
+    if (document.getElementById(div)) {
+        document.getElementById(div).innerHTML = '';
+        document.getElementById(div).innerHTML = '<div id="loding_img"><img src="' + URL + 'public/img/loading.gif"/></div>';
+
+    }
+}
+function endLoading(div) {
+    if (document.getElementById(div)) {
+        document.getElementById(div).innerHTML = '';
+    }
+    return true;
 }
 
 

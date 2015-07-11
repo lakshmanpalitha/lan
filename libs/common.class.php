@@ -130,29 +130,59 @@ class common {
         }
 
 #image processing start
-        if ($extension == "jpg" || $extension == "jpeg") {
-            $src = imagecreatefromjpeg($uploadedfile);
-        } else
-        if ($extension == "png") {
-            $src = imagecreatefrompng($uploadedfile);
-        } else {
-            $src = imagecreatefromgif($uploadedfile);
-        }
-
-        list($width, $height) = getimagesize($uploadedfile); # get the width and height of our image
-        //Upload original
-
-        $tmp_original_image = imagecreatetruecolor($width, $height);
-        imagecopyresampled($tmp_original_image, $src, 0, 0, 0, 0, $width, $height, $width, $height);
-        if (!is_dir($this->largeimgpath)) {
-            if (!mkdir($this->largeimgpath, 0777, true)) {
-                session::setError("feedback_negative", FEEDBACK_ORI_IMAGE_UPLOAD_PARH_ERROR);
-                return false;
+        try {
+            if ($extension == "jpg" || $extension == "jpeg") {
+                $src = imagecreatefromjpeg($uploadedfile);
+            } else
+            if ($extension == "png") {
+                $src = imagecreatefrompng($uploadedfile);
+            } else {
+                $src = imagecreatefromgif($uploadedfile);
             }
-        }
-        if (!imagejpeg($tmp_original_image, $this->largeimgpath . "/" . $file_name, 100))
+        } catch (Exception $e) {
+            session::setError("feedback_negative", $e->getMessage());
             return false;
-        imagedestroy($tmp_original_image);
+        }
+
+        try {
+            list($width, $height) = getimagesize($uploadedfile); # get the width and height of our image
+            //Upload original
+        } catch (Exception $e) {
+            session::setError("feedback_negative", $e->getMessage());
+            return false;
+        }
+
+
+        try {
+            $tmp_original_image = imagecreatetruecolor($width, $height);
+            imagecopyresampled($tmp_original_image, $src, 0, 0, 0, 0, $width, $height, $width, $height);
+        } catch (Exception $e) {
+            session::setError("feedback_negative", $e->getMessage());
+            return false;
+        }
+
+
+        try {
+            if (!is_dir($this->largeimgpath)) {
+                if (!mkdir($this->largeimgpath, 0777, true)) {
+                    session::setError("feedback_negative", FEEDBACK_ORI_IMAGE_UPLOAD_PARH_ERROR);
+                    return false;
+                }
+            }
+        } catch (Exception $e) {
+            session::setError("feedback_negative", $e->getMessage());
+            return false;
+        }
+
+        try {
+            if (!imagejpeg($tmp_original_image, $this->largeimgpath . "/" . $file_name, 100))
+                return false;
+            imagedestroy($tmp_original_image);
+        } catch (Exception $e) {
+            session::setError("feedback_negative", $e->getMessage());
+            return false;
+        }
+
 
 
         //Upload thumb
@@ -165,46 +195,63 @@ class common {
             } else {
                 $thumb_height = ($height / $width) * $thumb_width;
             }
-
-            $tmp_thumb_image = imagecreatetruecolor($thumb_width, $thumb_height);
-            imagecopyresampled($tmp_thumb_image, $src, 0, 0, 0, 0, $thumb_width, $thumb_height, $width, $height);
-            if (!is_dir($this->thumbpath)) {
-                if (!mkdir($this->thumbpath, 0777, true)) {
-                    session::setError("feedback_negative", FEEDBACK_THUMB_IMAGE_UPLOAD_PARH_ERROR);
-                    return false;
-                }
+            try {
+                $tmp_thumb_image = imagecreatetruecolor($thumb_width, $thumb_height);
+                imagecopyresampled($tmp_thumb_image, $src, 0, 0, 0, 0, $thumb_width, $thumb_height, $width, $height);
+            } catch (Exception $e) {
+                session::setError("feedback_negative", $e->getMessage());
+                return false;
             }
 
-            if (!imagejpeg($tmp_thumb_image, $this->thumbpath . "/thumb_" . $file_name, 100))
-                return fale;
-            imagedestroy($tmp_thumb_image);
-        }
 
-//Upload medium
-        if ($this->isAllowMedium) {
-            $medium_width = ($this->mediumWidth ? $this->mediumWidth : $width);
-
-            //set medium image height
-            if ($this->mediumHeight) {
-                $medium_height = $this->mediumHeight;
-            } else {
-                $medium_height = ($height / $width) * $medium_width;
-            }
-            $tmp_medium_image = imagecreatetruecolor($medium_width, $medium_height);
-            imagecopyresampled($tmp_medium_image, $src, 0, 0, 0, 0, $medium_width, $medium_height, $width, $height);
-            if ($this->midthumbpath) {
-                if (!is_dir($this->midthumbpath)) {
-                    if (!mkdir($this->midthumbpath, 0777, true)) {
-                        session::setError("feedback_negative", FEEDBACK_MEDIUM_IMAGE_UPLOAD_PARH_ERROR);
+            try {
+                if (!is_dir($this->thumbpath)) {
+                    if (!mkdir($this->thumbpath, 0777, true)) {
+                        session::setError("feedback_negative", FEEDBACK_THUMB_IMAGE_UPLOAD_PARH_ERROR);
                         return false;
                     }
                 }
-            }
 
-            if (!imagejpeg($tmp_medium_image, $this->midthumbpath . "/medium_" . $file_name, 100))
+                if (!imagejpeg($tmp_thumb_image, $this->thumbpath . "/thumb_" . $file_name, 100))
+                    return fale;
+                imagedestroy($tmp_thumb_image);
+            } catch (Exception $e) {
+                session::setError("feedback_negative", $e->getMessage());
                 return false;
-            imagedestroy($tmp_medium_image);
+            }
         }
+
+//Upload medium
+        try {
+            if ($this->isAllowMedium) {
+                $medium_width = ($this->mediumWidth ? $this->mediumWidth : $width);
+
+                //set medium image height
+                if ($this->mediumHeight) {
+                    $medium_height = $this->mediumHeight;
+                } else {
+                    $medium_height = ($height / $width) * $medium_width;
+                }
+                $tmp_medium_image = imagecreatetruecolor($medium_width, $medium_height);
+                imagecopyresampled($tmp_medium_image, $src, 0, 0, 0, 0, $medium_width, $medium_height, $width, $height);
+                if ($this->midthumbpath) {
+                    if (!is_dir($this->midthumbpath)) {
+                        if (!mkdir($this->midthumbpath, 0777, true)) {
+                            session::setError("feedback_negative", FEEDBACK_MEDIUM_IMAGE_UPLOAD_PARH_ERROR);
+                            return false;
+                        }
+                    }
+                }
+
+                if (!imagejpeg($tmp_medium_image, $this->midthumbpath . "/medium_" . $file_name, 100))
+                    return false;
+                imagedestroy($tmp_medium_image);
+            }
+        } catch (Exception $e) {
+            session::setError("feedback_negative", $e->getMessage());
+            return false;
+        }
+
 
         imagedestroy($src);
         return true;

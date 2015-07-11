@@ -3,16 +3,9 @@
 Options -Indexes
 
 RewriteEngine On
+RewriteBase /lansuwa/
 
+RewriteCond %{REQUEST_FILENAME} \.(gif|jpe?g|png|js|css|swf|ico|pdf)$
+RewriteRule ^ - [L]
 
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-l
-
-
-#RewriteRule ^admin/$ index.php?url=admin/dashbord [QSA,L]
-#RewriteRule ^(.+) reservation/index.php [QSA,L]
-
-RewriteRule ^template/  template/index.php [QSA,L]
-RewriteRule ^admin/  runtime/index.php?url=admin/dashbord  [QSA,L]
+RewriteRule .*  runtime/index.php?url=$0 [QSA,L]
