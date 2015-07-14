@@ -178,6 +178,14 @@
                                     <label>Max bid count</label>
                                     <input onkeypress='return isOnlyNumberKey(event)' name='product_max_count' id="product_max_count" class="form-control" placeholder="Bid count">
                                 </div>
+                                <div class="row">    
+                                    <div class="col-md-12">
+                                        <div  class="form-group"> 
+                                            <label>Short Description</label>
+                                            <textarea maxlength="200" id="product_short_desc" name="product_short_desc" class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
                             <input type="hidden" name="pro_action" value="" id="pro_action">
@@ -301,12 +309,12 @@
                                         <th>Category</th>
                                         <th>Market Price</th>
                                         <th>Bid Type</th>
-                                        <th>Max Bid Control</th>
+                                        <th width="12%">Max Bid Control</th>
                                         <th>Bid Interval</th>
                                         <th>Add Date</th>
                                         <th>Bid Status</th>
                                         <th>Publish Date</th>
-                                        <th width="18%">Action</th>
+                                        <th width="30%">Action</th>
 
                                     </tr>
                                 </thead>
@@ -314,14 +322,23 @@
                                     <?php
                                     if (!empty($this->products)) {
                                         foreach ($this->products as $pro) {
+                                            $time_string = '';
+                                            if ($pro->product_bid_type == 'T') {
+                                                $timeArr = explode(":", $pro->bit_time);
+                                                $days = floor(($timeArr[0] / 24));
+                                                $hours = ($timeArr[0] % 24);
+                                                $minute = ($timeArr[1]);
+                                                $sec = ($timeArr[2]);
+                                                $time_string = $days . " d " . $hours . " h " . $minute . " m " . $sec . " s";
+                                            }
                                             ?>
                                             <tr id="tr_pro_<?php echo $pro->product_id ?>" style="background-color: <?php echo ($pro->product_status == 'I' ? '#f2dede' : ''); ?>" class="odd gradeX">
                                                 <td><input onchange="chkEach(this, '<?php echo $pro->product_bid_status ?>')" class="chk_each" name="chk_each[]" id="shop_chk_<?php echo $pro->product_id ?>" type="radio" value="<?php echo $pro->product_id ?>"></td>
                                                 <td><?php echo $pro->product_name ?></td>
                                                 <td><?php echo $pro->cat_name ?></td>
                                                 <td><?php echo $pro->product_real_price ?></td>
-                                                <td><?php echo ($pro->product_bid_type == 'C' ? 'Bid ount' : 'Bid Time') ?></td>
-                                                <td><?php echo ($pro->product_bid_type == 'C' ? $pro->bid_count : $pro->bit_time) ?></td>
+                                                <td><?php echo ($pro->product_bid_type == 'C' ? 'Bid Count' : 'Bid Time') ?></td>
+                                                <td><?php echo ($pro->product_bid_type == 'C' ? $pro->bid_count : $time_string) ?></td>
                                                 <td><?php echo $pro->product_bid_interval ?></td>
                                                 <td><?php echo $pro->product_create_date ?></td>
                                                 <td>

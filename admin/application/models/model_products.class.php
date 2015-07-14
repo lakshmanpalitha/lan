@@ -110,6 +110,19 @@ class productsModel extends model {
             WHERE  
                 product_id IN ($proIdList)";
         $result = $this->db->execute($update_qry);
+        $result2 = true;
+        if ($result && $status = 'R') {
+            $update_qry = "
+            UPDATE 
+                tbl_product 
+            SET 
+                product_bid_start_date =NOW() 
+            WHERE  
+                product_id IN ($proIdList)";
+            $result2 = $this->db->execute($update_qry);
+        } else {
+            $result2 = false;
+        }
         return ($result ? $result : false);
     }
 
@@ -133,7 +146,8 @@ class productsModel extends model {
                 pro.product_max_bid_runtime as bid_count,
                (SELECT SEC_TO_TIME(pro.product_bid_interval)) product_bid_interval,               
                 pro.product_status,
-                pro.product_bid_status
+                pro.product_bid_status,
+                pro.product_short_description
 
             FROM 
                 tbl_product pro
@@ -143,7 +157,7 @@ class productsModel extends model {
         return ($result ? $result : false);
     }
 
-    function addNewProduct($proName, $proCat, $proVedioLink, $proMktPrice, $proBidTyp, $proMaxCount, $proBidInterval) {
+    function addNewProduct($proName, $proCat, $proVedioLink, $proMktPrice, $proBidTyp, $proMaxCount, $proBidInterval, $productShortDesc) {
         if (!$proName || !$proCat || !$proMktPrice || !$proBidTyp || !$proMaxCount || !$proBidInterval)
             return false;
         if (!session::get('user_id'))
@@ -167,14 +181,15 @@ class productsModel extends model {
                 '" . mysql_real_escape_string($proMaxCount) . "',
                 '" . mysql_real_escape_string($proBidInterval) . "',
                 'A',
-                'P'
+                'P',
+                '" . mysql_real_escape_string($productShortDesc) . "'
                 )";
 
         $result = $this->db->execute($query);
         return ($result ? true : false);
     }
 
-    function updateProduct($proName, $proCat, $proVedioLink, $proMktPrice, $proBidTyp, $proMaxCount, $proBidInterval, $product_id) {
+    function updateProduct($proName, $proCat, $proVedioLink, $proMktPrice, $proBidTyp, $proMaxCount, $proBidInterval, $product_id, $productShortDesc) {
         if (!$proName || !$proCat || !$proMktPrice || !$proBidTyp || !$proMaxCount || !$proBidInterval || !$product_id)
             return false;
         if (!session::get('user_id'))
@@ -186,7 +201,8 @@ class productsModel extends model {
                         product_real_price= '" . mysql_real_escape_string($proMktPrice) . "',  
                         product_bid_type= '" . mysql_real_escape_string($proBidTyp) . "',  
                         product_max_bid_runtime= '" . mysql_real_escape_string($proMaxCount) . "',  
-                        product_bid_interval= '" . mysql_real_escape_string($proBidInterval) . "'  
+                        product_bid_interval= '" . mysql_real_escape_string($proBidInterval) . "',
+                        product_short_description= '" . mysql_real_escape_string($productShortDesc) . "' 
                  WHERE product_id='" . mysql_real_escape_string($product_id) . "'";
         $result = $this->db->execute($query);
         return ($result ? true : false);

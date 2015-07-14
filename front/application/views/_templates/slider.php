@@ -12,20 +12,21 @@
                                     <article class="bg-image entry-lg" data-image-src="<?php echo URL ?>public/uploads/product/large/<?php echo $pro->def_image ?>">
                                         <div class="deal-short-entry bg-green">
                                             <p>
-                                                <?php echo $pro->product_description ?>
+                                                <?php echo $pro->product_short_description ?>
                                             </p>
                                         </div>
                                     </article>
                                 </div>
                                 <div class="col-sm-5 col-lg-4 alpha entry-lg">
-                                    <div class="buyPanel animated fadeIn bg-white Aligner shadow">
+                                    <div class="bid_pro_list buyPanel animated fadeIn bg-white Aligner shadow">
                                         <div class="content">
+                                            <span id="<?php echo $pro->product_id ?>" class="bid_pro_id"></span>
                                             <div class="deal-content">
                                                 <h3>
                                                     <?php echo $pro->product_name ?>
                                                 </h3>
                                                 <p>
-                                                     <?php echo $pro->product_description ?>
+                                                    <?php echo $pro->product_short_description ?>
                                                 </p>
                                             </div>
                                             <ul class="deal-price list-unstyled list-inline">
@@ -35,7 +36,7 @@
                                                     </h3>
                                                 </li>
                                                 <li class="buy-now">
-                                                    <a class="btn btn-success btn-raised ripple-effect">
+                                                    <a id="sidebar_pro_button_<?php echo $pro->product_id ?>" class="btn btn-success btn-raised ripple-effect">
                                                         BID NOW
                                                     </a>
                                                 </li>
@@ -45,47 +46,19 @@
                                                     <p>
                                                         Hurry up Only a few time left
                                                     </p>
-                                                    <span class="time">
-                                                        <i class="ti-timer color-green">
-                                                        </i>
-                                                        <b>
-                                                            8
-                                                        </b>
-                                                        d. 
-                                                        <b>
-                                                            20
-                                                        </b>
-                                                        st. 
-                                                        <b>
-                                                            58
-                                                        </b>
-                                                        min.
-                                                        <b>
-                                                            20
-                                                        </b>
-                                                        sec.
-                                                    </span>
+                                                    <span id="sidebar_pro_timer_<?php echo $pro->product_id ?>" class="time"></span>
                                                 </div>
                                                 <ul class="statistic list-unstyled list-inline">
                                                     <li>
                                                         <p>
-                                                            <i class="ti-user">
-                                                            </i>
-                                                            <b>
-                                                                2500
-                                                            </b>
-                                                            Person
+                                                            <i class="ti-user"></i>
+                                                            <b>2500</b>Person
                                                         </p>
                                                     </li>
                                                     <li>
-                                                        <i class="ti-tag">
-                                                        </i>
-                                                        <b>
-                                                            8245
-                                                        </b>
-                                                        Bids
+                                                        <i class="ti-tag"></i>
+                                                        <b>8245</b>Bids
                                                     </li>
-                                                    <li>
                                                 </ul>
                                                 <div class="social-sharing text-center" data-permalink="http://labs.carsonshold.com/social-sharing-buttons">
                                                     <!-- https://developers.facebook.com/docs/plugins/share-button/ -->
@@ -119,7 +92,8 @@
                                 </div>
                                 <!-- /#buypanel -->
                             </li>
-                        <?php }
+                            <?php
+                        }
                     }
                     ?>
                 </ul>

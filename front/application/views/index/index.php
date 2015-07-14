@@ -122,68 +122,50 @@
                         if (!empty($this->bid_products)) {
                             $bid_itm_count = 0;
                             foreach ($this->bid_products as $pro) {
-                                if($bid_itm_count==0){
+                                if ($bid_itm_count == 0) {
                                     echo '<div class="row">';
-                                }else if($bid_itm_count%2==0){
-                                      echo '</div><div class="row">';
+                                } else if ($bid_itm_count % 2 == 0) {
+                                    echo '</div><div class="row">';
                                 }
-                                echo '<div class="col-sm-6">
-                                <div class="deal-entry green">
-                                    <div class="image ripple-effect">
-                                        <a href="#" target="_blank" title="#">
-                                            <img src="' . URL . "public/uploads/product/large/" . $pro->def_image . '" alt="#" class="img-responsive">
-                                        </a>
-                                        <span class="bought">
-                                            <i class="ti-tag">
-                                            </i>
-                                            169 bids
-                                        </span>
-                                    </div>
-                                    <!-- /.image -->
-                                    <div class="title">
-                                        <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
-                                            ' . $pro->product_name . '
-                                        </a>
-                                    </div>
-                                    <div class="entry-content">
+                                ?>
+                                <div class="col-sm-6">
+                                    <div class="deal-entry green">
+                                        <div class="image ripple-effect">
+                                            <a href="#" target="_blank" title="#">
+                                                <img src="<?php echo URL ?>public/uploads/product/large/<?php echo $pro->def_image ?>" alt="#" class="img-responsive">
+                                            </a>
+                                            <span class="bought">
+                                                <i class="ti-tag"></i>169 bids
+                                            </span>
+                                        </div>
+                                        <!-- /.image -->
+                                        <div class="title">
+                                            <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
+                                                <?php echo $pro->product_name ?>
+                                            </a>
+                                        </div>
+                                        <div class="entry-content">
+                                            <p>
+                                                <?php echo $pro->product_short_description ?>
+                                            </p>
+                                        </div>
+                                        <!--/.entry content -->
+                                        <footer class="info_bar clearfix">
+                                            <ul class="unstyled list-inline row">
+                                                <li id="index_pro_timer_<?php echo $pro->product_id ?>" class="time col-sm-7 col-xs-6 col-lg-8"> 
+                                                   
+                                                </li>
 
-                                        <p>
-                                            ' . $pro->product_description . '
-                                        </p>
+                                                <li class="info_link col-sm-5 col-xs-6 col-lg-4">
+                                                    <a id="index_pro_button_<?php echo $pro->product_id ?>" href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
+                                                        Bid Now
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </footer>
                                     </div>
-                                    <!--/.entry content -->
-                                    <footer class="info_bar clearfix">
-                                        <ul class="unstyled list-inline row">
-                                            <li class="time col-sm-7 col-xs-6 col-lg-8">
-                                                <i class="ti-timer">
-                                                </i>
-                                                <b>
-                                                    8
-                                                </b>
-                                                d.
-                                                <b>
-                                                    20
-                                                </b>
-                                                st.
-                                                <b>
-                                                    58
-                                                </b>
-                                                min.
-
-                                                <b>
-                                                    18
-                                                </b>
-                                                sec.
-                                            </li>
-                                            <li class="info_link col-sm-5 col-xs-6 col-lg-4">
-                                                <a href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
-                                                    Bid Now
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </footer>
                                 </div>
-                            </div>';
+                                <?php
                                 $bid_itm_count++;
                             }
                             echo "</div>";
@@ -225,96 +207,24 @@
                                 <hr data-symbol="CATEGORIES">
                                 <!-- Sidebar navigation -->
                                 <ul class="nav sidebar-nav">
-                                    <li class="dropdown open">
-                                        <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
-                                            <i class="ti-shine">
-                                            </i>
-                                            Travel
-                                            <span class="sidebar-badge">
-                                                12
-                                            </span>
-                                            <b class="caret">
-                                            </b>
-                                        </a>
-                                        <ul class="dropdown-menu">
+                                    <?php
+                                    if (!empty($this->categorys)) {
+                                        foreach ($this->categorys as $cat) {
+                                            ?>
                                             <li>
-                                                <a href="#" tabindex="-1">
-                                                    Europe
+                                                <a href="<?php echo $cat->category_id ?>">
+                                                    <i class="ti-gift">
+                                                    </i>
+                                                    <?php echo $cat->category_name ?>
                                                     <span class="sidebar-badge">
-                                                        12
+                                                         <?php echo $cat->pro_count ?>
                                                     </span>
                                                 </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" tabindex="-1">
-                                                    Promo
-                                                    <span class="sidebar-badge">
-                                                        0
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-gift">
-                                            </i>
-                                            Gifts
-                                            <span class="sidebar-badge">
-                                                3
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-shopping-cart">
-                                            </i>
-                                            Products
-                                            <span class="sidebar-badge">
-                                                456
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-ticket">
-                                            </i>
-                                            Tickets
-                                            <span class="sidebar-badge badge-circle">
-                                                12
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-pulse">
-                                            </i>
-                                            Health
-                                            <span class="sidebar-badge badge-circle">
-                                                45
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-direction-alt">
-                                            </i>
-                                            Things To Do
-                                            <span class="sidebar-badge badge-circle">
-                                                117
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-cut">
-                                            </i>
-                                            Fashion
-                                            <span class="sidebar-badge badge-circle">
-                                                117
-                                            </span>
-                                        </a>
-                                    </li>
+                                            </li>    
+                                            <?php
+                                        }
+                                    }
+                                    ?>                                                   
                                 </ul>
                                 <!-- Sidebar divider -->
                             </div>

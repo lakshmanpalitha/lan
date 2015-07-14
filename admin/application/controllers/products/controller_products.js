@@ -195,6 +195,7 @@ function viewEachProduct(val) {
                 document.getElementById('product_market_price').value = jsonData.data[0]['product_bid_int_hour'];
                 document.getElementById('product_market_price').value = jsonData.data[0]['product_real_price'];
                 document.getElementById('product_bid_type').value = jsonData.data[0]['product_bid_type'];
+                $('#product_short_desc').html(jsonData.data[0]['product_short_description']);
 
                 var bid_time = jsonData.data[0]['product_bid_interval'];
                 var arr = bid_time.split(':');

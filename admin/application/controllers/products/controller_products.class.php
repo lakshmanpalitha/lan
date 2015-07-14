@@ -97,6 +97,8 @@ class products extends controller {
             $valid = false;
         if (!$productBidType = $this->read->get("product_bid_type", "POST", 'STRING', 1, true))
             $valid = false;
+        if (!$productShortDesc = $this->read->get("product_short_desc", "POST", '', 200, false))
+            $valid = false;
 
         if ($productBidType === 'C') {
             if (!$productMaxBidCount = $this->read->get("product_max_count", "POST", 'INT', 20, true))
@@ -139,12 +141,12 @@ class products extends controller {
 
         if ($valid) {
             if ($product_action == 'new') {
-                $res = $login_model->addNewProduct($productName, $productCategory, $productVedioLink, $productMktPrice, $productBidType, $proMaxCount, $proBidInterval);
+                $res = $login_model->addNewProduct($productName, $productCategory, $productVedioLink, $productMktPrice, $productBidType, $proMaxCount, $proBidInterval,$productShortDesc);
             } else if ($product_action == 'modify') {
                 $status = $login_model->getProductStatus($product_id);
                 $bid_status = $login_model->getProductBidStatus($product_id);
                 if ($bid_status == 'P' && $status='A') {
-                    $res = $login_model->updateProduct($productName, $productCategory, $productVedioLink, $productMktPrice, $productBidType, $proMaxCount, $proBidInterval, $product_id);
+                    $res = $login_model->updateProduct($productName, $productCategory, $productVedioLink, $productMktPrice, $productBidType, $proMaxCount, $proBidInterval, $product_id,$productShortDesc);
                 }
             }
             $products = $login_model->getProductList();
