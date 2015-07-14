@@ -12,176 +12,8 @@
   <body>
     <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
       <header>
-        <div class="top-bar bg-light hdden-xs">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 list-inline list-unstyled no-margin hidden-xs">
-                <p class="no-margin">
-                  Have any questions?
-                  <strong>
-                    +080 124 880
-                              </strong>
-                              or mail@codenpixel.com
-                          </p>
-                      </div>
-                      <div class="pull-right col-sm-6">
-                        <ul class="list-inline list-unstyled pull-right">
-                          <li class="active">
-                            <a href="#">
-                              <i class="ti-cart">
-                              </i>
-                              Faq
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              Sign In
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              Sign Up
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <i class="ti-shopping-cart">
-                              </i>
-                              Cart
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div id="nav-wrap">
-            <div class="nav-wrap-holder">
-              <div class="container" id="nav_wrapper">
-                <nav class="navbar navbar-static-top nav-white" id="main_navbar" role="navigation">
-                  <!-- Brand and toggle get grouped for better mobile display -->
-                  <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
-                      <span class="sr-only">
-                        Toggle navigation
-                                  </span>
-                                  <span class="icon-bar">
-                                  </span>
-                                  <span class="icon-bar">
-                                  </span>
-                                  <span class="icon-bar">
-                                  </span>
-                              </button>
-                              <a href="index-2.html" class="navbar-brand logo col-sm-3">
-                                <img src="images/logo.png" alt="" class="img-responsive">
-                              </a>
-                          </div>
-                          <!-- Collect the nav links, forms, and other content for toggling -->
-                          <div class="collapse navbar-collapse" id="Navbar">
-                            <!-- regular link -->
-                            <ul class="nav navbar-nav navbar-right">
-                              <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                  <i class="ti-home">
-                                  </i>
-                                  Home
-                                  <span class="caret">
-                                  </span>
-                                </a>
-                                <ul class="dropdown-menu" role="menu">
-                                  <li>
-                                    <a href="index-2.html">
-                                      Primary
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="index_2.html">
-                                      Secondary
-                                    </a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                  Pages 
-                                  <span class="caret">
-                                  </span>
-                                </a>
-                                <ul class="dropdown-menu" role="menu">
-                                  <li>
-                                    <a href="details_2.html">
-                                      Deal Page 1
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="details.html">
-                                      Deal Page 2
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="results.html">
-                                      Search Results
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="contact.html">
-                                      Contact
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="faq.html">
-                                      FAQ page
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="sumbit.html">
-                                      Sumbit deal
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="registration.html">
-                                      Registration
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="cart.html">
-                                      Cart Page
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="checkout.html">
-                                      Checkout
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="features.html">
-                                      Shortcodes
-                                    </a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                <a href="results.html">
-                                  Categories
-                                </a>
-                              </li>
-                              <li>
-                                <a href="sumbit.html">
-                                  Sumbit
-                                </a>
-                              </li>
-                              <li>
-                                <a href="contact.html">
-                                  Contact
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                      </nav>
-                  </div>
-              </div>
-              <!-- /.div nav wrap holder -->
-          </div>
+          <?php include "includes/topbar.php"; ?>
+          <?php include "includes/nav.php"; ?>
           <!-- /#nav wrap -->
       </header>
       <div class="search-form bg-white">
@@ -308,87 +140,9 @@
             </div>
             <!--/.post media -->
             <div class="row mTop-20">
-              
-              <div class="col-sm-4 col-lg-3 bg-light">
-                <article class="side-details">
-                  
-                  <div class="what-you-get">
-                    <h4 class="border">
-                      What You Get
-                    </h4>
-                    <ul>
-                      <li>
-                        Stay for two in a traditional king or double room
-                      </li>
-                      <li>
-                        Dates into September
-                      </li>
-                    </ul>
-                    
-                    <p>
-                      <strong>
-                        Included in room-only stays:
-                      </strong>
-                    </p>
-                    
-                    <ul>
-                      <li>
-                        Daily continental breakfast for two
-                      </li>
-                      <li>
-                        One bottle of rum per stay
-                      </li>
-                    </ul>
-                    
-                    <p>
-                      <strong>
-                        Included in all-inclusive stays:
-                      </strong>
-                    </p>
-                    
-                    <ul>
-                      <li>
-                        Daily breakfast, lunch, and dinner for two from the regular menus at the Circle Wine Bar and Cellar, Amalgama, Ginger Pool Bar, and Vieques del Mar Beach restaurants
-                      </li>
-                      <li>
-                        Unlimited house-brand cocktails, domestic beer, and nonalcoholic beverages
-                      </li>
-                      <li>
-                        Use of beach towels, fun zone, and fitness center
-                      </li>
-                      <li>
-                        Use of business station
-                      </li>
-                      <li>
-                        Shuttle transportation within Palmas del Mar
-                      </li>
-                      <li>
-                        WiFi
-                      </li>
-                      <li>
-                        All hotel taxes and fees
-                      </li>
-                    </ul>
-                    
-                    <hr>
-                    
-                    <p>
-                      <strong>
-                        Policies and Fees
-                      </strong>
-                    </p>
-                    
-                    
-                    
-                    
-                  </div>
-                  
-                </article>
-                
-                
-              </div>
+
               <!-- /col 5 -->
-              <div class="col-sm-5 col-lg-9">
+              <div class="col-sm-5 col-lg-12">
                 
                 <div class="widget-inner bg-white shadow mBtm-20">
                   <div role="tabpanel" id="tabs" class="tabbable responsive">
@@ -404,11 +158,7 @@
                           reviews
                         </a>
                       </li>
-                      <li role="presentation">
-                        <a href="#map" aria-controls="map" role="tab" data-toggle="tab">
-                          Map &amp; Directions
-                        </a>
-                      </li>
+
                     </ul>
                     <!-- Tab panes -->
                     <div class="tab-content">
@@ -723,14 +473,7 @@
                                                   </form>
                                                 </section>
                                               </div>
-                                              <div role="tabpanel" class="tab-pane" id="map">
-                                                <!-- Google map, just iframe for now -->
-                                                <div class="google-maps">
-                                                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7098.94326104394!2d78.0430654485247!3d27.172909818538997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1385710909804" width="600" height="450" frameborder="0" style="border:0">
-                                                  </iframe>
-                                                </div>
-                                                <!-- /google map -->
-                                              </div>
+
                                               <!-- /tab -->
                                           </div>
                                       </div>
@@ -748,120 +491,100 @@
               <!-- /col 8 -->
               <div class="col-sm-4">
                 <div class="widget-inner bg-white shadow">
-                  <div class="buyPanel animated fadeInLeft bg-white Aligner text-center">
-                    <div class="content">
-                      <div class="deal-content">
-                        <h3>
-                          Wyndham Garden at Palmas del Mar - Puerto Rico
-                        </h3>
-                        <p>
-                          Stay for two, with optional all-inclusive package. Dates into September
-                        </p>
-                      </div>
-                      <div class="price">
-                        <h1>
-                          $999
-                        </h1>
-                      </div>
-                      <div class="buy-now mBtm-30">
-                        <a class="btn btn-success btn-lg btn-raised ripple-effect btn-block" data-toggle="modal" data-target="#myModal">
-                          BUY NOW
-                          <span class="ink animate" style="height: 330px; width: 330px; top: -142.25px; left: -45.5px;">
-                          </span>
-                        </a>
-                      </div>
-                      <div class="dealAttributes">
-                        <div class="valueInfo bg-light shadow">
-                          <div class="value">
-                            <p class="value">
-                              $2,475
-                            </p>
-                            <p class="text">
-                              Value
-                            </p>
-                          </div>
-                          <div class="discount">
-                            <p class="value">
-                              59%
-                            </p>
-                            <p class="text">
-                              Discount
-                            </p>
-                          </div>
-                          <div class="save">
-                            <p class="value">
-                              $1,476
-                            </p>
-                            <p class="text">
-                              SAVINGS
-                            </p>
-                          </div>
+                    <div class="buyPanel animated fadeInLeft bg-white Aligner">
+                        <div class="content">
+                            <div class="deal-content">
+                                <h3>
+                                    Sirenis Punta Cana Resort Casino
+                                </h3>
+                                <p>
+                                    Kingscliff: From $349 for a 3-Night Romantic Stay with Bottle of Wine...
+                                </p>
+                            </div>
+                            <ul class="deal-price list-unstyled list-inline">
+                                <li class="price">
+                                    <h3>
+                                        $471
+                                    </h3>
+                                </li>
+                                <li class="buy-now">
+                                    <a class="btn btn-success btn-lg btn-raised ripple-effect btn-block" data-toggle="modal" data-target="#myModal">
+                                        PLACE BID
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="dealAttributes">
+
+                                <!-- /.value info -->
+                                <div class="timeLeft text-center">
+                                    <p>
+                                        Hurry up Only a few Bid left
+                                    </p>
+                            <span class="time">
+                              <i class="ti-timer color-green">
+                              </i>
+                              <b>
+                                  50000
+                              </b>
+                              Bid limit
+                              <b>
+                                  500
+                              </b>
+                              Bid left
+                            </span>
+                                </div>
+                                <ul class="statistic list-unstyled list-inline">
+                                    <li>
+                                        <p>
+                                            <i class="ti-user">
+                                            </i>
+                                            <b>
+                                                2500
+                                            </b>
+                                            Person
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <i class="ti-tag">
+                                        </i>
+                                        <b>
+                                            8245
+                                        </b>
+                                        Bids
+                                    </li>
+                                    <li>
+                                </ul>
+                                <div class="social-sharing text-center" data-permalink="http://labs.carsonshold.com/social-sharing-buttons">
+                                    <!-- https://developers.facebook.com/docs/plugins/share-button/ -->
+                                    <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://themeforest.net/user/codenpixel" class="share-facebook">
+                              <span class="icon icon-facebook">
+                              </span>
+                              <span class="share-title">
+                                Share
+                              </span>
+                              <span class="share-count is-loaded">
+                                150
+                              </span>
+                                    </a>
+                                    <!-- https://dev.twitter.com/docs/intents -->
+                                    <a target="_blank" href="http://twitter.com/share?url=http://themeforest.net/user/codenpixel" class="share-twitter">
+                              <span class="icon icon-twitter">
+                              </span>
+                              <span class="share-title">
+                                Tweet
+                              </span>
+                              <span class="share-count is-loaded">
+                                62
+                              </span>
+                                    </a>
+
+                                </div>
+                                <!--/.social sharing -->
+                            </div>
                         </div>
-                        <div class="timeLeft text-center">
-                          <p>
-                            Požuri, DO ISTEKA PONUDE JE PREOSTALO:
-                          </p>
-                          <span class="time">
-                            <i class="ti-timer color-green">
-                            </i>
-                            <b>
-                              8
-                            </b>
-                            d. 
-                            <b>
-                              20
-                            </b>
-                            st. 
-                            <b>
-                              58
-                            </b>
-                            min.
-                          </span>
-                        </div>
-                        <div class="social-sharing text-center" data-permalink="http://labs.carsonshold.com/social-sharing-buttons">
-                          <!-- https://developers.facebook.com/docs/plugins/share-button/ -->
-                          <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://themeforest.net/user/codenpixel" class="share-facebook">
-                            <span class="icon icon-facebook">
-                            </span>
-                            <span class="share-title">
-                              Share
-                            </span>
-                            <span class="share-count is-loaded">
-                              150
-                            </span>
-                          </a>
-                          <!-- https://dev.twitter.com/docs/intents -->
-                          <a target="_blank" href="http://twitter.com/share?url=http://themeforest.net/user/codenpixel" class="share-twitter">
-                            <span class="icon icon-twitter">
-                            </span>
-                            <span class="share-title">
-                              Tweet
-                            </span>
-                            <span class="share-count is-loaded">
-                              62
-                            </span>
-                          </a>
-                          <!--
-https://developers.pinterest.com/pin_it/
-Pinterest get data from the same Open Graph meta tags Facebook uses
--->
-                        </div>
-                        <!--/.social sharing -->
-                      </div>
                     </div>
-                  </div>
                 </div>
                 <!--/inner widget -->
-                <div class="smallFrame shadow bg-white">
-                  <i class="ti-shopping-cart">
-                  </i>
-                  <div class="content">
-                    <strong>
-                      12 deals
-                    </strong>
-                    Purchased
-                  </div>
-                </div>
                 <div class="terms-and-conditions bg-white shadow mTop-20">
                   <div class="widget-inner">
                     <hr data-symbol="ADDITIONAL INFO">
@@ -1040,181 +763,12 @@ Pinterest get data from the same Open Graph meta tags Facebook uses
         </div>
       </div>
       <!-- /.CTA -->
-      <footer id="footer">
-        <div class="container">
-          <div class="col-sm-4">
-            <img src="images/logo.png" alt="#" class="img-responsive logo">
-            <p>
-              Kupon,travel deals &amp; publishing,with minimal design. We provide you with the latest fresh inspiration straight from the industrie.
-            </p>
-          </div>
-          <div class="col-sm-4">
-            <h5>
-              COMMON TAGS
-            </h5>
-            <ul class="tags">
-              <li>
-                <a href="#" class="tag">
-                  Vacation
-                </a>
-              </li>
-              <li>
-                <a href="#" class="tag">
-                  Rentals
-                </a>
-              </li>
-              <li>
-                <a href="#" class="tag">
-                  Deals
-                </a>
-              </li>
-              <li>
-                <a href="#" class="tag">
-                  Travel deals
-                </a>
-              </li>
-              <li>
-                <a href="#" class="tag">
-                  Vacation deals
-                </a>
-              </li>
-              <li>
-                <a href="#" class="tag">
-                  Adriatic coast
-                </a>
-              </li>
-              <li>
-                <a href="#" class="tag">
-                  Europe
-                </a>
-              </li>
-              <li>
-                <a href="#" class="tag">
-                  Island
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-sm-2">
-            <h5>
-              CATEGORIES
-            </h5>
-            <ul class="list-unstyled">
-              <li>
-                Vacation Deals
-              </li>
-              <li>
-                Online Deals
-              </li>
-              <li>
-                Digital goods
-              </li>
-              <li>
-                Travel Deals
-              </li>
-              <li>
-                Hotel deals
-              </li>
-              <li>
-                Featured
-              </li>
-              <li>
-                All Categories ..
-              </li>
-            </ul>
-          </div>
-          <div class="col-sm-2">
-            <h5>
-              ABOUT US
-            </h5>
-            <ul class="list-unstyled">
-              <li>
-                Available Jobs
-              </li>
-              <li>
-                Sumbit Deal
-              </li>
-              <li>
-                Contact Us
-              </li>
-              <li>
-                History
-              </li>
-              <li>
-                Impressium
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="btmFooter">
-          <div class="container">
-            <div class="col-sm-7">
-              <p>
-                <strong>
-                  Copyright 2015 
-                </strong>
-                Kupon- deals and Coupons template made with
-                <i class="ti-heart">
-                </i>
-                <strong>
-                  by Codenpixel
-                </strong>
-              </p>
-            </div>
-            <div class="col-sm-5">
-              <ul class="pay-opt pull-right list-inline list-unstyled">
-                <li>
-                  <a href="#" title="#">
-                    <img src="images/amz-icon.png" class="img-responsive" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#">
-                    <img src="images/paypal-icon.png" class="img-responsive" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#">
-                    <img src="images/ax-icon.png" class="img-responsive" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#">
-                    <img src="images/mb-icon.png" class="img-responsive" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#">
-                    <img src="images/mst-icon.png" class="img-responsive" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#">
-                    <img src="images/mstr-icon.png" class="img-responsive" alt="">
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <?php include "includes/bidpop.php"; ?>
+      <?php include "includes/footer.php"; ?>
   </div>
   <!-- /animitsion -->
   <!-- JS files -->
-  <script src="js/jquery.min.js">
-  </script>
-  <script src="js/kupon.js">
-  </script>
-  <script src="js/bootstrap.min.js">
-  </script>
-  <script src="js/jquery.animsition.min.js">
-  </script>
-  <script src="owl.carousel/owl.carousel.js">
-  </script>
-  <script src="js/jquery.flexslider-min.js">
-  </script>
-  <script src="js/plugins.js">
-  </script>
+    <?php include "includes/js.php"; ?>
   
   </body>
   
