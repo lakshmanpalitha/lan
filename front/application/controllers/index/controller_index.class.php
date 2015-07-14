@@ -16,7 +16,14 @@ class index extends controller {
         $login_model_bid = $this->loadModel('bid');
         $this->view->categorys = $login_model_bid->activeCategory();
         $this->view->bid_products = $login_model_bid->bidProduts();
-        $this->view->render('index/index', false, false, $this->module);
+        $this->view->render('bid/bid_home', false, false, $this->module);
+    }
+
+    function detail() {
+        $login_model_bid = $this->loadModel('bid');
+        $this->view->categorys = $login_model_bid->activeCategory();
+        $this->view->bid_products = $login_model_bid->bidProduts();
+        $this->view->render('bid/bid_detail', false, false, $this->module);
     }
 
     function jsonProductBid($product_id = null) {
@@ -46,7 +53,7 @@ class index extends controller {
                     $bid['status'] = 'A';
                     $bid['type'] = 'C';
                     $bid['count'] = $pro_bid->bid_allow_time;
-                    $bid['bid_count_left'] = ($pro_bid->bid_allow_time-$pro_bid->bid_count);
+                    $bid['bid_count_left'] = ($pro_bid->bid_allow_time - $pro_bid->bid_count);
                 }
                 array_push($pro_bid_array, $bid);
             }

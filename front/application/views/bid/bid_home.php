@@ -131,7 +131,7 @@
                                 <div class="col-sm-6">
                                     <div class="deal-entry green">
                                         <div class="image ripple-effect">
-                                            <a href="#" target="_blank" title="#">
+                                            <a href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/" target="_blank" title="#">
                                                 <img src="<?php echo URL ?>public/uploads/product/large/<?php echo $pro->def_image ?>" alt="#" class="img-responsive">
                                             </a>
                                             <span class="bought">
@@ -140,7 +140,7 @@
                                         </div>
                                         <!-- /.image -->
                                         <div class="title">
-                                            <a href="#" target="_blank" title="ATLETIKA 3 mēnešu abonements">
+                                            <a href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/" target="_blank" title="ATLETIKA 3 mēnešu abonements">
                                                 <?php echo $pro->product_name ?>
                                             </a>
                                         </div>
@@ -153,11 +153,11 @@
                                         <footer class="info_bar clearfix">
                                             <ul class="unstyled list-inline row">
                                                 <li id="index_pro_timer_<?php echo $pro->product_id ?>" class="time col-sm-7 col-xs-6 col-lg-8"> 
-                                                   
+
                                                 </li>
 
                                                 <li class="info_link col-sm-5 col-xs-6 col-lg-4">
-                                                    <a id="index_pro_button_<?php echo $pro->product_id ?>" href="details_2.html" class="btn btn-block btn-default btn-raised btn-sm">
+                                                    <a id="index_pro_button_<?php echo $pro->product_id ?>" href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/" class="btn btn-block btn-default btn-raised btn-sm">
                                                         Bid Now
                                                     </a>
                                                 </li>
@@ -217,7 +217,7 @@
                                                     </i>
                                                     <?php echo $cat->category_name ?>
                                                     <span class="sidebar-badge">
-                                                         <?php echo $cat->pro_count ?>
+                                                        <?php echo $cat->pro_count ?>
                                                     </span>
                                                 </a>
                                             </li>    
@@ -381,5 +381,9 @@
 
 
     </body>
-
+    <script>
+        $(document).ready(function() {
+            bid_info();
+        });
+    </script>
 </html>

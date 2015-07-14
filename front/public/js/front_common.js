@@ -1,48 +1,11 @@
 
-$(document).ready(function() {
+function bid_info() {
     try {
         setInterval(function() {
             var nURL = URL + MODULE + "/index/jsonProductBid/";
             var param = '';
             ajaxRequest(nURL, param, null, function(responseText) {
-                try {
-                    if (responseText)
-                        var jsonData = JSON.parse(responseText);
-                    if (jsonData) {
-                        if (jsonData.success == true) {
-                            for (var i in jsonData.data) {
-                                var time_string = '';
-                                if (jsonData.data[i].status == 'A') {
-                                    if (jsonData.data[i].type == 'T') {
-                                        var bid_time = jsonData.data[i].count;
-                                        var arr = bid_time.split(':');
-                                        var days = (Math.floor(arr[0] / 24));
-                                        var hours = (arr[0] % 24);
-                                        var min = arr[1];
-                                        var sec = arr[2];
-                                        time_string = '<i class="ti-timer color-green"></i>' + (days > 0 ? "'<b>' + days + '</b>d." : "") + '<b>' + hours + '</b>st.<b>' + min + '</b>min.<b>' + sec + '</b>sec.';
-
-                                    } else {
-                                        time_string = '<i class="ti-timer color-green"></i><b>' + jsonData.data[i].count + '</b> Bid limit <b>' + jsonData.data[i].bid_count_left + '</b> Bid left';
-                                    }
-                                } else {
-                                    time_string = "<p>Bid Closed</p>";
-                                    document.getElementById("index_pro_button_" + jsonData.data[i].id).style.display = "none";
-                                    document.getElementById("sidebar_pro_button_" + jsonData.data[i].id).style.display = "none";
-                                }
-                                if ($("#sidebar_pro_timer_" + jsonData.data[i].id).length > 0) {
-                                    $("#sidebar_pro_timer_" + jsonData.data[i].id).html(time_string);
-                                }
-                                if ($("#index_pro_timer_" + jsonData.data[i].id).length > 0) {
-                                    $('#index_pro_timer_' + jsonData.data[i].id).html(time_string);
-                                }
-                            }
-                        }
-                    }
-                } catch (err) {
-                    alert(err.message);
-                    return false;
-                }
+                bid_info_print(responseText);
             });
         }, 1000);
     } catch (err) {
@@ -50,7 +13,68 @@ $(document).ready(function() {
         return false;
     }
 
-});
+}
+function bid_info_each(val) {
+    try {
+        setInterval(function() {
+            var nURL = URL + MODULE + "/index/jsonProductBid/" + val + "/";
+            var param = '';
+            ajaxRequest(nURL, param, null, function(responseText) {
+                bid_info_print(responseText);
+            });
+        }, 1000);
+    } catch (err) {
+        alert(err.message);
+        return false;
+    }
+
+}
+function bid_info_print(responseText) {
+    try {
+        if (responseText)
+            var jsonData = JSON.parse(responseText);
+        if (jsonData) {
+            if (jsonData.success == true) {
+                for (var i in jsonData.data) {
+                    var time_string = '';
+                    if (jsonData.data[i].status == 'A') {
+                        if (jsonData.data[i].type == 'T') {
+                            var bid_time = jsonData.data[i].count;
+                            var arr = bid_time.split(':');
+                            var days = (Math.floor(arr[0] / 24));
+                            var hours = (arr[0] % 24);
+                            var min = arr[1];
+                            var sec = arr[2];
+                            time_string = '<i class="ti-timer color-green"></i>' + (days > 0 ? "'<b>' + days + '</b>d." : "") + '<b>' + hours + '</b>st.<b>' + min + '</b>min.<b>' + sec + '</b>sec.';
+
+                        } else {
+                            time_string = '<i class="ti-timer color-green"></i><b>' + jsonData.data[i].count + '</b> Bid limit <b>' + jsonData.data[i].bid_count_left + '</b> Bid left';
+                        }
+                    } else {
+                        time_string = "<p>Bid Closed</p>";
+                        if ($("#index_pro_button_" + jsonData.data[i].id).length > 0) {
+                            document.getElementById("index_pro_button_" + jsonData.data[i].id).style.display = "none";
+                        }
+                        if ($("#sidebar_pro_button_" + jsonData.data[i].id).length > 0) {
+                            document.getElementById("sidebar_pro_button_" + jsonData.data[i].id).style.display = "none";
+                        }
+
+
+                    }
+                    if ($("#sidebar_pro_timer_" + jsonData.data[i].id).length > 0) {
+                        $("#sidebar_pro_timer_" + jsonData.data[i].id).html(time_string);
+                    }
+                    if ($("#index_pro_timer_" + jsonData.data[i].id).length > 0) {
+                        $('#index_pro_timer_' + jsonData.data[i].id).html(time_string);
+                    }
+                }
+            }
+        }
+    } catch (err) {
+        alert(err.message);
+        return false;
+    }
+}
 //$(document).ready(function() {
 //    var objs = $(".fright");
 //
