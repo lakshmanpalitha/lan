@@ -31,7 +31,7 @@
 
                             <div class="form-group">
                                 <label>
-                                    Username
+                                    Name
                                 </label>
                                 <input type="" name="" class="form-control" id="" value="">
                             </div>
@@ -63,16 +63,6 @@
                                 </label>
                                 <input type="" name="" class="form-control" id="" value="">
                             </div>
-
-
-                            <div class="col-sm-6">
-                                <input type="checkbox" class="checkbox pull-left" />Sigh up for our newsletter
-                            </div>
-
-                            <div class="col-sm-6">
-                                <input type="checkbox" class="checkbox pull-left" />Send notifications to this email
-                            </div>
-
 
                         </div>
 
