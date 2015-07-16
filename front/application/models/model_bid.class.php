@@ -19,6 +19,7 @@ class bidModel extends model {
                 pro.product_video_link,
                 pro.product_short_description,
                 pro.product_bid_type,
+                pro.product_description,
                 (select 
                     GROUP_CONCAT(pimg.image_name SEPARATOR ', ')
                  FROM 

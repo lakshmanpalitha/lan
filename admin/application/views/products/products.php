@@ -216,12 +216,13 @@
                         </div>
                         <form id="product_desc">
                             <div class="modal-body">
-                                <textarea  name="product_desc" id="editor">adad</textarea>
+                                <textarea  name="product_desc" id="editor"></textarea>
+                                <input type="hidden" name="desc_modal_pro_id" value="" id="desc_modal_pro_id">
                             </div>
                         </form>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button onclick="addProductDesc()" type="button" class="btn btn-primary">Save changes</button>
+                            <button onclick="addProductDesc(document.getElementById('desc_modal_pro_id').value)" type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                     <!-- /.modal-content -->

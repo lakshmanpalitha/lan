@@ -264,10 +264,10 @@ class products extends controller {
         $valid = true;
         if (!$product_id = $this->read->get("product_id", "POST", 'INT', 11, true))
             $valid = false;
-        if (!$product_desc = $this->read->get("product_desc", "POST", '', 5000, false))
+        if (!$product_desc = $this->read->get("product_desc", "POST", '', 10000, false))
             $valid = false;
         if ($valid) {
-            $res = $login_model->addProductDesc($product_id, $product_desc);
+            $res = $login_model->addProductDesc($product_id, rawurldecode($product_desc));
             $product_desc = $login_model->getProductDesc($product_id);
         }
         $data = array('success' => true, 'data' => $product_desc, 'error' => $this->view->renderFeedbackMessagesForJson());

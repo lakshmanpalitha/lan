@@ -149,7 +149,7 @@ function viewProducts(responseText) {
                 if (document.getElementById('new_product')) {
                     document.getElementById("new_product").reset();
                 }
-           
+
             } else {
                 if (document.getElementById('error_msg'))
                     document.getElementById('error_msg').innerHTML = jsonData.error;
@@ -274,7 +274,7 @@ function changeProductState(e) {
             params = params + "&action=" + e;
             var nURL = URL + "admin/products/changeProductState/";
             xmlRequest(nURL, params, null, function(responseText) {
-               viewProducts(responseText);
+                viewProducts(responseText);
             });
         }
     } catch (err) {
@@ -345,31 +345,32 @@ function createNewProduct() {
 }
 
 function showProductDesc(val) {
-    try {
 
-        if (document.getElementById('editor'))
-            document.getElementById('editor').innerHTML = '';
+    try {
+        var editor = CKEDITOR.instances['editor'];
+        if (!editor) {
+            initSample();
+        }
+        document.getElementById('desc_modal_pro_id').value = val;
         loading('editor');
         $('#model_desc').modal('show', {backdrop: 'static'});
         var params = 'product_id=' + val;
         var nURL = URL + "admin/products/jsonGetProductDesc/";
         xmlRequest(nURL, params, null, function(responseText) {
+            endLoading('editor');
             viewProductDesc(responseText);
         });
-
-
-
     } catch (err) {
         endLoading('editor');
         alert(err.message);
         return false;
     }
 }
-function addProductDesc() {
+function addProductDesc(val) {
     try {
-        var params = "product_desc=" + document.getElementById('editor').value;
+        var params = "product_id=" + val + "&product_desc=" + escape(CKEDITOR.instances["editor"].getData());
         var nURL = URL + "admin/products/addProductDesc/";
-        xmlRequest(nURL, params, null, function(responseText) {
+        xmlRequest((nURL), (params), null, function(responseText) {
             viewProductDesc(responseText);
         });
     }
@@ -386,10 +387,9 @@ function viewProductDesc(responseText) {
         if (jsonData) {
             if (jsonData.success == true) {
                 if (document.getElementById('editor'))
-                    document.getElementById('editor').innerHTML = jsonData.data;
+                    CKEDITOR.instances["editor"].setData(jsonData.data)
             }
         }
-        initSample(jsonData.data);
     } catch (err) {
         endLoading('editor');
         alert(err.message);
