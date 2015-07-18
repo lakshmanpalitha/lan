@@ -2,11 +2,18 @@
 
 class bidModel extends model {
 
-    function bidProduts($product_id = null) {
+    function bidProduts($product_id = null, $category = null, $key = null) {
         $where = null;
         if ($product_id) {
-            $where = "AND product_id='" . mysql_real_escape_string($product_id) . "'";
+            $where = "AND pro.product_id='" . mysql_real_escape_string($product_id) . "'";
         }
+        if ($category) {
+            $where.= ($where ? "AND " : "") . "pro.category_id='" . mysql_real_escape_string($category) . "'";
+        }
+        if ($key) {
+            $where.= ($where ? "AND " : "") . "pro.product_name LIKE '%" . mysql_real_escape_string($key) . "%'";
+        }
+
         $query = "
             SELECT 
                 pro.product_id,
@@ -58,7 +65,7 @@ class bidModel extends model {
     }
 
     function checkProductBidTime($product_id = null) {
-        $where='';
+        $where = '';
         if ($product_id) {
             $where = "pro.product_id='" . mysql_real_escape_string($product_id) . "' AND";
         }
@@ -73,14 +80,13 @@ class bidModel extends model {
             FROM 
                 tbl_product pro
             WHERE 
-                ".($where ? $where : '')."
+                " . ($where ? $where : '') . "
                 pro.product_status='A'
                 AND pro.product_bid_status='R'";
 
         $result = $this->db->queryMultipleObjects($query);
         return ($result ? $result : false);
     }
-  
 
 }
 

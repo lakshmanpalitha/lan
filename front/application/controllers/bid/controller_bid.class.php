@@ -19,6 +19,13 @@ class bid extends controller {
         $this->view->render('bid/bid_detail', false, false, $this->module);
     }
 
+    function listing() {
+        $login_model_bid = $this->loadModel('bid');
+        $this->view->categorys = $login_model_bid->activeCategory();
+        $this->view->bid_products = $login_model_bid->bidProduts();
+        $this->view->render('bid/bid_listing', false, false, $this->module);
+    }
+
 }
 
 ?>
