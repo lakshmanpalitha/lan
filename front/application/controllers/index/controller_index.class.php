@@ -39,7 +39,7 @@ class index extends controller {
                         $bid['id'] = $pro_bid->pro_id;
                         $bid['status'] = 'A';
                         $bid['type'] = 'T';
-                        $bid['count'] = date("H:i:s", $available_time);
+                        $bid['count'] = $login_model_bid->time($available_time);
                         $bid['bid_count_left'] = '-';
                     } else {
                         $bid['id'] = $pro_bid->pro_id;

@@ -2,7 +2,7 @@
 
 
 .deal-price .price p{
-	display: inline-block;
+    display: inline-block;
     font-family: Roboto,sans-serif;
     font-size: 12px;
     font-weight: 300;
@@ -18,13 +18,32 @@
 }
 
 .entry-content .time{
-	font-size: 16px;
-	}
-	
+    font-size: 16px;
+}
+
 .entry-content .time{
-	font-size: 16px;
-	
-	}
+    font-size: 16px;
+
+}
+#loding_img{
+    padding: 10px;
+    text-align: center;
+}
+#loding_img img{
+    height: 16px !important;
+    padding: 0 !important;
+}
+#bid_msg{
+    text-align: center;
+    padding: 50px;
+}
+
+#bid_interval{
+    font-weight: bold;
+    font-size: 36px; 
+    text-align: center;
+    padding: 50px;
+}
 
 
 

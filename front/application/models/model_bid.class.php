@@ -8,10 +8,10 @@ class bidModel extends model {
             $where = "AND pro.product_id='" . mysql_real_escape_string($product_id) . "'";
         }
         if ($category) {
-            $where.= ($where ? "AND " : "") . "pro.category_id='" . mysql_real_escape_string($category) . "'";
+            $where.= "AND pro.category_id='" . mysql_real_escape_string($category) . "'";
         }
         if ($key) {
-            $where.= ($where ? "AND " : "") . "pro.product_name LIKE '%" . mysql_real_escape_string($key) . "%'";
+            $where.= "AND pro.product_name LIKE '%" . mysql_real_escape_string($key) . "%'";
         }
 
         $query = "
@@ -86,6 +86,86 @@ class bidModel extends model {
 
         $result = $this->db->queryMultipleObjects($query);
         return ($result ? $result : false);
+    }
+
+    function addBid($bid) {
+        if (!empty($bid)) {
+            $result2 = false;
+            $primaryKey = $this->primaryKeyGenarator('tbl_bid', 'bid_id');
+            if ($primaryKey) {
+                $query = "
+            INSERT INTO 
+            tbl_bid(bid_id,product_id,user_id,bid_price,bid_time,bid_status)
+            VALUES(
+            '" . mysql_real_escape_string($primaryKey) . "',
+                '" . mysql_real_escape_string($bid[1]) . "',
+                    '" . mysql_real_escape_string(session::get('user_id')) . "',
+                        '" . mysql_real_escape_string($bid[0]) . "',
+                            NOW(),
+                       'A'
+            )";
+                $result = $this->db->execute($query);
+                if ($result) {
+                    $query2 = "UPDATE tbl_reg_users SET user_last_bid_time=NOW() WHERE user_id='" . session::get('user_id') . "'";
+                    $result2 = $this->db->execute($query2);
+                }
+                return ($result2 ? true : false);
+            }
+            return false;
+        }
+    }
+
+    function userPerProducBid($product_id = null, $user_id = null) {
+        if ($product_id && $user_id) {
+            $qry = "
+            SELECT 
+                COUNT(bid_id)              
+            FROM 
+                tbl_bid 
+            WHERE 
+                product_id='" . $product_id . "'
+                AND user_id='" . $user_id . "'
+                AND bid_status='A'";
+            $result = $this->db->queryUniqueValue($qry);
+            return ($result ? $result : false);
+        }
+        return false;
+    }
+
+    function userTotBid($user_id = null) {
+        if ($user_id) {
+            $qry = "
+            SELECT 
+                COUNT(bid_id)           
+            FROM 
+                tbl_bid 
+            WHERE 
+                user_id='" . $user_id . "'
+                AND bid_status='A'";
+            $result = $this->db->queryUniqueValue($qry);
+            return ($result ? $result : false);
+        }
+        return false;
+    }
+
+    function productInterval($product_id = null) {
+        if ($product_id) {
+            $qry = "
+            SELECT 
+                product_bid_interval              
+            FROM 
+                tbl_product 
+            WHERE 
+                product_id='" . $product_id . "'
+                AND bid_status='R'";
+            $result = $this->db->queryUniqueValue($qry);
+            return ($result ? $result : false);
+        }
+        return false;
+    }
+    
+    function calTime($sec){
+        return $this->time($sec);
     }
 
 }

@@ -11,12 +11,13 @@ date_default_timezone_set("Asia/Calcutta");
 /**
  * Configuration for: Base URL
  */
-define('BACKEND', 'admin/');
-define('FRONTEND', 'front/');
 
-define('URL', '//localhost/lansuwa/');
-define('FILE_URL', '//localhost/lansuwa/');
-define('DOC_PATH', 'D:/xampp/htdocs/lansuwa/');
+define('BACKEND','admin/');
+define('FRONTEND','front/');
+
+define('URL', '//microsola.com/preview/lansuwa/');
+define('FILE_URL', '//microsola.com/preview/lansuwa/');
+define('DOC_PATH', '/home2/microsq0/public_html/preview/lansuwa/');
 
 /**
  * Configuration for: Folders
@@ -39,10 +40,10 @@ define('COOKIE_DOMAIN', '.localhost');
  * Configuration for: Database
  */
 define('DB_TYPE', 'mysql');
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'db_lansuwa');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'microsq0_lansuwa');
+define('DB_USER', 'microsq0_preview');
+define('DB_PASS', 'lanka1234');
 
 
 
@@ -93,10 +94,6 @@ define("PRO_THUMB_UPLOAD_PATH", DOC_PATH . "public/uploads/product/thumb/");
 define("PRO_MEDIUM_UPLOAD_PATH", DOC_PATH . "public/uploads/product/medium/");
 define("PRO_ALLOW_THUMB", true);
 define("PRO_ALLOW_MEDIUM", true);
-
-define("DEFAULT_ALLOW_BID_PER_PRODUCT", 10);
-define("DEFAULT_TOTAL_ALLOW_BID", 100);
-define("DEFAULT_BID_INTERVAL",  60);
 
 
 

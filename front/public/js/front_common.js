@@ -9,7 +9,7 @@ function bid_info() {
             });
         }, 1000);
     } catch (err) {
-        alert(err.message);
+        //alert(err.message);
         return false;
     }
 
@@ -24,7 +24,7 @@ function bid_info_each(val) {
             });
         }, 1000);
     } catch (err) {
-        alert(err.message);
+        //alert(err.message);
         return false;
     }
 
@@ -71,7 +71,7 @@ function bid_info_print(responseText) {
             }
         }
     } catch (err) {
-        alert(err.message);
+        //alert(err.message);
         return false;
     }
 }
@@ -158,31 +158,54 @@ function xmlRequest(URL, param, div, returnFunc)
     try {
         xmlhttp.send(param); //here a xmlhttprequestexception number 101 is thrown 
     } catch (err) {
-        alert('XMLHttprequest error: " + err.description + "');
+        //alert('XMLHttprequest error: " + err.description + "');
         //this prints "XMLHttprequest error: undefined" in the body.
     }
 }
 
-function ajaxRequest(URL, param, div, returnFunc)
+function ajaxRequest(URL, param, returnFunc)
 {
-    $.ajax({
+    jQuery.ajax({
         url: URL,
         data: param,
-        // THIS MUST BE DONE FOR FILE UPLOADING
         type: 'POST',
-        processData: false,
-        contentType: false,
+        timeout: 10000,
+        async: true,
         success: function(data) {
-            if (typeof returnFunc === 'function') {
-                returnFunc(data);
+            try {
+                if (typeof returnFunc === 'function') {
+                    if (data) {
+                        returnFunc(JSON.parse(data));
+                    } else {
+                        returnFunc();
+                    }
+                }
+            }
+            catch (err) {
+                alert(err.message);
+                return false;
             }
         },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(xhr.status + thrownError);
+        error: function(request, status, error) {
+            alert(request.responseText);
         }
+
     })
 }
 
+function loading(div) {
+    if (document.getElementById(div)) {
+        document.getElementById(div).innerHTML = '';
+        document.getElementById(div).innerHTML = '<div id="loding_img"><img src="' + URL + 'public/img/loading.gif"/></div>';
+
+    }
+}
+function endLoading(div) {
+    if (document.getElementById(div)) {
+        document.getElementById(div).innerHTML = '';
+    }
+    return true;
+}
 
 
 

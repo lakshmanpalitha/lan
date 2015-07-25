@@ -2,7 +2,7 @@
 
 class usersModel extends model {
 
-    function log($email = null, $pass = null) {
+    function login($email = null, $pass = null) {
         if (!$email || !$pass)
             return false;
 
@@ -21,7 +21,7 @@ class usersModel extends model {
             session::setError("feedback_negative", FEEDBACK_FIELD_NOT_VALID);
             return false;
         }
-        if ($user->user_sataus === 'I') {
+        if ($user->user_status === 'I') {
             session::setError("feedback_negative", FEEDBACK_FIELD_USER_INACTIVE);
             return false;
         }
@@ -39,6 +39,45 @@ class usersModel extends model {
                 user_id='" . $user->user_id . "'";
         $result = $this->db->execute($updateQuery);
         return true;
+    }
+
+    function register($user) {
+        $primaryKey = $this->primaryKeyGenarator('tbl_reg_users', 'user_id');
+        if ($primaryKey) {
+            $query = "
+            INSERT INTO 
+            tbl_reg_users(user_id,user_f_name,user_email,user_pasword,user_reg_date,user_status)
+            VALUES(
+            '" . mysql_real_escape_string($primaryKey) . "',
+                '" . mysql_real_escape_string($user[0]) . "',
+                    '" . mysql_real_escape_string($user[1]) . "',
+                        '" . mysql_real_escape_string(md5($user[2])) . "',
+                            NOW(),
+                       'A'
+            )";
+            $result = $this->db->execute($query);
+            return ($result ? true : false);
+        }
+        return false;
+    }
+
+    function userBidSetting($user_id = null) {
+        $user = (session::get('user_id')) ? session::get('user_id') : false;
+        if ($user_id && $user) {
+            $query = "
+            SELECT 
+                user_allow_bid_per_product,
+                user_allow_tot_bid,
+                TIME_TO_SEC(TIMEDIFF(NOW(),user_last_bid_time)) AS user_bid_interval
+            FROM 
+                tbl_reg_users 
+            WHERE 
+                user_id='" . $user . "' 
+                AND user_status IN('A')";
+            $result = $this->db->queryUniqueObject($query);
+            return ($result ? $result : false);
+        }
+        return false;
     }
 
 }

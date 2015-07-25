@@ -13,7 +13,7 @@ class model extends common {
 
         $this->read = new read();
         $this->session = new session();
-        $this->email = new PHPMailer();
+        // $this->email = new PHPMailer();
         $this->arr = array();
     }
 
@@ -108,15 +108,28 @@ class model extends common {
 
         if ($res === null) {
             $key = 1;
-            $key = str_pad($key, 3, "0", STR_PAD_LEFT);
+            $key = str_pad($key, 5, "0", STR_PAD_LEFT);
             return $key ? $key : false;
         } else if ($res) {
             $key = (int) ($res);
             $key+=1;
-            $key = str_pad($key, 3, "0", STR_PAD_LEFT);
+            $key = str_pad($key, 5, "0", STR_PAD_LEFT);
             return $key ? $key : false;
         }
         return false;
+    }
+
+    function time($seconds) {
+
+        $hours = floor($seconds / 3600);
+        $mins = floor(($seconds - $hours * 3600) / 60);
+        $s = $seconds - ($hours * 3600 + $mins * 60);
+
+        $mins = ($mins < 10 ? "0" . $mins : "" . $mins);
+        $s = ($s < 10 ? "0" . $s : "" . $s);
+
+        $time = ($hours > 0 ? $hours . ":" : "00:") . ($mins > 0 ? $mins : '00') . ":" . $s;
+        return $time;
     }
 
 }

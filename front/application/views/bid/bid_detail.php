@@ -112,7 +112,7 @@
                                                 </h3>
                                             </li>
                                             <li class="buy-now">
-                                                <a id="index_pro_button_<?php echo $this->bid_product[0]->product_id ?>" class="btn btn-success btn-lg btn-raised ripple-effect btn-block" data-toggle="modal" data-target="#myModal">
+                                                <a onclick="showAjaxModal('<?php echo base64_encode($this->bid_product[0]->product_id) ?>')" id="index_pro_button_<?php echo $this->bid_product[0]->product_id ?>" class="btn btn-success btn-lg btn-raised ripple-effect btn-block">
                                                     PLACE BID
                                                 </a>
                                             </li>
@@ -367,9 +367,107 @@
 
     </body>
     <script>
-        $(document).ready(function() {
-            bid_info_each('<?php echo $this->bid_product[0]->product_id ?>');
-        });
+                                                $(document).ready(function() {
+                                                    //bid_info_each('<?php echo $this->bid_product[0]->product_id ?>');
+                                                });
+
+                                                var interval;
+                                                function showAjaxModal(val)
+                                                {
+                                                    loading('bid_popup_body');
+                                                    $('#bid_model').modal('show', {backdrop: 'static'});
+                                                    $("#pro-id").val(val);
+                                                    bidCheck(val);
+
+                                                }
+
+                                                function bidCheck(val)
+                                                {
+                                                    var nURL = "<?php echo URL . FRONTEND ?>users/jsonCheckAccess/" + val + "/";
+                                                    var param = '';
+                                                    ajaxRequest(nURL, param, function(jsonData) {
+                                                        if (jsonData) {
+                                                            endLoading('bid_popup_body');
+                                                            if (jsonData.success == true) {
+                                                                $('#bid_popup_body').html(jsonData.data)
+                                                                if (jsonData.recall == 'Y') {
+                                                                    interval = setInterval(bidInterval, 1000);
+                                                                }
+                                                            } else {
+                                                                $('#bid_popup_body').html(jsonData.error)
+                                                            }
+                                                        }
+                                                    });
+                                                }
+                                                function bidInterval() {
+                                                    var val = $("#pro-id").val();
+                                                    var nURL = "<?php echo URL . FRONTEND ?>users/jsonBidInterval/" + val + "/";
+                                                    var param = '';
+                                                    ajaxRequest(nURL, param, function(jsonData) {
+                                                        if (jsonData) {
+                                                            endLoading('bid_popup_body');
+                                                            if (jsonData.success == true) {
+                                                                if (jsonData.data == 0) {
+                                                                    clearInterval(interval);
+                                                                    bidCheck(val);
+                                                                } else {
+                                                                    $('#bid_popup_body').html(jsonData.data)
+                                                                }
+                                                            } else {
+                                                                clearInterval(interval);
+                                                                $('#bid_popup_body').html(jsonData.error)
+                                                            }
+                                                        }
+                                                    });
+                                                }
+                                                function login() {
+                                                    var pro_id = $("#pro-id").val();
+                                                    var nURL = "<?php echo URL . FRONTEND ?>users/jsonLogin/" + pro_id + "/";
+                                                    var param = $('#user_login_form').serialize();
+                                                    ajaxRequest(nURL, param, function(jsonData) {
+                                                        if (jsonData) {
+                                                            if (jsonData.success == true) {
+                                                                bidCheck(pro_id);
+                                                            }
+                                                        }
+                                                    });
+                                                }
+
+                                                $('#bid_price').keypress(function(event) {
+                                                    if ((event.which != 46 || $(this).val().indexOf('.') != -1) &&
+                                                            ((event.which < 48 || event.which > 57) &&
+                                                                    (event.which != 0 && event.which != 8))) {
+                                                        event.preventDefault();
+                                                    }
+
+                                                    var text = $(this).val();
+                                                    if (text.length > 7 && event.which != 0 && event.which != 8) {
+                                                        event.preventDefault();
+                                                    } else
+                                                    if ((text.indexOf('.') != -1) &&
+                                                            (text.substring(text.indexOf('.')).length > 1) &&
+                                                            (event.which != 0 && event.which != 8)) {
+                                                        var num = text.split(".");
+                                                        $(this).val(num[0] + "." + (num[1] * 10));
+                                                        event.preventDefault();
+
+                                                    }
+                                                });
+
+                                                function bidnow() {
+                                                    var nURL = "<?php echo URL . FRONTEND ?>users/userBid/";
+                                                    var param = $('#user_bid_form').serialize();
+                                                    ajaxRequest(nURL, param, function(jsonData) {
+                                                        if (jsonData) {
+                                                            if (jsonData.success == true) {
+                                                                $('#bid_popup_body').html(jsonData.data)
+                                                            } else {
+                                                                $('#bid_popup_body').html(jsonData.error)
+                                                            }
+                                                        }
+                                                    });
+                                                }
+
     </script>
 
     <!-- Mirrored from pamukovic.com/demo/kupon/details.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jun 2015 05:35:04 GMT -->
