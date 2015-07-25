@@ -157,14 +157,15 @@ class bidModel extends model {
                 tbl_product 
             WHERE 
                 product_id='" . $product_id . "'
-                AND bid_status='R'";
+                AND product_status='A'
+                AND product_bid_status='R'";
             $result = $this->db->queryUniqueValue($qry);
             return ($result ? $result : false);
         }
         return false;
     }
-    
-    function calTime($sec){
+
+    function calTime($sec) {
         return $this->time($sec);
     }
 

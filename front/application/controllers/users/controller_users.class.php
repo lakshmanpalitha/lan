@@ -273,7 +273,6 @@ class users extends controller {
         if ($valid) {
             $product_id = base64_decode($product_id);
             if ($bid_price > 0) {
-
                 $bid_valid = $this->check_per_bid_allow($product_id);
                 if ($bid_valid) {
                     $bid_valid = $this->check_bid_interval_allow($product_id);
