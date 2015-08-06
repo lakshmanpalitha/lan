@@ -131,7 +131,7 @@
                                 <div class="col-sm-6">
                                     <div class="deal-entry green">
                                         <div class="image ripple-effect">
-                                            <a href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/" target="_blank" title="#">
+                                            <a href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/" title="#">
                                                 <img src="<?php echo URL ?>public/uploads/product/large/<?php echo $pro->def_image ?>" alt="#" class="img-responsive">
                                             </a>
                                             <span class="bought">
@@ -140,7 +140,7 @@
                                         </div>
                                         <!-- /.image -->
                                         <div class="title">
-                                            <a href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/" target="_blank" title="ATLETIKA 3 mēnešu abonements">
+                                            <a href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/"  title="ATLETIKA 3 mēnešu abonements">
                                                 <?php echo $pro->product_name ?>
                                             </a>
                                         </div>

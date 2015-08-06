@@ -38,6 +38,17 @@ class usersModel extends model {
         $result = $this->db->queryMultipleObjects($get_qry);
         return ($result ? $result : false);
     }
+       function getRegisterUsers() {
+        $get_qry = "
+            SELECT 
+                * 
+            FROM 
+                tbl_reg_users
+            WHERE 
+                user_status NOT IN('D')";
+        $result = $this->db->queryMultipleObjects($get_qry);
+        return ($result ? $result : false);
+    }
 
     function changeSystemUserStatus($status = 'A', $sysUserIdArray = null) {
         $sysUserArray = array();

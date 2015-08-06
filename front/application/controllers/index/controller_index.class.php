@@ -27,6 +27,7 @@ class index extends controller {
     }
 
     function jsonProductBid($product_id = null) {
+        $product_id = base64_decode($product_id);
         $login_model_bid = $this->loadModel('bid');
         $pro_bid_time = $login_model_bid->checkProductBidTime($product_id);
         $bid = array();
@@ -49,11 +50,20 @@ class index extends controller {
                         $bid['bid_count_left'] = '-';
                     }
                 } else {
-                    $bid['id'] = $pro_bid->pro_id;
-                    $bid['status'] = 'A';
-                    $bid['type'] = 'C';
-                    $bid['count'] = $pro_bid->bid_allow_time;
-                    $bid['bid_count_left'] = ($pro_bid->bid_allow_time - $pro_bid->bid_count);
+                    $bid_allow_count = (($pro_bid->bid_allow_time - $pro_bid->bid_count));
+                    if ($bid_allow_count > 0) {
+                        $bid['id'] = $pro_bid->pro_id;
+                        $bid['status'] = 'A';
+                        $bid['type'] = 'C';
+                        $bid['count'] = $pro_bid->bid_allow_time;
+                        $bid['bid_count_left'] = ($bid_allow_count > 0 ? $bid_allow_count : 0);
+                    } else {
+                        $bid['id'] = $pro_bid->pro_id;
+                        $bid['status'] = 'N';
+                        $bid['type'] = '-';
+                        $bid['count'] = '-';
+                        $bid['bid_count_left'] = '-';
+                    }
                 }
                 array_push($pro_bid_array, $bid);
             }
