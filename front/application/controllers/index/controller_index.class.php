@@ -18,6 +18,9 @@ class index extends controller {
         $this->view->bid_products = $login_model_bid->bidProduts();
         $this->view->render('bid/bid_home', false, false, $this->module);
     }
+    function contact() {
+        $this->view->render('pages/contact', false, false, $this->module);
+    }
 
     function detail() {
         $login_model_bid = $this->loadModel('bid');

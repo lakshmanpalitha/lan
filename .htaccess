@@ -3,7 +3,7 @@
 Options -Indexes
 
 RewriteEngine On
-RewriteBase /lansuwa/
+RewriteBase /www.lansuwa.com/
 
 RewriteCond %{REQUEST_FILENAME} \.(gif|jpe?g|png|js|css|swf|ico|pdf)$
 RewriteRule ^ - [L]
