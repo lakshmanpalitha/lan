@@ -63,4 +63,5 @@ define("FEEDBACK_BID_FAILED", "Sorry,Your bid failed");
 define("FEEDBACK_INVALID_PRODUCT", "Inavalid product id");
 define("FEEDBACK_INVALID_SESSION", "Inavalid session");
 define("FEEDBACK_INVALID_BID", "Inavalid bid");
+define("FEEDBACK_INVALID_BID_PRODUCT", "Bid time expire");
 ?>

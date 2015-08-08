@@ -169,6 +169,25 @@ class bidModel extends model {
         return $this->time($sec);
     }
 
+    function userBidSummary($user_id = null) {
+        if ($user_id) {
+            $qry = "
+            SELECT 
+                bid.product_id, 
+                COUNT(bid.bid_id) AS count,
+                (SELECT pro.product_name FROM tbl_product pro WHERE pro.product_id=bid.product_id) AS produc_name,              
+                (SELECT img.image_name FROM tbl_product_images img WHERE img.product_id=bid.product_id AND img.default_image='Y') AS product_img  
+            FROM 
+                tbl_bid bid 
+            WHERE 
+                bid.user_id='" . $user_id . "'
+                AND bid.bid_status='A'
+            GROUP BY bid.product_id";
+            $result = $this->db->queryMultipleObjects($qry);
+            return ($result ? $result : false);
+        }
+        return false;
+    }
 }
 
 ?>

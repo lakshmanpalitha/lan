@@ -252,7 +252,7 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Manage Bids</a>
+                    <a href="<?php echo URL ?>admin/bids/"><i class="fa fa-edit fa-fw"></i> Manage Bids</a>
                 </li>
                 <li>
                     <a href="<?php echo URL ?>admin/products/category/"><i class="fa fa-edit fa-fw"></i> Manage Product Category</a>

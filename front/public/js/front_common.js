@@ -4,7 +4,7 @@ function bid_info() {
         setInterval(function() {
             var nURL = URL + MODULE + "/index/jsonProductBid/";
             var param = '';
-            ajaxRequest(nURL, param, null, function(responseText) {
+            ajaxRequest(nURL, param, function(responseText) {
                 bid_info_print(responseText);
             });
         }, 1000);
@@ -19,7 +19,7 @@ function bid_info_each(val) {
         setInterval(function() {
             var nURL = URL + MODULE + "/index/jsonProductBid/" + val + "/";
             var param = '';
-            ajaxRequest(nURL, param, null, function(responseText) {
+            ajaxRequest(nURL, param, function(responseText) {
                 bid_info_print(responseText);
             });
         }, 1000);
@@ -32,7 +32,7 @@ function bid_info_each(val) {
 function bid_info_print(responseText) {
     try {
         if (responseText)
-            var jsonData = JSON.parse(responseText);
+            var jsonData = responseText;
         if (jsonData) {
             if (jsonData.success == true) {
                 for (var i in jsonData.data) {
@@ -50,6 +50,12 @@ function bid_info_print(responseText) {
                         } else {
                             time_string = '<i class="ti-timer color-green"></i><b>' + jsonData.data[i].count + '</b> Bid limit <b>' + jsonData.data[i].bid_count_left + '</b> Bid left';
                         }
+                        if ($("#index_pro_button_" + jsonData.data[i].id).length > 0) {
+                            document.getElementById("index_pro_button_" + jsonData.data[i].id).style.display = "block";
+                        }
+                        if ($("#sidebar_pro_button_" + jsonData.data[i].id).length > 0) {
+                            document.getElementById("sidebar_pro_button_" + jsonData.data[i].id).style.display = "block";
+                        }
                     } else {
                         time_string = "<p>Bid Closed</p>";
                         if ($("#index_pro_button_" + jsonData.data[i].id).length > 0) {
@@ -58,8 +64,6 @@ function bid_info_print(responseText) {
                         if ($("#sidebar_pro_button_" + jsonData.data[i].id).length > 0) {
                             document.getElementById("sidebar_pro_button_" + jsonData.data[i].id).style.display = "none";
                         }
-
-
                     }
                     if ($("#sidebar_pro_timer_" + jsonData.data[i].id).length > 0) {
                         $("#sidebar_pro_timer_" + jsonData.data[i].id).html(time_string);
@@ -187,7 +191,7 @@ function ajaxRequest(URL, param, returnFunc)
             }
         },
         error: function(request, status, error) {
-            alert(request.responseText);
+            //alert(request.responseText);
         }
 
     })
