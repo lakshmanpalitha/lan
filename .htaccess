@@ -2,10 +2,14 @@
                 ####### BLOCK DIRECTORY LISTING #########
 Options -Indexes
 
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
 RewriteEngine On
 RewriteBase /lansuwa/
 
-RewriteCond %{REQUEST_FILENAME} \.(gif|jpe?g|png|js|css|swf|ico|pdf)$
+RewriteCond %{REQUEST_FILENAME} \.(gif|jpe?g|png|js|css|swf|ico|pdf|woff|eot|ttf|svg)$
 RewriteRule ^ - [L]
 
 RewriteRule .*  runtime/index.php?url=$0 [QSA,L]
