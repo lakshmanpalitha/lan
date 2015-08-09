@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
     <!-- Mirrored from pamukovic.com/demo/kupon/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jun 2015 05:34:34 GMT -->
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -21,6 +19,7 @@
             <!-- /.search form -->
 
 
+
             <section id="page" class="container">
                 <!--/.frame -->
                 <div class="row">
@@ -28,7 +27,7 @@
                         <div class="row">
                             <div class="col-sm-12 clearfix">
                                 <div class="hr-link">
-                                    <hr class="mBtm-50 mTop-30" data-symbol="FEATURED DEALS">
+                                    <hr class="mBtm-50 mTop-30" data-symbol="About Us">
                                 </div>
                             </div>
                         </div>
@@ -45,7 +44,7 @@
                                 <div class="col-sm-6">
                                     <div class="deal-entry green">
                                         <div class="image ripple-effect">
-                                            <a href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/"  title="#">
+                                            <a href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/" target="_blank" title="#">
                                                 <img src="<?php echo URL ?>public/uploads/product/large/<?php echo $pro->def_image ?>" alt="#" class="img-responsive">
                                             </a>
                                             <span class="bought">
@@ -54,7 +53,7 @@
                                         </div>
                                         <!-- /.image -->
                                         <div class="title">
-                                            <a href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/"  title="ATLETIKA 3 mēnešu abonements">
+                                            <a href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/" target="_blank" title="ATLETIKA 3 mēnešu abonements">
                                                 <?php echo $pro->product_name ?>
                                             </a>
                                         </div>
@@ -71,7 +70,7 @@
                                                 </li>
 
                                                 <li class="info_link col-sm-5 col-xs-6 col-lg-4">
-                                                    <a  id="index_pro_button_<?php echo $pro->product_id ?>" href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/" class="btn btn-block btn-default btn-raised btn-sm">
+                                                    <a id="index_pro_button_<?php echo $pro->product_id ?>" href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/" class="btn btn-block btn-default btn-raised btn-sm">
                                                         Bid Now
                                                     </a>
                                                 </li>

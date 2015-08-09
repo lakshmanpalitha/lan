@@ -15,7 +15,7 @@
                                   <span class="icon-bar">
                                   </span>
                               </button>
-                              <a href="index-2.html" class="navbar-brand logo col-sm-3">
+                              <a  href="<?php echo URL; ?>" class="navbar-brand logo col-sm-3">
                                 <img src="<?php echo URL . FRONTEND ?>public/images/logo.png" alt="" class="img-responsive">
                               </a>
                           </div>
@@ -24,97 +24,19 @@
                             <!-- regular link -->
                             <ul class="nav navbar-nav navbar-right">
                               <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <a href="<?php echo URL; ?>"  role="button">
                                   <i class="ti-home">
                                   </i>
                                   Home
-                                  <span class="caret">
-                                  </span>
-                                </a>
-                                <ul class="dropdown-menu" role="menu">
-                                  <li>
-                                    <a href="index-2.html">
-                                      Primary
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="index_2.html">
-                                      Secondary
-                                    </a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                  Pages 
-                                  <span class="caret">
-                                  </span>
-                                </a>
-                                <ul class="dropdown-menu" role="menu">
-                                  <li>
-                                    <a href="details_2.html">
-                                      Deal Page 1
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="details.html">
-                                      Deal Page 2
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="results.html">
-                                      Search Results
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="contact.html">
-                                      Contact
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="faq.html">
-                                      FAQ page
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="sumbit.html">
-                                      Sumbit deal
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="registration.html">
-                                      Registration
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="cart.html">
-                                      Cart Page
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="checkout.html">
-                                      Checkout
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="features.html">
-                                      Shortcodes
-                                    </a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                <a href="results.html">
-                                  Categories
                                 </a>
                               </li>
                               <li>
-                                <a href="sumbit.html">
-                                  Sumbit
+                                <a href="<?php echo URL."front/index/about" ?>">
+                                  About Lansuwa
                                 </a>
                               </li>
                               <li>
-                                <a href="contact.html">
+                                <a href="<?php echo URL."front/index/contact" ?>">
                                   Contact
                                 </a>
                               </li>

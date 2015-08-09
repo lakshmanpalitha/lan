@@ -5,37 +5,30 @@
                 <p class="no-margin">
                   Have any questions?
                   <strong>
-                    +080 124 880
-                              </strong>
-                              or mail@codenpixel.com
+                      &nbsp;&nbsp; info@lansuwa.lk
+                    </strong>
                           </p>
                       </div>
                       <div class="pull-right col-sm-6">
                         <ul class="list-inline list-unstyled pull-right">
-                          <li class="active">
-                            <a href="#">
-                              <i class="ti-cart">
-                              </i>
-                              Faq
-                            </a>
-                          </li>
+
                           <li>
-                            <a href="#">
+                            <a href="<?php echo URL."front/users/login" ?>">
                               Sign In
                             </a>
                           </li>
                           <li>
-                            <a href="#">
+                            <a  href="<?php echo URL."front/users/register" ?>">
                               Sign Up
                             </a>
                           </li>
-                          <li>
-                            <a href="#">
-                              <i class="ti-shopping-cart">
-                              </i>
-                              Cart
-                            </a>
-                          </li>
+                            <li class="active">
+                                <a href="<?php echo URL."front/index/faq" ?>">
+                                    <i class="ti-cart">
+                                    </i>
+                                    FAQ
+                                </a>
+                            </li>
                         </ul>
                       </div>
                   </div>
