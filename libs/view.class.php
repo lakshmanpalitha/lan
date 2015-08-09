@@ -76,14 +76,34 @@ class view {
 // echo out positive messages
         if (isset($feedback_positive)) {
             foreach ($feedback_positive as $feedback) {
-                $pHtml.= '<div class="feedback_success">' . $feedback . '</div>';
+                $pHtml.= '<div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">
+                        &times;
+                      </span>
+                    </button>
+                    <strong>
+Warning!
+                    </strong>
+'.$feedback.'
+                  </div>';
             }
         }
 
 // echo out negative messages
         if (isset($feedback_negative)) {
             foreach ($feedback_negative as $feedback) {
-                $nHtml.='<div class="feedback_error">' . $feedback . '</div>';
+                $nHtml.='<div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">
+                        &times;
+                      </span>
+                    </button>
+                    <strong>
+Warning!
+                    </strong>
+'.$feedback.'
+                  </div>';
             }
         }
 

@@ -3,7 +3,7 @@
           <div class="col-sm-4">
             <img src="<?php echo URL . FRONTEND ?>public/images/logo.png" alt="#" class="img-responsive logo">
             <p>
-              Kupon,travel deals &amp; publishing,with minimal design. We provide you with the latest fresh inspiration straight from the industrie.
+                Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
             </p>
           </div>
           <div class="col-sm-4">
@@ -55,53 +55,63 @@
           </div>
           <div class="col-sm-2">
             <h5>
-              CATEGORIES
+                CATEGORIES
             </h5>
-            <ul class="list-unstyled">
-              <li>
-                Vacation Deals
-              </li>
-              <li>
-                Online Deals
-              </li>
-              <li>
-                Digital goods
-              </li>
-              <li>
-                Travel Deals
-              </li>
-              <li>
-                Hotel deals
-              </li>
-              <li>
-                Featured
-              </li>
-              <li>
-                All Categories ..
-              </li>
-            </ul>
+              <ul class="list-unstyled">
+
+                  <li>
+                      <a href="#">
+                          cat1
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          cat1
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          cat1
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          cat1
+                      </a>
+                  </li>
+              </ul>
           </div>
           <div class="col-sm-2">
             <h5>
-              ABOUT US
+                Featured Links
             </h5>
-            <ul class="list-unstyled">
-              <li>
-                Available Jobs
-              </li>
-              <li>
-                Sumbit Deal
-              </li>
-              <li>
-                Contact Us
-              </li>
-              <li>
-                History
-              </li>
-              <li>
-                Impressium
-              </li>
-            </ul>
+              <ul class="list-unstyled">
+                  <li>
+                      <a href="<?php echo URL."front/index/what_is_lansuwa" ?>">
+                          What is Lansuwa
+                      </a>
+                  </li>
+                  <li>
+                      <a href="<?php echo URL."front/index/how_to_win" ?>">
+                          How to Win
+                      </a>
+                  </li>
+                  <li>
+                      <a href="<?php echo URL."front/index/privacy_policy" ?>">
+                          Privacy Policy
+                      </a>
+                  </li>
+                  <li>
+                      <a href="<?php echo URL."front/index/terms_and_conditions" ?>">
+                          Terms and Conditions
+                      </a>
+                  </li>
+                  <li>
+                      <a href="<?php echo URL."front/index/contact" ?>">
+                          Contact Us
+                      </a>
+                  </li>
+              </ul>
           </div>
         </div>
         <div class="btmFooter">

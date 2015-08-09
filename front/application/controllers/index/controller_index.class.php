@@ -18,6 +18,36 @@ class index extends controller {
         $this->view->bid_products = $login_model_bid->bidProduts();
         $this->view->render('bid/bid_home', false, false, $this->module);
     }
+    function contact() {
+        $this->view->render('pages/contact', false, false, $this->module);
+    }
+
+    function about() {
+        $this->view->render('pages/about', false, false, $this->module);
+    }
+
+    function faq() {
+            $this->view->render('pages/faq', false, false, $this->module);
+    }
+
+    function how_to_win() {
+                $this->view->render('pages/how_to_win', false, false, $this->module);
+    }
+
+    function privacy_policy() {
+                $this->view->render('pages/privacy_policy', false, false, $this->module);
+    }
+
+    function terms_and_conditions() {
+                $this->view->render('pages/terms_and_conditions', false, false, $this->module);
+    }
+
+    function what_is_lansuwa() {
+                $this->view->render('pages/what_is_lansuwa', false, false, $this->module);
+    }
+
+
+
 
     function detail() {
         $login_model_bid = $this->loadModel('bid');
