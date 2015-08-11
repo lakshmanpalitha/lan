@@ -36,13 +36,15 @@ class bidsModel extends model {
                 bid.bid_status
             FROM 
                 tbl_bid bid.
-            WHERE bid.bid_id='".$bid_id."'";
+            WHERE bid.bid_id='" . $bid_id . "'";
 
             $result = $this->db->queryUniqueObject($query);
             return ($result ? $result : false);
         }
         return false;
     }
+
+
 
 }
 

@@ -52,7 +52,7 @@
                                     }
                                 } else {
                                     echo "<tr>
-                                            <td colspan='7'>No Record Found</td>
+                                            <td colspan='9'>No Record Found</td>
                                           <tr>";
                                 }
                                 ?>

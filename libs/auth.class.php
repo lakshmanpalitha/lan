@@ -20,6 +20,19 @@ class auth {
         }
     }
 
+    public static function handleLoginAdmin() {
+        // initialize the session
+        session::init();
+        // if user is still not logged in, then destroy session, handle user as "not logged in" and
+        // redirect user to login page
+        if (!isset($_SESSION['bakend_user_logged_in'])) {
+            session::destroy();
+            header('location: ' . URL . 'admin/login/');
+        } else {
+            return true;
+        }
+    }
+
     public static function handlecompany() {
         // initialize the session
         session::init();

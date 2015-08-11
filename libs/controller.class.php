@@ -14,13 +14,11 @@ class controller extends common {
 
         //intilize module (backoffice or reservation)
         $this->module = $module;
-
         session::init();
-
-
         // create a view object (that does nothing, but provides the view render() method)
-
         $this->view = new view($this->module);
+        $this->model = new model();
+        $this->view->randCat = $this->model->randomCategory();
         $this->read = new read();
     }
 
@@ -28,9 +26,8 @@ class controller extends common {
      * loads the model with the given name.
      * @param $name string name of the model
      */
-    public function loadModel($name,$module=null) {
-
-        $this->module=($module?$module:$this->module);
+    public function loadModel($name, $module = null) {
+        $this->module = ($module ? $module : $this->module);
         $path = DOC_PATH . $this->module . "/" . MODELS_PATH . "model_" . strtolower($name) . '.class.php';
         if (file_exists($path)) {
             require DOC_PATH . $this->module . "/" . MODELS_PATH . "model_" . strtolower($name) . '.class.php';

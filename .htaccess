@@ -5,12 +5,8 @@ Options -Indexes
     Header set Access-Control-Allow-Origin "*"
 </IfModule>
 
-<IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "*"
-</IfModule>
-
 RewriteEngine On
-RewriteBase /www.lansuwa.com/
+RewriteBase /lansuwa/
 
 RewriteCond %{REQUEST_FILENAME} \.(gif|jpe?g|png|js|css|swf|ico|pdf|woff|eot|ttf|svg)$
 RewriteRule ^ - [L]

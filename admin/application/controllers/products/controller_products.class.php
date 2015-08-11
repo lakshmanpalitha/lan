@@ -3,7 +3,7 @@
 class products extends controller {
 
     function __construct($module) {
-        auth::handleLogin();
+        auth::handleLoginAdmin();
         parent::__construct($module);
     }
 
@@ -27,7 +27,7 @@ class products extends controller {
     function createNewCategory() {
         $valid = true;
         $login_model = $this->loadModel('products');
-        if (!$category_name = $this->read->get("category_name", "POST", 'NUMERIC', 100, true))
+        if (!$category_name = $this->read->get("category_name", "POST", '', 100, true))
             $valid = false;
         if (!$category_desc = $this->read->get("category_description", "POST", '', 1500, true))
             $valid = false;
@@ -141,12 +141,12 @@ class products extends controller {
 
         if ($valid) {
             if ($product_action == 'new') {
-                $res = $login_model->addNewProduct($productName, $productCategory, $productVedioLink, $productMktPrice, $productBidType, $proMaxCount, $proBidInterval,$productShortDesc);
+                $res = $login_model->addNewProduct($productName, $productCategory, $productVedioLink, $productMktPrice, $productBidType, $proMaxCount, $proBidInterval, $productShortDesc);
             } else if ($product_action == 'modify') {
                 $status = $login_model->getProductStatus($product_id);
                 $bid_status = $login_model->getProductBidStatus($product_id);
-                if ($bid_status == 'P' && $status='A') {
-                    $res = $login_model->updateProduct($productName, $productCategory, $productVedioLink, $productMktPrice, $productBidType, $proMaxCount, $proBidInterval, $product_id,$productShortDesc);
+                if ($bid_status == 'P' && $status = 'A') {
+                    $res = $login_model->updateProduct($productName, $productCategory, $productVedioLink, $productMktPrice, $productBidType, $proMaxCount, $proBidInterval, $product_id, $productShortDesc);
                 }
             }
             $products = $login_model->getProductList();

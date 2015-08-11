@@ -62,6 +62,38 @@ class view {
         Session::set('feedback_negative', null);
     }
 
+    public function renderCustomMassage($error, $type) {
+        $pHtml = '';
+        if ($type == 'positive') {
+
+            $pHtml = '<div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">
+                        &times;
+                      </span>
+                    </button>
+                    <strong>
+Warning!
+                    </strong>
+' . $error . '
+                  </div>';
+        } else if ($type == 'negative') {
+
+            $pHtml='<div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">
+                        &times;
+                      </span>
+                    </button>
+                    <strong>
+Warning!
+                    </strong>
+' . $error . '
+                  </div>';
+        }
+        return $pHtml;
+    }
+
     /**
      * renders the feedback messages into the view
      */
@@ -85,7 +117,7 @@ class view {
                     <strong>
 Warning!
                     </strong>
-'.$feedback.'
+' . $feedback . '
                   </div>';
             }
         }
@@ -102,7 +134,7 @@ Warning!
                     <strong>
 Warning!
                     </strong>
-'.$feedback.'
+' . $feedback . '
                   </div>';
             }
         }

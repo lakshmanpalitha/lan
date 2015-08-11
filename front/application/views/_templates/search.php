@@ -26,6 +26,7 @@
                 </div>
                 <!-- /.col 3 -->
                 <div class="col-sm-2">
+                    <input type="hidden" name="ch" value="sh"/>
                     <button type="submit" class="btn btn-raised ripple-effect btn-success btn-block">Search Deals</button>
                 </div>
                 <!-- /.col 1 -->

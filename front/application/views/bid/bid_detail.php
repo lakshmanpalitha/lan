@@ -142,7 +142,7 @@
                                                     <i class="ti-tag">
                                                     </i>
                                                     <b>
-                                                        8245
+                                                        <?php echo $this->bid_product[0]->bid_count ?>
                                                     </b>
                                                     Bids
                                                 </li>

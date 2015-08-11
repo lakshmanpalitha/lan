@@ -28,7 +28,7 @@
                         <div class="row">
                             <div class="col-sm-12 clearfix">
                                 <div class="hr-link">
-                                    <hr class="mBtm-50 mTop-30" data-symbol="FEATURED DEALS">
+                                    <hr class="mBtm-50 mTop-30" data-symbol="<?php echo $this->title ?>">
                                 </div>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                                                 <img src="<?php echo URL ?>public/uploads/product/large/<?php echo $pro->def_image ?>" alt="#" class="img-responsive">
                                             </a>
                                             <span class="bought">
-                                                <i class="ti-tag"></i>169 bids
+                                                <i class="ti-tag"></i><?php echo $pro->bid_count ?> bids
                                             </span>
                                         </div>
                                         <!-- /.image -->

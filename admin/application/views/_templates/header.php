@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>SB Admin 2 - Bootstrap Admin Theme</title>
+        <title>Lansuwa Admin</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="<?php echo FILE_URL ?>public/theme/css/bootstrap.min.css" rel="stylesheet">

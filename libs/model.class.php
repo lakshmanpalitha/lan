@@ -10,11 +10,23 @@ class model extends common {
         } catch (Exception $e) {
             die('Database connection could not be established.');
         }
-
         $this->read = new read();
         $this->session = new session();
         // $this->email = new PHPMailer();
         $this->arr = array();
+    }
+
+    function randomCategory() {
+        $get_qry = "
+            SELECT 
+                pc.category_id,
+                pc.category_name
+            FROM 
+                tbl_product_category pc
+            WHERE 
+                pc.category_status IN('A') ORDER BY RAND() LIMIT 5";
+        $result = $this->db->queryMultipleObjects($get_qry);
+        return ($result ? $result : false);
     }
 
     function sendMail($Message, $Subject, $ToEmail) {

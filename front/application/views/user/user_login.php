@@ -22,7 +22,9 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="panel-body frameLR bg-white shadow space-sm">
+                            <div id="error_login" class="col-sm-12">
 
+                            </div>
                             <div class="col-md-6">
                                 <h3 class="dark-grey">
                                     Login
@@ -91,7 +93,7 @@
                                                     if (jsonData.success == true) {
                                                         window.location.href = "<?php echo URL . FRONTEND ?>users/profile/";
                                                     } else {
-                                                        $('#bid_popup_body').html(jsonData.error)
+                                                        jQuery('#error_login').html(jsonData.error);
                                                     }
                                                 }
                                             });

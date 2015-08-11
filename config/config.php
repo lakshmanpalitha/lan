@@ -14,9 +14,9 @@ date_default_timezone_set("Asia/Calcutta");
 define('BACKEND', 'admin/');
 define('FRONTEND', 'front/');
 
-define('URL', '//localhost/www.lansuwa.com/');
-define('FILE_URL', '//localhost/www.lansuwa.com/');
-define('DOC_PATH', 'D:/wamp/www/www.lansuwa.com/');
+define('URL', '//localhost/lansuwa/');
+define('FILE_URL', '//localhost/lansuwa/');
+define('DOC_PATH', 'D:/xampp/htdocs/lansuwa/');
 
 /**
  * Configuration for: Folders
@@ -40,7 +40,7 @@ define('COOKIE_DOMAIN', '.localhost');
  */
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'lansuwa');
+define('DB_NAME', 'db_lansuwa');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 

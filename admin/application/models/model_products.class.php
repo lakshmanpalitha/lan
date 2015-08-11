@@ -29,8 +29,8 @@ class productsModel extends model {
                          '" . $newImageName . "',
                          'A')";
         $result = $this->db->execute($insert_qry);
+        $isUploadImg = false;
         if ($result) {
-            $isUploadImg = true;
             if ($imamge_name && $temp_name) {
                 $imageArray['filename'] = $newImageName;
                 $imageArray['tempname'] = $temp_name;
@@ -47,14 +47,14 @@ class productsModel extends model {
                 $imageArray['isallowmedium'] = CAT_ALLOW_MEDIUM;
                 $this->setImage($imageArray);
                 $res = $this->imageUpload();
-                if (!$res) {
-                    $isUploadImg = false;
-                    session::setError("feedback_negative", "Category " . FEEDBACK_IMG_UPLOAD_FAIL);
-                }
+//                if (!$res) {
+//                   
+//                    session::setError("feedback_negative", "Category " . FEEDBACK_IMG_UPLOAD_FAIL);
+//                }
             }
         }
 
-        return ($isUploadImg ? true : false);
+        return ($result ? true : false);
     }
 
     function getCategoryList() {

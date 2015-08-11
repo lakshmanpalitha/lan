@@ -370,7 +370,7 @@
                                         }
                                     } else {
                                         echo "<tr>
-                                            <td colspan='8'>No Record Found</td>
+                                            <td colspan='11'>No Record Found</td>
                                           <tr>";
                                     }
                                     ?>

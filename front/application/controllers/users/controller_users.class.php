@@ -112,7 +112,7 @@ class users extends controller {
                 $data = array('success' => false, 'data' => '', 'error' => $this->view->renderFeedbackMessagesForJson());
             }
         } else {
-            $data = array('success' => false, 'data' => '', 'error' => FEEDBACK_FIELD_NOT_VALID_TYPE);
+            $data = array('success' => false, 'data' => '', 'error' => $this->view->renderCustomMassage(FEEDBACK_FIELD_NOT_VALID_TYPE,'negative'));
         }
         echo json_encode($data);
     }
@@ -407,7 +407,7 @@ class users extends controller {
                     $data = array('success' => false, 'data' => '', 'error' => $this->print_msg(FEEDBACK_INVALID_BID));
                 }
             } else {
-                $data = array('success' => false, 'data' => '', 'error' => FEEDBACK_BID_PRICE);
+                $data = array('success' => false, 'data' => '', 'error' => $this->view->renderCustomMassage(FEEDBACK_BID_PRICE,'negative'));
             }
         } else {
             $data = array('success' => false, 'data' => '', 'error' => $this->view->renderFeedbackMessagesForJson());

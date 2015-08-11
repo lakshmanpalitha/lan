@@ -12,6 +12,7 @@ class bid extends controller {
             $login_model_bid = $this->loadModel('bid');
             $this->view->categorys = $login_model_bid->activeCategory();
             $this->view->bid_product = $login_model_bid->bidProduts(base64_decode($product_id));
+            $this->view->top_bid_products=$login_model_bid->topBidsProducts();
         } else {
             $this->view->categorys = null;
             $this->view->bid_product = null;
@@ -26,17 +27,25 @@ class bid extends controller {
             $valid = false;
         if (!$cat = $this->read->get("category", "GET", '', '', false))
             $valid = false;
+        if (!$title = $this->read->get("ch", "GET", '', '', false))
+            $valid = false;
         $key = is_bool($key) ? '' : $key;
         $cat = is_bool($cat) ? '' : $cat;
         $this->view->categorys = $login_model_bid->activeCategory();
         $this->view->bid_products = $login_model_bid->bidProduts(null, $cat, $key);
+        $this->view->top_bid_products=$login_model_bid->topBidsProducts();
         $this->view->key = $key;
         $this->view->cat = $cat;
+        if ($title == 'ct') {
+            $this->view->title = 'PRODUCT BY CATEGORY';
+        } else if ($title == 'sh') {
+            $this->view->title = 'PRODUCT BY SEARCH';
+        } else {
+            $this->view->title = "PRODUCT LISTING PAGE";
+        }
+
         $this->view->render('bid/bid_listing', false, false, $this->module);
     }
-
-
-
 
 }
 

@@ -85,10 +85,14 @@ function viewCategory(responseText) {
                     html = html + '<td><button class="btn btn-primary btn-circle" type="button"><i class="fa fa-list"></i></button></td>';
                     html = html + "</tr>";
                 }
-                if (document.getElementById('category_list_body'))
+                if (document.getElementById('category_list_body')) {
                     document.getElementById('category_list_body').innerHTML = html;
-                if (document.getElementById('action_btn'))
+                }
+                if (document.getElementById('action_btn')) {
                     document.getElementById("action_btn").style.display = "none";
+                }
+                $('#modal_category').modal('hide');
+
             } else {
                 if (document.getElementById('error_msg'))
                     document.getElementById('error_msg').innerHTML = jsonData.error;
@@ -292,13 +296,10 @@ function createNewCategory() {
         formData.append('action', 'previewImg');
         // Main magic with files here
         formData.append('image', $('input[type=file]')[0].files[0]);
-
         var categoryName = document.getElementById('category_name').value;
         var categoryDesc = document.getElementById('category_description').value;
         formData.append('category_name', categoryName);
         formData.append('category_description', categoryDesc);
-
-
         var nURL = URL + "admin/products/createNewCategory/";
         ajaxRequest(nURL, formData, null, function(responseText) {
             viewCategory(responseText);

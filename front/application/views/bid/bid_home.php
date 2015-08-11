@@ -135,7 +135,7 @@
                                                 <img src="<?php echo URL ?>public/uploads/product/large/<?php echo $pro->def_image ?>" alt="#" class="img-responsive">
                                             </a>
                                             <span class="bought">
-                                                <i class="ti-tag"></i>169 bids
+                                                <i class="ti-tag"></i><?php echo $pro->bid_count ?> bids
                                             </span>
                                         </div>
                                         <!-- /.image -->

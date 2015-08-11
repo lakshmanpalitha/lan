@@ -18,6 +18,44 @@ class bidModel extends model {
             SELECT 
                 pro.product_id,
                 pro.category_id,
+               (SELECT cat.category_name FROM tbl_product_category cat WHERE cat.category_id=pro.category_id) cat_name,
+                pro.product_name,
+                pro.product_real_price,
+                pro.product_bid_start_date,
+                pro.product_create_date,
+                pro.product_video_link,
+                pro.product_short_description,
+                pro.product_bid_type,
+                pro.product_description,
+                (SELECT COUNT(product_id) FROM tbl_bid WHERE product_id=pro.product_id) AS bid_count,
+                (select 
+                    GROUP_CONCAT(pimg.image_name SEPARATOR ', ')
+                 FROM 
+                    tbl_product_images pimg 
+                 WHERE 
+                    pimg.product_id=pro.product_id ) as images,
+                (select 
+                    pimg2.image_name
+                FROM 
+                    tbl_product_images pimg2 
+                WHERE 
+                    pimg2.product_id=pro.product_id 
+                    AND pimg2.default_image='Y' ) as def_image
+                        FROM 
+                tbl_product pro
+            WHERE pro.product_status NOT IN ('D')
+                  AND pro.product_bid_status IN ('R')
+                  " . ($where ? $where : '');
+
+        $result = $this->db->queryMultipleObjects($query);
+        return ($result ? $result : false);
+    }
+
+    function topProducts() {
+        $query = "
+            SELECT 
+                pro.product_id,
+                pro.category_id,
                 (SELECT cat.category_name FROM tbl_product_category cat WHERE cat.category_id=pro.category_id) cat_name,
                 pro.product_name,
                 pro.product_real_price,
@@ -55,14 +93,16 @@ class bidModel extends model {
             SELECT 
                 pc.category_id,
                 pc.category_name,
-               (SELECT COUNT(product_id) FROM tbl_product WHERE category_id=pc.category_id) AS pro_count
+               (SELECT COUNT(product_id) FROM tbl_product WHERE category_id=pc.category_id AND product_status NOT IN ('D') AND product_bid_status IN ('R')  ) AS pro_count
             FROM 
                 tbl_product_category pc
             WHERE 
-                pc.category_status IN('A')";
+                pc.category_status IN('A') AND (SELECT COUNT(product_id) FROM tbl_product WHERE category_id=pc.category_id AND product_status NOT IN ('D') AND product_bid_status IN ('R')  ) > 0";
         $result = $this->db->queryMultipleObjects($get_qry);
         return ($result ? $result : false);
     }
+    
+
 
     function checkProductBidTime($product_id = null) {
         $where = '';
@@ -188,6 +228,25 @@ class bidModel extends model {
         }
         return false;
     }
+
+    function topBidsProducts() {
+        $query = "
+           SELECT 
+                  b.product_id AS pro_id,
+                  (SELECT product_name FROM tbl_product WHERE product_id=b.product_id) AS pro_name,
+                  (SELECT image_name FROM tbl_product_images WHERE product_id=b.product_id AND default_image='Y') AS pro_img,
+                  (SELECT product_real_price FROM tbl_product WHERE product_id=b.product_id) as pro_price                  
+                  FROM 
+                  tbl_bid b
+                         WHERE 
+                         b.product_id IN (SELECT product_id FROM tbl_product WHERE product_bid_status='R' AND product_status='A')
+                                        GROUP BY b.product_id 
+                                        ORDER BY COUNT(b.product_id) 
+                                        DESC LIMIT 5";
+        $result = $this->db->queryMultipleObjects($query);
+        return ($result ? $result : false);
+    }
+
 }
 
 ?>

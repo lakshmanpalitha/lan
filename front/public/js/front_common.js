@@ -45,7 +45,7 @@ function bid_info_print(responseText) {
                             var hours = (arr[0] % 24);
                             var min = arr[1];
                             var sec = arr[2];
-                            time_string = '<i class="ti-timer color-green"></i>' + (days > 0 ? "'<b>' + days + '</b>d." : "") + '<b>' + hours + '</b>st.<b>' + min + '</b>min.<b>' + sec + '</b>sec.';
+                            time_string = '<i class="ti-timer color-green"></i>' + (days > 0 ? '<b>' + days + '</b>d.' : "") + '<b>' + hours + '</b>st.<b>' + min + '</b>min.<b>' + sec + '</b>sec.';
 
                         } else {
                             time_string = '<i class="ti-timer color-green"></i><b>' + jsonData.data[i].count + '</b> Bid limit <b>' + jsonData.data[i].bid_count_left + '</b> Bid left';
