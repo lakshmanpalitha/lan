@@ -64,4 +64,7 @@ define("FEEDBACK_INVALID_PRODUCT", "Inavalid product id");
 define("FEEDBACK_INVALID_SESSION", "Inavalid session");
 define("FEEDBACK_INVALID_BID", "Inavalid bid");
 define("FEEDBACK_INVALID_BID_PRODUCT", "Bid time expire");
+define("FEEDBACK_INVALID_ACTIVATION_CODE", "Invalid activation code");
+define("FEEDBACK_INVALID_ACTIVATION_DONE", "You allredy activated your account.Please sign in");
+define("FEEDBACK_INVALID_ACTIVATION_NOT_COMPLETE", "Login failed.Please login to your email and activate your account");
 ?>

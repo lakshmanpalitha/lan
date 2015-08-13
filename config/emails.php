@@ -10,7 +10,7 @@ $massage.="<p>Your successfully registerd in lansuwa.Please click the below link
 $massage.="<p>User name: " . (isset($lansuwa_reg_user_email) ? $lansuwa_reg_user_email : '') . "</p></br>";
 $massage.="<p>Password: " . (isset($lansuwa_reg_user_password) ? $lansuwa_reg_user_password : '') . "</p></br>";
 $massage.="<p>Activate Link</p></br>";
-$massage.="<p><a href='" . URL . "backoffice/'>Login to back office</a></p></br></br>";
+$massage.="<p><a href='" . URL . FRONTEND . "users/activateAccount/" . (isset($activate_code) ? $activate_code : '') . "'>Click to activate your account</a></p></br></br>";
 $massage.="<p>Warm Regards,</p></br>";
 $massage.="<b><a href='www.lansuva.lk'>www.lansuva.lk</a></b>";
 $massage.="</body></html>";

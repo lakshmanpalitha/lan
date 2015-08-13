@@ -21,6 +21,10 @@ class usersModel extends model {
             session::setError("feedback_negative", FEEDBACK_FIELD_NOT_VALID);
             return false;
         }
+        if ($user->user_activated === 'N') {
+            $this->session->setError("feedback_negative", FEEDBACK_INVALID_ACTIVATION_NOT_COMPLETE);
+            return false;
+        }
         if ($user->user_status === 'I') {
             session::setError("feedback_negative", FEEDBACK_FIELD_USER_INACTIVE);
             return false;
@@ -47,17 +51,47 @@ class usersModel extends model {
         if ($primaryKey) {
             $query = "
             INSERT INTO 
-            tbl_reg_users(user_id,user_f_name,user_email,user_pasword,user_reg_date,user_status)
+            tbl_reg_users(user_id,user_f_name,user_email,user_pasword,user_reg_date,user_status,user_activated_code)
             VALUES(
             '" . mysql_real_escape_string($primaryKey) . "',
                 '" . mysql_real_escape_string($user[0]) . "',
                     '" . mysql_real_escape_string($user[1]) . "',
                         '" . mysql_real_escape_string(md5($user[2])) . "',
                             NOW(),
-                       'A'
+                       'A',
+                       '" . mysql_real_escape_string($user[2]) . "'
             )";
             $result = $this->db->execute($query);
             return ($result ? true : false);
+        }
+        return false;
+    }
+
+    function activateUser($code) {
+        $query = "
+            SELECT 
+                user_id,
+                user_activated
+            FROM 
+                tbl_reg_users 
+            WHERE 
+                md5(user_activated_code)='" . mysql_real_escape_string($code) . "'";
+        $user = $this->db->queryUniqueObject($query);
+        if ($user) {
+            if ($user->user_activated = 'Y') {
+                return -1;
+            } else {
+                $query = "UPDATE 
+                                tbl_reg_users 
+                          SET
+                                user_activated='Y'
+                          WHERE
+                                user_id='" . $user->user_id . "'";
+                $result = $this->db->execute($query);
+                if ($result) {
+                    return true;
+                }
+            }
         }
         return false;
     }

@@ -25,6 +25,21 @@ class users extends controller {
             header('Location:' . URL . FRONTEND . 'users/signin/');
         }
     }
+    function activateAccount($code = null) {
+        if ($code) {
+            $res = $this->login_model->activateUser($code);
+            if ($res == -1) {
+                $this->view->error = (FEEDBACK_INVALID_ACTIVATION_DONE);
+            } else if (!$res) {
+                $this->view->error = (FEEDBACK_INVALID_ACTIVATION_CODE);
+            } else {
+                header('Location:' . URL . FRONTEND . 'users/signin/');
+            }
+        } else {
+            $this->view->error = (FEEDBACK_INVALID_ACTIVATION_CODE);
+        }
+        $this->view->render('user/user_activate', false, false, $this->module);
+    }
 
     function profile() {
         if (auth::handleLogin()) {
@@ -71,70 +86,78 @@ class users extends controller {
     }
 
     function changePassword() {
-        $valid = true;
-        $pwd = array();
-        if (!$new_pwd = $this->read->get("new_pwd", "POST", '', '', true))
-            $valid = false;
-        if (!$re_pwd = $this->read->get("re_pwd", "POST", 'NUMERIC', 150, true))
-            $valid = false;
-        if (!$user_id = $this->read->get("user_id", "POST", '', '', true))
-            $valid = false;
-        if ($new_pwd != $re_pwd) {
-            session::setError("feedback_negative", FEEDBACK_PASSWORD_MISSMACH);
-            $valid = false;
+        if (auth::handleLogin()) {
+            $valid = true;
+            $pwd = array();
+            if (!$new_pwd = $this->read->get("new_pwd", "POST", '', '', true))
+                $valid = false;
+            if (!$re_pwd = $this->read->get("re_pwd", "POST", 'NUMERIC', 150, true))
+                $valid = false;
+            if (!$user_id = $this->read->get("user_id", "POST", '', '', true))
+                $valid = false;
+            if ($new_pwd != $re_pwd) {
+                session::setError("feedback_negative", FEEDBACK_PASSWORD_MISSMACH);
+                $valid = false;
+            }
+            if ($valid) {
+                array_push($pwd, $new_pwd);
+                array_push($pwd, base64_decode($user_id));
+                $res = $this->login_model->updatePassword($pwd);
+            }
+            header('Location:' . URL . FRONTEND . 'users/profile/');
+        } else {
+            header('Location:' . URL . FRONTEND . 'users/signin/');
         }
-        if ($valid) {
-            array_push($pwd, $new_pwd);
-            array_push($pwd, base64_decode($user_id));
-            $res = $this->login_model->updatePassword($pwd);
-        }
-        header('Location:' . URL . FRONTEND . 'users/profile/');
     }
 
     function changeprofile() {
-        $user = array();
-        $valid = true;
-        $imgArray = array();
-        if (!$user_id = $this->read->get("user_id", "POST", '', '', true))
-            $valid = false;
-        if (!$user_fname = $this->read->get("fname", "POST", 'NUMERIC', 150, true))
-            $valid = false;
-        if (!$user_lname = $this->read->get("lname", "POST", 'NUMERIC', 150, true))
-            $valid = false;
-        if (!$user_email = $this->read->get("email", "POST", 'EMAIL', 150, true))
-            $valid = false;
-        if (!$user_telephone = $this->read->get("telephone", "POST", 'INT', 10, false))
-            $valid = false;
-        if (!$user_mobile = $this->read->get("mobile", "POST", 'INT', 10, true))
-            $valid = false;
-        if (!$user_address = $this->read->get("address", "POST", '', 250, true))
-            $valid = false;
-        if (!$user_nic_no = $this->read->get("nic", "POST", 'NUMERIC', 10, true))
-            $valid = false;
+        if (auth::handleLogin()) {
+            $user = array();
+            $valid = true;
+            $imgArray = array();
+            if (!$user_id = $this->read->get("user_id", "POST", '', '', true))
+                $valid = false;
+            if (!$user_fname = $this->read->get("fname", "POST", 'NUMERIC', 150, true))
+                $valid = false;
+            if (!$user_lname = $this->read->get("lname", "POST", 'NUMERIC', 150, true))
+                $valid = false;
+            if (!$user_email = $this->read->get("email", "POST", 'EMAIL', 150, true))
+                $valid = false;
+            if (!$user_telephone = $this->read->get("telephone", "POST", 'INT', 10, false))
+                $valid = false;
+            if (!$user_mobile = $this->read->get("mobile", "POST", 'INT', 10, true))
+                $valid = false;
+            if (!$user_address = $this->read->get("address", "POST", '', 250, true))
+                $valid = false;
+            if (!$user_nic_no = $this->read->get("nic", "POST", 'NUMERIC', 10, true))
+                $valid = false;
 
-        $user_telephone = is_bool($user_telephone) ? '' : $user_telephone;
-        if ($valid) {
-            array_push($user, base64_decode($user_id));
-            array_push($user, $user_fname);
-            array_push($user, $user_lname);
-            array_push($user, $user_email);
-            array_push($user, $user_telephone);
-            array_push($user, $user_mobile);
-            array_push($user, $user_address);
-            array_push($user, $user_nic_no);
-            $imageName = (isset($_FILES['profile_img']) ? $_FILES['profile_img']['name'] : '');
-            $imageTemp = (isset($_FILES['profile_img']) ? $_FILES['profile_img']['tmp_name'] : '');
-            $imageSize = (isset($_FILES['profile_img']) ? filesize($_FILES['profile_img']['tmp_name']) : 0);
-            if ($imageName && $imageTemp && $imageSize > 0) {
-                $imgArray['imgname'] = $imageName;
-                $imgArray['imgtemp'] = $imageTemp;
-                $imgArray['imgsize'] = $imageSize;
+            $user_telephone = is_bool($user_telephone) ? '' : $user_telephone;
+            if ($valid) {
+                array_push($user, base64_decode($user_id));
+                array_push($user, $user_fname);
+                array_push($user, $user_lname);
+                array_push($user, $user_email);
+                array_push($user, $user_telephone);
+                array_push($user, $user_mobile);
+                array_push($user, $user_address);
+                array_push($user, $user_nic_no);
+                $imageName = (isset($_FILES['profile_img']) ? $_FILES['profile_img']['name'] : '');
+                $imageTemp = (isset($_FILES['profile_img']) ? $_FILES['profile_img']['tmp_name'] : '');
+                $imageSize = (isset($_FILES['profile_img']) ? filesize($_FILES['profile_img']['tmp_name']) : 0);
+                if ($imageName && $imageTemp && $imageSize > 0) {
+                    $imgArray['imgname'] = $imageName;
+                    $imgArray['imgtemp'] = $imageTemp;
+                    $imgArray['imgsize'] = $imageSize;
+                }
+                array_push($user, $imgArray);
+
+                $res = $this->login_model->updateProfile($user);
             }
-            array_push($user, $imgArray);
-
-            $res = $this->login_model->updateProfile($user);
+            header('Location:' . URL . FRONTEND . 'users/profile/');
+        } else {
+            header('Location:' . URL . FRONTEND . 'users/signin/');
         }
-        header('Location:' . URL . FRONTEND . 'users/profile/');
     }
 
     function jsonLogin() {
@@ -399,11 +422,12 @@ class users extends controller {
             } else if ($user_email != $re_user_email) {
                 $data = array('success' => false, 'data' => '', 'error' => FEEDBACK_EMAIL_MISSMACH);
             } else {
+                $activate_code = md5($user_email . "#" . (19880503));
                 array_push($user, $user_name);
                 array_push($user, $user_email);
                 array_push($user, $user_pwd);
-                //$res = $this->login_model->register($user);
-                $res = true;
+                array_push($user, $activate_code);
+                $res = $this->login_model->register($user);
                 if ($res) {
                     $lansuwa_reg_user = $user_name;
                     $lansuwa_reg_user_email = $user_email;
