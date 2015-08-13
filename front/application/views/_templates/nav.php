@@ -40,6 +40,41 @@
                                   Contact
                                 </a>
                               </li>
+                                <li>
+                                    <a href="<?php echo URL."front/user/user_profile" ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                        <i class="ti-user">
+                                        </i>
+                                        My Account
+                                        <span class="caret">
+                                  </span>
+                                    </a>
+
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+
+                                            <a href="">
+
+                                                My profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                My bid list
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                My win item
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="">
+                                                Change My Password
+                                            </a>
+                                        </li>
+                                    </ul
+                                </li>
                             </ul>
                           </div>
                       </nav>
