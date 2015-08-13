@@ -408,15 +408,35 @@ function addProductImg() {
             formData.append('img_count', no_of_img);
             // Main magic with files here
             if (no_of_img > 0) {
+                var valid = true;
+                ;
                 for (var i = 0; i <= parseInt(no_of_img - 1); i++) {
-                    formData.append('image' + i, $('input[type=file]')[i].files[0]);
+                    if ($('input[type=file]')[i].files[0]) {
+                        formData.append('image' + i, $('input[type=file]')[i].files[0]);
+                    } else {
+                        valid = false;
+                        break;
+                    }
                 }
             }
-
-            var nURL = URL + "admin/products/addProductImg/";
-            ajaxRequest(nURL, formData, null, function(responseText) {
-                viewProductImg(responseText);
-            });
+            if (valid) {
+                var nURL = URL + "admin/products/addProductImg/";
+                ajaxRequest(nURL, formData, null, function(responseText) {
+                    viewProductImg(responseText);
+                });
+            } else {
+                 endLoading('ul_pro_img');
+                document.getElementById('error_msg_img').innerHTML = "Select product image";
+                if (document.getElementById('error_body_img')) {
+                    document.getElementById("error_body_img").style.display = "block";
+                }
+            }
+        } else {
+             endLoading('ul_pro_img');
+            document.getElementById('error_msg_img').innerHTML = "Select product image";
+            if (document.getElementById('error_body_img')) {
+                document.getElementById("error_body_img").style.display = "block";
+            }
         }
     }
     catch (err) {
@@ -443,6 +463,7 @@ function viewProductImg(responseText) {
                 }
                 if (document.getElementById('ul_pro_img'))
                     document.getElementById('ul_pro_img').innerHTML = html;
+                document.getElementById("product_img").reset();
             } else {
                 endLoading('ul_pro_img');
                 if (document.getElementById('error_msg_img')) {
@@ -451,6 +472,7 @@ function viewProductImg(responseText) {
                 if (document.getElementById('error_body_img')) {
                     document.getElementById("error_body_img").style.display = "block";
                 }
+                document.getElementById("product_img").reset();
             }
 
         }

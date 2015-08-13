@@ -264,7 +264,7 @@ class products extends controller {
         $valid = true;
         if (!$product_id = $this->read->get("product_id", "POST", 'INT', 11, true))
             $valid = false;
-        if (!$product_desc = $this->read->get("product_desc", "POST", '', 10000, false))
+        if (!$product_desc = $this->read->get("product_desc", "POST", '', '', false))
             $valid = false;
         if ($valid) {
             $res = $login_model->addProductDesc($product_id, rawurldecode($product_desc));

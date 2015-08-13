@@ -101,8 +101,6 @@ class bidModel extends model {
         $result = $this->db->queryMultipleObjects($get_qry);
         return ($result ? $result : false);
     }
-    
-
 
     function checkProductBidTime($product_id = null) {
         $where = '';
@@ -244,6 +242,20 @@ class bidModel extends model {
                                         ORDER BY COUNT(b.product_id) 
                                         DESC LIMIT 5";
         $result = $this->db->queryMultipleObjects($query);
+        if (empty($result)) {
+            $query = "
+           SELECT 
+                   p.product_id AS pro_id,
+                   p.product_name AS pro_name,
+                  (SELECT image_name FROM tbl_product_images WHERE product_id=p.product_id AND default_image='Y') AS pro_img,
+                   p.product_real_price as pro_price                  
+                  FROM 
+                  tbl_product p
+                  WHERE product_bid_status='R' AND product_status='A' 
+									ORDER BY product_real_price ASC
+                  LIMIT 5";
+            $result = $this->db->queryMultipleObjects($query);
+        }
         return ($result ? $result : false);
     }
 

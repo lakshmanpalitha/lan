@@ -15,6 +15,7 @@ class index extends controller {
     function index() {
         $login_model_bid = $this->loadModel('bid');
         $this->view->categorys = $login_model_bid->activeCategory();
+        $this->view->top_bid_products=$login_model_bid->topBidsProducts();
         $this->view->bid_products = $login_model_bid->bidProduts();
         $this->view->render('bid/bid_home', false, false, $this->module);
     }

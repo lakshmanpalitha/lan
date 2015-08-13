@@ -108,7 +108,7 @@
                                         <ul class="deal-price list-unstyled list-inline">
                                             <li class="price">
                                                 <h3>
-                                                    <?php echo $this->bid_product[0]->product_real_price ?>
+                                                    Rs.<?php echo $this->bid_product[0]->product_real_price ?>
                                                 </h3>
                                             </li>
                                             <li class="buy-now">
@@ -206,7 +206,7 @@
                                                 var interval;
                                                 function showAjaxModal(val)
                                                 {
-                                                    loading('bid_popup_body');
+                                                    loading('display_extra');
                                                     $('#bid_model').modal('show', {backdrop: 'static'});
                                                     $("#pro-id").val(val);
                                                     bidCheck(val);
@@ -218,11 +218,11 @@
                                                     var param = '';
                                                     ajaxRequest(nURL, param, function(jsonData) {
                                                         if (jsonData) {
-                                                            endLoading('bid_popup_body');
+                                                            endLoading('display_extra');
                                                             if (jsonData.success == true) {
                                                                 $('#bid_popup_body').html(jsonData.data)
                                                             } else {
-                                                                $('#bid_popup_body').html(jsonData.error)
+                                                                $('#display_extra').html(jsonData.error)
                                                             }
                                                         }
                                                     });
@@ -231,14 +231,14 @@
                                                     var pro_id = $("#pro-id").val();
                                                     var nURL = "<?php echo URL . FRONTEND ?>users/jsonLogin/";
                                                     var param = $('#user_login_form').serialize();
-                                                    loading('bid_popup_body');
+                                                    loading('display_extra');
                                                     ajaxRequest(nURL, param, function(jsonData) {
                                                         if (jsonData) {
-                                                            endLoading('bid_popup_body');
+                                                            endLoading('display_extra');
                                                             if (jsonData.success == true) {
                                                                 bidCheck(pro_id);
                                                             } else {
-                                                                $('#bid_popup_body').html(jsonData.error)
+                                                                $('#display_extra').html(jsonData.error)
                                                             }
                                                         }
                                                     });
@@ -267,14 +267,14 @@
                                                 function bidnow() {
                                                     var nURL = "<?php echo URL . FRONTEND ?>users/userBid/";
                                                     var param = $('#user_bid_form').serialize();
-                                                    loading('bid_popup_body');
+                                                    loading('display_extra');
                                                     ajaxRequest(nURL, param, function(jsonData) {
                                                         if (jsonData) {
-                                                            endLoading('bid_popup_body');
+                                                            endLoading('display_extra');
                                                             if (jsonData.success == true) {
                                                                 $('#bid_popup_body').html(jsonData.data)
                                                             } else {
-                                                                $('#bid_popup_body').html(jsonData.error)
+                                                                $('#display_extra').html(jsonData.error)
                                                             }
                                                         }
                                                     });

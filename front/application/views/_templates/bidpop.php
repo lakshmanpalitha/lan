@@ -13,12 +13,13 @@
                 </h4>
             </div>
             <div class="modal-body">
+                <div id="display_extra" class="col-sm-12">
+
+                </div>
                 <div class="credit-card-div">
                     <div id="panel_head" class="panel panel-default">                     
                         <div id="bid_popup_body" class="panel-heading">
 
-
-                            <!--/ row -->
                         </div>
                     </div>
                     <input  type="hidden" name="pro-id" class="form-control center-text" id="pro-id" value="">

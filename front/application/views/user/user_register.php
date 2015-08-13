@@ -109,9 +109,10 @@
                                             if (jsonData) {
                                                 //endLoading('loading');
                                                 if (jsonData.success == true) {
-
+                                                    jQuery('#error_register').html("Account Created.");
+                                                    document.getElementById("user_register_form").reset();
                                                 } else {
-                                                    jQuery('#error_register').html(jsonData.error)
+                                                    jQuery('#error_register').html(jsonData.error);
                                                 }
                                             }
                                         });
