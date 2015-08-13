@@ -1,5 +1,5 @@
 <title>
-    Kupon - Deals and Coupons bootstrap template
+    Lansuwa - Sri lankan largest bidding store
 </title>
 <base href="http://127.0.0.1/lansuwa/">
 <meta name="generator" content="#" />

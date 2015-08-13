@@ -45,6 +45,17 @@
     padding: 50px;
 }
 
+.profile-image-wapper{
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    border-radius: 75px;
+    margin: 0 auto;
+    border: solid 1px #F3F2F2;
+}
+
 
 
 
