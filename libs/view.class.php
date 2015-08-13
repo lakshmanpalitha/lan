@@ -108,7 +108,7 @@ Warning!
 // echo out positive messages
         if (isset($feedback_positive)) {
             foreach ($feedback_positive as $feedback) {
-                $pHtml.= '<div class="alert alert-danger alert-dismissible" role="alert">
+                $pHtml.= '<div class="alert alert-success alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">
                         &times;
@@ -125,7 +125,7 @@ Warning!
 // echo out negative messages
         if (isset($feedback_negative)) {
             foreach ($feedback_negative as $feedback) {
-                $nHtml.='<div class="alert alert-success alert-dismissible" role="alert">
+                $nHtml.='<div class="alert  alert-danger alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">
                         &times;

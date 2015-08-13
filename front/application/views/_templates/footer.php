@@ -112,11 +112,9 @@
                     <strong>
                         Copyright 2015 
                     </strong>
-                    Kupon- deals and Coupons template made with
-                    <i class="ti-heart">
-                    </i>
+                    Lansuwa.lk all right reserved.
                     <strong>
-                        by Codenpixel
+                        &nbsp;&nbsp;&nbsp;Solution By: <a class="btn btn-xs btn-flat ripple-effect btn-primary" href="http://microsola.com" target="_blank">Microsola</a>
                     </strong>
                 </p>
             </div>
