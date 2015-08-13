@@ -28,13 +28,11 @@ class users extends controller {
     function activateAccount($code = null) {
         if ($code) {
             $res = $this->login_model->activateUser($code);
-            if ($res == -1) {
-                $this->view->error = (FEEDBACK_INVALID_ACTIVATION_DONE);
+            if ($res) {
+                 header('Location:' . URL . FRONTEND . 'users/signin/');               
             } else if (!$res) {
                 $this->view->error = (FEEDBACK_INVALID_ACTIVATION_CODE);
-            } else {
-                header('Location:' . URL . FRONTEND . 'users/signin/');
-            }
+            } 
         } else {
             $this->view->error = (FEEDBACK_INVALID_ACTIVATION_CODE);
         }

@@ -21,11 +21,11 @@ class usersModel extends model {
             session::setError("feedback_negative", FEEDBACK_FIELD_NOT_VALID);
             return false;
         }
-        if ($user->user_activated === 'N') {
+        if ($user->user_activated == 'N') {
             $this->session->setError("feedback_negative", FEEDBACK_INVALID_ACTIVATION_NOT_COMPLETE);
             return false;
         }
-        if ($user->user_status === 'I') {
+        if ($user->user_status == 'I') {
             session::setError("feedback_negative", FEEDBACK_FIELD_USER_INACTIVE);
             return false;
         }
@@ -59,7 +59,7 @@ class usersModel extends model {
                         '" . mysql_real_escape_string(md5($user[2])) . "',
                             NOW(),
                        'A',
-                       '" . mysql_real_escape_string($user[2]) . "'
+                       '" . mysql_real_escape_string($user[3]) . "'
             )";
             $result = $this->db->execute($query);
             return ($result ? true : false);
@@ -75,11 +75,11 @@ class usersModel extends model {
             FROM 
                 tbl_reg_users 
             WHERE 
-                md5(user_activated_code)='" . mysql_real_escape_string($code) . "'";
+                user_activated_code='" . mysql_real_escape_string($code) . "'";
         $user = $this->db->queryUniqueObject($query);
         if ($user) {
-            if ($user->user_activated = 'Y') {
-                return -1;
+            if ($user->user_activated == 'Y') {
+                return true;
             } else {
                 $query = "UPDATE 
                                 tbl_reg_users 

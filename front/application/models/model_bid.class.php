@@ -46,7 +46,6 @@ class bidModel extends model {
             WHERE pro.product_status NOT IN ('D')
                   AND pro.product_bid_status IN ('R')
                   " . ($where ? $where : '');
-
         $result = $this->db->queryMultipleObjects($query);
         return ($result ? $result : false);
     }

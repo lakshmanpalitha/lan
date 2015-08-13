@@ -12,7 +12,7 @@
                 <!-- /.col 4 -->
                 <div class="col-sm-3">
                     <select name="category" placeholder="Category" id="category" class="form-control sm-margin-bottom-10">
-                        <option selected="selected">Select Category</option>
+                        <option value="" selected="selected">Select Category</option>
                         <?php
                         if (!empty($this->categorys)) {
                             foreach ($this->categorys as $cat) {
