@@ -112,7 +112,7 @@ class users extends controller {
                 $data = array('success' => false, 'data' => '', 'error' => $this->view->renderFeedbackMessagesForJson());
             }
         } else {
-            $data = array('success' => false, 'data' => '', 'error' => $this->view->renderCustomMassage(FEEDBACK_FIELD_NOT_VALID_TYPE,'negative'));
+            $data = array('success' => false, 'data' => '', 'error' => $this->view->renderCustomMassage(FEEDBACK_FIELD_NOT_VALID_TYPE, 'negative'));
         }
         echo json_encode($data);
     }
@@ -231,6 +231,9 @@ class users extends controller {
         $setting = $this->login_model->userBidSetting($user_id);
         if ($setting) {
             $product_bid_interval = $this->login_model_bid->productInterval($product_id);
+            if (empty($setting->user_bid_interval)) {
+                $valid = true;
+            } else
             if ($product_bid_interval > 0) {
                 if ($setting->user_bid_interval >= $product_bid_interval) {
                     $valid = true;
@@ -407,7 +410,7 @@ class users extends controller {
                     $data = array('success' => false, 'data' => '', 'error' => $this->print_msg(FEEDBACK_INVALID_BID));
                 }
             } else {
-                $data = array('success' => false, 'data' => '', 'error' => $this->view->renderCustomMassage(FEEDBACK_BID_PRICE,'negative'));
+                $data = array('success' => false, 'data' => '', 'error' => $this->view->renderCustomMassage(FEEDBACK_BID_PRICE, 'negative'));
             }
         } else {
             $data = array('success' => false, 'data' => '', 'error' => $this->view->renderFeedbackMessagesForJson());
