@@ -15,8 +15,15 @@ class users extends controller {
         $this->login_model_bid = $this->loadModel('bid');
     }
 
-    function login() {
+    function signin() {
         $this->view->render('user/user_login', false, false, $this->module);
+    }
+
+    function signout() {
+        $res = $this->login_model->signOut();
+        if ($res) {
+            header('Location:' . URL . FRONTEND . 'users/signin/');
+        }
     }
 
     function profile() {
@@ -26,7 +33,40 @@ class users extends controller {
             $this->view->active = 'profile';
             $this->view->render('user/user_profile', false, false, $this->module);
         } else {
-            header('Location:' . URL . FRONTEND . 'users/login/');
+            header('Location:' . URL . FRONTEND . 'users/signin/');
+        }
+    }
+
+    function mybid() {
+        if (auth::handleLogin()) {
+            $this->view->bid_summary = $this->login_model_bid->userBidSummary(session::get('user_id'));
+            $this->view->info = $this->login_model->userInfo(session::get('user_id'));
+            $this->view->active = 'bid';
+            $this->view->render('user/user_profile', false, false, $this->module);
+        } else {
+            header('Location:' . URL . FRONTEND . 'users/signin/');
+        }
+    }
+
+    function mywin() {
+        if (auth::handleLogin()) {
+            $this->view->bid_summary = $this->login_model_bid->userBidSummary(session::get('user_id'));
+            $this->view->info = $this->login_model->userInfo(session::get('user_id'));
+            $this->view->active = 'win';
+            $this->view->render('user/user_profile', false, false, $this->module);
+        } else {
+            header('Location:' . URL . FRONTEND . 'users/signin/');
+        }
+    }
+
+    function pwd() {
+        if (auth::handleLogin()) {
+            $this->view->bid_summary = $this->login_model_bid->userBidSummary(session::get('user_id'));
+            $this->view->info = $this->login_model->userInfo(session::get('user_id'));
+            $this->view->active = 'pwd';
+            $this->view->render('user/user_profile', false, false, $this->module);
+        } else {
+            header('Location:' . URL . FRONTEND . 'users/signin/');
         }
     }
 
@@ -295,7 +335,7 @@ class users extends controller {
         $product_id = base64_decode($product_id);
         $display = '';
         if ($product_id) {
-            if (session::get('user_logged_in') === true) {
+            if (session::get('lansuwa_online_user_logged_in') === true) {
                 $valid = $this->check_product_bid_limit_allow($product_id);
                 if ($valid === true) {
                     $valid = $this->check_per_bid_allow($product_id, session::get('user_id'));
@@ -362,8 +402,14 @@ class users extends controller {
                 array_push($user, $user_name);
                 array_push($user, $user_email);
                 array_push($user, $user_pwd);
-                $res = $this->login_model->register($user);
+                //$res = $this->login_model->register($user);
+                $res = true;
                 if ($res) {
+                    $lansuwa_reg_user = $user_name;
+                    $lansuwa_reg_user_email = $user_email;
+                    $lansuwa_reg_user_password = $user_pwd;
+                    include(DOC_PATH . "config/emails.php");
+                    $res = $this->sendMail($lansuwa_reg_user_notification_email, $lansuwa_reg_user_notification_email_subject, $user_email);
                     $data = array('success' => true, 'data' => '', 'error' => '');
                 } else {
                     $data = array('success' => false, 'data' => '', 'error' => $this->view->renderFeedbackMessagesForJson());
@@ -400,8 +446,16 @@ class users extends controller {
                 if ($bid_valid === true) {
                     array_push($bid, $bid_price);
                     array_push($bid, $product_id);
-                    $res = $this->login_model_bid->addBid($bid);
+                    //$res = $this->login_model_bid->addBid($bid);
+                    $res = true;
                     if ($res) {
+                        $product_info = $this->login_model_bid->bidProduts($product_id);
+                        $bid_user = session::get('user_f_name');
+                        $bid_product_name = $product_info[0]->product_name;
+                        $bid_product_real_price = 'Rs :' . $product_info[0]->product_real_price;
+                        $bid_price = 'Rs :' . $bid_price;
+                        include(DOC_PATH . "config/emails.php");
+                        $res = $this->sendMail($lansuwa_bid_notification, $lansuwa_bid_notification_email_subject, session::get('user_email'));
                         $data = array('success' => true, 'data' => $this->print_msg(FEEDBACK_BID_DONE), 'error' => '');
                     } else {
                         $data = array('success' => false, 'data' => '', 'error' => $this->view->renderFeedbackMessagesForJson());

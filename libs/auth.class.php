@@ -12,7 +12,7 @@ class auth {
         session::init();
         // if user is still not logged in, then destroy session, handle user as "not logged in" and
         // redirect user to login page
-        if (!isset($_SESSION['user_logged_in'])) {
+        if (!isset($_SESSION['lansuwa_online_user_logged_in'])) {
             session::destroy();
             return false;
         } else {

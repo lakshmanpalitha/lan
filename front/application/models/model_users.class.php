@@ -25,8 +25,9 @@ class usersModel extends model {
             session::setError("feedback_negative", FEEDBACK_FIELD_USER_INACTIVE);
             return false;
         }
-        session::set('user_logged_in', true);
+        session::set('lansuwa_online_user_logged_in', true);
         session::set('user_email', $user->user_email);
+        session::set('user_f_name', $user->user_f_name);
         session::set('user_type', $user->user_account_type);
         session::set('user_id', $user->user_id);
 
@@ -97,7 +98,7 @@ class usersModel extends model {
                     $res = $this->imageUpload();
                     if (!$res) {
                         $isUploadImg = false;
-                        session::setError("feedback_negative",FEEDBACK_IMG_UPLOAD_FAIL);
+                        session::setError("feedback_negative", FEEDBACK_IMG_UPLOAD_FAIL);
                     }
                 }
             }
@@ -153,6 +154,15 @@ class usersModel extends model {
             return ($user ? $user : false);
         }
         return false;
+    }
+
+    function signOut() {
+        session::clear('lansuwa_online_user_logged_in');
+        session::clear('user_email');
+        session::clear('user_f_name');
+        session::clear('user_type');
+        session::clear('user_id');
+        return true;
     }
 
 }

@@ -33,19 +33,18 @@
                                         <div class="row">
                                             <div class=" mTop-30 col-sm-9 col-sm-offset-3" id="wizardControl">
                                                 <div class="wizNav">
-
-                                                    <a class="btn <?php echo ($this->active == 'bid' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#bid" data-toggle="tab">
-                                                        <span class="ti-package"></span>&nbsp;&nbsp;My Bids
-                                                    </a>
-                                                    <a class="btn <?php echo ($this->active == 'win' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#win" data-toggle="tab">
-                                                        <span class="ti-cup"></span>&nbsp;&nbsp;win product
-                                                    </a>
-                                                    <a class="btn <?php echo ($this->active == 'profile' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#profile" data-toggle="tab">
-                                                        <span class="ti-user"></span>&nbsp;&nbsp;My Profile
-                                                    </a>
-                                                    <a class="btn <?php echo ($this->active == 'pwd' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#pwd" data-toggle="tab">
-                                                        <span class="ti-user"></span>&nbsp;&nbsp;Change Password
-                                                    </a>
+                                                        <a class="btn <?php echo ($this->active == 'bid' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#bid" data-toggle="tab">
+                                                            <span class="ti-package"></span>&nbsp;&nbsp;My Bids
+                                                        </a>
+                                                        <a class="btn <?php echo ($this->active == 'win' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#win" data-toggle="tab">
+                                                            <span class="ti-cup"></span>&nbsp;&nbsp;win product
+                                                        </a>
+                                                        <a class="btn <?php echo ($this->active == 'profile' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#profile" data-toggle="tab">
+                                                            <span class="ti-user"></span>&nbsp;&nbsp;My Profile
+                                                        </a>
+                                                        <a class="btn <?php echo ($this->active == 'pwd' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#pwd" data-toggle="tab">
+                                                            <span class="ti-user"></span>&nbsp;&nbsp;Change Password
+                                                        </a>
                                                 </div>
                                             </div>
                                         </div>
