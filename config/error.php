@@ -1,5 +1,7 @@
 <?php
 
+
+define("FEEDBACK_REQUEST_FAILED", "Request failed try again");
 /*
  * login
  */
@@ -67,4 +69,6 @@ define("FEEDBACK_INVALID_BID_PRODUCT", "Bid time expire");
 define("FEEDBACK_INVALID_ACTIVATION_CODE", "Invalid activation code");
 define("FEEDBACK_INVALID_ACTIVATION_DONE", "You allredy activated your account.Please sign in");
 define("FEEDBACK_INVALID_ACTIVATION_NOT_COMPLETE", "Login failed.Please login to your email and activate your account");
+
+define("FEEDBACK_USER_ALLREDY_REGISTERED", "User allredy registered.");
 ?>

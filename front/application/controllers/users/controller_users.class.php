@@ -25,14 +25,15 @@ class users extends controller {
             header('Location:' . URL . FRONTEND . 'users/signin/');
         }
     }
+
     function activateAccount($code = null) {
         if ($code) {
             $res = $this->login_model->activateUser($code);
             if ($res) {
-                 header('Location:' . URL . FRONTEND . 'users/signin/');               
+                header('Location:' . URL . FRONTEND . 'users/signin/');
             } else if (!$res) {
                 $this->view->error = (FEEDBACK_INVALID_ACTIVATION_CODE);
-            } 
+            }
         } else {
             $this->view->error = (FEEDBACK_INVALID_ACTIVATION_CODE);
         }
@@ -468,8 +469,7 @@ class users extends controller {
                 if ($bid_valid === true) {
                     array_push($bid, $bid_price);
                     array_push($bid, $product_id);
-                    //$res = $this->login_model_bid->addBid($bid);
-                    $res = true;
+                    $res = $this->login_model_bid->addBid($bid);
                     if ($res) {
                         $product_info = $this->login_model_bid->bidProduts($product_id);
                         $bid_user = session::get('user_f_name');

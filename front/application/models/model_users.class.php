@@ -47,9 +47,12 @@ class usersModel extends model {
     }
 
     function register($user) {
-        $primaryKey = $this->primaryKeyGenarator('tbl_reg_users', 'user_id');
-        if ($primaryKey) {
-            $query = "
+        $query = "SELECT user_id FROM tbl_reg_users WHERE user_email='" . $user[1] . "'";
+        $user = $this->db->queryUniqueValue($query);
+        if (!$user) {
+            $primaryKey = $this->primaryKeyGenarator('tbl_reg_users', 'user_id');
+            if ($primaryKey) {
+                $query = "
             INSERT INTO 
             tbl_reg_users(user_id,user_f_name,user_email,user_pasword,user_reg_date,user_status,user_activated_code)
             VALUES(
@@ -61,8 +64,13 @@ class usersModel extends model {
                        'A',
                        '" . mysql_real_escape_string($user[3]) . "'
             )";
-            $result = $this->db->execute($query);
-            return ($result ? true : false);
+                $result = $this->db->execute($query);
+                return ($result ? true : false);
+            }else{
+                 session::setError("feedback_negative", FEEDBACK_REQUEST_FAILED);
+            } 
+        }else{
+             session::setError("feedback_negative", FEEDBACK_USER_ALLREDY_REGISTERED);
         }
         return false;
     }
