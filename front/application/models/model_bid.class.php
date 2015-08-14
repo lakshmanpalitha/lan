@@ -2,7 +2,7 @@
 
 class bidModel extends model {
 
-    function bidProduts($product_id = null, $category = null, $key = null) {
+    function bidProduts($product_id = null, $category = null, $key = null, $check_bid_status = true) {
         $where = null;
         if ($product_id) {
             $where = "AND pro.product_id='" . mysql_real_escape_string($product_id) . "'";
@@ -44,7 +44,7 @@ class bidModel extends model {
                         FROM 
                 tbl_product pro
             WHERE pro.product_status NOT IN ('D')
-                  AND pro.product_bid_status IN ('R')
+                  " . ($check_bid_status ? "AND pro.product_bid_status IN ('R')" : "") . "
                   " . ($where ? $where : '');
         $result = $this->db->queryMultipleObjects($query);
         return ($result ? $result : false);

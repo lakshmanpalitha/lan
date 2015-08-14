@@ -361,7 +361,8 @@
                                                     <p>
                                                         <button onclick="showProductDesc('<?php echo $pro->product_id ?>')" class="btn btn-primary btn-xs" type="button">Add more</button>
                                                         <button onclick="showImgModel('<?php echo $pro->product_id ?>')" class="btn btn-primary btn-xs" type="button">Image</button>
-                                                        <button onclick="viewEachProduct('<?php echo $pro->product_id ?>')" class="btn btn-primary btn-xs" type="button">View</button>
+                                                        <button onclick="viewEachProduct('<?php echo $pro->product_id ?>')" class="btn btn-primary btn-xs" type="button">Edit</button>
+                                                        <button onclick="preview('<?php echo base64_encode($pro->product_id) ?>')" class="btn btn-primary btn-xs" type="button">Preview</button>
                                                     </p>
                                                 </td>
 

@@ -15,7 +15,6 @@ class usersModel extends model {
                 user_email='" . mysql_real_escape_string($email) . "' 
                 AND user_pasword='" . md5($pass) . "'
                 AND user_status NOT IN('D')";
-
         $user = $this->db->queryUniqueObject($query);
         if (empty($user)) {
             session::setError("feedback_negative", FEEDBACK_FIELD_NOT_VALID);
@@ -66,11 +65,11 @@ class usersModel extends model {
             )";
                 $result = $this->db->execute($query);
                 return ($result ? true : false);
-            }else{
-                 session::setError("feedback_negative", FEEDBACK_REQUEST_FAILED);
-            } 
-        }else{
-             session::setError("feedback_negative", FEEDBACK_USER_ALLREDY_REGISTERED);
+            } else {
+                session::setError("feedback_negative", FEEDBACK_REQUEST_FAILED);
+            }
+        } else {
+            session::setError("feedback_negative", FEEDBACK_USER_ALLREDY_REGISTERED);
         }
         return false;
     }
@@ -104,8 +103,27 @@ class usersModel extends model {
         return false;
     }
 
+    function resetPwd($user_email = null, $temp_pwd) {
+        $query = "SELECT user_id FROM tbl_reg_users WHERE user_email='" . $user_email . "'";
+        $user = $this->db->queryUniqueValue($query);
+        if ($user) {
+            $updateQuery = "
+            UPDATE 
+                tbl_reg_users 
+            SET
+                user_pasword='" . md5($temp_pwd) . "'
+            WHERE
+                user_id='" . $user . "'";
+            $result = $this->db->execute($updateQuery);
+            return ($result ? $result : false);
+        }
+        return false;
+    }
+
     function updateProfile($info = array()) {
         if (!empty($info)) {
+            $imageArray = $info[8];
+            $new_img_name = (isset($imageArray['imgname']) ? $info[1] . "_" . $imageArray['imgname'] : '');
             $query = "UPDATE 
                 tbl_reg_users 
             SET
@@ -121,11 +139,10 @@ class usersModel extends model {
 
             $result = $this->db->execute($query);
             if ($result) {
-                $imageArray = $info[7];
                 if (!empty($imageArray)) {
-                    $imageArray['filename'] = $newImageName;
-                    $imageArray['tempname'] = $temp_name;
-                    $imageArray['size'] = $size;
+                    $imageArray['filename'] = $new_img_name;
+                    $imageArray['tempname'] = $imageArray['imgtemp'];
+                    $imageArray['size'] = $imageArray['imgsize'];
                     $imageArray['maximagesize'] = MAX_UPLOAD_SIZE;
                     $imageArray['thumbwidth'] = CAT_THUMB_WIDTH;
                     $imageArray['thumbheight'] = CAT_THUMB_HEIGHT;
@@ -141,6 +158,14 @@ class usersModel extends model {
                     if (!$res) {
                         $isUploadImg = false;
                         session::setError("feedback_negative", FEEDBACK_IMG_UPLOAD_FAIL);
+                    } else {
+                        $query = "UPDATE 
+                                        tbl_reg_users 
+                                  SET
+                                user_profile_image='" . $new_img_name . "'
+                                    WHERE
+                                user_id='" . $info[0] . "'";
+                        $result = $this->db->execute($query);
                     }
                 }
             }

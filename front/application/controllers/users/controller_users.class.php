@@ -398,6 +398,31 @@ class users extends controller {
         $this->view->render('user/user_register', false, false, $this->module);
     }
 
+    function frogetPwd() {
+        $this->view->render('user/user_reset_pwd', false, false, $this->module);
+    }
+
+    function jsonResetPwd() {
+        $valid = true;
+        $user = array();
+        if (!$email = $this->read->get("email", "POST", 'EMAIL', 150, true))
+            $valid = false;
+        if ($valid) {
+            $temp_pwd = substr(str_shuffle(str_repeat('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', 5)), 0, 5);
+            $res = $this->login_model->resetPwd($email, $temp_pwd);
+            if ($res) {
+                include(DOC_PATH . "config/emails.php");
+                $res = $this->sendMail($lansuwa_reset_user_pwd_email, $lansuwa_reset_user_pwd_email_subject, $email);
+                $data = array('success' => true, 'data' => $this->view->renderCustomMassage(FEEDBACK_RESET_PWD, 'positive'), 'error' => '');
+            } else {
+                $data = array('success' => false, 'data' => '', 'error' => $this->view->renderCustomMassage(FEEDBACK_EMAIL_ERROR, 'negative'));
+            }
+        } else {
+            $data = array('success' => false, 'data' => '', 'error' => $this->view->renderCustomMassage(FEEDBACK_INVALID_PRODUCT, 'negative'));
+        }
+        echo json_encode($data);
+    }
+
     function jsonRegister() {
         $valid = true;
         $data = array();
