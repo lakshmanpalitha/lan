@@ -109,11 +109,8 @@
                         <div class="row">
                             <div class="col-sm-12 clearfix">
                                 <div class="hr-link">
-                                    <hr class="mBtm-50 mTop-30" data-symbol="FEATURED DEALS">
+                                    <hr class="mBtm-50 mTop-30" data-symbol="FEATURED BIDS">
                                     <div class="view-all">
-                                        <a href="index-2.html">
-                                            VIEW ALL
-                                        </a>
                                     </div>
                                 </div>
                             </div>
