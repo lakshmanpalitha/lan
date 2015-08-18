@@ -412,7 +412,7 @@ class users extends controller {
             $res = $this->login_model->resetPwd($email, $temp_pwd);
             if ($res) {
                 include(DOC_PATH . "config/emails.php");
-                $res = $this->sendMail($lansuwa_reset_user_pwd_email, $lansuwa_reset_user_pwd_email_subject, $email);
+                $this->sendMail($lansuwa_reset_user_pwd_email, $lansuwa_reset_user_pwd_email_subject, $email);
                 $data = array('success' => true, 'data' => $this->view->renderCustomMassage(FEEDBACK_RESET_PWD, 'positive'), 'error' => '');
             } else {
                 $data = array('success' => false, 'data' => '', 'error' => $this->view->renderCustomMassage(FEEDBACK_EMAIL_ERROR, 'negative'));
@@ -428,23 +428,23 @@ class users extends controller {
         $data = array();
         $user = array();
 
-        if (!$user_name = $this->read->get("name", "POST", 'STRING', 250, true))
+        if (!$user_name = $this->read->get("First_name", "POST", 'STRING', 250, true))
             $valid = false;
-        if (!$user_email = $this->read->get("email", "POST", 'EMAIL', 150, true))
+        if (!$user_email = $this->read->get("Email_address", "POST", 'EMAIL', 150, true))
             $valid = false;
-        if (!$re_user_email = $this->read->get("re_email", "POST", 'EMAIL', 150, true))
+        if (!$re_user_email = $this->read->get("Repeat_email_address", "POST", 'EMAIL', 150, true))
             $valid = false;
-        if (!$user_pwd = $this->read->get("pwd", "POST", '', '', true))
+        if (!$user_pwd = $this->read->get("Password", "POST", '', '', true))
             $valid = false;
-        if (!$user_re_pwd = $this->read->get("re_pwd", "POST", '', '', true))
+        if (!$user_re_pwd = $this->read->get("Repeat_password", "POST", '', '', true))
             $valid = false;
 
         if ($valid) {
             $user_role = isset($_POST['user_role']) ? $_POST['user_role'] : null;
             if ($user_pwd != $user_re_pwd) {
-                $data = array('success' => false, 'data' => '', 'error' => FEEDBACK_PASSWORD_MISSMACH);
+                $data = array('success' => false, 'data' => '', 'error' => $this->view->renderCustomMassage(FEEDBACK_PASSWORD_MISSMACH, 'negative'));
             } else if ($user_email != $re_user_email) {
-                $data = array('success' => false, 'data' => '', 'error' => FEEDBACK_EMAIL_MISSMACH);
+                $data = array('success' => false, 'data' => '', 'error' => $this->view->renderCustomMassage(FEEDBACK_EMAIL_MISSMACH, 'negative'));
             } else {
                 $activate_code = md5($user_email . "#" . (19880503));
                 array_push($user, $user_name);
@@ -457,8 +457,8 @@ class users extends controller {
                     $lansuwa_reg_user_email = $user_email;
                     $lansuwa_reg_user_password = $user_pwd;
                     include(DOC_PATH . "config/emails.php");
-                    $res = $this->sendMail($lansuwa_reg_user_notification_email, $lansuwa_reg_user_notification_email_subject, $user_email);
-                    $data = array('success' => true, 'data' => '', 'error' => '');
+                    $this->sendMail($lansuwa_reg_user_notification_email, $lansuwa_reg_user_notification_email_subject, $user_email);
+                    $data = array('success' => true, 'data' => $this->view->renderCustomMassage(FEEDBACK_REGISTERED_SUCCESS, 'positive'), 'error' => '');
                 } else {
                     $data = array('success' => false, 'data' => '', 'error' => $this->view->renderFeedbackMessagesForJson());
                 }

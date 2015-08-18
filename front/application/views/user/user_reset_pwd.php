@@ -79,6 +79,8 @@
                                                     } else {
                                                         jQuery('#error_login').html(jsonData.error);
                                                     }
+                                                } else {
+                                                   endLoading('error_login'); 
                                                 }
                                             });
                                         }
