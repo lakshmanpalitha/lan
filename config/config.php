@@ -18,6 +18,14 @@ define('URL', '//localhost/lansuwa/');
 define('FILE_URL', '//localhost/lansuwa/');
 define('DOC_PATH', 'D:/xampp/htdocs/lansuwa/');
 
+/*live*
+ * 
+ */
+
+//define('URL', '//microsola.com/preview/lansuwa/');
+//define('FILE_URL', '//microsola.com/preview/lansuwa/');
+//define('DOC_PATH', '/home2/microsq0/public_html/preview/lansuwa/');
+
 /**
  * Configuration for: Folders
  * Here you define where your folders are. Unless you have renamed them, there's no need to change this.
@@ -44,7 +52,13 @@ define('DB_NAME', 'db_lansuwa');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 
+/*live*/
 
+//define('DB_TYPE', 'mysql');
+//define('DB_HOST', 'localhost');
+//define('DB_NAME', 'microsq0_lansuwa');
+//define('DB_USER', 'microsq0_preview');
+//define('DB_PASS', 'lanka1234');
 
 
 
@@ -105,7 +119,7 @@ define("PROFILE_ORIGINAL_UPLOAD_PATH", DOC_PATH . "public/uploads/user/large/");
 define("PROFILE_THUMB_UPLOAD_PATH", DOC_PATH . "public/uploads/user/thumb/");
 define("PROFILE_MEDIUM_UPLOAD_PATH", DOC_PATH . "public/uploads/user/medium/");
 
-
+define('REQUEST_SUBMIT_EMAIL', 'lakmalwimaladasa@gmil.com');
 
 /*
  * include error description file

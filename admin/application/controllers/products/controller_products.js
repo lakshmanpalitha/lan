@@ -425,14 +425,14 @@ function addProductImg() {
                     viewProductImg(responseText);
                 });
             } else {
-                 endLoading('ul_pro_img');
+                endLoading('ul_pro_img');
                 document.getElementById('error_msg_img').innerHTML = "Select product image";
                 if (document.getElementById('error_body_img')) {
                     document.getElementById("error_body_img").style.display = "block";
                 }
             }
         } else {
-             endLoading('ul_pro_img');
+            endLoading('ul_pro_img');
             document.getElementById('error_msg_img').innerHTML = "Select product image";
             if (document.getElementById('error_body_img')) {
                 document.getElementById("error_body_img").style.display = "block";
@@ -541,6 +541,12 @@ function setDefaultImg(e) {
         endLoading('ul_pro_img');
         alert(err.message);
         return false;
+    }
+}
+function preview(proid) {
+    if (proid)
+    {
+        window.location.href = URL + "front/bid/preview/" + proid + "/";
     }
 }
 

@@ -26,7 +26,7 @@ class controller extends common {
             $this->view->isLog = true;
             $this->view->user = session::get('user_f_name');
         }
-        $this->email = new PHPMailer();
+        //$this->email = new PHPMailer();
     }
 
     /**

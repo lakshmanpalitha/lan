@@ -95,7 +95,7 @@ define("PRO_MEDIUM_UPLOAD_PATH", DOC_PATH . "public/uploads/product/medium/");
 define("PRO_ALLOW_THUMB", true);
 define("PRO_ALLOW_MEDIUM", true);
 
-
+define('REQUEST_SUBMIT_EMAIL', 'lakmalwimaladasa@gmil.com');
 
 
 

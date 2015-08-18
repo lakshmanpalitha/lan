@@ -29,38 +29,22 @@
                                 <h3 class="dark-grey">
                                     Login
                                 </h3>
-                                <form id="user_login_form">
+                                <form id="reset_pwd">
                                     <div class="form-group">
                                         <label>
                                             Email Address
                                         </label>
                                         <input type="" name="email" class="form-control" id="email" value="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            Password
-                                        </label>
-                                        <input type="password" name="pwd" class="form-control" id="pwd" value="">
-                                    </div>                                   
+                                    </div>                                 
                                 </form>
                                 <div class="form-group">
-                                    <a  onclick="login()" class="btn btn-primary btn-raised ripple-effect">
+                                    <a  onclick="resetPwd()" class="btn btn-primary btn-raised ripple-effect">
                                         Login
                                     </a>
                                 </div>
-                                <P><a href="<?php echo URL . FRONTEND ?>users/frogetPwd/" >Forgot my password<a></a></P>
                             </div>
 
                             <div class="mBtm-20 visible-xs">
-                            </div>
-
-                            <div class="col-md-6">
-                                <h3 class="dark-grey">
-                                    or Register
-                                </h3>
-                                <a  target="_blank" href="<?php echo URL . FRONTEND ?>users/register/" class="btn btn-primary btn-raised ripple-effect">
-                                    Create Account
-                                </a>
                             </div>
                         </div>
                         <!-- /inner wrap -->
@@ -83,15 +67,15 @@
 
     </body>
     <script>
-                                        function login() {
-                                            var nURL = "<?php echo URL . FRONTEND ?>users/jsonLogin/";
-                                            var param = $('#user_login_form').serialize();
-                                            loading('bid_popup_body');
+                                        function resetPwd() {
+                                            var nURL = "<?php echo URL . FRONTEND ?>users/jsonResetPwd/";
+                                            var param = $('#reset_pwd').serialize();
+                                            loading('error_login');
                                             ajaxRequest(nURL, param, function(jsonData) {
                                                 if (jsonData) {
-                                                    endLoading('bid_popup_body');
+                                                    endLoading('error_login');
                                                     if (jsonData.success == true) {
-                                                        window.location.href = "<?php echo URL . FRONTEND ?>users/profile/";
+                                                        jQuery('#error_login').html(jsonData.data);
                                                     } else {
                                                         jQuery('#error_login').html(jsonData.error);
                                                     }

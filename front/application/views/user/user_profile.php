@@ -33,18 +33,18 @@
                                         <div class="row">
                                             <div class=" mTop-30 col-sm-9 col-sm-offset-3" id="wizardControl">
                                                 <div class="wizNav">
-                                                        <a class="btn <?php echo ($this->active == 'bid' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#bid" data-toggle="tab">
-                                                            <span class="ti-package"></span>&nbsp;&nbsp;My Bids
-                                                        </a>
-                                                        <a class="btn <?php echo ($this->active == 'win' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#win" data-toggle="tab">
-                                                            <span class="ti-cup"></span>&nbsp;&nbsp;win product
-                                                        </a>
-                                                        <a class="btn <?php echo ($this->active == 'profile' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#profile" data-toggle="tab">
-                                                            <span class="ti-user"></span>&nbsp;&nbsp;My Profile
-                                                        </a>
-                                                        <a class="btn <?php echo ($this->active == 'pwd' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#pwd" data-toggle="tab">
-                                                            <span class="ti-user"></span>&nbsp;&nbsp;Change Password
-                                                        </a>
+                                                    <a class="btn <?php echo ($this->active == 'bid' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#bid" data-toggle="tab">
+                                                        <span class="ti-package"></span>&nbsp;&nbsp;My Bids
+                                                    </a>
+                                                    <a class="btn <?php echo ($this->active == 'win' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#win" data-toggle="tab">
+                                                        <span class="ti-cup"></span>&nbsp;&nbsp;win product
+                                                    </a>
+                                                    <a class="btn <?php echo ($this->active == 'profile' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#profile" data-toggle="tab">
+                                                        <span class="ti-user"></span>&nbsp;&nbsp;My Profile
+                                                    </a>
+                                                    <a class="btn <?php echo ($this->active == 'pwd' ? 'btn-primary' : 'btn-default') ?> btn-raised ripple-effect" href="#pwd" data-toggle="tab">
+                                                        <span class="ti-user"></span>&nbsp;&nbsp;Change Password
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -122,7 +122,7 @@
 
                                             </div>
                                             <div id="profile" class="tab-pane profile-wrapper <?php echo ($this->active == 'profile' ? 'active' : '') ?>">
-                                                <form action="<?php echo URL . FRONTEND ?>users/changeprofile/" method="POST">
+                                                <form action="<?php echo URL . FRONTEND ?>users/changeprofile/" method="POST" enctype="multipart/form-data">
                                                     <div class="row text-center m-t-lg m-b-lg">
                                                         <div id="step1" class="tab-pane active">
                                                             <div class="row wizForm">
@@ -130,7 +130,7 @@
                                                                     <h5>
                                                                         Hallo Lakshman
                                                                     </h5>
-                                                                    <div class="profile-image-wapper shadow"><img src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-xft1/v/t1.0-9/11745506_1668969550005332_298184417205816095_n.png?oh=0825f169d338f53488128b8adb3610a4&oe=565A1542" alt="Profile"></div>
+                                                                    <div class="profile-image-wapper shadow"><img src="<?php echo URL ?>public/uploads/user/thumb/thumb_<?php echo (isset($this->info->user_profile_image) ? $this->info->user_profile_image : '')?>" alt="Profile"></div>
                                                                 </div>
                                                                 <div class="col-lg-9">
                                                                     <div class="row">

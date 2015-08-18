@@ -12,12 +12,25 @@ class bid extends controller {
             $login_model_bid = $this->loadModel('bid');
             $this->view->categorys = $login_model_bid->activeCategory();
             $this->view->bid_product = $login_model_bid->bidProduts(base64_decode($product_id));
-            $this->view->top_bid_products=$login_model_bid->topBidsProducts();
+            $this->view->top_bid_products = $login_model_bid->topBidsProducts();
         } else {
             $this->view->categorys = null;
             $this->view->bid_product = null;
         }
         $this->view->render('bid/bid_detail', false, false, $this->module);
+    }
+
+    function preview($product_id = null) {
+        if ($product_id) {
+            $login_model_bid = $this->loadModel('bid');
+            $this->view->categorys = $login_model_bid->activeCategory();
+            $this->view->bid_product = $login_model_bid->bidProduts(base64_decode($product_id), null, null, false);
+            $this->view->top_bid_products = $login_model_bid->topBidsProducts();
+        } else {
+            $this->view->categorys = null;
+            $this->view->bid_product = null;
+        }
+        $this->view->render('bid/bid_priview', false, false, $this->module);
     }
 
     function listing() {
@@ -33,7 +46,7 @@ class bid extends controller {
         $cat = is_bool($cat) ? '' : $cat;
         $this->view->categorys = $login_model_bid->activeCategory();
         $this->view->bid_products = $login_model_bid->bidProduts(null, $cat, $key);
-        $this->view->top_bid_products=$login_model_bid->topBidsProducts();
+        $this->view->top_bid_products = $login_model_bid->topBidsProducts();
         $this->view->key = $key;
         $this->view->cat = $cat;
         if ($title == 'ct') {

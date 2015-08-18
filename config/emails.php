@@ -33,4 +33,29 @@ $massage.="<p><a href='www.lansuva.lk'>www.lansuva.lk</a></p></br>";
 $massage.="</body></html>";
 $lansuwa_bid_notification_email_subject = 'Lansuwa Bid';
 $lansuwa_bid_notification = $massage;
+
+
+$massage = "<html><body>";
+$massage.="Dear user, </br></br>";
+$massage.="<p>Please find the reset password herewith.</p></br></br>";
+$massage.="<p>New Password: " . (isset($temp_pwd) ? $temp_pwd : '') . "</p></br>";
+$massage.="<p>Warm Regards,</p></br>";
+$massage.="<b><a href='www.lansuva.lk'>www.lansuva.lk</a></b>";
+$massage.="</body></html>";
+$lansuwa_reset_user_pwd_email_subject = 'Lansuwa Reset Password';
+$lansuwa_reset_user_pwd_email = $massage;
+
+
+$massage = "<html><body>";
+$massage.="Dear Lansuwa, </br></br>";
+$massage.="<p>Some one has submit inquery through contact form.</p></br></br>";
+$massage.="<p>Name: " . (isset($name) ? $name : '') . "</p></br>";
+$massage.="<p>Email: " . (isset($email) ? $email : '') . "</p></br>";
+$massage.="<p>Web Site: " . (isset($website) ? $website : '') . "</p></br>";
+$massage.="<p>Message: " . (isset($mesaage) ? $mesaage : '') . "</p></br>";
+$massage.="<p>Warm Regards,</p></br>";
+$massage.="<b><a href='www.lansuva.lk'>www.lansuva.lk</a></b>";
+$massage.="</body></html>";
+$lansuwa_contact_us_email_subject = 'Request';
+$lansuwa_contact_us_email = $massage;
 ?>

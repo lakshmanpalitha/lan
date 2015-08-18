@@ -71,4 +71,9 @@ define("FEEDBACK_INVALID_ACTIVATION_DONE", "You allredy activated your account.P
 define("FEEDBACK_INVALID_ACTIVATION_NOT_COMPLETE", "Login failed.Please login to your email and activate your account");
 
 define("FEEDBACK_USER_ALLREDY_REGISTERED", "User allredy registered.");
+define("FEEDBACK_EMAIL_ERROR", "Wrong email address");
+define("FEEDBACK_RESET_PWD", "Please login to your email and find new password");
+
+define("FEEDBACK_CONTACT_US", "Your Request successfully submit");
+
 ?>
