@@ -58,7 +58,7 @@ define("FEEDBACK_EMAIL_MISSMACH", "Wrong repeat email");
 define("FEEDBACK_BID_PRICE", "Bid price should be greter than zero");
 
 define("FEEDBACK_PER_BID_ERROR", "Sorry,bid limit exceed for your selected product");
-define("FEEDBACK_TOT_BID_ERROR", "Sorry,Your maximum bid limi exceeded");
+define("FEEDBACK_TOT_BID_ERROR", "Sorry,Your maximum bid limit exceeded");
 
 define("FEEDBACK_BID_DONE", "Thank you,Your bid successfully saved");
 define("FEEDBACK_BID_FAILED", "Sorry,Your bid failed");

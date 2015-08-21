@@ -56,6 +56,31 @@
     border: solid 1px #F3F2F2;
 }
 
+.tumblr{background:#444;}
+.youtube{background:#BB0000;}
+.google{background:#DD4B39;}
+.flickr{background:#444;}
+.linkedin{background:#007BB6;}
+.twitter{background:#00ACED;}
+.facebook{background:#3B5998;}
+.instagram{background:#517FA4;}
+.pinterest{background:#444;}
 
+
+
+.tumblr:hover,
+.youtube:hover,
+.google:hover,
+.flickr:hover,
+.linkedin:hover,
+.twitter:hover,
+.facebook:hover,
+.instagram:hover,
+.pinterest:hover{-moz-opacity: 0.82;
+    -khtml-opacity: 0.82;
+    opacity: 0.82;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=82);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=82);
+    filter:alpha(opacity=82);}
 
 

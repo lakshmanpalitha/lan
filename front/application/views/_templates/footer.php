@@ -119,38 +119,14 @@
                 </p>
             </div>
             <div class="col-sm-5">
-                <ul class="pay-opt pull-right list-inline list-unstyled">
-                    <li>
-                        <a href="#" title="#">
-                            <img src="<?php echo URL . FRONTEND ?>public/images/amz-icon.png" class="img-responsive" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="#">
-                            <img src="<?php echo URL . FRONTEND ?>public/images/paypal-icon.png" class="img-responsive" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="#">
-                            <img src="<?php echo URL . FRONTEND ?>public/images/ax-icon.png" class="img-responsive" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="#">
-                            <img src="<?php echo URL . FRONTEND ?>public/images/mb-icon.png" class="img-responsive" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="#">
-                            <img src="<?php echo URL . FRONTEND ?>public/images/mst-icon.png" class="img-responsive" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="#">
-                            <img src="<?php echo URL . FRONTEND ?>public/images/mstr-icon.png" class="img-responsive" alt="">
-                        </a>
-                    </li>
-                </ul>
+                <button class="btn btn-circle ripple-effect btn-default facebook" onclick="window.location.href='http://www.facebook.com'">
+                          <span class="ti-bolt-alt">
+                          </span>
+                </button>
+                <a type="button" class="btn btn-circle ripple-effect btn-default twitter">
+                          <span class="ti-bolt-alt">
+                          </span>
+                </a>
             </div>
         </div>
     </div>
