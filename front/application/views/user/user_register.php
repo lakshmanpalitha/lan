@@ -31,33 +31,33 @@
                                     </h3>
                                     <div class="form-group">
                                         <label>
-                                            Name
+                                            First Name
                                         </label>
-                                        <input type="" name="name" class="form-control" id="name" value="">
+                                        <input type="" name="First_name" class="form-control" id="First_name" value="">
                                     </div>
                                     <div class="form-group">
                                         <label>
                                             Password
                                         </label>
-                                        <input type="password" name="pwd" class="form-control" id="pwd" value="">
+                                        <input type="password" name="Password" class="form-control" id="Password" value="">
                                     </div>
                                     <div class="form-group">
                                         <label>
                                             Repeat Password
                                         </label>
-                                        <input type="password" name="re_pwd" class="form-control" id="re_pwd" value="">
+                                        <input type="password" name="Repeat_password" class="form-control" id="Repeat_password" value="">
                                     </div>
                                     <div class="form-group">
                                         <label>
                                             Email Address
                                         </label>
-                                        <input type="" name="email" class="form-control" id="email" value="">
+                                        <input type="" name="Email_address" class="form-control" id="Email_address" value="">
                                     </div>
                                     <div class="form-group">
                                         <label>
                                             Repeat Email Address
                                         </label>
-                                        <input type="" name="re_email" class="form-control" id="re_email" value="">
+                                        <input type="" name="Repeat_email_address" class="form-control" id="Repeat_email_address" value="">
                                     </div>
                                 </div>
                             </form>
@@ -102,20 +102,30 @@
     <script>
                                     function register()
                                     {
-                                        //loading('loading');
-                                        var nURL = "<?php echo URL . FRONTEND ?>users/jsonRegister/";
-                                        var param = $('#user_register_form').serialize();
-                                        ajaxRequest(nURL, param, function(jsonData) {
-                                            if (jsonData) {
-                                                //endLoading('loading');
-                                                if (jsonData.success == true) {
-                                                    jQuery('#error_register').html("Account Created.");
+                                        try {
+                                            loading('error_register');
+                                            var nURL = "<?php echo URL . FRONTEND ?>users/jsonRegister/";
+                                            var param = $('#user_register_form').serialize();
+                                            ajaxRequest(nURL, param, function(jsonData) {
+                                                if (jsonData) {
+                                                    endLoading('error_register');
+                                                    if (jsonData.success == true) {
+                                                        jQuery('#error_register').html(jsonData.data);
+                                                        document.getElementById("user_register_form").reset();
+                                                    } else {
+                                                        jQuery('#error_register').html(jsonData.error);
+                                                    }
+                                                }else{
+                                                    endLoading('error_register');
                                                     document.getElementById("user_register_form").reset();
-                                                } else {
-                                                    jQuery('#error_register').html(jsonData.error);
                                                 }
-                                            }
-                                        });
+                                            });
+                                        }
+                                        catch (err) {
+                                            endLoading('error_register');
+                                            document.getElementById("user_register_form").reset();
+                                            return false;
+                                        }
                                     }
     </script>
 </html>

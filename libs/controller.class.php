@@ -26,7 +26,7 @@ class controller extends common {
             $this->view->isLog = true;
             $this->view->user = session::get('user_f_name');
         }
-        //$this->email = new PHPMailer();
+        $this->email = new PHPMailer();
     }
 
     /**
@@ -79,13 +79,13 @@ class controller extends common {
 
         $this->email->AddAddress($ToEmail, $ToEmail);
 
-        if ($this->email->Send()) {
-            $this->email->ClearAddresses();
+        if (@$this->email->Send()) {
+            @$this->email->ClearAddresses();
             return true;
         } else {
-//            session::setError("feedback_negative", "Mailer Error: " . $this->email->ErrorInfo);
             return false;
         }
+        return false;
     }
 
     function sms($msg, $no) {

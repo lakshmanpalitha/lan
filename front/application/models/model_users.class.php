@@ -47,8 +47,8 @@ class usersModel extends model {
 
     function register($user) {
         $query = "SELECT user_id FROM tbl_reg_users WHERE user_email='" . $user[1] . "'";
-        $user = $this->db->queryUniqueValue($query);
-        if (!$user) {
+        $user_id = $this->db->queryUniqueValue($query);
+        if (!$user_id) {
             $primaryKey = $this->primaryKeyGenarator('tbl_reg_users', 'user_id');
             if ($primaryKey) {
                 $query = "

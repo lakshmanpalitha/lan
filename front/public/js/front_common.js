@@ -173,7 +173,7 @@ function ajaxRequest(URL, param, returnFunc)
         url: URL,
         data: param,
         type: 'POST',
-        timeout: 10000,
+        timeout: 30000,
         async: true,
         success: function(data) {
             try {
@@ -181,17 +181,20 @@ function ajaxRequest(URL, param, returnFunc)
                     if (data) {
                         returnFunc(JSON.parse(data));
                     } else {
-                        returnFunc();
+                        returnFunc(false);
                     }
                 }
             }
             catch (err) {
-                alert(err.message);
-                return false;
+                if (typeof returnFunc === 'function') {
+                    returnFunc(false);
+                }
             }
         },
-        error: function(request, status, error) {
-            //alert(request.responseText);
+        error: function(jqXHR, textStatus, errorThrown) {
+            if (typeof returnFunc === 'function') {
+                returnFunc(false);
+            }
         }
 
     })
