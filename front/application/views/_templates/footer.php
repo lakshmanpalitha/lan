@@ -119,14 +119,21 @@
                 </p>
             </div>
             <div class="col-sm-5">
-                <button class="btn btn-circle ripple-effect btn-default facebook" onclick="window.location.href='http://www.facebook.com'">
-                          <span class="ti-bolt-alt">
+
+                <button type="button" class="btn btn-circle ripple-effect btn-info facebook" onclick="window.open('https://www.facebook.com/Lansuwa.lk', '_blank');">
+                          <span class="ti-facebook">
                           </span>
                 </button>
-                <a type="button" class="btn btn-circle ripple-effect btn-default twitter">
-                          <span class="ti-bolt-alt">
+                <button type="button" class="btn btn-circle ripple-effect btn-info twitter"  onclick="window.open('https://www.facebook.com/Lansuwa.lk', '_blank');">
+                          <span class="ti-twitter">
                           </span>
-                </a>
+                </button>
+                <button type="button" class="btn btn-circle ripple-effect btn-info google" onclick="window.open('https://plus.google.com/104315030913500470438/about', '_blank');">
+                          <span class="ti-google">
+                          </span>
+                </button>
+
+
             </div>
         </div>
     </div>

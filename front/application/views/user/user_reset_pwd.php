@@ -34,7 +34,7 @@
                                         <label>
                                             Email Address
                                         </label>
-                                        <input type="" name="email" class="form-control" id="email" value="">
+                                        <input type="" name="email" class="validate[required,custom[email]] form-control" id="email" value="">
                                     </div>                                 
                                 </form>
                                 <div class="form-group">
@@ -67,22 +67,26 @@
 
     </body>
     <script>
-                                        function resetPwd() {
-                                            var nURL = "<?php echo URL . FRONTEND ?>users/jsonResetPwd/";
-                                            var param = $('#reset_pwd').serialize();
-                                            loading('error_login');
-                                            ajaxRequest(nURL, param, function(jsonData) {
-                                                if (jsonData) {
-                                                    endLoading('error_login');
-                                                    if (jsonData.success == true) {
-                                                        jQuery('#error_login').html(jsonData.data);
-                                                    } else {
-                                                        jQuery('#error_login').html(jsonData.error);
-                                                    }
-                                                } else {
-                                                   endLoading('error_login'); 
-                                                }
-                                            });
-                                        }
+
+            function resetPwd() {
+                if( $('#reset_pwd').validationEngine('validate'))
+                {
+                var nURL = "<?php echo URL . FRONTEND ?>users/jsonResetPwd/";
+                var param = $('#reset_pwd').serialize();
+                loading('error_login');
+                ajaxRequest(nURL, param, function(jsonData) {
+                    if (jsonData) {
+                        endLoading('error_login');
+                        if (jsonData.success == true) {
+                            jQuery('#error_login').html(jsonData.data);
+                        } else {
+                            jQuery('#error_login').html(jsonData.error);
+                        }
+                    } else {
+                       endLoading('error_login');
+                    }
+                });
+            }
+        }
     </script>
 </html>

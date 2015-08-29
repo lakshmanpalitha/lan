@@ -7,14 +7,14 @@ $feedback_negative = Session::get('feedback_negative');
 // echo out positive messages
 if (isset($feedback_positive)) {
     foreach ($feedback_positive as $feedback) {
-        echo '<div class="alert alert-danger alert-dismissible" role="alert">
+        echo '<div class="alert alert-success alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">
                         &times;
                       </span>
                     </button>
                     <strong>
-Warning!
+222
                     </strong>
 '.$feedback.'
                   </div>';
@@ -34,7 +34,7 @@ if (isset($feedback_negative)) {
                       </span>
                     </button>
                     <strong>
-Warning!
+222
                     </strong>
 '.$feedback.'
                   </div>';

@@ -1,3 +1,68 @@
+$( document ).ready(function() {
+    // LEAK GLOBAL OPTIONS
+    $.validationEngine= {fieldIdCounter: 0,defaults:{
+       validationEventTrigger: "blur",
+        scroll: true,
+        focusFirstField:true,
+        showPrompts: true,
+       validateNonVisibleFields: false,
+        ignoreFieldsWithClass: 'ignoreMe',
+        promptPosition: "bottomLeft",
+        bindMethod:"bind",
+        inlineAjax: false,
+        ajaxFormValidation: false,
+        ajaxFormValidationURL: false,
+        ajaxFormValidationMethod: 'get',
+        onAjaxFormComplete: $.noop,
+        onBeforeAjaxFormValidation: $.noop,
+        onValidationComplete: false,
+        doNotShowAllErrosOnSubmit: false,
+        custom_error_messages:{},
+        binded: true,
+        notEmpty: false,
+        showArrow: true,
+        showArrowOnRadioAndCheckbox: false,
+        isError: false,
+        maxErrorsPerField: false,
+        ajaxValidCache: {},
+        autoPositionUpdate: false,
+        InvalidFields: [],
+        onFieldSuccess: false,
+        onFieldFailure: false,
+        onSuccess: false,
+        onFailure: false,
+        validateAttribute: "class",
+        addSuccessCssClassToField: "",
+        addFailureCssClassToField: "",
+        autoHidePrompt: false,
+        autoHideDelay: 10000,
+        fadeDuration: 300,
+        prettySelect: false,
+        addPromptClass : "",
+        usePrefix: "",
+        useSuffix: "",
+        showOneMessage: false
+    }};
+
+
+    if($("#user_login_form").length)
+    {
+        $("#user_login_form").validationEngine();
+    }
+
+    if($("#user_register_form").length)
+    {
+        $("#user_register_form").validationEngine();
+    }
+
+    if($('#reset_pwd').length)
+    {
+        $('#reset_pwd').validationEngine();
+    }
+
+
+
+});
 
 function bid_info() {
     try {

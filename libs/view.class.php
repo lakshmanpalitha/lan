@@ -66,27 +66,27 @@ class view {
         $pHtml = '';
         if ($type == 'positive') {
 
-            $pHtml = '<div class="alert alert-danger alert-dismissible" role="alert">
+            $pHtml = '<div class="alert alert-success alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">
                         &times;
                       </span>
                     </button>
                     <strong>
-Warning!
+333
                     </strong>
 ' . $error . '
                   </div>';
         } else if ($type == 'negative') {
 
-            $pHtml='<div class="alert alert-success alert-dismissible" role="alert">
+            $pHtml='<div class="alert alert-danger alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">
                         &times;
                       </span>
                     </button>
                     <strong>
-Warning!
+333
                     </strong>
 ' . $error . '
                   </div>';
@@ -115,7 +115,7 @@ Warning!
                       </span>
                     </button>
                     <strong>
-Warning!
+111
                     </strong>
 ' . $feedback . '
                   </div>';
@@ -132,7 +132,7 @@ Warning!
                       </span>
                     </button>
                     <strong>
-Warning!
+111
                     </strong>
 ' . $feedback . '
                   </div>';
