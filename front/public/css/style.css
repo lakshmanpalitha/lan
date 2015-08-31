@@ -1860,6 +1860,13 @@ table.cart-contents .currency {
     border-radius: 75px;
     margin: 0 auto;
     border: solid 1px #F3F2F2;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 .tumblr {
     background: #444;

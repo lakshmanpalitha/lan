@@ -60,6 +60,11 @@ $( document ).ready(function() {
         $('#reset_pwd').validationEngine();
     }
 
+    if($('#update-profile').length)
+        {
+            $('#update-profile').validationEngine();
+        }
+
 
 
 });
@@ -89,7 +94,7 @@ function bid_info_each(val) {
             });
         }, 1000);
     } catch (err) {
-        //alert(err.message);
+        //alert(err.message)
         return false;
     }
 

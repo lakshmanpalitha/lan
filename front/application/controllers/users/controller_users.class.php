@@ -213,8 +213,8 @@ class users extends controller {
                                         Please Login Add your Bid
                                     </label>
                                     <form id="user_login_form">
-                                        <input class="form-control" name="email" id="email" type="text" placeholder="User Email...">
-                                        <input class="form-control" name="pwd" id="pwd" type="password" placeholder="password...">
+                                        <input class="validate[required,custom[email]] form-control" name="email" id="email" type="text" placeholder="User Email...">
+                                        <input class="validate[required] form-control" name="pwd" id="pwd" type="password" placeholder="password...">
                                     </form>
                                     <button onclick="login()" class="btn btn-lg btn-raised ripple-effect btn-primary" type="button">
                                         <span class="ti-lock"> LOGIN</span>

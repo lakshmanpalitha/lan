@@ -37,7 +37,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label class="center-text">
-                                        Please Login Add your Bid
+                                        Please Login Add your Bid vvvv
                                     </label>
                                     <input class="form-control" type="text" placeholder="User Name...">
 
