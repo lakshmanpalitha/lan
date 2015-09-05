@@ -118,7 +118,7 @@
 
 
     </body>
-    <script>                                    
+    <script>
                                             function saveConatct() {
                                                 var nURL = "<?php echo URL . FRONTEND ?>index/jsonSendContact/";
                                                 var param = $('#contact').serialize();
@@ -132,6 +132,9 @@
                                                         } else {
                                                             jQuery('#error_login').html(jsonData.error);
                                                         }
+                                                    } else {
+                                                        endLoading('error_login');
+                                                        document.getElementById("contact").reset();
                                                     }
                                                 });
                                             }

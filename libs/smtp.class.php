@@ -1,5 +1,4 @@
 <?php
-error_reporting(0);
 /**
  * PHPMailer RFC821 SMTP email transport class.
  * PHP Version 5
@@ -25,7 +24,7 @@ error_reporting(0);
  * @author Chris Ryan <unknown@example.com>
  * @author Marcus Bointon <phpmailer@synchromedia.co.uk>
  */
-class SMTP {
+class smtp {
     /**
      * The PHPMailer SMTP version number.
      * @type string

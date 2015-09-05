@@ -42,9 +42,10 @@ class users extends controller {
 
     function profile() {
         if (auth::handleLogin()) {
+            $action = $this->read->get("action", "GET", '', '', false);
             $this->view->bid_summary = $this->login_model_bid->userBidSummary(session::get('user_id'));
             $this->view->info = $this->login_model->userInfo(session::get('user_id'));
-            $this->view->active = 'profile';
+            $this->view->active = $action;
             $this->view->render('user/user_profile', false, false, $this->module);
         } else {
             header('Location:' . URL . FRONTEND . 'users/signin/');
@@ -56,7 +57,7 @@ class users extends controller {
             $this->view->bid_summary = $this->login_model_bid->userBidSummary(session::get('user_id'));
             $this->view->info = $this->login_model->userInfo(session::get('user_id'));
             $this->view->active = 'bid';
-            $this->view->render('user/user_profile', false, false, $this->module);
+            $this->view->render('user/user_profile/?action=bid', false, false, $this->module);
         } else {
             header('Location:' . URL . FRONTEND . 'users/signin/');
         }
@@ -67,7 +68,7 @@ class users extends controller {
             $this->view->bid_summary = $this->login_model_bid->userBidSummary(session::get('user_id'));
             $this->view->info = $this->login_model->userInfo(session::get('user_id'));
             $this->view->active = 'win';
-            $this->view->render('user/user_profile', false, false, $this->module);
+            $this->view->render('user/user_profile/?action=win', false, false, $this->module);
         } else {
             header('Location:' . URL . FRONTEND . 'users/signin/');
         }
@@ -78,7 +79,7 @@ class users extends controller {
             $this->view->bid_summary = $this->login_model_bid->userBidSummary(session::get('user_id'));
             $this->view->info = $this->login_model->userInfo(session::get('user_id'));
             $this->view->active = 'pwd';
-            $this->view->render('user/user_profile', false, false, $this->module);
+            $this->view->render('user/user_profile/?action=pwd', false, false, $this->module);
         } else {
             header('Location:' . URL . FRONTEND . 'users/signin/');
         }
@@ -88,9 +89,9 @@ class users extends controller {
         if (auth::handleLogin()) {
             $valid = true;
             $pwd = array();
-            if (!$new_pwd = $this->read->get("new_pwd", "POST", '', '', true))
+            if (!$new_pwd = $this->read->get("New_password", "POST", '', '', true))
                 $valid = false;
-            if (!$re_pwd = $this->read->get("re_pwd", "POST", 'NUMERIC', 150, true))
+            if (!$re_pwd = $this->read->get("Re_password", "POST", '', '', true))
                 $valid = false;
             if (!$user_id = $this->read->get("user_id", "POST", '', '', true))
                 $valid = false;
@@ -103,7 +104,7 @@ class users extends controller {
                 array_push($pwd, base64_decode($user_id));
                 $res = $this->login_model->updatePassword($pwd);
             }
-            header('Location:' . URL . FRONTEND . 'users/profile/');
+            header('Location:' . URL . FRONTEND . 'users/profile/?action=pwd');
         } else {
             header('Location:' . URL . FRONTEND . 'users/signin/');
         }
@@ -153,7 +154,7 @@ class users extends controller {
 
                 $res = $this->login_model->updateProfile($user);
             }
-            header('Location:' . URL . FRONTEND . 'users/profile/');
+            header('Location:' . URL . FRONTEND . 'users/profile/?action=profile');
         } else {
             header('Location:' . URL . FRONTEND . 'users/signin/');
         }

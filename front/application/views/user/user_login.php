@@ -86,10 +86,10 @@
                                         function login() {
                                             var nURL = "<?php echo URL . FRONTEND ?>users/jsonLogin/";
                                             var param = $('#user_login_form').serialize();
-                                            loading('bid_popup_body');
+                                            loading('error_login');
                                             ajaxRequest(nURL, param, function(jsonData) {
                                                 if (jsonData) {
-                                                    endLoading('bid_popup_body');
+                                                    endLoading('error_login');
                                                     if (jsonData.success == true) {
                                                         window.location.href = "<?php echo URL . FRONTEND ?>users/profile/";
                                                     } else {

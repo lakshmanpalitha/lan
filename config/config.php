@@ -119,7 +119,7 @@ define("PROFILE_ORIGINAL_UPLOAD_PATH", DOC_PATH . "public/uploads/user/large/");
 define("PROFILE_THUMB_UPLOAD_PATH", DOC_PATH . "public/uploads/user/thumb/");
 define("PROFILE_MEDIUM_UPLOAD_PATH", DOC_PATH . "public/uploads/user/medium/");
 
-define('REQUEST_SUBMIT_EMAIL', 'lakmalwimaladasa@gmil.com');
+define('REQUEST_SUBMIT_EMAIL', 'lakmalwimaladasa@gmail.com');
 
 /*
  * include error description file

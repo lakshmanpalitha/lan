@@ -173,7 +173,7 @@ function ajaxRequest(URL, param, returnFunc)
         url: URL,
         data: param,
         type: 'POST',
-        timeout: 30000,
+        timeout: 60000,
         async: true,
         success: function(data) {
             try {

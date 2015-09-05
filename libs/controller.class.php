@@ -26,7 +26,7 @@ class controller extends common {
             $this->view->isLog = true;
             $this->view->user = session::get('user_f_name');
         }
-        $this->email = new PHPMailer();
+        $this->email = new mailer();
     }
 
     /**
@@ -48,22 +48,22 @@ class controller extends common {
 
     function sendMail($Message, $Subject, $ToEmail) {
 
-        $FromEmail = 'lakmalwimaladasa@yahoo.com';
-        $FromName = 'Lansuwa';
+        $FromEmail = 'info@microsola.com';
+        $FromName = 'microsola';
         $this->email->From = $FromEmail;
         $this->email->FromName = $FromName;
 
-        $this->email->IsSMTP();
+        //$this->email->IsSMTP();
 
-        $this->email->SMTPAuth = true;     // turn of SMTP authentication
-        $this->email->Username = "lakmalwimaladasa@yahoo.com";  // SMTP username  (Ex: sumithnets@yahoo.com)
-        $this->email->Password = "123456"; // SMTP password  (Ex: yahoo email password)
-        $this->email->SMTPSecure = "ssl";
+       // $this->email->SMTPAuth = false;     // turn of SMTP authentication
+        //$this->email->Username = "lakmalwimaladasa@yahoo.com";  // SMTP username  (Ex: sumithnets@yahoo.com)
+        //$this->email->Password = "123456"; // SMTP password  (Ex: yahoo email password)
+        //$this->email->SMTPSecure = "ssl";
 
-        $this->email->Host = "smtp.mail.yahoo.com";
-        $this->email->Port = 465;
+        //$this->email->Host = "smtp.mail.yahoo.com";
+        //$this->email->Port = 465;
 
-        $this->email->SMTPDebug = 2; // Enables SMTP debug information (for testing, remove this line on production mode)
+        //$this->email->SMTPDebug = 2; // Enables SMTP debug information (for testing, remove this line on production mode)
         // 1 = errors and messages
         // 2 = messages only
 
@@ -79,8 +79,8 @@ class controller extends common {
 
         $this->email->AddAddress($ToEmail, $ToEmail);
 
-        if (@$this->email->Send()) {
-            @$this->email->ClearAddresses();
+        if ($this->email->Send()) {
+            $this->email->ClearAddresses();
             return true;
         } else {
             return false;

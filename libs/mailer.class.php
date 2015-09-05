@@ -33,7 +33,7 @@
  * @copyright 2004 - 2008 Andy Prevost
  */
 
-class PHPMailer {
+class mailer {
     /////////////////////////////////////////////////
     // PROPERTIES, PUBLIC
     /////////////////////////////////////////////////
@@ -580,7 +580,7 @@ class PHPMailer {
      */
     public function SmtpConnect() {
         if ($this->smtp == NULL) {
-            $this->smtp = new SMTP();
+            $this->smtp = new smtp();
         }
 
         $this->smtp->do_debug = $this->SMTPDebug;

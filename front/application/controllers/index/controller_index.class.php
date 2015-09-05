@@ -32,7 +32,7 @@ class index extends controller {
         $valid = true;
         if (!$name = $this->read->get("name", "POST", '', 100, true))
             $valid = false;
-        if (!$web_site = $this->read->get("website", "POST", '', 250, true))
+        if (!$web_site = $this->read->get("website", "POST", '', 250, false))
             $valid = false;
         if (!$mesaage = $this->read->get("message", "POST", '', 1500, true))
             $valid = false;

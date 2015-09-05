@@ -222,7 +222,7 @@
                                                                                 New Password
                                                                             </label>
                                                                             <div class="col-lg-10">
-                                                                                <input type="password" value="" id="new_pwd" class="form-control" name="new_pwd" placeholder="New Password">
+                                                                                <input type="password" value="" id="New_password" class="form-control" name="New_password" placeholder="New Password">
                                                                             </div>
                                                                         </div>
 
@@ -231,7 +231,7 @@
                                                                                 Re-Password
                                                                             </label>
                                                                             <div class="col-lg-10">
-                                                                                <input type="password" value="" id="re_pwd" class="form-control" name="re_pwd" placeholder="Re-Password">
+                                                                                <input type="password" value="" id="Re_password" class="form-control" name="Re_password" placeholder="Re-Password">
                                                                             </div>
                                                                         </div>                                   
                                                                     </div>
