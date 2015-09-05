@@ -474,11 +474,11 @@ object {
 .navbar.nav-white .dropdown-menu li.dropdown-header {
     color: #fff
 }
-.navbar.nav-white: not(li)>a {
+.navbar.nav-white:not(li)>a {
                                color: #62A2D8
                            }
-.navbar.nav-white: not(li)>a:focus,
-                           .navbar.nav-white: not(li)>a:hover {
+.navbar.nav-white:not(li)>a:focus,
+                           .navbar.nav-white:not(li)>a:hover {
                                                           color: #44A5FF
                                                       }
 .navbar.nav-white .dropdown-menu>li>a {
@@ -522,14 +522,15 @@ object {
     -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 5px #fff;
     box-shadow: inset 0 1px 1px transparent, 0 0 5px #fff
 }
-.navbar.nav-white .navbar-nav .dropdown-menu li: not(.list-group)>a {
-                                                                      color: #7D8693;
-                                                                      background-color: #fff;
-                                                                      padding: 5px 20px;
-                                                                      font-weight: 300
-                                                                  }
-.navbar.nav-white .navbar-nav .dropdown-menu li: not(.list-group)>a:focus,
-                                                                  .navbar.nav-white .navbar-nav .dropdown-menu li: not(.list-group)>a:hover {
+.navbar.nav-white .navbar-nav .dropdown-menu li:not(.list-group)>a
+{
+  color: #7D8693;
+  background-color: #fff;
+  padding: 5px 20px;
+  font-weight: 300
+}
+.navbar.nav-white .navbar-nav .dropdown-menu li:not(.list-group)>a:focus,
+ .navbar.nav-white .navbar-nav .dropdown-menu li:not(.list-group)>a:hover {
                                                                                                                                         color: #000;
                                                                                                                                         background-color: #fff
                                                                                                                                     }
@@ -547,9 +548,9 @@ object {
 .navbar.nav-white .navbar-nav .dropdown-menu li.open>a,
 .navbar.nav-white .navbar-nav .dropdown-menu li.open>a:focus,
 .navbar.nav-white .navbar-nav .dropdown-menu li.open>a:hover,
-.navbar.nav-white .navbar-nav .dropdown-menu li: not(.no-fix)>a.dropdown-toggle: not(.collapsed),
-.navbar.nav-white .navbar-nav .dropdown-menu li: not(.no-fix)>a.dropdown-toggle: not(.collapsed):focus,
-                                                                                                .navbar.nav-white .navbar-nav .dropdown-menu li: not(.no-fix)>a.dropdown-toggle: not(.collapsed):hover {
+.navbar.nav-white .navbar-nav .dropdown-menu li:not(.no-fix)>a.dropdown-toggle:not(.collapsed),
+.navbar.nav-white .navbar-nav .dropdown-menu li:not(.no-fix)>a.dropdown-toggle:not(.collapsed):focus,
+.navbar.nav-white .navbar-nav .dropdown-menu li:not(.no-fix)>a.dropdown-toggle:not(.collapsed):hover {
                                                                                                                                                                                                     color: #fff;
                                                                                                                                                                                                     background-color: #fff
                                                                                                                                                                                                 }
@@ -562,8 +563,8 @@ object {
     color: #fff;
     background-color: #fff
 }
-.navbar.nav-white .navbar-nav li: not(.dropdown)>.dropdown-grid-wrapper>ul.dropdown-menu.bordered: not(.no-padding):after,
-                                                                                                                   .navbar.nav-white .navbar-nav li: not(.dropdown)>ul.dropdown-menu.bordered: not(.no-padding):after {
+.navbar.nav-white .navbar-nav li:not(.dropdown)>.dropdown-grid-wrapper>ul.dropdown-menu.bordered:not(.no-padding):after,
+ .navbar.nav-white .navbar-nav li:not(.dropdown)>ul.dropdown-menu.bordered:not(.no-padding):after {
                                                                                                                                                                                                                    outline-color: #fff
                                                                                                                                                                                                                }
 .navbar.nav-white .dropdown-menu li.divider,
@@ -1812,7 +1813,9 @@ table.cart-contents .currency {
 }
 .google-maps {
     position: relative;
-    padding-bottom: 75%; // This is the aspect ratio height:0;overflow:hidden}.google-maps iframe{position:absolute;top:0;left:0;width:100%!important;height:100%!important}.modal-content{border-radius:0;border:1px solid #ededed}.modal-body{position:relative;padding:0}.panel .panel-collapse .collapse{transition:transform .25s ease-in-out;-webkit-transition:-webkit-transform .25s ease-in-out}.cta-main{margin-top:90px}.cta-box{padding:25px 30px;background-color:#3c4759;color:#AFACBB;margin-top:25px}.cta-box h3{line-height:24px;color:#FFF;font-weight:400}.cta-box a.btn{margin-top:24px}.cta-grey{background:#f1f1f1}@media handheld,only screen and (max-width:767px){.cta-box{text-align:center}.cta-box a.btn{margin:25px 0}}.box-icon{padding:30px 0}.box-icon .icon-wrap{float:left;font-size:40px;margin-top:12px}.box-icon .text{overflow:hidden;padding-left:20px}.box-icon .text h4{font-size:14px;text-transform:uppercase;margin:13px 0 5px}.box-icon .text p{margin-bottom:13px}@media handheld,only screen and (max-width:767px){.box-icon .text{padding-left:10px}}.credit-card-div span{padding-top:10px}.credit-card-div img{padding-top:48px;height:89px}.credit-card-div .small-font{font-size:9px}.credit-card-div .pad-adjust{padding-top:10px}.credit-card-div .form-control{margin:5px 0}.credit-card-div textarea{margin:15px 0;padding:10px}.wizNav{margin:10px 0 30px}.well{min-height:20px;padding:19px;margin-bottom:20px;background-color:#F1F5F8;border:#F1F5F8;border-radius:0;-webkit-box-shadow:none;box-shadow:none}.rating .fa{font-size:22px}.rating-num{margin-top:0;font-size:60px}.progress{margin-bottom:5px}.progress-bar{text-align:left}.rating-desc .col-md-3{padding-right:0} .terms {padding:20px}
+    padding-bottom: 75%;
+    height:0;overflow:hidden}
+.google-maps iframe{position:absolute;top:0;left:0;width:100%!important;height:100%!important}.modal-content{border-radius:0;border:1px solid #ededed}.modal-body{position:relative;padding:0}.panel .panel-collapse .collapse{transition:transform .25s ease-in-out;-webkit-transition:-webkit-transform .25s ease-in-out}.cta-main{margin-top:90px}.cta-box{padding:25px 30px;background-color:#3c4759;color:#AFACBB;margin-top:25px}.cta-box h3{line-height:24px;color:#FFF;font-weight:400}.cta-box a.btn{margin-top:24px}.cta-grey{background:#f1f1f1}@media handheld,only screen and (max-width:767px){.cta-box{text-align:center}.cta-box a.btn{margin:25px 0}}.box-icon{padding:30px 0}.box-icon .icon-wrap{float:left;font-size:40px;margin-top:12px}.box-icon .text{overflow:hidden;padding-left:20px}.box-icon .text h4{font-size:14px;text-transform:uppercase;margin:13px 0 5px}.box-icon .text p{margin-bottom:13px}@media handheld,only screen and (max-width:767px){.box-icon .text{padding-left:10px}}.credit-card-div span{padding-top:10px}.credit-card-div img{padding-top:48px;height:89px}.credit-card-div .small-font{font-size:9px}.credit-card-div .pad-adjust{padding-top:10px}.credit-card-div .form-control{margin:5px 0}.credit-card-div textarea{margin:15px 0;padding:10px}.wizNav{margin:10px 0 30px}.well{min-height:20px;padding:19px;margin-bottom:20px;background-color:#F1F5F8;border:#F1F5F8;border-radius:0;-webkit-box-shadow:none;box-shadow:none}.rating .fa{font-size:22px}.rating-num{margin-top:0;font-size:60px}.progress{margin-bottom:5px}.progress-bar{text-align:left}.rating-desc .col-md-3{padding-right:0} .terms {padding:20px}
 .deal-price .price p {
     display: inline-block;
     font-family: Roboto, sans-serif;

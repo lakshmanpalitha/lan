@@ -13,7 +13,7 @@
                     Welcome to Lansuwa...
                 </h3>
                 <p>
-                    Carefully designed to bring you the best performance, usage and customization experience!
+                    Sri lankan largest bidding store - Revolution against traditional “Lansuwa” !
                 </p>
             </div>
         </div>

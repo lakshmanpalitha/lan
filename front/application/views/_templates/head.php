@@ -1,5 +1,5 @@
 <title>
-    Lansuwa - Sri lankan largest bidding store
+    Lansuwa - Sri lankan largest bidding store - Revolution against traditional “Lansuwa”
 </title>
 <base href="http://127.0.0.1/lansuwa/">
 <meta name="generator" content="#" />
