@@ -1895,3 +1895,47 @@ table.cart-contents .currency {
 .pinterest {
     background: #444;
 }
+
+
+
+.accordion, .accordion * {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+.accordion {
+    overflow:hidden;
+    box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+    border-radius:3px;
+    background:#f7f7f7;
+}
+
+/*----- Section Titles -----*/
+.accordion-section-title {
+    width: 100%;
+    padding: 15px;
+    display: inline-block;
+    border-bottom: 1px solid #4A4A4A;
+    background: #EAEDEF;
+    transition: all linear 0.15s;
+    font-size: 1.200em;
+    color: #000;
+    font-weight: bold;
+}
+
+.accordion-section-title.active, .accordion-section-title:hover {
+    background:#ECECEC;
+    /* Type */
+    text-decoration:none;
+}
+
+.accordion-section:last-child .accordion-section-title {
+    border-bottom:none;
+}
+
+/*----- Section Content -----*/
+.accordion-section-content {
+    padding:15px;
+    display:none;
+}
