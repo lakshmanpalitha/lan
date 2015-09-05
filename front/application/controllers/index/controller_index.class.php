@@ -100,51 +100,59 @@ class index extends controller {
     function jsonProductBid($product_id = null) {
         if ($product_id) {
             $product_id = base64_decode($product_id);
-            $login_model_bid = $this->loadModel('bid');
-            $pro_bid_time = $login_model_bid->checkProductBidTime($product_id);
-            $bid = array();
-            $pro_bid_array = array();
-            if (!empty($pro_bid_time)) {
-                foreach ($pro_bid_time as $pro_bid) {
-                    if ($pro_bid->bid_type == 'T') {
-                        if ($pro_bid->bid_allow_time > $pro_bid->bid_time_def) {
-                            $available_time = ($pro_bid->bid_allow_time - $pro_bid->bid_time_def);
-                            $bid['id'] = $pro_bid->pro_id;
-                            $bid['status'] = 'A';
-                            $bid['type'] = 'T';
-                            $bid['count'] = $login_model_bid->time($available_time);
-                            $bid['bid_count_left'] = '-';
-                        } else {
-                            $bid['id'] = $pro_bid->pro_id;
-                            $bid['status'] = 'N';
-                            $bid['type'] = '-';
-                            $bid['count'] = '-';
-                            $bid['bid_count_left'] = '-';
-                        }
-                    } else {
-                        $bid_allow_count = (($pro_bid->bid_allow_time - $pro_bid->bid_count));
-                        if ($bid_allow_count > 0) {
-                            $bid['id'] = $pro_bid->pro_id;
-                            $bid['status'] = 'A';
-                            $bid['type'] = 'C';
-                            $bid['count'] = $pro_bid->bid_allow_time;
-                            $bid['bid_count_left'] = ($bid_allow_count > 0 ? $bid_allow_count : 0);
-                        } else {
-                            $bid['id'] = $pro_bid->pro_id;
-                            $bid['status'] = 'N';
-                            $bid['type'] = '-';
-                            $bid['count'] = '-';
-                            $bid['bid_count_left'] = '-';
-                        }
-                    }
-                    array_push($pro_bid_array, $bid);
-                }
-            } else {
-                $data = array('success' => false, 'data' => '', 'error' => '');
-            }
-            $data = array('success' => true, 'data' => $pro_bid_array, 'error' => '');
-            echo json_encode($data);
         }
+        $login_model_bid = $this->loadModel('bid');
+        $pro_bid_time = $login_model_bid->checkProductBidTime($product_id);
+        $bid = array();
+        $pro_bid_array = array();
+        if (!empty($pro_bid_time)) {
+            foreach ($pro_bid_time as $pro_bid) {
+                if ($pro_bid->bid_type == 'T') {
+                    if ($pro_bid->bid_allow_time > $pro_bid->bid_time_def) {
+                        $available_time = ($pro_bid->bid_allow_time - $pro_bid->bid_time_def);
+                        $bid['id'] = $pro_bid->pro_id;
+                        $bid['status'] = 'A';
+                        $bid['type'] = 'T';
+                        $bid['count'] = $login_model_bid->time($available_time);
+                        $bid['bid_count_left'] = '-';
+                        $bid['user_count'] = $pro_bid->count_users;
+                        $bid['bid_count'] = $pro_bid->bid_count;
+                    } else {
+                        $bid['id'] = $pro_bid->pro_id;
+                        $bid['status'] = 'N';
+                        $bid['type'] = '-';
+                        $bid['count'] = '-';
+                        $bid['bid_count_left'] = '-';
+                        $bid['user_count'] = $pro_bid->count_users;
+                        $bid['bid_count'] = $pro_bid->bid_count;
+                    }
+                } else {
+                    $bid_allow_count = (($pro_bid->bid_allow_time - $pro_bid->bid_count));
+                    if ($bid_allow_count > 0) {
+                        $bid['id'] = $pro_bid->pro_id;
+                        $bid['status'] = 'A';
+                        $bid['type'] = 'C';
+                        $bid['count'] = $pro_bid->bid_allow_time;
+                        $bid['bid_count_left'] = ($bid_allow_count > 0 ? $bid_allow_count : 0);
+                        $bid['user_count'] = $pro_bid->count_users;
+                        $bid['bid_count'] = $pro_bid->bid_count;
+                    } else {
+                        $bid['id'] = $pro_bid->pro_id;
+                        $bid['status'] = 'N';
+                        $bid['type'] = '-';
+                        $bid['count'] = '-';
+                        $bid['bid_count_left'] = '-';
+                        $bid['user_count'] = $pro_bid->count_users;
+                        $bid['bid_count'] = $pro_bid->bid_count;
+                    }
+                }
+                array_push($pro_bid_array, $bid);
+            }
+        } else {
+            $data = array('success' => false, 'data' => '', 'error' => '');
+        }
+        $data = array('success' => true, 'data' => $pro_bid_array, 'error' => '');
+        echo json_encode($data);
     }
 
 }

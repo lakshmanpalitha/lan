@@ -16,18 +16,8 @@
             </header>
             <?php include DOC_PATH . FRONTEND . "application/views/_templates/search.php"; ?>
             <!-- /.search form -->
-            <div class="alert  alert-danger alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">
-                        &times;
-                    </span>
-                </button>
-                <strong>
-                    333
-                </strong>
-                <?php echo (isset($this->error) ? $this->error : ''); ?>
-            </div>
-            
+            <?php echo (isset($this->error) ? $this->error : ''); ?> 
+
             <!-- /#page ends -->
             <?php include DOC_PATH . FRONTEND . "application/views/_templates/welcome.php"; ?>
             <!-- /.CTA -->

@@ -14,7 +14,6 @@ if (isset($feedback_positive)) {
                       </span>
                     </button>
                     <strong>
-222
                     </strong>
 '.$feedback.'
                   </div>';
@@ -34,7 +33,6 @@ if (isset($feedback_negative)) {
                       </span>
                     </button>
                     <strong>
-222
                     </strong>
 '.$feedback.'
                   </div>';

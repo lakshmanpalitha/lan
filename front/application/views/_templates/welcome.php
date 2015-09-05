@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-12 pull-right">
-                <a href="#" class="btn btn-raised btn-primary ripple-effect btn-lg" data-original-title="" title="">
+                <a href="<?php echo URL . FRONTEND ?>bid/listing/" class="btn btn-raised btn-primary ripple-effect btn-lg" data-original-title="" title="">
                     <i class="ti-shopping-cart">
                     </i>
                     &nbsp; Find your bid Now

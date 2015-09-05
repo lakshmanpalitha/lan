@@ -163,6 +163,12 @@ function bid_info_print(responseText) {
                     if ($("#sidebar_pro_timer_" + jsonData.data[i].id).length > 0) {
                         $("#sidebar_pro_timer_" + jsonData.data[i].id).html(time_string);
                     }
+                    if ($("#sidebar_pro_user_count_" + jsonData.data[i].id).length > 0) {
+                        $("#sidebar_pro_user_count_" + jsonData.data[i].id).html(jsonData.data[i].user_count);
+                    }
+                    if ($("#sidebar_pro_bid_count_" + jsonData.data[i].id).length > 0) {
+                        $("#sidebar_pro_bid_count_" + jsonData.data[i].id).html(jsonData.data[i].bid_count);
+                    }
                     if ($("#index_pro_timer_" + jsonData.data[i].id).length > 0) {
                         $('#index_pro_timer_' + jsonData.data[i].id).html(time_string);
                     }

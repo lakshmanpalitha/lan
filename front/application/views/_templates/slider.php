@@ -52,12 +52,12 @@
                                                     <li>
                                                         <p>
                                                             <i class="ti-user"></i>
-                                                            <b>2500</b>Person
+                                                            <b><span id="sidebar_pro_user_count_<?php echo $pro->product_id ?>"></span></b> Person
                                                         </p>
                                                     </li>
                                                     <li>
                                                         <i class="ti-tag"></i>
-                                                        <b>8245</b>Bids
+                                                        <b><span id="sidebar_pro_bid_count_<?php echo $pro->product_id ?>"></span></b> Bids
                                                     </li>
                                                 </ul>
                                                 <div class="social-sharing text-center" data-permalink="http://labs.carsonshold.com/social-sharing-buttons">

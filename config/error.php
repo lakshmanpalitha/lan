@@ -77,5 +77,7 @@ define("FEEDBACK_RESET_PWD", "Please login to your email and find new password")
 define("FEEDBACK_CONTACT_US", "Your Request successfully submit");
 
 define("FEEDBACK_REGISTERED_SUCCESS", "You successfully registered in lansuwa.Please login to your email and activate your account");
+define("FEEDBACK_CHANGE_PASSWORD", "Successfully changed password");
+define("FEEDBACK_CHANGE_PROFILE", "Successfully modifyed profile");
 
 ?>

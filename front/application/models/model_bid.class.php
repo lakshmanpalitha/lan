@@ -27,6 +27,12 @@ class bidModel extends model {
                 pro.product_short_description,
                 pro.product_bid_type,
                 pro.product_description,
+                (SELECT COUNT(bid.user_id)
+FROM(
+SELECT DISTINCT user_id
+FROM tbl_bid
+WHERE product_id=product_id
+)bid) AS count_users,
                 (SELECT COUNT(product_id) FROM tbl_bid WHERE product_id=pro.product_id) AS bid_count,
                 (select 
                     GROUP_CONCAT(pimg.image_name SEPARATOR ', ')
@@ -45,7 +51,7 @@ class bidModel extends model {
                 tbl_product pro
             WHERE pro.product_status NOT IN ('D')
                   " . ($check_bid_status ? "AND pro.product_bid_status IN ('R')" : "") . "
-                  " . ($where ? $where : '');
+                  " . ($where ? $where : '')." ORDER BY pro.product_create_date";
         $result = $this->db->queryMultipleObjects($query);
         return ($result ? $result : false);
     }
@@ -113,14 +119,19 @@ class bidModel extends model {
                 pro.product_bid_type AS  bid_type,
                 pro.product_max_bid_runtime AS bid_allow_time,
                 (SELECT COUNT(product_id) FROM tbl_bid WHERE product_id=pro.product_id) AS bid_count,
-                pro.product_bid_status AS bid_status
+                pro.product_bid_status AS bid_status,
+                (SELECT COUNT(bid.user_id)
+FROM(
+SELECT DISTINCT user_id
+FROM tbl_bid
+WHERE product_id=product_id
+)bid) AS count_users
             FROM 
                 tbl_product pro
             WHERE 
                 " . ($where ? $where : '') . "
                 pro.product_status='A'
                 AND pro.product_bid_status='R'";
-
         $result = $this->db->queryMultipleObjects($query);
         return ($result ? $result : false);
     }

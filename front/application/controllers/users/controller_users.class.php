@@ -32,10 +32,10 @@ class users extends controller {
             if ($res) {
                 header('Location:' . URL . FRONTEND . 'users/signin/');
             } else if (!$res) {
-                $this->view->error = (FEEDBACK_INVALID_ACTIVATION_CODE);
+                $this->view->error = $this->view->renderCustomMassage(FEEDBACK_INVALID_ACTIVATION_CODE, 'negative');
             }
         } else {
-            $this->view->error = (FEEDBACK_INVALID_ACTIVATION_CODE);
+            $this->view->error = $this->view->renderCustomMassage(FEEDBACK_INVALID_ACTIVATION_CODE, 'negative');
         }
         $this->view->render('user/user_activate', false, false, $this->module);
     }
@@ -43,6 +43,9 @@ class users extends controller {
     function profile() {
         if (auth::handleLogin()) {
             $action = $this->read->get("action", "GET", '', '', false);
+            if($action===true){
+                $action='profile';
+            }
             $this->view->bid_summary = $this->login_model_bid->userBidSummary(session::get('user_id'));
             $this->view->info = $this->login_model->userInfo(session::get('user_id'));
             $this->view->active = $action;
@@ -103,6 +106,9 @@ class users extends controller {
                 array_push($pwd, $new_pwd);
                 array_push($pwd, base64_decode($user_id));
                 $res = $this->login_model->updatePassword($pwd);
+                if ($res) {
+                    session::setError("feedback_positive", FEEDBACK_CHANGE_PASSWORD);
+                }
             }
             header('Location:' . URL . FRONTEND . 'users/profile/?action=pwd');
         } else {
@@ -153,6 +159,9 @@ class users extends controller {
                 array_push($user, $imgArray);
 
                 $res = $this->login_model->updateProfile($user);
+                if ($res) {
+                    session::setError("feedback_positive", FEEDBACK_CHANGE_PROFILE);
+                }
             }
             header('Location:' . URL . FRONTEND . 'users/profile/?action=profile');
         } else {

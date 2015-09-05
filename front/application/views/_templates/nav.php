@@ -30,6 +30,11 @@
                                 Home
                             </a>
                         </li>
+                        <li class="dropdown">
+                            <a href="<?php echo URL . FRONTEND ?>bid/listing/"  role="button">
+                                All Bids
+                            </a>
+                        </li>
                         <li>
                             <a href="<?php echo URL . "front/index/about" ?>">
                                 About Lansuwa
@@ -41,16 +46,16 @@
                             </a>
                         </li>
                         <?php
-                            if ($this->isLog === true) {
-                                ?>
-                        <li>
-                            <a href="<?php echo URL . "front/user/user_profile" ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                <i class="ti-user">
-                                </i>
-                                My Account
-                                <span class="caret">
-                                </span>
-                            </a>                           
+                        if ($this->isLog === true) {
+                            ?>
+                            <li>
+                                <a href="<?php echo URL . "front/user/user_profile" ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <i class="ti-user">
+                                    </i>
+                                    My Account
+                                    <span class="caret">
+                                    </span>
+                                </a>                           
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
 
@@ -76,7 +81,7 @@
                                         </a>
                                     </li>
                                 </ul>                           
-                        </li>
+                            </li>
                         <?php } ?>
                     </ul>
                 </div>

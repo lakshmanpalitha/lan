@@ -133,7 +133,7 @@
                                                         <i class="ti-user">
                                                         </i>
                                                         <b>
-                                                            2500
+                                                           <span id="sidebar_pro_user_count_<?php echo $this->bid_product[0]->product_id ?>"><?php echo $this->bid_product[0]->count_users ?></span>
                                                         </b>
                                                         Person
                                                     </p>
@@ -142,7 +142,7 @@
                                                     <i class="ti-tag">
                                                     </i>
                                                     <b>
-                                                        <?php echo $this->bid_product[0]->bid_count ?>
+                                                        <span id="sidebar_pro_bid_count_<?php echo $this->bid_product[0]->product_id ?>"><?php echo $this->bid_product[0]->bid_count ?></span>
                                                     </b>
                                                     Bids
                                                 </li>

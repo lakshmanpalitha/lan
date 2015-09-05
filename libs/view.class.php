@@ -115,7 +115,6 @@ class view {
                       </span>
                     </button>
                     <strong>
-111
                     </strong>
 ' . $feedback . '
                   </div>';
@@ -132,7 +131,6 @@ class view {
                       </span>
                     </button>
                     <strong>
-111
                     </strong>
 ' . $feedback . '
                   </div>';

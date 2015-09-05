@@ -25,6 +25,8 @@ class session {
      * @param mixed $value
      */
     public static function set($key, $value) {
+        $_SESSION['feedback_positive'] = null;
+        $_SESSION['feedback_negative'] = null;
         $_SESSION[$key] = $value;
     }
 
