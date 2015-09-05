@@ -122,7 +122,7 @@
 
                                             </div>
                                             <div id="profile" class="tab-pane profile-wrapper <?php echo ($this->active == 'profile' ? 'active' : '') ?>">
-                                                <form action="<?php echo URL . FRONTEND ?>users/changeprofile/" method="POST" enctype="multipart/form-data">
+                                                <form id="update-profile" action="<?php echo URL . FRONTEND ?>users/changeprofile/" method="POST" enctype="multipart/form-data">
                                                     <div class="row text-center m-t-lg m-b-lg">
                                                         <div id="step1" class="tab-pane active">
                                                             <div class="row wizForm">
@@ -130,7 +130,7 @@
                                                                     <h5>
                                                                         Hallo Lakshman
                                                                     </h5>
-                                                                    <div class="profile-image-wapper shadow"><img src="<?php echo URL ?>public/uploads/user/thumb/thumb_<?php echo (isset($this->info->user_profile_image) ? $this->info->user_profile_image : '')?>" alt="Profile"></div>
+                                                                    <div class="profile-image-wapper shadow" style="background: url(<?php echo URL ?>public/uploads/user/medium/medium_<?php echo (isset($this->info->user_profile_image) ? $this->info->user_profile_image : '');?> )"></div>
                                                                 </div>
                                                                 <div class="col-lg-9">
                                                                     <div class="row">
@@ -139,7 +139,7 @@
                                                                                 First Name
                                                                             </label>
                                                                             <div class="col-lg-10">
-                                                                                <input type="text" value="<?php echo (isset($this->info->user_f_name) ? $this->info->user_f_name : '') ?>" id="fname" class="form-control" name="fname" placeholder="Name">
+                                                                                <input type="text" value="<?php echo (isset($this->info->user_f_name) ? $this->info->user_f_name : '') ?>" id="fname" class="validate[required] form-control" name="fname" placeholder="Name">
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group col-lg-12">
@@ -147,7 +147,7 @@
                                                                                 Last Name
                                                                             </label>
                                                                             <div class="col-lg-10">
-                                                                                <input type="text" value="<?php echo (isset($this->info->user_l_name) ? $this->info->user_l_name : '') ?>" id="" class="form-control" name="lname" placeholder="lname">
+                                                                                <input type="text" value="<?php echo (isset($this->info->user_l_name) ? $this->info->user_l_name : '') ?>" id="" class="validate[required] form-control" name="lname" placeholder="lname">
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group col-lg-12">
@@ -155,7 +155,7 @@
                                                                                 E-Mail
                                                                             </label>
                                                                             <div class="col-lg-10">
-                                                                                <input type="text" value="<?php echo (isset($this->info->user_email) ? $this->info->user_email : '') ?>" id="email" class="form-control" name="email" placeholder="Email">
+                                                                                <input type="text" value="<?php echo (isset($this->info->user_email) ? $this->info->user_email : '') ?>" id="email" class="validate[required,custom[email]] form-control" name="email" placeholder="Email">
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group col-lg-12">
@@ -163,7 +163,7 @@
                                                                                 Telephone
                                                                             </label>
                                                                             <div class="col-lg-10">
-                                                                                <input type="text" value="<?php echo (isset($this->info->user_land_number) ? $this->info->user_land_number : '') ?>" id="telephone" class="form-control" name="telephone" placeholder="Telphone">
+                                                                                <input type="text" value="<?php echo (isset($this->info->user_land_number) ? $this->info->user_land_number : '') ?>" id="telephone" class="validate[required] form-control" name="telephone" placeholder="Telphone">
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group col-lg-12">
@@ -171,7 +171,7 @@
                                                                                 Mobile
                                                                             </label>
                                                                             <div class="col-lg-10">
-                                                                                <input type="text" value="<?php echo (isset($this->info->user_mobile_number) ? $this->info->user_mobile_number : '') ?>" id="mobile" class="form-control" name="mobile" placeholder="Telphone">
+                                                                                <input type="text" value="<?php echo (isset($this->info->user_mobile_number) ? $this->info->user_mobile_number : '') ?>" id="mobile" class="validate[required] form-control" name="mobile" placeholder="Telphone">
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group col-lg-12">
@@ -179,7 +179,7 @@
                                                                                 NIC number
                                                                             </label>
                                                                             <div class="col-lg-10">
-                                                                                <input type="text" value="<?php echo (isset($this->info->user_nic_no) ? $this->info->user_nic_no : '') ?>" id="nic" class="form-control" name="nic" placeholder="NIC">
+                                                                                <input type="text" value="<?php echo (isset($this->info->user_nic_no) ? $this->info->user_nic_no : '') ?>" id="nic" class="validate[required] form-control" name="nic" placeholder="NIC">
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group col-lg-12">
@@ -195,7 +195,7 @@
                                                                                 Address
                                                                             </label>
                                                                             <div class="col-lg-10">
-                                                                                <textarea id="address" class="form-control" name="address"  rows="6"><?php echo (isset($this->info->user_address) ? $this->info->user_address : '') ?></textarea>
+                                                                                <textarea id="address" class="validate[required] form-control" name="address"  rows="6"><?php echo (isset($this->info->user_address) ? $this->info->user_address : '') ?></textarea>
                                                                             </div>
                                                                         </div>     
                                                                     </div>

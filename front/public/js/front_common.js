@@ -1,3 +1,98 @@
+$( document ).ready(function() {
+    // LEAK GLOBAL OPTIONS
+    $.validationEngine= {fieldIdCounter: 0,defaults:{
+       validationEventTrigger: "blur",
+        scroll: true,
+        focusFirstField:true,
+        showPrompts: true,
+       validateNonVisibleFields: false,
+        ignoreFieldsWithClass: 'ignoreMe',
+        promptPosition: "bottomLeft",
+        bindMethod:"bind",
+        inlineAjax: false,
+        ajaxFormValidation: false,
+        ajaxFormValidationURL: false,
+        ajaxFormValidationMethod: 'get',
+        onAjaxFormComplete: $.noop,
+        onBeforeAjaxFormValidation: $.noop,
+        onValidationComplete: false,
+        doNotShowAllErrosOnSubmit: false,
+        custom_error_messages:{},
+        binded: true,
+        notEmpty: false,
+        showArrow: true,
+        showArrowOnRadioAndCheckbox: false,
+        isError: false,
+        maxErrorsPerField: false,
+        ajaxValidCache: {},
+        autoPositionUpdate: false,
+        InvalidFields: [],
+        onFieldSuccess: false,
+        onFieldFailure: false,
+        onSuccess: false,
+        onFailure: false,
+        validateAttribute: "class",
+        addSuccessCssClassToField: "",
+        addFailureCssClassToField: "",
+        autoHidePrompt: false,
+        autoHideDelay: 10000,
+        fadeDuration: 300,
+        prettySelect: false,
+        addPromptClass : "",
+        usePrefix: "",
+        useSuffix: "",
+        showOneMessage: false
+    }};
+
+
+    if($("#user_login_form").length)
+    {
+        $("#user_login_form").validationEngine();
+    }
+
+    if($("#user_register_form").length)
+    {
+        $("#user_register_form").validationEngine();
+    }
+
+    if($('#reset_pwd').length)
+    {
+        $('#reset_pwd').validationEngine();
+    }
+
+    if($('#update-profile').length)
+        {
+            $('#update-profile').validationEngine();
+        }
+
+
+
+    function close_accordion_section() {
+        $('.accordion .accordion-section-title').removeClass('active');
+        $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+    }
+
+    $('.accordion-section-title').click(function(e) {
+        // Grab current anchor value
+        var currentAttrValue = $(this).next('div');
+
+        if($(e.target).is('.active')) {
+            close_accordion_section();
+        }else {
+            close_accordion_section();
+
+            // Add active class to section title
+            $(this).addClass('active');
+            // Open up the hidden content panel
+            $(currentAttrValue).slideDown(300).addClass('open');
+        }
+
+        e.preventDefault();
+
+    });
+
+
+});
 
 function bid_info() {
     try {
@@ -24,7 +119,7 @@ function bid_info_each(val) {
             });
         }, 1000);
     } catch (err) {
-        //alert(err.message);
+        //alert(err.message)
         return false;
     }
 

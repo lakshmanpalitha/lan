@@ -34,17 +34,17 @@
                                         <label>
                                             Email Address
                                         </label>
-                                        <input type="" name="email" class="form-control" id="email" value="">
+                                        <input type="" name="email" class="validate[required,custom[email]] form-control" id="email" value="">
                                     </div>
                                     <div class="form-group">
                                         <label>
                                             Password
                                         </label>
-                                        <input type="password" name="pwd" class="form-control" id="pwd" value="">
+                                        <input type="password" name="pwd" class="validate[required] form-control" id="pwd" value="">
                                     </div>                                   
                                 </form>
                                 <div class="form-group">
-                                    <a  onclick="login()" class="btn btn-primary btn-raised ripple-effect">
+                                    <a id="user-login-btn" onclick="login()" class="btn btn-primary btn-raised ripple-effect">
                                         Login
                                     </a>
                                 </div>
@@ -83,20 +83,27 @@
 
     </body>
     <script>
-                                        function login() {
-                                            var nURL = "<?php echo URL . FRONTEND ?>users/jsonLogin/";
-                                            var param = $('#user_login_form').serialize();
-                                            loading('error_login');
-                                            ajaxRequest(nURL, param, function(jsonData) {
-                                                if (jsonData) {
-                                                    endLoading('error_login');
-                                                    if (jsonData.success == true) {
-                                                        window.location.href = "<?php echo URL . FRONTEND ?>users/profile/";
-                                                    } else {
-                                                        jQuery('#error_login').html(jsonData.error);
-                                                    }
-                                                }
-                                            });
-                                        }
+
+
+            function login() {
+                if( $("#user_login_form").validationEngine('validate'))
+                {
+                var nURL = "<?php echo URL . FRONTEND ?>users/jsonLogin/";
+                var param = $('#user_login_form').serialize();
+                loading('bid_popup_body');
+                ajaxRequest(nURL, param, function(jsonData) {
+                    if (jsonData) {
+                        endLoading('bid_popup_body');
+                        if (jsonData.success == true) {
+                            window.location.href = "<?php echo URL . FRONTEND ?>users/profile/";
+                        } else {
+                            jQuery('#error_login').html(jsonData.error);
+                        }
+                    }
+                });
+
+            }
+        }
+
     </script>
 </html>

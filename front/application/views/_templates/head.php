@@ -21,6 +21,7 @@
 <link href="<?php echo URL . FRONTEND ?>public/css/animate.min.css" rel="stylesheet">
 <link href="<?php echo URL . FRONTEND ?>public/css/animsition.css" rel="stylesheet">
 <link href="<?php echo URL . FRONTEND ?>public/css/plugins.min.css" rel="stylesheet">
+<link href="<?php echo URL . FRONTEND ?>public/css/validationEngine.jquery.css" rel="stylesheet">
 <link href="<?php echo URL . FRONTEND ?>public/css/style.css" rel="stylesheet">
 <!--[if lt IE 9]>
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
