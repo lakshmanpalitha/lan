@@ -80,4 +80,6 @@ define("FEEDBACK_REGISTERED_SUCCESS", "You successfully registered in lansuwa.Pl
 define("FEEDBACK_CHANGE_PASSWORD", "Successfully changed password");
 define("FEEDBACK_CHANGE_PROFILE", "Successfully modifyed profile");
 
+define("FEEDBACK_BID_WAITING", "Please wait..");
+
 ?>

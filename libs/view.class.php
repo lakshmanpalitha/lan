@@ -73,7 +73,6 @@ class view {
                       </span>
                     </button>
                     <strong>
-333
                     </strong>
 ' . $error . '
                   </div>';
@@ -86,7 +85,6 @@ class view {
                       </span>
                     </button>
                     <strong>
-333
                     </strong>
 ' . $error . '
                   </div>';

@@ -378,7 +378,7 @@ class users extends controller {
                             if ($valid === true) {
                                 $display = $this->print_bid($product_id);
                             } else if ($valid === false) {
-                                $display = $this->print_time($this->cal_interval($product_id, session::get('user_id')));
+                                $display = "<div id='waiting_msg'>".FEEDBACK_BID_WAITING."</div>".$this->print_time($this->cal_interval($product_id, session::get('user_id')));
                             }
                         } else if ($valid === false) {
                             $display = $this->print_msg(FEEDBACK_TOT_BID_ERROR);

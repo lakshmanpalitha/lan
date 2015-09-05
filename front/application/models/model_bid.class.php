@@ -51,7 +51,7 @@ WHERE product_id=product_id
                 tbl_product pro
             WHERE pro.product_status NOT IN ('D')
                   " . ($check_bid_status ? "AND pro.product_bid_status IN ('R')" : "") . "
-                  " . ($where ? $where : '')." ORDER BY pro.product_create_date";
+                  " . ($where ? $where : '') . " ORDER BY pro.product_create_date";
         $result = $this->db->queryMultipleObjects($query);
         return ($result ? $result : false);
     }
@@ -213,8 +213,16 @@ WHERE product_id=product_id
         return false;
     }
 
-    function calTime($sec) {
-        return $this->time($sec);
+    function calTime($seconds) {
+        $hours = floor($seconds / 3600);
+        $mins = floor(($seconds - $hours * 3600) / 60);
+        $s = $seconds - ($hours * 3600 + $mins * 60);
+
+        $mins = ($mins < 10 ? "0" . $mins : "" . $mins);
+        $s = ($s < 10 ? "0" . $s : "" . $s);
+
+        $time = "<div id='waiting_time'>" . ($hours > 0 ? $hours . " <span>Hours:</span>" : "00 <span>Hours:</span>") . ($mins > 0 ? $mins . " <span>Min:</span>" : '00 <span>Min:</span>') . $s . " <span>Second:</span></div>";
+        return $time;
     }
 
     function userBidSummary($user_id = null) {
