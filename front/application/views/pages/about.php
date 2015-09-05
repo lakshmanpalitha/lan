@@ -28,6 +28,9 @@
                             <div class="col-sm-12 clearfix">
                                 <div class="hr-link">
                                     <hr class="mBtm-50 mTop-30" data-symbol="About Us">
+
+                                    <p>Lansuva” is a new step which opens the foundation for unique path to current business world.Providing qualitative products for every customers in the society,  who are being with us under their minimum desired price,  is the golden objective of “Lansuva”. </p>
+                                    <p>Revolution against traditional “Lansuwa”</p>
                                 </div>
                             </div>
                         </div>

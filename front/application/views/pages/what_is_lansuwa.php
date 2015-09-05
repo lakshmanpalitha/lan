@@ -25,6 +25,9 @@
                             <div class="col-sm-12 clearfix">
                                 <div class="hr-link">
                                     <hr class="mBtm-50 mTop-30" data-symbol="What is Lansuwa">
+
+                                    <p>Lansuva” is a new step which opens the foundation for unique path to current business world.Providing qualitative products for every customers in the society,  who are being with us under their minimum desired price,  is the golden objective of “Lansuva”. </p>
+                                    <p>Revolution against traditional “Lansuwa”</p>
                                 </div>
                             </div>
                         </div>
@@ -89,27 +92,7 @@
                 </div>
             </section>
             <!-- /#page ends -->
-            <div class="cta-box bg-blue-1 clearfix">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3 col-xs-12 pull-right">
-                            <a href="#" class="btn btn-raised btn-primary ripple-effect btn-lg" data-original-title="" title="">
-                                <i class="ti-shopping-cart">
-                                </i>
-                                &nbsp; Find your bid Now
-                            </a>
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <h3>
-                                Welcome to Lansuwa..
-                            </h3>
-                            <p>
-                                Carefully designed to bring you the best performance, usage and customization experience!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php include DOC_PATH . FRONTEND . "application/views/_templates/welcome.php"; ?>
             <!-- /.CTA -->
             <?php include DOC_PATH . FRONTEND . "application/views/_templates/footer.php"; ?>      
         </div>
