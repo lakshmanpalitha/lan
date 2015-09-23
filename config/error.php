@@ -82,4 +82,8 @@ define("FEEDBACK_CHANGE_PROFILE", "Successfully modifyed profile");
 
 define("FEEDBACK_BID_WAITING", "Please wait..");
 
+define("FEEDBACK_BID_INTERVAL_FAILED", "Please provide bid interval");
+
+define("FEEDBACK_BID_TIME_FAILED", "Please provide bid time");
+
 ?>

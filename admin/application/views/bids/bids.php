@@ -36,7 +36,7 @@
                                     foreach ($this->bids as $bid) {
                                         ?>
                                         <tr style="background-color: <?php echo ($bid->bid_status == 'I' ? '#f2dede' : ''); ?>" class="odd gradeX">
-                                            <td><input onchange="chkEachShop(this)" class="chk_each" name="chk_each[]" id="shop_chk_<?php echo $bid->bid_id ?>" type="checkbox" value="<?php echo $us->user_id ?>"></td>
+                                            <td><input onchange="" class="chk_each" name="chk_each[]" id="shop_chk_<?php echo $bid->bid_id ?>" type="checkbox" value="<?php echo $us->user_id ?>"></td>
                                             <td><?php echo $bid->bid_id ?></td>
                                             <td><?php echo $bid->user_id ?></td>
                                             <td><?php echo $bid->user_email ?></td>

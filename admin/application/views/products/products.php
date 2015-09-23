@@ -51,7 +51,7 @@
                                     <input name='product_video_link' id="product_video_link" class="form-control" placeholder="Category name">
                                 </div>
                                 <div class="form-group">
-                                    <label>Real Price</label>
+                                    <label>Market Price</label>
                                     <input onkeypress='return isOnlyNumberKey(event)' name='product_market_price' id="product_market_price" class="form-control" placeholder="Category name">
                                 </div>
                                 <div class="row">    
@@ -363,6 +363,7 @@
                                                         <button onclick="showImgModel('<?php echo $pro->product_id ?>')" class="btn btn-primary btn-xs" type="button">Image</button>
                                                         <button onclick="viewEachProduct('<?php echo $pro->product_id ?>')" class="btn btn-primary btn-xs" type="button">Edit</button>
                                                         <button onclick="preview('<?php echo base64_encode($pro->product_id) ?>')" class="btn btn-primary btn-xs" type="button">Preview</button>
+                                                        <a target='_blank' class="btn btn-primary btn-xs" href='<?php echo URL ?>admin/bids/product/<?php echo base64_encode($pro->product_id) ?>/'>Bids</a>
                                                     </p>
                                                 </td>
 

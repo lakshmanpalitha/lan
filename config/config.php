@@ -14,7 +14,7 @@ date_default_timezone_set("Asia/Calcutta");
 define('BACKEND', 'admin/');
 define('FRONTEND', 'front/');
 
-define('URL', '//localhost/lansuwa/');
+define('URL', 'http://localhost/lansuwa/');
 define('FILE_URL', '//localhost/lansuwa/');
 define('DOC_PATH', 'D:/xampp/htdocs/lansuwa/');
 

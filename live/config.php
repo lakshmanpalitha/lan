@@ -15,7 +15,7 @@ date_default_timezone_set("Asia/Calcutta");
 define('BACKEND','admin/');
 define('FRONTEND','front/');
 
-define('URL', '//microsola.com/preview/lansuwa/');
+define('URL', 'http://microsola.com/preview/lansuwa/');
 define('FILE_URL', '//microsola.com/preview/lansuwa/');
 define('DOC_PATH', '/home2/microsq0/public_html/preview/lansuwa/');
 

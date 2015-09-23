@@ -87,7 +87,7 @@ class products extends controller {
         }else {
             $valid = false;
         }
-        if (!$productName = $this->read->get("product_name", "POST", 'NUMERIC', '', true))
+        if (!$productName = $this->read->get("product_name", "POST", '', 100, true))
             $valid = false;
         if (!$productCategory = $this->read->get("product_category", "POST", 'NUMERIC', 20, true))
             $valid = false;
@@ -120,8 +120,13 @@ class products extends controller {
                 $productMaxBidMin = ($productMaxBidMin === true ? 0 : $productMaxBidMin);
                 $productMaxBidSec = ($productMaxBidSec === true ? 0 : $productMaxBidSec);
                 $proMaxCount = ($productMaxBidDays * 24 * 60 * 60) + ($productMaxBidHour * 60 * 60) + ( $productMaxBidMin * 60) + $productMaxBidSec;
+                if ($proMaxCount <= 0) {
+                    session::setError("feedback_negative", FEEDBACK_BID_TIME_FAILED);
+                    $valid = false;
+                }
             }
         }
+
         if (!$productBidIntDays = $this->read->get("product_bid_int_days", "POST", 'INT', 20, false))
             $valid = false;
         if (!$productBidIntHour = $this->read->get("product_bid_int_hour", "POST", 'INT', 20, false))
@@ -130,15 +135,19 @@ class products extends controller {
             $valid = false;
         if (!$productBidIntSec = $this->read->get("product_bid_int_sec", "POST", 'INT', 2, false))
             $valid = false;
+
         if ($valid) {
             $productBidIntDays = ($productBidIntDays === true ? 0 : $productBidIntDays);
             $productBidIntHour = ($productBidIntHour === true ? 0 : $productBidIntHour);
             $productBidIntMin = ($productBidIntMin === true ? 0 : $productBidIntMin);
             $productBidIntSec = ($productBidIntSec === true ? 0 : $productBidIntSec);
+
             $proBidInterval = ($productBidIntDays * 24 * 60 * 60) + ($productBidIntHour * 60 * 60) + ($productBidIntMin * 60) + $productBidIntSec;
+            if ($proBidInterval <= 0) {
+                session::setError("feedback_negative", FEEDBACK_BID_INTERVAL_FAILED);
+                $valid = false;
+            }
         }
-
-
         if ($valid) {
             if ($product_action == 'new') {
                 $res = $login_model->addNewProduct($productName, $productCategory, $productVedioLink, $productMktPrice, $productBidType, $proMaxCount, $proBidInterval, $productShortDesc);

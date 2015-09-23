@@ -128,7 +128,7 @@
                                                             <div class="row wizForm">
                                                                 <div class="col-lg-3">
                                                                     <h5>
-                                                                        Hallo Lakshman
+                                                                        Hallo <?php echo (isset($this->info->user_f_name) ? $this->info->user_f_name : '') ?>
                                                                     </h5>
                                                                     <div class="profile-image-wapper shadow" style="background: url(<?php echo URL ?>public/uploads/user/medium/medium_<?php echo (isset($this->info->user_profile_image) ? $this->info->user_profile_image : '');?> )"></div>
                                                                 </div>

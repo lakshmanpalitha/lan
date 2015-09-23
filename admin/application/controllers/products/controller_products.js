@@ -92,6 +92,7 @@ function viewCategory(responseText) {
                     document.getElementById("action_btn").style.display = "none";
                 }
                 $('#modal_category').modal('hide');
+                
 
             } else {
                 if (document.getElementById('error_msg'))
@@ -152,6 +153,7 @@ function viewProducts(responseText) {
                 }
                 if (document.getElementById('new_product')) {
                     document.getElementById("new_product").reset();
+                    $('#myModal').modal('hide');
                 }
 
             } else {
