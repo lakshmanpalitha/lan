@@ -27,12 +27,7 @@ class bidModel extends model {
                 pro.product_short_description,
                 pro.product_bid_type,
                 pro.product_description,
-                (SELECT COUNT(bid.user_id)
-FROM(
-SELECT DISTINCT user_id
-FROM tbl_bid
-WHERE product_id=product_id
-)bid) AS count_users,
+                (SELECT COUNT(DISTINCT user_id) FROM tbl_bid WHERE product_id=pro.product_id) AS count_users,
                 (SELECT COUNT(product_id) FROM tbl_bid WHERE product_id=pro.product_id) AS bid_count,
                 (select 
                     GROUP_CONCAT(pimg.image_name SEPARATOR ', ')
@@ -120,12 +115,7 @@ WHERE product_id=product_id
                 pro.product_max_bid_runtime AS bid_allow_time,
                 (SELECT COUNT(product_id) FROM tbl_bid WHERE product_id=pro.product_id) AS bid_count,
                 pro.product_bid_status AS bid_status,
-                (SELECT COUNT(bid.user_id)
-FROM(
-SELECT DISTINCT user_id
-FROM tbl_bid
-WHERE product_id=product_id
-)bid) AS count_users
+                (SELECT COUNT(DISTINCT user_id) FROM tbl_bid WHERE product_id=pro.product_id) AS count_users
             FROM 
                 tbl_product pro
             WHERE 
