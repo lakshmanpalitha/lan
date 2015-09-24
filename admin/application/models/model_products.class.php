@@ -151,7 +151,7 @@ class productsModel extends model {
 
             FROM 
                 tbl_product pro
-            WHERE pro.product_status NOT IN ('D') " . ($where ? $where : '');
+            WHERE pro.product_status NOT IN ('D') " . ($where ? $where : '')." ORDER BY pro.product_id DESC";
 
         $result = $this->db->queryMultipleObjects($query);
         return ($result ? $result : false);

@@ -18,6 +18,8 @@ define('URL', 'http://localhost/lansuwa/');
 define('FILE_URL', '//localhost/lansuwa/');
 define('DOC_PATH', 'D:/xampp/htdocs/lansuwa/');
 
+
+
 /*live*
  * 
  */
@@ -112,7 +114,7 @@ define("DEFAULT_ALLOW_BID_PER_PRODUCT", 50);
 define("DEFAULT_TOTAL_ALLOW_BID", 100);
 define("DEFAULT_BID_INTERVAL",  60);
 
-
+define('HOME_SLIDER_DISPLAY_MAX_PRODUCT',4);
 /*Profile image setting*/
 
 define("PROFILE_ORIGINAL_UPLOAD_PATH", DOC_PATH . "public/uploads/user/large/");

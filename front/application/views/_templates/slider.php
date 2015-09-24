@@ -5,7 +5,10 @@
                 <ul class="slides">
                     <?php
                     if (!empty($this->bid_products)) {
+                        $i = 0;
                         foreach ($this->bid_products as $pro) {
+                            if ($i == HOME_SLIDER_DISPLAY_MAX_PRODUCT)
+                                break;
                             ?>
                             <li>
                                 <div class="col-sm-7 col-lg-8 omega">
@@ -93,6 +96,7 @@
                                 <!-- /#buypanel -->
                             </li>
                             <?php
+                            $i++;
                         }
                     }
                     ?>

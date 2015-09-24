@@ -11,9 +11,8 @@ date_default_timezone_set("Asia/Calcutta");
 /**
  * Configuration for: Base URL
  */
-
-define('BACKEND','admin/');
-define('FRONTEND','front/');
+define('BACKEND', 'admin/');
+define('FRONTEND', 'front/');
 
 define('URL', 'http://microsola.com/preview/lansuwa/');
 define('FILE_URL', '//microsola.com/preview/lansuwa/');
@@ -94,6 +93,18 @@ define("PRO_THUMB_UPLOAD_PATH", DOC_PATH . "public/uploads/product/thumb/");
 define("PRO_MEDIUM_UPLOAD_PATH", DOC_PATH . "public/uploads/product/medium/");
 define("PRO_ALLOW_THUMB", true);
 define("PRO_ALLOW_MEDIUM", true);
+
+
+define("DEFAULT_ALLOW_BID_PER_PRODUCT", 50);
+define("DEFAULT_TOTAL_ALLOW_BID", 100);
+define("DEFAULT_BID_INTERVAL", 60);
+define('HOME_SLIDER_DISPLAY_MAX_PRODUCT', 4);
+
+/* Profile image setting */
+
+define("PROFILE_ORIGINAL_UPLOAD_PATH", DOC_PATH . "public/uploads/user/large/");
+define("PROFILE_THUMB_UPLOAD_PATH", DOC_PATH . "public/uploads/user/thumb/");
+define("PROFILE_MEDIUM_UPLOAD_PATH", DOC_PATH . "public/uploads/user/medium/");
 
 define('REQUEST_SUBMIT_EMAIL', 'lakmalwimaladasa@gmil.com');
 

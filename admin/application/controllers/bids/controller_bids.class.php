@@ -14,7 +14,7 @@ class bids extends controller {
     }
     function product($product_id=null) {
         $login_model = $this->loadModel('bids');
-        $this->view->bids = $login_model->getBidsList(base64_decode($product_id));
+        $this->view->bids = $login_model->getBidsList(($product_id));
         $this->view->render('bids/bids', true, true, $this->module);
     }
 }
