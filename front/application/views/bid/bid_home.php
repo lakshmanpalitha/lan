@@ -40,6 +40,9 @@
                         if (!empty($this->bid_products)) {
                             $bid_itm_count = 0;
                             foreach ($this->bid_products as $pro) {
+                                if ($bid_itm_count == (HOME_PAGE_DISPLAY_MAX_PRODUCT)) {
+                                    break;
+                                }
                                 if ($bid_itm_count == 0) {
                                     echo '<div class="row">';
                                 } else if ($bid_itm_count % 2 == 0) {

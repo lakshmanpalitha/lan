@@ -2,7 +2,11 @@
 
 class bidsModel extends model {
 
-    function getBidsList() {
+    function getBidsList($product_id = null) {
+        $where = '';
+        if ($product_id) {
+            $where = "WHERE bid.product_id='" . ($product_id) . "'";
+        }
         $query = "
             SELECT 
                 bid.bid_id,
@@ -15,6 +19,7 @@ class bidsModel extends model {
                 bid.bid_status
             FROM 
                 tbl_bid bid
+            " . ($where ? $where : '') . "
             ORDER BY
                 bid.bid_id DESC";
 
@@ -43,8 +48,6 @@ class bidsModel extends model {
         }
         return false;
     }
-
-
 
 }
 

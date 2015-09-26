@@ -36,6 +36,8 @@ class session {
      * @param mixed $value
      */
     public static function setError($key, $value) {
+        $_SESSION['feedback_positive'] = null;
+        $_SESSION['feedback_negative'] = null;
         $_SESSION[$key][] = $value;
     }
 

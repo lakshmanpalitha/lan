@@ -27,12 +27,7 @@ class bidModel extends model {
                 pro.product_short_description,
                 pro.product_bid_type,
                 pro.product_description,
-                (SELECT COUNT(bid.user_id)
-FROM(
-SELECT DISTINCT user_id
-FROM tbl_bid
-WHERE product_id=product_id
-)bid) AS count_users,
+                (SELECT COUNT(DISTINCT user_id) FROM tbl_bid WHERE product_id=pro.product_id) AS count_users,
                 (SELECT COUNT(product_id) FROM tbl_bid WHERE product_id=pro.product_id) AS bid_count,
                 (select 
                     GROUP_CONCAT(pimg.image_name SEPARATOR ', ')
@@ -51,7 +46,7 @@ WHERE product_id=product_id
                 tbl_product pro
             WHERE pro.product_status NOT IN ('D')
                   " . ($check_bid_status ? "AND pro.product_bid_status IN ('R')" : "") . "
-                  " . ($where ? $where : '') . " ORDER BY pro.product_create_date";
+                  " . ($where ? $where : '') . " ORDER BY pro.product_id DESC";
         $result = $this->db->queryMultipleObjects($query);
         return ($result ? $result : false);
     }
@@ -120,12 +115,7 @@ WHERE product_id=product_id
                 pro.product_max_bid_runtime AS bid_allow_time,
                 (SELECT COUNT(product_id) FROM tbl_bid WHERE product_id=pro.product_id) AS bid_count,
                 pro.product_bid_status AS bid_status,
-                (SELECT COUNT(bid.user_id)
-FROM(
-SELECT DISTINCT user_id
-FROM tbl_bid
-WHERE product_id=product_id
-)bid) AS count_users
+                (SELECT COUNT(DISTINCT user_id) FROM tbl_bid WHERE product_id=pro.product_id) AS count_users
             FROM 
                 tbl_product pro
             WHERE 
@@ -221,7 +211,7 @@ WHERE product_id=product_id
         $mins = ($mins < 10 ? "0" . $mins : "" . $mins);
         $s = ($s < 10 ? "0" . $s : "" . $s);
 
-        $time = "<div id='waiting_time'>" . ($hours > 0 ? $hours . " <span>Hours:</span>" : "00 <span>Hours:</span>") . ($mins > 0 ? $mins . " <span>Min:</span>" : '00 <span>Min:</span>') . $s . " <span>Second:</span></div>";
+        $time = "<div id='waiting_time'>" . ($hours > 0 ? "<span>Hours</span>" . $hours : "<span>Hours</span> 00") . ($mins > 0 ? "<span>:Min </span>" . $mins : '<span>:Min</span> 00') . ($s > 0 ? "<span>:Second </span>" . $s : "<span>?:Second</span> 00") . "</div>";
         return $time;
     }
 

@@ -60,7 +60,7 @@ class users extends controller {
             $this->view->bid_summary = $this->login_model_bid->userBidSummary(session::get('user_id'));
             $this->view->info = $this->login_model->userInfo(session::get('user_id'));
             $this->view->active = 'bid';
-            $this->view->render('user/user_profile/?action=bid', false, false, $this->module);
+            $this->view->render('user/user_profile', false, false, $this->module);
         } else {
             header('Location:' . URL . FRONTEND . 'users/signin/');
         }
@@ -71,7 +71,7 @@ class users extends controller {
             $this->view->bid_summary = $this->login_model_bid->userBidSummary(session::get('user_id'));
             $this->view->info = $this->login_model->userInfo(session::get('user_id'));
             $this->view->active = 'win';
-            $this->view->render('user/user_profile/?action=win', false, false, $this->module);
+            $this->view->render('user/user_profile', false, false, $this->module);
         } else {
             header('Location:' . URL . FRONTEND . 'users/signin/');
         }
@@ -82,7 +82,7 @@ class users extends controller {
             $this->view->bid_summary = $this->login_model_bid->userBidSummary(session::get('user_id'));
             $this->view->info = $this->login_model->userInfo(session::get('user_id'));
             $this->view->active = 'pwd';
-            $this->view->render('user/user_profile/?action=pwd', false, false, $this->module);
+            $this->view->render('user/user_profile', false, false, $this->module);
         } else {
             header('Location:' . URL . FRONTEND . 'users/signin/');
         }

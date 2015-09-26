@@ -1,4 +1,4 @@
-$('#dataTables-example-pro').dataTable();
+preview$('#dataTables-example-pro').dataTable();
 
 $(".pro_img").css("display", "none");
 
@@ -93,6 +93,7 @@ function viewCategory(responseText) {
                 }
                 $('#modal_category').modal('hide');
 
+
             } else {
                 if (document.getElementById('error_msg'))
                     document.getElementById('error_msg').innerHTML = jsonData.error;
@@ -141,7 +142,7 @@ function viewProducts(responseText) {
                     html = html + "<td>" + jsonData.data[i]['product_create_date'] + "</td>";
                     html = html + "<td>" + status + "</td>";
                     html = html + "<td>" + jsonData.data[i]['product_bid_start_date'] + "</td>";
-                    html = html + '<td><button onclick=showProductDesc("' + jsonData.data[i]['product_id'] + '") class="btn btn-primary btn-xs" type="button">Add more</button>&nbsp;<button onclick=showImgModel("' + jsonData.data[i]['product_id'] + '") class="btn btn-primary btn-xs" type="button">Image</button>&nbsp;<button onclick=viewEachProduct("' + jsonData.data[i]['product_id'] + '")  class="btn btn-primary btn-xs" type="button">View</button></td>';
+                    html = html + '<td><button onclick=showProductDesc("' + jsonData.data[i]['product_id'] + '") class="btn btn-primary btn-xs" type="button">Add more</button>&nbsp;<button onclick=showImgModel("' + jsonData.data[i]['product_id'] + '") class="btn btn-primary btn-xs" type="button">Image</button>&nbsp;<button onclick=viewEachProduct("' + jsonData.data[i]['product_id'] + '")  class="btn btn-primary btn-xs" type="button">Edit</button>&nbsp;<button onclick=preview("' + jsonData.data[i]['product_id'] + '")  class="btn btn-primary btn-xs" type="button">Preview</button>&nbsp<a target="_blank" class="btn btn-primary btn-xs" href="' + URL + 'admin/bids/product/' + jsonData.data[i]['product_id'] + '/">Bids</a></td>';
                     html = html + "</tr>";
                 }
                 if (document.getElementById('products_list_body')) {
@@ -152,6 +153,7 @@ function viewProducts(responseText) {
                 }
                 if (document.getElementById('new_product')) {
                     document.getElementById("new_product").reset();
+                    $('#myModal').modal('hide');
                 }
 
             } else {
@@ -546,7 +548,8 @@ function setDefaultImg(e) {
 function preview(proid) {
     if (proid)
     {
-        window.location.href = URL + "front/bid/preview/" + proid + "/";
+        //window.location.href = URL + "front/bid/preview/" + proid + "/";
+        window.open(URL + "front/bid/preview/" + proid + "/", '_blank');
     }
 }
 
