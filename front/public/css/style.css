@@ -1371,10 +1371,11 @@ video {
     margin: 15px 0
 }
 .deal-price .buy-now {
-    float: right
+    /*float: right*/
 }
 .deal-price .price h3 {
-    margin: 4px 0
+    margin: 4px 0;
+    text-decoration: line-through;
 }
 .valueInfo div {
     width: 32%;
@@ -1942,3 +1943,5 @@ table.cart-contents .currency {
     padding:15px;
     display:none;
 }
+
+#bid_interval #waiting_time span{font-size: 15px;}

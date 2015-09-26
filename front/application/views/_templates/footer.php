@@ -15,43 +15,43 @@
             </h5>
             <ul class="tags">
                 <li>
-                    <a href="#" class="tag">
-                        Vacation
+                    <a href="http://microsola.com/preview/lansuwa/front/bid/listing/?key=pen+drive&category=&ch=sh" class="tag">
+                        Pen Drives
+                    </a>
+                </li>
+                <li>
+                    <a href="http://microsola.com/preview/lansuwa/front/bid/listing/?key=Mobile+Phone&category=&ch=sh" class="tag">
+                        Mobile Phone
+                    </a>
+                </li>
+                <li>
+                    <a href="http://microsola.com/preview/lansuwa/front/bid/listing/?key=Ladies+Items&category=&ch=sh" class="tag">
+                        Ladies Items
+                    </a>
+                </li>
+                <li>
+                    <a href="http://microsola.com/preview/lansuwa/front/bid/listing/?key=computers&category=&ch=sh" class="tag">
+                        computers
                     </a>
                 </li>
                 <li>
                     <a href="#" class="tag">
-                        Rentals
+                        Men's Item
                     </a>
                 </li>
                 <li>
                     <a href="#" class="tag">
-                        Deals
+                        Fashion - Pinterest
                     </a>
                 </li>
                 <li>
                     <a href="#" class="tag">
-                        Travel deals
+                        Gift item
                     </a>
                 </li>
                 <li>
                     <a href="#" class="tag">
-                        Vacation deals
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="tag">
-                        Adriatic coast
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="tag">
-                        Europe
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="tag">
-                        Island
+                        Love
                     </a>
                 </li>
             </ul>
@@ -90,11 +90,11 @@
                         How to Win
                     </a>
                 </li>
-                <li>
-                    <a href="<?php echo URL . "front/index/privacy_policy" ?>">
-                        Privacy Policy
-                    </a>
-                </li>
+<!--                <li>-->
+<!--                    <a href="--><?php //echo URL . "front/index/privacy_policy" ?><!--">-->
+<!--                        Privacy Policy-->
+<!--                    </a>-->
+<!--                </li>-->
                 <li>
                     <a href="<?php echo URL . "front/index/terms_and_conditions" ?>">
                         Terms and Conditions

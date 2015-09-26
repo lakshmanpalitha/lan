@@ -68,18 +68,9 @@
                                 <h3 class="dark-grey">
                                     Terms and Conditions
                                 </h3>
-                                <p>
-                                    By clicking on "Register" you agree to The Company's' Terms and Conditions
-                                </p>
-                                <p>
-                                    While rare, prices are subject to change based on exchange rate fluctuations - should such a fluctuation happen, we may request an additional payment. You have the option to request a full refund or to pay the new price. (Paragraph 13.5.8)
-                                </p>
-                                <p>
-                                    Should there be an error in the description or pricing of a product, we will provide you with a full refund (Paragraph 13.5.6)
-                                </p>
-                                <p>
-                                    Acceptance of an order by us is dependent on our suppliers ability to provide the product. (Paragraph 13.5.6)
-                                </p>
+                                <p>By using our website you agree to be legally bound by these terms, which shall take effect immediately on your first use of our website. If you do not agree to be legally bound by all the following terms please do not access and/or use our website.</p>
+
+                                <p>We may change these terms at any time by posting changes online. Please review these terms regularly to ensure you are aware of any changes made by us. Your continued use of our website after changes are posted means you agree to be legally bound by these terms as updated and/or amended.</p>
 
                                 <button onclick="register()" class="btn btn-primary btn-raised ripple-effect">
                                     Register
