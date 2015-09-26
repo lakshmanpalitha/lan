@@ -12,7 +12,6 @@ class login extends controller {
     function index() {
         $this->view->render('login/login', true, false, $this->module);
     }
-
     function doLogin() {
         $valid = true;
         $login_model = $this->loadModel('login');
@@ -33,7 +32,7 @@ class login extends controller {
     }
 
     function logout() {
-        session::set('user_logged_in', false);
+        session::set('bakend_user_logged_in', false);
         session::set('user_email', null);
         session::set('user_type', null);
         session::set('user_id', null);

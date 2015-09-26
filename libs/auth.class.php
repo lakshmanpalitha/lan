@@ -10,12 +10,26 @@ class auth {
     public static function handleLogin() {
         // initialize the session
         session::init();
-
         // if user is still not logged in, then destroy session, handle user as "not logged in" and
         // redirect user to login page
-        if (!isset($_SESSION['user_logged_in'])) {
+        if (!isset($_SESSION['lansuwa_online_user_logged_in'])) {
+            session::destroy();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public static function handleLoginAdmin() {
+        // initialize the session
+        session::init();
+        // if user is still not logged in, then destroy session, handle user as "not logged in" and
+        // redirect user to login page
+        if (!isset($_SESSION['bakend_user_logged_in'])) {
             session::destroy();
             header('location: ' . URL . 'admin/login/');
+        } else {
+            return true;
         }
     }
 
@@ -54,6 +68,7 @@ class auth {
             header('location: ' . URL . 'admin/user/error/');
         }
     }
+
     public static function isLevel1User() {
         // initialize the session
         session::init();

@@ -1,5 +1,4 @@
 <?php
-
 // Load application config (error reporting, database credentials etc.)
 require '../config/config.php';
 

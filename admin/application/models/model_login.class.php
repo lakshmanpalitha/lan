@@ -25,7 +25,7 @@ class loginModel extends model {
             session::setError("feedback_negative", FEEDBACK_FIELD_USER_INACTIVE);
             return false;
         }
-        session::set('user_logged_in', true);
+        session::set('bakend_user_logged_in', true);
         session::set('user_email', $user->user_email);
         session::set('user_type', $user->user_type);
         session::set('user_id', $user->user_id);

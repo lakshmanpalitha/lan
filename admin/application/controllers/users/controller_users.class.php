@@ -3,7 +3,7 @@
 class users extends controller {
 
     function __construct($module) {
-        auth::handleLogin();
+        auth::handleLoginAdmin();
         parent::__construct($module);
     }
 
@@ -19,6 +19,8 @@ class users extends controller {
 
     function onlineUsers() {
         //auth::handleLogin();
+        $login_model = $this->loadModel('users');
+        $this->view->registerUsers = $login_model->getRegisterUsers();
         $this->view->render('users/online_user_list', true, true, $this->module);
     }
 

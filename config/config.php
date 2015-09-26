@@ -5,15 +5,28 @@
  * Useful to show every little problem during development, but only show hard errors in production
  */
 error_reporting(E_ALL);
-ini_set("display_errors", -1);
+//ini_set("display_errors", -1);
 date_default_timezone_set("Asia/Calcutta");
 
 /**
  * Configuration for: Base URL
  */
-define('URL', '//localhost/lansuwa/');
+define('BACKEND', 'admin/');
+define('FRONTEND', 'front/');
+
+define('URL', 'http://localhost/lansuwa/');
 define('FILE_URL', '//localhost/lansuwa/');
 define('DOC_PATH', 'D:/xampp/htdocs/lansuwa/');
+
+
+
+/* live*
+ * 
+ */
+
+//define('URL', '//microsola.com/preview/lansuwa/');
+//define('FILE_URL', '//microsola.com/preview/lansuwa/');
+//define('DOC_PATH', '/home2/microsq0/public_html/preview/lansuwa/');
 
 /**
  * Configuration for: Folders
@@ -41,6 +54,14 @@ define('DB_NAME', 'db_lansuwa');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 
+/* live */
+
+//define('DB_TYPE', 'mysql');
+//define('DB_HOST', 'localhost');
+//define('DB_NAME', 'microsq0_lansuwa');
+//define('DB_USER', 'microsq0_preview');
+//define('DB_PASS', 'lanka1234');
+
 
 
 /**
@@ -65,7 +86,7 @@ define("EMAIL_SMTP_ENCRYPTION", 'ssl');
 
 /* image upload setting */
 define("MAX_UPLOAD_SIZE", 5000 * 1024);
-
+/* Category icon */
 define("CAT_THUMB_WIDTH", 100);
 define("CAT_THUMB_HEIGHT", 70);
 define("CAT_MEDIUM_WIDTH", 300);
@@ -76,17 +97,32 @@ define("CAT_MEDIUM_UPLOAD_PATH", DOC_PATH . "public/uploads/product_category/med
 define("CAT_ALLOW_THUMB", true);
 define("CAT_ALLOW_MEDIUM", true);
 
-define("PRODUCT_THUMB_WIDTH", 100);
-define("PRODUCT_THUMB_HEIGHT", 70);
-define("PRODUCT_MEDIUM_WIDTH", 300);
-define("PRODUCT_MEDIUM_HEIGHT", 180);
-define("PRODUCT_ORIGINAL_UPLOAD_PATH", '');
-define("PRODUCT_THUMB_UPLOAD_PATH", '');
-define("PRODUCT_MEDIUM_UPLOAD_PATH", '');
-define("PRODUCT_ALLOW_THUMB", '');
-define("PRODUCT_ALLOW_MEDIUM", '');
 
 
+/* product image */
+define("PRO_THUMB_WIDTH", 100);
+define("PRO_THUMB_HEIGHT", 70);
+define("PRO_MEDIUM_WIDTH", 300);
+define("PRO_MEDIUM_HEIGHT", 180);
+define("PRO_ORIGINAL_UPLOAD_PATH", DOC_PATH . "public/uploads/product/large/");
+define("PRO_THUMB_UPLOAD_PATH", DOC_PATH . "public/uploads/product/thumb/");
+define("PRO_MEDIUM_UPLOAD_PATH", DOC_PATH . "public/uploads/product/medium/");
+define("PRO_ALLOW_THUMB", true);
+define("PRO_ALLOW_MEDIUM", true);
+
+define("DEFAULT_ALLOW_BID_PER_PRODUCT", 50);
+define("DEFAULT_TOTAL_ALLOW_BID", 100);
+define("DEFAULT_BID_INTERVAL", 60);
+
+define('HOME_SLIDER_DISPLAY_MAX_PRODUCT', 4);
+define('HOME_PAGE_DISPLAY_MAX_PRODUCT', 6);
+/* Profile image setting */
+
+define("PROFILE_ORIGINAL_UPLOAD_PATH", DOC_PATH . "public/uploads/user/large/");
+define("PROFILE_THUMB_UPLOAD_PATH", DOC_PATH . "public/uploads/user/thumb/");
+define("PROFILE_MEDIUM_UPLOAD_PATH", DOC_PATH . "public/uploads/user/medium/");
+
+define('REQUEST_SUBMIT_EMAIL', 'lakmalwimaladasa@gmail.com');
 
 /*
  * include error description file

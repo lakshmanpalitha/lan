@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+        <a class="navbar-brand" href="index.html">Lansuwa Admin</a>
     </div>
     <!-- /.navbar-header -->
 
@@ -252,7 +252,7 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Manage Bids</a>
+                    <a href="<?php echo URL ?>admin/bids/"><i class="fa fa-edit fa-fw"></i> Manage Bids</a>
                 </li>
                 <li>
                     <a href="<?php echo URL ?>admin/products/category/"><i class="fa fa-edit fa-fw"></i> Manage Product Category</a>

@@ -24,23 +24,23 @@ class view {
         $this->module = $module;
         $jsFile = explode('/', $filename);
         $this->mainMenuItem = $jsFile[0];
-        $jsController = "../".$this->module . "/" . CONTROLLER_PATH . $jsFile[0] . "/controller_" . $jsFile[0] . '.js';
-        $jsView = "../".$this->module . "/" . VIEWS_PATH . $jsFile[0] . "/view_" . $jsFile[0] . '.js';
+        $jsController = $this->module . "/" . CONTROLLER_PATH . $jsFile[0] . "/controller_" . $jsFile[0] . '.js';
+        $jsView = $this->module . "/" . VIEWS_PATH . $jsFile[0] . "/view_" . $jsFile[0] . '.js';
         // page without header and footer, for whatever reason
 
         if ($render_with_header_and_footer == false) {
-            require "../".$this->module . "/" . VIEWS_PATH . $filename . '.php';
+            require DOC_PATH . $this->module . "/" . VIEWS_PATH . $filename . '.php';
         } else {
 
-            require "../".$this->module . "/" . VIEWS_PATH . '_templates/header.php';
-            ($render_with_menu ? require "../".$this->module . "/" . VIEWS_PATH . '_templates/navigation.php' : '');
-            require "../".$this->module . "/" . VIEWS_PATH . $filename . '.php';
-            require "../".$this->module . "/" . VIEWS_PATH . '_templates/footer.php';
+            require DOC_PATH . $this->module . "/" . VIEWS_PATH . '_templates/header.php';
+            ($render_with_menu ? require DOC_PATH . $this->module . "/" . VIEWS_PATH . '_templates/navigation.php' : '');
+            require DOC_PATH . $this->module . "/" . VIEWS_PATH . $filename . '.php';
+            require DOC_PATH . $this->module . "/" . VIEWS_PATH . '_templates/footer.php';
         }
     }
 
     function getContent($filename) {
-        $content= file_get_contents($this->module . "/" . VIEWS_PATH . $filename . '.php');
+        $content = file_get_contents($this->module . "/" . VIEWS_PATH . $filename . '.php');
         return $content;
     }
 
@@ -55,43 +55,41 @@ class view {
         // echo out the feedback messages (errors and success messages etc.),
         // they are in $_SESSION["feedback_positive"] and $_SESSION["feedback_negative"]
 
-        require $this->module . "/" . VIEWS_PATH . '_templates/feedback.php';
+        require DOC_PATH . $this->module . "/" . VIEWS_PATH . '_templates/feedback.php';
 
         // delete these messages (as they are not needed anymore and we want to avoid to show them twice
         Session::set('feedback_positive', null);
         Session::set('feedback_negative', null);
     }
 
-    public function renderFeedbackMessagesReservation() {
-        // echo out the feedback messages (errors and success messages etc.),
-        // they are in $_SESSION["feedback_positive"] and $_SESSION["feedback_negative"]
-        $feedback_positive = Session::get('feedback_positive');
-        $feedback_negative = Session::get('feedback_negative');
-        $pHtml = null;
-        $nHtml = null;
-// echo out positive messages
-        if (isset($feedback_positive)) {
-            foreach ($feedback_positive as $feedback) {
-                $pHtml.= ' <div class="vehicle" style="height:80px;">
-            <img style="  float: left; margin: 7px 0 0 20px; width: 49px;" src="' . URL . 'reservation/public/images/error.jpg"/>
-            <div style="color: green;float: left;font-size: 14px;margin: 18px 0 0 20px;"><p>' . $feedback . '</p></div>
-        </div>';
-            }
-        }
+    public function renderCustomMassage($error, $type) {
+        $pHtml = '';
+        if ($type == 'positive') {
 
-// echo out negative messages
-        if (isset($feedback_negative)) {
-            foreach ($feedback_negative as $feedback) {
-                $nHtml.='<div class="vehicle" style="height:80px;">
-            <img style="  float: left; margin: 7px 0 0 20px; width: 49px;" src="' . URL . 'reservation/public/images/error.jpg"/>
-            <div style="color: red;float: left;font-size: 14px;margin: 18px 0 0 20px;"><p>' . $feedback . '</p></div>
-        </div>';
-            }
+            $pHtml = '<div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">
+                        &times;
+                      </span>
+                    </button>
+                    <strong>
+                    </strong>
+' . $error . '
+                  </div>';
+        } else if ($type == 'negative') {
+
+            $pHtml='<div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">
+                        &times;
+                      </span>
+                    </button>
+                    <strong>
+                    </strong>
+' . $error . '
+                  </div>';
         }
-        // delete these messages (as they are not needed anymore and we want to avoid to show them twice
-        echo $pHtml . $nHtml;
-        Session::set('feedback_positive', null);
-        Session::set('feedback_negative', null);
+        return $pHtml;
     }
 
     /**
@@ -108,14 +106,32 @@ class view {
 // echo out positive messages
         if (isset($feedback_positive)) {
             foreach ($feedback_positive as $feedback) {
-                $pHtml.= '<div class="feedback_success">' . $feedback . '</div>';
+                $pHtml.= '<div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">
+                        &times;
+                      </span>
+                    </button>
+                    <strong>
+                    </strong>
+' . $feedback . '
+                  </div>';
             }
         }
 
 // echo out negative messages
         if (isset($feedback_negative)) {
             foreach ($feedback_negative as $feedback) {
-                $nHtml.='<div class="feedback_error">' . $feedback . '</div>';
+                $nHtml.='<div class="alert  alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">
+                        &times;
+                      </span>
+                    </button>
+                    <strong>
+                    </strong>
+' . $feedback . '
+                  </div>';
             }
         }
 

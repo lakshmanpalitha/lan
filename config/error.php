@@ -1,5 +1,7 @@
 <?php
 
+
+define("FEEDBACK_REQUEST_FAILED", "Request failed try again");
 /*
  * login
  */
@@ -46,4 +48,42 @@ define("FEEDBACK_ORI_IMAGE_UPLOAD_PARH_ERROR", "Original image upload path error
 define("FEEDBACK_THUMB_IMAGE_UPLOAD_PARH_ERROR", "Thumb image upload path error");
 define("FEEDBACK_MEDIUM_IMAGE_UPLOAD_PARH_ERROR", "Medium image upload path error");
 define("FEEDBACK_IMG_UPLOAD_FAIL", " is successfully added,image upload failed!");
+
+
+define("FEEDBACK_INVALID_REQUEST", " Invalid request action!");
+
+define("FEEDBACK_PASSWORD_MISSMACH", "Wrong repeat password");
+define("FEEDBACK_EMAIL_MISSMACH", "Wrong repeat email");
+
+define("FEEDBACK_BID_PRICE", "Bid price should be greter than zero");
+
+define("FEEDBACK_PER_BID_ERROR", "Sorry,bid limit exceed for your selected product");
+define("FEEDBACK_TOT_BID_ERROR", "Sorry,Your maximum bid limit exceeded");
+
+define("FEEDBACK_BID_DONE", "Thank you,Your bid successfully saved");
+define("FEEDBACK_BID_FAILED", "Sorry,Your bid failed");
+define("FEEDBACK_INVALID_PRODUCT", "Inavalid product id");
+define("FEEDBACK_INVALID_SESSION", "Inavalid session");
+define("FEEDBACK_INVALID_BID", "Inavalid bid");
+define("FEEDBACK_INVALID_BID_PRODUCT", "Bid time expire");
+define("FEEDBACK_INVALID_ACTIVATION_CODE", "Invalid activation code");
+define("FEEDBACK_INVALID_ACTIVATION_DONE", "You allredy activated your account.Please sign in");
+define("FEEDBACK_INVALID_ACTIVATION_NOT_COMPLETE", "Login failed.Please login to your email and activate your account");
+
+define("FEEDBACK_USER_ALLREDY_REGISTERED", "User allredy registered.");
+define("FEEDBACK_EMAIL_ERROR", "Wrong email address");
+define("FEEDBACK_RESET_PWD", "Please login to your email and find new password");
+
+define("FEEDBACK_CONTACT_US", "Your Request successfully submit");
+
+define("FEEDBACK_REGISTERED_SUCCESS", "You successfully registered in lansuwa.Please login to your email and activate your account");
+define("FEEDBACK_CHANGE_PASSWORD", "Successfully changed password");
+define("FEEDBACK_CHANGE_PROFILE", "Successfully modifyed profile");
+
+define("FEEDBACK_BID_WAITING", "Please wait..");
+
+define("FEEDBACK_BID_INTERVAL_FAILED", "Please provide bid interval");
+
+define("FEEDBACK_BID_TIME_FAILED", "Please provide bid time");
+
 ?>

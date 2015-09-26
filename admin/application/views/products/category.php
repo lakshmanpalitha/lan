@@ -9,11 +9,11 @@
     <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
-            <button style="border-radius: 0;float: right;margin: 5px 0;" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
+            <button style="border-radius: 0;float: right;margin: 5px 0;" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal_category">
                 Create New Category
             </button>
             <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id="modal_category" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
