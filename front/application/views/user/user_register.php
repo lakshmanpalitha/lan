@@ -70,9 +70,7 @@
                                 </h3>
                                 <p>By using our website you agree to be legally bound by these terms, which shall take effect immediately on your first use of our website. If you do not agree to be legally bound by all the following terms please do not access and/or use our website.</p>
 
-                                <p>We may change these terms at any time by posting changes online. Please review these terms regularly to ensure you are aware of any changes made by us. Your continued use of our website after changes are posted means you agree to be legally bound by these terms as updated and/or amended.</p>
-
-                                <button onclick="register()" class="btn btn-primary btn-raised ripple-effect">
+                                <button onclick="register()" class="btn btn-primary btn-lg btn-raised ripple-effect">
                                     Register
                                 </button>
                             </div>

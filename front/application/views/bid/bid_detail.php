@@ -106,11 +106,11 @@
                                             </p>
                                         </div>
                                         <ul class="deal-price list-unstyled list-inline">
-                                            <li class="price">
-                                                <h3>
-                                                    Rs.<?php echo $this->bid_product[0]->product_real_price ?>
-                                                </h3>
-                                            </li>
+<!--                                            <li class="price">-->
+<!--                                                <h3>-->
+<!--                                                    Rs.--><?php ////echo $this->bid_product[0]->product_real_price ?>
+<!--                                                </h3>-->
+<!--                                            </li>-->
                                             <li class="buy-now">
                                                 <a style="display:none;" onclick="showAjaxModal('<?php echo base64_encode($this->bid_product[0]->product_id) ?>')" id="index_pro_button_<?php echo $this->bid_product[0]->product_id ?>" class="btn btn-success btn-lg btn-raised ripple-effect btn-block">
                                                     PLACE BID
