@@ -309,6 +309,20 @@ class products extends controller {
         echo json_encode($data);
     }
 
+    function jsonDeleteProductImage($product, $image) {
+        $login_model = $this->loadModel('products');
+        $res = $login_model->deleteProductImage($image);
+        if ($res) {
+            $product_img = $login_model->getProductImg($product);
+            $data = array('success' => true, 'data' => $product_img, 'error' => '');
+            echo json_encode($data);
+        } else {
+            $data = array('success' => false, 'error' => $this->view->renderFeedbackMessagesForJson());
+            echo json_encode($data);
+        }
+    }
+    
+
 }
 
 ?>

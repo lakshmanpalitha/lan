@@ -4,8 +4,6 @@
  * Configuration for: Error reporting
  * Useful to show every little problem during development, but only show hard errors in production
  */
- 
-header("Access-Control-Allow-Origin:*");
 error_reporting(E_ALL);
 //ini_set("display_errors", -1);
 date_default_timezone_set("Asia/Calcutta");
@@ -16,9 +14,9 @@ date_default_timezone_set("Asia/Calcutta");
 define('BACKEND', 'admin/');
 define('FRONTEND', 'front/');
 
-define('URL', 'http://lansuwa.com/');
-define('FILE_URL', '//lansuwa.com/');
-define('DOC_PATH', '/home2/microsq0/public_html/lansuwa/');
+define('URL', 'http://microsola.com/preview/lansuwa/');
+define('FILE_URL', '//microsola.com/preview/lansuwa/');
+define('DOC_PATH', '/home2/microsq0/public_html/preview/lansuwa/');
 
 /**
  * Configuration for: Folders
@@ -42,9 +40,9 @@ define('COOKIE_DOMAIN', '.localhost');
  */
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'microsq0_liveLan');
-define('DB_USER', 'microsq0_pvtltd');
-define('DB_PASS', 'fCo-MJpOuTOH');
+define('DB_NAME', 'microsq0_lansuwa');
+define('DB_USER', 'microsq0_preview');
+define('DB_PASS', 'lanka1234');
 
 
 

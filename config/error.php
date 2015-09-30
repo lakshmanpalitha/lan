@@ -1,6 +1,5 @@
 <?php
 
-
 define("FEEDBACK_REQUEST_FAILED", "Request failed try again");
 /*
  * login
@@ -85,5 +84,6 @@ define("FEEDBACK_BID_WAITING", "Please wait..");
 define("FEEDBACK_BID_INTERVAL_FAILED", "Please provide bid interval");
 
 define("FEEDBACK_BID_TIME_FAILED", "Please provide bid time");
-
+define("FEEDBACK_IMAGE_NOT_FOUND", "Image not found");
+define("FEEDBACK_IMAGE_DELETE_SUCCESS", "Image successfully deleted!");
 ?>

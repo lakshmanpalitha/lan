@@ -270,7 +270,7 @@ class common {
                             throw new Exception("Unlink fail");
                         }
                     } catch (Exception $e) {
-                        session::setError("feedback_negative", FEEDBACK_IMAGE_VEHICLE_ERROR);
+                        session::setError("feedback_negative", FEEDBACK_IMAGE_NOT_FOUND);
                         return false;
                     }
                 }
@@ -285,7 +285,7 @@ class common {
                         throw new Exception("Unlink fail");
                     }
                 } catch (Exception $e) {
-                    session::setError("feedback_negative", FEEDBACK_IMAGE_VEHICLE_ERROR);
+                    session::setError("feedback_negative", FEEDBACK_IMAGE_NOT_FOUND);
                     return false;
                 }
             } else {

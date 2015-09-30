@@ -151,7 +151,7 @@ class productsModel extends model {
 
             FROM 
                 tbl_product pro
-            WHERE pro.product_status NOT IN ('D') " . ($where ? $where : '')." ORDER BY pro.product_id DESC";
+            WHERE pro.product_status NOT IN ('D') " . ($where ? $where : '') . " ORDER BY pro.product_id DESC";
 
         $result = $this->db->queryMultipleObjects($query);
         return ($result ? $result : false);
@@ -276,6 +276,20 @@ class productsModel extends model {
         return ($result ? $result : false);
     }
 
+    function geteachProductImg($img) {
+        if (!$img)
+            return false;
+        $get_qry = "
+            SELECT 
+                image_name
+            FROM 
+                tbl_product_images
+            WHERE 
+                image_id='" . mysql_real_escape_string($img) . "'";
+        $result = $this->db->queryUniqueValue($get_qry);
+        return ($result ? $result : false);
+    }
+
     function setDefaultImg($product_id, $img_id) {
         if ($product_id && $img_id) {
             $query = "UPDATE tbl_product_images SET default_image='N' WHERE product_id='" . mysql_real_escape_string($product_id) . "'";
@@ -338,6 +352,23 @@ class productsModel extends model {
                 product_id='" . mysql_real_escape_string($product_id) . "'";
         $result = $this->db->queryUniqueValue($get_qry);
         return ($result ? $result : false);
+    }
+
+    function deleteProductImage($imageid) {
+        $image = $this->geteachProductImg($imageid);
+        if ($image) {
+            $this->deleteFile(DOC_PATH . "public/uploads/product/large/" . $image);
+            $this->deleteFile(DOC_PATH . "public/uploads/product/medium/medium_" . $image);
+            $this->deleteFile(DOC_PATH . "public/uploads/product/thumb/thumb_" . $image);
+            $deleteVehicleImage = "DELETE FROM tbl_product_images WHERE  image_id='" . mysql_real_escape_string($imageid) . "'";
+            if ($this->db->execute($deleteVehicleImage)) {
+                session::setError("feedback_positive", FEEDBACK_IMAGE_DELETE_SUCCESS);
+                return true;
+            }
+        } else {
+            session::setError("feedback_negative", FEEDBACK_IMAGE_NOT_FOUND);
+            return false;
+        }
     }
 
 }

@@ -45,7 +45,8 @@ class usersModel extends model {
             FROM 
                 tbl_reg_users
             WHERE 
-                user_status NOT IN('D')";
+                user_status NOT IN('D')
+            ORDER BY user_id DESC";
         $result = $this->db->queryMultipleObjects($get_qry);
         return ($result ? $result : false);
     }

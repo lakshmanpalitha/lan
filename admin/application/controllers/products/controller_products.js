@@ -459,7 +459,7 @@ function viewProductImg(responseText) {
                 for (var i in jsonData.data) {
                     html = html + '<li>' +
                             '<img src="' + URL + "public/uploads/product/thumb/thumb_" + jsonData.data[i]['image_name'] + '" width="60" height="60"/>' +
-                            '<span><span class="glyphicon glyphicon-remove"></span></span>' +
+                            '<span><span onclick=deleteImg("' + jsonData.data[i]['product_id'] + '","' + jsonData.data[i]['image_id'] + '") class="glyphicon glyphicon-remove"></span></span>' +
                             '<span><input ' + (jsonData.data[i]['default_image'] == "Y" ? "checked" : "") + ' value="' + jsonData.data[i]['product_id'] + '#' + jsonData.data[i]['image_id'] + '" id="def_img" name="def_img" type="radio" onclick="setDefaultImg(this)"></span>' +
                             '</li>';
                 }
@@ -480,6 +480,19 @@ function viewProductImg(responseText) {
         }
     }
     catch (err) {
+        alert(err.message);
+        return false;
+    }
+}
+function deleteImg(pro, img) {
+    try {
+        if (doConfirm('Are you sure to delete selected image?')) {
+            var nURL = URL + "admin/products/jsonDeleteProductImage/" + pro + "/" + img + "/";
+            xmlRequest(nURL, null, null, function(responseText) {
+                viewProductImg(responseText);
+            });
+        }
+    } catch (err) {
         alert(err.message);
         return false;
     }

@@ -1,0 +1,235 @@
+[18-Aug-2015 23:14:27] PHP Parse error:  syntax error, unexpected $end in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/index/controller_index.class.php on line 124
+[18-Aug-2015 11:47:25] PHP Fatal error:  Class 'application' not found in /home2/microsq0/public_html/preview/lansuwa/runtime/index.php on line 13
+[18-Aug-2015 23:22:02] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:22:02] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:22:02] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:22:02] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:22:02] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:22:02] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:22:02] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:22:02] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:24:25] PHP Notice:  Undefined property: stdClass::$user_sataus in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/users/online_user_list.php on line 34
+[18-Aug-2015 23:24:44] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:24:44] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:24:44] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:24:44] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:24:44] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:24:44] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:24:44] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:24:44] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[18-Aug-2015 23:42:59] PHP Fatal error:  Class 'index' not found in /home2/microsq0/public_html/preview/lansuwa/libs/application.class.php on line 45
+[18-Aug-2015 23:46:57] PHP Fatal error:  Class 'index' not found in /home2/microsq0/public_html/preview/lansuwa/libs/application.class.php on line 45
+[30-Aug-2015 12:41:15] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '/home2/microsq0/public_html/preview/lansuwa/front/application/views/user/user_profile/?action=win.php' (include_path='.:/usr/lib64/php:/usr/share/pear') in /home2/microsq0/public_html/preview/lansuwa/libs/view.class.php on line 32
+[30-Aug-2015 12:41:27] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '/home2/microsq0/public_html/preview/lansuwa/front/application/views/user/user_profile/?action=win.php' (include_path='.:/usr/lib64/php:/usr/share/pear') in /home2/microsq0/public_html/preview/lansuwa/libs/view.class.php on line 32
+[04-Sep-2015 17:28:16] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '/home2/microsq0/public_html/preview/lansuwa/front/application/views/user/user_profile/?action=bid.php' (include_path='.:/usr/lib64/php:/usr/share/pear') in /home2/microsq0/public_html/preview/lansuwa/libs/view.class.php on line 32
+[04-Sep-2015 17:28:30] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '/home2/microsq0/public_html/preview/lansuwa/front/application/views/user/user_profile/?action=bid.php' (include_path='.:/usr/lib64/php:/usr/share/pear') in /home2/microsq0/public_html/preview/lansuwa/libs/view.class.php on line 32
+[05-Sep-2015 18:30:56] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '/home2/microsq0/public_html/preview/lansuwa/front/application/views/user/user_profile/?action=bid.php' (include_path='.:/usr/lib64/php:/usr/share/pear') in /home2/microsq0/public_html/preview/lansuwa/libs/view.class.php on line 32
+[05-Sep-2015 18:31:06] PHP Fatal error:  Call to undefined method users::index() in /home2/microsq0/public_html/preview/lansuwa/libs/application.class.php on line 69
+[05-Sep-2015 21:01:21] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/index/controller_index.class.php on line 126
+[05-Sep-2015 21:01:21] PHP Parse error:  syntax error, unexpected $end, expecting ']' in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/index/controller_index.class.php on line 126
+[05-Sep-2015 21:01:22] PHP Notice:  Undefined property: stdClass::$count_users in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/index/controller_index.class.php on line 118
+[05-Sep-2015 21:01:23] PHP Notice:  Undefined property: stdClass::$count_users in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/index/controller_index.class.php on line 118
+[05-Sep-2015 21:01:24] PHP Notice:  Undefined property: stdClass::$count_users in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/index/controller_index.class.php on line 118
+[05-Sep-2015 21:01:25] PHP Notice:  Undefined property: stdClass::$count_users in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/index/controller_index.class.php on line 118
+[05-Sep-2015 21:01:26] PHP Notice:  Undefined property: stdClass::$count_users in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/index/controller_index.class.php on line 118
+[05-Sep-2015 21:01:27] PHP Notice:  Undefined property: stdClass::$count_users in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/index/controller_index.class.php on line 118
+[05-Sep-2015 21:01:28] PHP Notice:  Undefined property: stdClass::$count_users in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/index/controller_index.class.php on line 118
+[05-Sep-2015 21:01:29] PHP Parse error:  syntax error, unexpected $end, expecting '(' in /home2/microsq0/public_html/preview/lansuwa/front/application/models/model_bid.class.php on line 139
+[05-Sep-2015 21:06:33] PHP Fatal error:  Class 'application' not found in /home2/microsq0/public_html/preview/lansuwa/runtime/index.php on line 13
+[05-Sep-2015 21:06:34] PHP Warning:  Unterminated comment starting line 114 in /home2/microsq0/public_html/preview/lansuwa/libs/application.class.php on line 114
+[05-Sep-2015 21:06:34] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home2/microsq0/public_html/preview/lansuwa/libs/application.class.php on line 114
+[05-Sep-2015 21:06:40] PHP Fatal error:  Class 'controller' not found in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/index/controller_index.class.php on line 5
+[05-Sep-2015 21:06:42] PHP Parse error:  syntax error, unexpected $end in /home2/microsq0/public_html/preview/lansuwa/libs/database.class.php on line 159
+[05-Sep-2015 21:06:43] PHP Fatal error:  Class 'mailer' not found in /home2/microsq0/public_html/preview/lansuwa/libs/controller.class.php on line 29
+[05-Sep-2015 21:06:44] PHP Warning:  Unterminated comment starting line 170 in /home2/microsq0/public_html/preview/lansuwa/libs/mailer.class.php on line 170
+[05-Sep-2015 21:06:44] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home2/microsq0/public_html/preview/lansuwa/libs/mailer.class.php on line 170
+[05-Sep-2015 21:06:51] PHP Fatal error:  Class 'session' not found in /home2/microsq0/public_html/preview/lansuwa/libs/controller.class.php on line 17
+[05-Sep-2015 21:06:57] PHP Fatal error:  Class 'view' not found in /home2/microsq0/public_html/preview/lansuwa/libs/controller.class.php on line 19
+[05-Sep-2015 21:13:14] PHP Parse error:  syntax error, unexpected $end in /home2/microsq0/public_html/preview/lansuwa/libs/view.class.php on line 138
+[05-Sep-2015 21:27:58] PHP Fatal error:  Class 'view' not found in /home2/microsq0/public_html/preview/lansuwa/libs/controller.class.php on line 19
+[05-Sep-2015 21:29:36] PHP Fatal error:  Class 'bidModel' not found in /home2/microsq0/public_html/preview/lansuwa/libs/controller.class.php on line 44
+[05-Sep-2015 21:29:36] PHP Parse error:  syntax error, unexpected $end, expecting '(' in /home2/microsq0/public_html/preview/lansuwa/front/application/models/model_bid.class.php on line 139
+[05-Sep-2015 21:32:26] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '/home2/microsq0/public_html/preview/lansuwa/front/application/views/user/user_profile/?action=bid.php' (include_path='.:/usr/lib64/php:/usr/share/pear') in /home2/microsq0/public_html/preview/lansuwa/libs/view.class.php on line 32
+[05-Sep-2015 21:32:30] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '/home2/microsq0/public_html/preview/lansuwa/front/application/views/user/user_profile/?action=bid.php' (include_path='.:/usr/lib64/php:/usr/share/pear') in /home2/microsq0/public_html/preview/lansuwa/libs/view.class.php on line 32
+[05-Sep-2015 21:32:42] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '/home2/microsq0/public_html/preview/lansuwa/front/application/views/user/user_profile/?action=win.php' (include_path='.:/usr/lib64/php:/usr/share/pear') in /home2/microsq0/public_html/preview/lansuwa/libs/view.class.php on line 32
+[05-Sep-2015 21:32:47] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '/home2/microsq0/public_html/preview/lansuwa/front/application/views/user/user_profile/?action=pwd.php' (include_path='.:/usr/lib64/php:/usr/share/pear') in /home2/microsq0/public_html/preview/lansuwa/libs/view.class.php on line 32
+[05-Sep-2015 22:27:58] PHP Parse error:  syntax error, unexpected $end, expecting '(' in /home2/microsq0/public_html/preview/lansuwa/front/application/models/model_bid.class.php on line 139
+[05-Sep-2015 22:34:40] PHP Fatal error:  Class 'bidModel' not found in /home2/microsq0/public_html/preview/lansuwa/libs/controller.class.php on line 44
+[07-Sep-2015 22:36:58] PHP Notice:  Use of undefined constant PROFILE_ORIGINAL_UPLOAD_PATH - assumed 'PROFILE_ORIGINAL_UPLOAD_PATH' in /home2/microsq0/public_html/preview/lansuwa/front/application/models/model_users.class.php on line 151
+[07-Sep-2015 22:36:58] PHP Notice:  Use of undefined constant PROFILE_THUMB_UPLOAD_PATH - assumed 'PROFILE_THUMB_UPLOAD_PATH' in /home2/microsq0/public_html/preview/lansuwa/front/application/models/model_users.class.php on line 152
+[07-Sep-2015 22:36:58] PHP Notice:  Use of undefined constant PROFILE_MEDIUM_UPLOAD_PATH - assumed 'PROFILE_MEDIUM_UPLOAD_PATH' in /home2/microsq0/public_html/preview/lansuwa/front/application/models/model_users.class.php on line 153
+[12-Sep-2015 20:38:17] PHP Notice:  Use of undefined constant DEFAULT_ALLOW_BID_PER_PRODUCT - assumed 'DEFAULT_ALLOW_BID_PER_PRODUCT' in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/users/controller_users.class.php on line 269
+[12-Sep-2015 20:38:17] PHP Notice:  Use of undefined constant DEFAULT_TOTAL_ALLOW_BID - assumed 'DEFAULT_TOTAL_ALLOW_BID' in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/users/controller_users.class.php on line 291
+[12-Sep-2015 20:38:33] PHP Notice:  Use of undefined constant DEFAULT_ALLOW_BID_PER_PRODUCT - assumed 'DEFAULT_ALLOW_BID_PER_PRODUCT' in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/users/controller_users.class.php on line 269
+[12-Sep-2015 20:38:33] PHP Notice:  Use of undefined constant DEFAULT_TOTAL_ALLOW_BID - assumed 'DEFAULT_TOTAL_ALLOW_BID' in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/users/controller_users.class.php on line 291
+[12-Sep-2015 20:38:40] PHP Notice:  Use of undefined constant DEFAULT_ALLOW_BID_PER_PRODUCT - assumed 'DEFAULT_ALLOW_BID_PER_PRODUCT' in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/users/controller_users.class.php on line 269
+[12-Sep-2015 20:38:40] PHP Notice:  Use of undefined constant DEFAULT_TOTAL_ALLOW_BID - assumed 'DEFAULT_TOTAL_ALLOW_BID' in /home2/microsq0/public_html/preview/lansuwa/front/application/controllers/users/controller_users.class.php on line 291
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[22-Sep-2015 23:59:37] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 21:33:03] PHP Notice:  Use of undefined constant FEEDBACK_BID_INTERVAL_FAILED - assumed 'FEEDBACK_BID_INTERVAL_FAILED' in /home2/microsq0/public_html/preview/lansuwa/admin/application/controllers/products/controller_products.class.php on line 147
+[23-Sep-2015 22:02:10] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:10] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:33] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:33] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:33] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:33] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:33] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:33] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:33] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:33] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:33] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:02:33] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:04:48] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:07:55] PHP Fatal error:  Class 'session' not found in /home2/microsq0/public_html/preview/lansuwa/libs/controller.class.php on line 17
+[23-Sep-2015 22:08:10] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:10] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:10] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:10] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:08:20] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[23-Sep-2015 22:48:32] PHP Fatal error:  Class 'bidModel' not found in /home2/microsq0/public_html/preview/lansuwa/libs/controller.class.php on line 44
+[24-Sep-2015 21:05:45] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/front/application/views/bid/bid_detail.php on line 203
+[24-Sep-2015 22:36:39] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 22:36:39] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Undefined variable: us in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[24-Sep-2015 23:54:21] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/preview/lansuwa/admin/application/views/bids/bids.php on line 39
+[25-Sep-2015 00:28:04] PHP Fatal error:  Class 'bidModel' not found in /home2/microsq0/public_html/preview/lansuwa/libs/controller.class.php on line 44
+[25-Sep-2015 00:28:04] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home2/microsq0/public_html/preview/lansuwa/front/application/models/model_bid.class.php on line 135
+[25-Sep-2015 00:31:09] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home2/microsq0/public_html/preview/lansuwa/front/application/models/model_bid.class.php on line 135
+[25-Sep-2015 00:31:09] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home2/microsq0/public_html/preview/lansuwa/front/application/models/model_bid.class.php on line 135
+[25-Sep-2015 00:40:47] PHP Fatal error:  Class 'bidModel' not found in /home2/microsq0/public_html/preview/lansuwa/libs/controller.class.php on line 44
+[25-Sep-2015 00:40:47] PHP Fatal error:  Class 'bidModel' not found in /home2/microsq0/public_html/preview/lansuwa/libs/controller.class.php on line 44
+[25-Sep-2015 22:36:59] PHP Fatal error:  Class 'application' not found in /home2/microsq0/public_html/preview/lansuwa/runtime/index.php on line 13
