@@ -14,14 +14,14 @@ date_default_timezone_set("Asia/Calcutta");
 define('BACKEND', 'admin/');
 define('FRONTEND', 'front/');
 
-define('URL', 'http://localhost/lansuwa/');
-define('FILE_URL', '//localhost/lansuwa/');
-define('DOC_PATH', 'D:/xampp/htdocs/lansuwa/');
+define('URL', 'http://localhost/www.lansuwa.com/');
+define('FILE_URL', '//localhost/www.lansuwa.com/');
+define('DOC_PATH', 'D:/wamp/www/www.lansuwa.com/');
 
 
 
 /* live*
- * 
+ *
  */
 
 //define('URL', '//microsola.com/preview/lansuwa/');
@@ -40,7 +40,7 @@ define('VIEWS_PATH', 'application/views/');
 
 
 /**
- * Configuration for: Cookies 
+ * Configuration for: Cookies
  */
 define('COOKIE_RUNTIME', 1209600);
 define('COOKIE_DOMAIN', '.localhost');
@@ -50,7 +50,7 @@ define('COOKIE_DOMAIN', '.localhost');
  */
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'db_lansuwa');
+define('DB_NAME', 'lansuwa');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 

@@ -6,7 +6,7 @@ Options -Indexes
 </IfModule>
 
 RewriteEngine On
-RewriteBase /lansuwa/
+RewriteBase /www.lansuwa.com/
 
 RewriteCond %{REQUEST_FILENAME} \.(gif|jpe?g|png|js|css|swf|ico|pdf|woff|eot|ttf|svg)$
 RewriteRule ^ - [L]
