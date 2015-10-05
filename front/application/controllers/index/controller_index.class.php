@@ -146,8 +146,8 @@ class index extends controller {
                             $bid_allow_time = DEFAULT_ALLOW_BID_PER_PRODUCT;
                         }
                     } else {
-                        $bid_count_left = $bid_allow_count;
-                        $bid_allow_time = $pro_bid->bid_allow_time;
+                        $bid_count_left = DEFAULT_ALLOW_BID_PER_PRODUCT;
+                        $bid_allow_time = DEFAULT_ALLOW_BID_PER_PRODUCT;
                     }
                     //*******************************************
 

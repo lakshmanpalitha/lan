@@ -143,7 +143,8 @@ function bid_info_print(responseText) {
                             time_string = '<i class="ti-timer color-green"></i>' + (days > 0 ? '<b>' + days + '</b>d.' : "") + '<b>' + hours + '</b>st.<b>' + min + '</b>min.<b>' + sec + '</b>sec.';
 
                         } else {
-                            time_string = '<i class="ti-timer color-green"></i><b>' + jsonData.data[i].count + '</b> Bid limit <b>' + jsonData.data[i].bid_count_left + '</b> Bid left';
+                            //time_string = '<i class="ti-timer color-green"></i><b>' + jsonData.data[i].count + '</b> Bid limit <b>' + jsonData.data[i].bid_count_left + '</b> Bid left';
+                             time_string = '<i class="ti-timer color-green"></i><b>You have ' + jsonData.data[i].bid_count_left + ' more chance to bid.</b>';//*****temperaly
                         }
                         if ($("#index_pro_button_" + jsonData.data[i].id).length > 0) {
                             document.getElementById("index_pro_button_" + jsonData.data[i].id).style.display = "block";
