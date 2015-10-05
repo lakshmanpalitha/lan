@@ -102,6 +102,9 @@ class index extends controller {
             $product_id = base64_decode($product_id);
         }
         $login_model_bid = $this->loadModel('bid');
+        $login_model_user = $this->loadModel('users');
+
+
         $pro_bid_time = $login_model_bid->checkProductBidTime($product_id);
         $bid = array();
         $pro_bid_array = array();
@@ -127,13 +130,35 @@ class index extends controller {
                         $bid['bid_count'] = $pro_bid->bid_count;
                     }
                 } else {
+
+
                     $bid_allow_count = (($pro_bid->bid_allow_time - $pro_bid->bid_count));
+                    //***************This is for temprely.
+                    if (session::get('user_id')) {
+                        $user_id = session::get('user_id');
+                        $setting = $login_model_user->userBidSetting($user_id);
+                        $per_product_bid = $login_model_bid->userPerProducBid($pro_bid->pro_id, $user_id);
+                        if (is_array($setting) && $setting->user_allow_bid_per_product > 0) {
+                            $bid_count_left = ($setting->user_allow_bid_per_product - $per_product_bid);
+                            $bid_allow_time = $setting->user_allow_bid_per_product;
+                        } else {
+                            $bid_count_left = (DEFAULT_ALLOW_BID_PER_PRODUCT - $per_product_bid);
+                            $bid_allow_time = DEFAULT_ALLOW_BID_PER_PRODUCT;
+                        }
+                    } else {
+                        $bid_count_left = $bid_allow_count;
+                        $bid_allow_time = $pro_bid->bid_allow_time;
+                    }
+                    //*******************************************
+
                     if ($bid_allow_count > 0) {
                         $bid['id'] = $pro_bid->pro_id;
                         $bid['status'] = 'A';
                         $bid['type'] = 'C';
-                        $bid['count'] = $pro_bid->bid_allow_time;
-                        $bid['bid_count_left'] = ($bid_allow_count > 0 ? $bid_allow_count : 0);
+                        //$bid['count'] = $pro_bid->bid_allow_time;
+                        $bid['count'] = $bid_allow_time; //***********temperaly
+                        //$bid['bid_count_left'] = ($bid_allow_count > 0 ? $bid_allow_count : 0);
+                        $bid['bid_count_left'] = $bid_count_left; //***********temperaly
                         $bid['user_count'] = $pro_bid->count_users;
                         $bid['bid_count'] = $pro_bid->bid_count;
                     } else {

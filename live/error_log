@@ -560,3 +560,8 @@
 [30-Sep-2015 12:53:57 Asia/Calcutta] PHP Notice:  Trying to get property of non-object in /home2/microsq0/public_html/lansuwa/admin/application/views/bids/bids.php on line 39
 [30-Sep-2015 12:54:00 Asia/Calcutta] PHP Notice:  Undefined property: stdClass::$user_sataus in /home2/microsq0/public_html/lansuwa/admin/application/views/users/online_user_list.php on line 34
 [30-Sep-2015 17:03:05 Asia/Calcutta] PHP Notice:  Undefined property: stdClass::$user_sataus in /home2/microsq0/public_html/lansuwa/admin/application/views/users/online_user_list.php on line 34
+[30-Sep-2015 22:50:48 Asia/Calcutta] PHP Fatal error:  Class 'common' not found in /home2/microsq0/public_html/lansuwa/libs/controller.class.php on line 11
+[30-Sep-2015 22:50:48 Asia/Calcutta] PHP Fatal error:  Class 'common' not found in /home2/microsq0/public_html/lansuwa/libs/controller.class.php on line 11
+[30-Sep-2015 22:50:48 Asia/Calcutta] PHP Fatal error:  Class 'common' not found in /home2/microsq0/public_html/lansuwa/libs/controller.class.php on line 11
+[30-Sep-2015 22:50:49 Asia/Calcutta] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home2/microsq0/public_html/lansuwa/libs/common.class.php on line 168
+[30-Sep-2015 22:50:49 Asia/Calcutta] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home2/microsq0/public_html/lansuwa/libs/common.class.php on line 168
