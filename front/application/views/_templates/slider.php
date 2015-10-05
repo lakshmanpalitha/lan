@@ -33,11 +33,11 @@
                                                 </p>
                                             </div>
                                             <ul class="deal-price list-unstyled list-inline">
-                                                <li class="price">
-                                                    <h3>
-                                                        <p>Real Price</p>Rs.<?php echo $pro->product_real_price ?>
-                                                    </h3>
-                                                </li>
+<!--                                                <li class="price">-->
+<!--                                                    <h3>-->
+<!--                                                        <p>Real Price</p>Rs.--><?php ////echo $pro->product_real_price ?>
+<!--                                                    </h3>-->
+<!--                                                </li>-->
                                                 <li class="buy-now">
                                                     <a href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/" id="sidebar_pro_button_<?php echo $pro->product_id ?>" class="btn btn-success btn-raised ripple-effect">
                                                         BID NOW

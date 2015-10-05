@@ -51,7 +51,7 @@
                         <ul class="list-inline">
                             <li>
                                 <p class="price">
-                                   <?php echo $pro->pro_price ?>
+                                   <?php //echo $pro->pro_price ?>
                                 </p>
                             </li>
                         </ul>
