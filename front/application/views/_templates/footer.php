@@ -11,50 +11,70 @@
         </div>
         <div class="col-sm-4">
             <h5>
-                COMMON TAGS
+                Help Links
             </h5>
-            <ul class="tags">
+            <ul class="list-unstyled">
                 <li>
-                    <a href="http://microsola.com/preview/lansuwa/front/bid/listing/?key=pen+drive&category=&ch=sh" class="tag">
-                        Pen Drives
+                    <a href="<?php echo URL . "front/index/how_to_register" ?>">
+                        How to Create Account
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo URL . "front/index/how_to_bid" ?>">
+                        How to Bid
                     </a>
                 </li>
                 <li>
-                    <a href="http://microsola.com/preview/lansuwa/front/bid/listing/?key=Mobile+Phone&category=&ch=sh" class="tag">
-                        Mobile Phone
+                    <a href="<?php echo URL . "front/index/how_to_win" ?>">
+                        How to Win
                     </a>
                 </li>
-                <li>
-                    <a href="http://microsola.com/preview/lansuwa/front/bid/listing/?key=Ladies+Items&category=&ch=sh" class="tag">
-                        Ladies Items
-                    </a>
-                </li>
-                <li>
-                    <a href="http://microsola.com/preview/lansuwa/front/bid/listing/?key=computers&category=&ch=sh" class="tag">
-                        computers
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="tag">
-                        Men's Item
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="tag">
-                        Fashion - Pinterest
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="tag">
-                        Gift item
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="tag">
-                        Love
-                    </a>
-                </li>
-            </ul>
+
+                </ul>
+
+<!--            <ul class="tags">-->
+<!--                <li>-->
+<!--                    <a href="http://microsola.com/preview/lansuwa/front/bid/listing/?key=pen+drive&category=&ch=sh" class="tag">-->
+<!--                        Pen Drives-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="http://microsola.com/preview/lansuwa/front/bid/listing/?key=Mobile+Phone&category=&ch=sh" class="tag">-->
+<!--                        Mobile Phone-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="http://microsola.com/preview/lansuwa/front/bid/listing/?key=Ladies+Items&category=&ch=sh" class="tag">-->
+<!--                        Ladies Items-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="http://microsola.com/preview/lansuwa/front/bid/listing/?key=computers&category=&ch=sh" class="tag">-->
+<!--                        computers-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="#" class="tag">-->
+<!--                        Men's Item-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="#" class="tag">-->
+<!--                        Fashion - Pinterest-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="#" class="tag">-->
+<!--                        Gift item-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="#" class="tag">-->
+<!--                        Love-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--            </ul>-->
         </div>
         <div class="col-sm-2">
             <h5>

@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aa3c2cb-7718-46c7-8b9e-d670d37ead6e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/application/views/pages/how_to_bid.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/application/views/pages/how_to_register.php" />
       <change type="DELETED" beforePath="D:\wamp\www\www.lansuwa.com\nbproject\project.properties" afterPath="" />
       <change type="DELETED" beforePath="D:\wamp\www\www.lansuwa.com\nbproject\project.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/application/controllers/index/controller_index.class.php" afterPath="$PROJECT_DIR$/front/application/controllers/index/controller_index.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/application/views/_templates/head.php" afterPath="$PROJECT_DIR$/front/application/views/_templates/head.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/public/css/style.css" afterPath="$PROJECT_DIR$/front/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/application/views/_templates/footer.php" afterPath="$PROJECT_DIR$/front/application/views/_templates/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/application/views/pages/how_to_bid.php" afterPath="$PROJECT_DIR$/front/application/views/pages/how_to_bid.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/application/views/pages/how_to_register.php" afterPath="$PROJECT_DIR$/front/application/views/pages/how_to_register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/application/views/_templates/search.php" afterPath="$PROJECT_DIR$/front/application/views/_templates/search.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="www.lansuwa.com.iws" />
@@ -38,16 +36,7 @@
       <file leaf-file-name="bid_detail.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/application/views/bid/bid_detail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="49" selection-start="6500" selection-end="6500" vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="4947">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="slider.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/application/views/_templates/slider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="53" selection-start="2482" selection-end="2482" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1904">
+            <state line="112" column="49" selection-start="6532" selection-end="6532" vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="4947">
               <folding />
             </state>
           </provider>
@@ -56,7 +45,7 @@
       <file leaf-file-name="bid_priview.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/application/views/bid/bid_priview.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="49" selection-start="6500" selection-end="6500" vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="3519">
+            <state line="112" column="49" selection-start="6532" selection-end="6532" vertical-scroll-proportion="0.0" vertical-offset="1904" max-vertical-offset="3519">
               <folding />
             </state>
           </provider>
@@ -92,7 +81,7 @@
       <file leaf-file-name="user_register.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/application/views/user/user_register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="44" selection-start="4809" selection-end="4809" vertical-scroll-proportion="0.0" vertical-offset="959" max-vertical-offset="2210">
+            <state line="75" column="34" selection-start="4564" selection-end="4564" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="2176">
               <folding />
             </state>
           </provider>
@@ -101,7 +90,7 @@
       <file leaf-file-name="how_to_register.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/application/views/pages/how_to_register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="126" selection-start="5123" selection-end="5123" vertical-scroll-proportion="-49.03846" vertical-offset="0" max-vertical-offset="2958">
+            <state line="75" column="120" selection-start="5117" selection-end="5123" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="2958">
               <folding />
             </state>
           </provider>
@@ -110,7 +99,16 @@
       <file leaf-file-name="how_to_bid.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front/application/views/pages/how_to_bid.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2958">
+            <state line="26" column="113" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.45333335" vertical-offset="204" max-vertical-offset="2856">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/application/views/_templates/search.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="109" selection-start="1859" selection-end="1859" vertical-scroll-proportion="0.0" vertical-offset="148" max-vertical-offset="748">
               <folding />
             </state>
           </provider>
@@ -119,7 +117,7 @@
       <file leaf-file-name="controller_index.class.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/application/controllers/index/controller_index.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="50" selection-start="4107" selection-end="4107" vertical-scroll-proportion="0.0" vertical-offset="1378" max-vertical-offset="2958">
+            <state line="105" column="45" selection-start="4398" selection-end="4398" vertical-scroll-proportion="0.0" vertical-offset="1364" max-vertical-offset="3111">
               <folding />
             </state>
           </provider>
@@ -148,7 +146,6 @@
         <option value="$PROJECT_DIR$/front/application/views/bid/bid_listing.php" />
         <option value="$PROJECT_DIR$/front/application/views/_templates/topbar.php" />
         <option value="$PROJECT_DIR$/front/application/views/pages/contact.php" />
-        <option value="$PROJECT_DIR$/front/application/views/_templates/search.php" />
         <option value="$PROJECT_DIR$/front/application/views/_templates/nav.php" />
         <option value="$PROJECT_DIR$/config/error.php" />
         <option value="$PROJECT_DIR$/front/application/views/_templates/js.php" />
@@ -171,7 +168,6 @@
         <option value="$PROJECT_DIR$/front/application/views/_templates/page_mid_ad" />
         <option value="$PROJECT_DIR$/front/application/views/bid/bid_home.php" />
         <option value="$PROJECT_DIR$/front/application/views/_templates/page_mid_ad.php" />
-        <option value="$PROJECT_DIR$/front/application/views/_templates/footer.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/front/application/views/_templates/slider.php" />
         <option value="$PROJECT_DIR$/front/application/views/bid/bid_detail.php" />
@@ -179,9 +175,12 @@
         <option value="$PROJECT_DIR$/front/application/views/_templates/right_col.php" />
         <option value="$PROJECT_DIR$/front/application/views/user/user_register.php" />
         <option value="$PROJECT_DIR$/front/application/views/_templates/head.php" />
-        <option value="$PROJECT_DIR$/front/application/controllers/index/controller_index.class.php" />
         <option value="$PROJECT_DIR$/front/public/css/style.css" />
+        <option value="$PROJECT_DIR$/front/application/controllers/index/controller_index.class.php" />
+        <option value="$PROJECT_DIR$/front/application/views/_templates/footer.php" />
+        <option value="$PROJECT_DIR$/front/application/views/_templates/search.php" />
         <option value="$PROJECT_DIR$/front/application/views/pages/how_to_register.php" />
+        <option value="$PROJECT_DIR$/front/application/views/pages/how_to_bid.php" />
       </list>
     </option>
   </component>
@@ -472,15 +471,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="738" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1366" height="738" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21330275" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21941896" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -491,8 +490,8 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15599343" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -535,11 +534,6 @@
     <entry file="file://$PROJECT_DIR$/front/application/views/pages/contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="89" column="118" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="2244" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/application/views/_templates/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="29" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="697" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/public/css/font-awesome.css">
@@ -687,11 +681,6 @@
         <state line="18" column="34" selection-start="948" selection-end="983" vertical-scroll-proportion="-8.5" vertical-offset="85" max-vertical-offset="1649" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/application/views/bid/bid_home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="78" selection-start="3455" selection-end="3483" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2091" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/application/views/_templates/page_mid_ad.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="45" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="204" />
@@ -706,21 +695,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front/application/views/_templates/slider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="53" selection-start="2482" selection-end="2482" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1904">
-          <folding />
-        </state>
+        <state line="39" column="53" selection-start="2514" selection-end="2514" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1904" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/application/views/bid/bid_detail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="49" selection-start="6500" selection-end="6500" vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="4947">
+        <state line="112" column="49" selection-start="6532" selection-end="6532" vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="4947">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/application/views/bid/bid_priview.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="49" selection-start="6500" selection-end="6500" vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="3519">
+        <state line="112" column="49" selection-start="6532" selection-end="6532" vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="3519">
           <folding />
         </state>
       </provider>
@@ -739,14 +726,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/application/views/_templates/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="24" selection-start="3759" selection-end="3759" vertical-scroll-proportion="0.3653846" vertical-offset="1588" max-vertical-offset="2516" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/application/views/user/user_register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="44" selection-start="4809" selection-end="4809" vertical-scroll-proportion="0.0" vertical-offset="959" max-vertical-offset="2210">
+        <state line="75" column="34" selection-start="4564" selection-end="4564" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="2176">
           <folding />
         </state>
       </provider>
@@ -754,13 +736,6 @@
     <entry file="file://$PROJECT_DIR$/front/application/views/_templates/head.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="31" selection-start="2083" selection-end="2083" vertical-scroll-proportion="0.8685714" vertical-offset="122" max-vertical-offset="1020" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/application/controllers/index/controller_index.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="50" selection-start="4107" selection-end="4107" vertical-scroll-proportion="0.0" vertical-offset="1378" max-vertical-offset="2958">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/application/views/_templates/right_col.php">
@@ -772,21 +747,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1949" column="23" selection-start="42847" selection-end="42847" vertical-scroll-proportion="0.0" vertical-offset="32730" max-vertical-offset="33235">
+        <state line="1949" column="23" selection-start="42847" selection-end="42847" vertical-scroll-proportion="0.0" vertical-offset="32730" max-vertical-offset="33235" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/application/views/_templates/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="21" selection-start="1205" selection-end="1205" vertical-scroll-proportion="-16.346153" vertical-offset="102" max-vertical-offset="2856" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/application/views/bid/bid_home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="82" selection-start="859" selection-end="861" vertical-scroll-proportion="-7.1923075" vertical-offset="102" max-vertical-offset="2091" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/application/views/_templates/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="109" selection-start="1859" selection-end="1859" vertical-scroll-proportion="0.0" vertical-offset="148" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/application/controllers/index/controller_index.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="45" selection-start="4398" selection-end="4398" vertical-scroll-proportion="0.0" vertical-offset="1364" max-vertical-offset="3111">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/application/views/pages/how_to_register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="126" selection-start="5123" selection-end="5123" vertical-scroll-proportion="-49.03846" vertical-offset="0" max-vertical-offset="2958">
+        <state line="75" column="120" selection-start="5117" selection-end="5123" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="2958">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/application/views/pages/how_to_bid.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2958">
+        <state line="26" column="113" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.45333335" vertical-offset="204" max-vertical-offset="2856">
           <folding />
         </state>
       </provider>
