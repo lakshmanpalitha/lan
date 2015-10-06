@@ -93,11 +93,20 @@ class index extends controller {
 
 
     function how_to_register() {
+    $login_model_bid = $this->loadModel('bid');
+    $this->view->categorys = $login_model_bid->activeCategory();
+    $this->view->top_bid_products = $login_model_bid->topBidsProducts();
+    $this->view->render('pages/how_to_register', false, false, $this->module);
+}
+
+    function how_to_bid() {
         $login_model_bid = $this->loadModel('bid');
         $this->view->categorys = $login_model_bid->activeCategory();
         $this->view->top_bid_products = $login_model_bid->topBidsProducts();
-        $this->view->render('pages/how_to_register', false, false, $this->module);
+        $this->view->render('pages/how_to_bid', false, false, $this->module);
     }
+
+
 
     function detail() {
         $login_model_bid = $this->loadModel('bid');

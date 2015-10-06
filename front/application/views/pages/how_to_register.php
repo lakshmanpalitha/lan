@@ -78,8 +78,8 @@
 
 
                                     <div class="help-block">
-                                        <h4><a href="" target="_blank">How to bid ?</a></h4>
-                                        <h4><a href="" target="_blank">ලන්සු තබන්නේ කෙසේද යන්න දැන ගැනීමට මෙතැන ක්ලික් කරන්න.</a></h4>
+                                        <h4><a href="<?php echo URL ?>front/index/how_to_bid" target="_blank">How to bid ?</a></h4>
+                                        <h4><a href="<?php echo URL ?>front/index/how_to_bid" target="_blank">ලන්සු තබන්නේ කෙසේද යන්න දැන ගැනීමට මෙතැන ක්ලික් කරන්න.</a></h4>
                                     </div>
 
 

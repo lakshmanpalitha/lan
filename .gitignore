@@ -1,3 +1,6 @@
 /nbproject/private/
 .htaccess
 /config/config.php
+.idea/workspace.xml
+nbproject/project.properties
+nbproject/project.xml

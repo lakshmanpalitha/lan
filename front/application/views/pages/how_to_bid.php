@@ -24,62 +24,56 @@
                         <div class="row">
                             <div class="col-sm-12 clearfix">
                                 <div class="hr-link">
-                                    <hr class="mBtm-50 mTop-30" data-symbol="How to create an account - (ගිණුමක් සැකසීම)">
+                                    <hr class="mBtm-50 mTop-30" data-symbol="How to Bid - (ලන්සු තබන්නේ කෙසෙද?)">
 
                                     <div class="help-block">
-                                        <h4>Go to : <a href="http://lansuwa.com/front/users/register/" target="_blank">http://lansuwa.com/front/users/register/</a> </h4>
-                                        <h4>ඉහත ලින්ක් එක වෙත යන්න</h4>
-                                        <img src="<?php echo URL . FRONTEND ?>public/images/help/lansuwa-registor-account-01.png" alt="add" class="img-responsive">
+                                        <h4>Go to : <a href="http://lansuwa.com/" target="_blank">http://lansuwa.com</a> </h4>
+                                        <h4>පළමුව අපගෙ වෙබ් අඩවියට ලොග් වන්න.මෙහිදී ඔබට අපගේ ලන්සු තැබිය හැකි සියලු නිෂ්පදිත තිරයෙ දිස්වනවා අත. ඔබ විසින් ලන්සු තැබීමට කැමති භාණ්ඩය මත ක්ලික් කරන්න.එවිට එම භාණ්ඩයට අදාල වෙබ් පිටුව විවර වනවා ඇත.</h4>
+                                        <img src="<?php echo URL . FRONTEND ?>public/images/help/lansuwa-how-to-bid-01.png" alt="add" class="img-responsive">
                                     </div>
 
                                     <div class="help-block">
-                                        <h4>Fill out a form > Click on “REGESTER” Button</h4>
-                                        <h4>ලබා දී ඇති පෝරමය පුරවා "REGESTER" මත ක්ලික් කරන්න.</h4>
-                                        <img src="<?php echo URL . FRONTEND ?>public/images/help/lansuwa-registor-account-02.png" alt="add" class="img-responsive">
+                                        <h4>Click on “PLACE BID” Button</h4>
+                                        <h4>දැන් ඔබගේ තිරයේ දකුනු පසින් දක්නට ඇති “PLACE BID  "   මත ක්ලික් කරන්න. එවිට ලොගින් මෙනුව විවර වෙනු ඇත.</h4>
+                                        <img src="<?php echo URL . FRONTEND ?>public/images/help/lansuwa-how-to-bid-02.png" alt="add" class="img-responsive">
                                     </div>
 
                                     <div class="help-block">
-                                        <h4>It will display message like below.</h4>
-                                        <h4>ඔබට පහත ආකාරයේ පණිවුඩයක් දිස්වනු ඇත.</h4>
-                                        <img src="<?php echo URL . FRONTEND ?>public/images/help/lansuwa-registor-account-03.png" alt="add" class="img-responsive">
+                                        <h4>Enter your email and password > Click Login</h4>
+                                        <h4>ලොගින් මෙනුව තුල ඔබගේ ඊ මේල් ලිපිනය හා රහස් කේතය නිවැරදිව සටහන් කොට ලොගින් අයිකනය මත ක්ලික් කරන්න.</h4>
+                                        <img src="<?php echo URL . FRONTEND ?>public/images/help/lansuwa-how-to-bid-03.png" alt="add" class="img-responsive">
                                     </div>
 
                                     <div class="help-block">
-                                        <h4>Llog in your email Account > Open “Lansuwa Registration” Mail</h4>
-                                        <h4>දැන් ඔබගේ ඊ-මේල් ගිණුම වෙත යන්න. පහත පරිදි ඊ-මේල් පණිවුඩයක් ලැබී තිබෙනු ඇත.</h4>
-                                        <img src="<?php echo URL . FRONTEND ?>public/images/help/lansuwa-registor-account-04.png" alt="add" class="img-responsive">
+                                        <h4>Enter your bid value and click “PLACE BID”</h4>
+                                        <h4>එවිට ඔබට "Place Your Bid Online   " මෙනුව විවර වනු ඇත.එහිදී ඔබට ඔබගේ අවම බිඩ් අගය සදහන් කල හැහ.ඉන් පසුව " Bid Now" ස්විචය මත ක්ලික් කරන්න.</h4>
+                                        <img src="<?php echo URL . FRONTEND ?>public/images/help/lansuwa-how-to-bid-04.png" alt="add" class="img-responsive">
                                     </div>
 
                                     <div class="help-block">
-                                        <h4>Click “Click to activate your account” > You will redirect the Login page.</h4>
-                                        <h4>ඊ-මේල් පණිවුඩය තුල ඇති "Click to activate your account" මත ක්ලික් කරන්න.</h4>
-                                        <img src="<?php echo URL . FRONTEND ?>public/images/help/lansuwa-registor-account-05.png" alt="add" class="img-responsive">
+                                        <h4>You can see the Successful message</h4>
+                                        <h4>එවිට ඔබ තැබු බිඩ් අගය අපගේ පද්ධතිය තුල "Save" වන අතර ක්රියාවලිය නිවැරදිව සිදු වු බව ඔබට දිස්වන "Popup Massage" මගින් තහවුරු කරගත හැක.</h4>
+                                        <img src="<?php echo URL . FRONTEND ?>public/images/help/lansuwa-how-to-bid-05.png" alt="add" class="img-responsive">
                                     </div>
 
-                                    <div class="help-block">
-                                        <h4>Enter your Email and password and Click “ Login “ Button</h4>
-                                        <h4>දැන් ඔබගේ ඊ-මේල් ලිපිනය හා මුර පදය යොදා "Login" මත ක්ලික් කරන්න.</h4>
-                                        <img src="<?php echo URL . FRONTEND ?>public/images/help/lansuwa-registor-account-07.png" alt="add" class="img-responsive">
-                                    </div>
 
 
                                     <div class="help-block">
-                                        <h4>Your Registration Complete.</h4>
-                                        <h4>එවිට ඔබට පහත පරිදි දිස්වනු ඇත. දැන් ඔබගේ ගිණුම සකසා අවසන්. ඔබට ලන්සු තබීම ආරම්භ කල හැක.</h4>
-                                        <img src="<?php echo URL . FRONTEND ?>public/images/help/lansuwa-registor-account-08.png" alt="add" class="img-responsive">
-                                    </div>
+                                        <h4>You have to wait for next bid until end of the waiting time given by the system. </h4>
+                                        <h4>එක් භාණ්ඩයක් මත "bid" තබා එම භාණ්ඩය මත ඔබට නැවත  වරක් "bid" තැබීමට නම් ඒ සදහා ලබා දෙන "waiting time" ඉවර වන තුරු සිටිය යුතුය.</h4>
 
+                                    </div>
 
                                     <div class="help-block">
                                         <h4>To more help please watch the video.</h4>
                                         <h4>පහත වීඩියෝව නැරබීමෙන් ඔබට තවත් උපකාර වනු ඇත.</h4>
-                                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/UuuAxj1ro4I?rel=0" frameborder="0" allowfullscreen></iframe>
+                                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/C8ySnUw0ab8?rel=0" frameborder="0" allowfullscreen></iframe>
                                     </div>
 
 
                                     <div class="help-block">
-                                        <h4><a href="" target="_blank">How to bid ?</a></h4>
-                                        <h4><a href="" target="_blank">ලන්සු තබන්නේ කෙසේද යන්න දැන ගැනීමට මෙතැන ක්ලික් කරන්න.</a></h4>
+                                        <h4><a href="<?php echo URL ?>front/index/how_to_register" target="_blank">How to Crate an Accout</a></h4>
+                                        <h4><a href="<?php echo URL  ?>front/index/how_to_register" target="_blank">ලන්සුව තුල ලියාපදින්චි වන්නේ කෙසේද යන්න දැන ගැනීමට මෙතැන ක්ලික් කරන්න.</a></h4>
                                     </div>
 
 

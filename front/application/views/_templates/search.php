@@ -32,5 +32,8 @@
                 <!-- /.col 1 -->
             </div>
         </form>
+
+        <div class="banner-ad"><img src="<?php echo URL . FRONTEND ?>public/images/help/how-to-bit-banner.jpg" alt="add" class="img-responsive"></div>
+
     </div>
 </div>
