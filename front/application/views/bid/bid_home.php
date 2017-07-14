@@ -48,12 +48,13 @@
                                 } else if ($bid_itm_count % 2 == 0) {
                                     echo '</div><div class="row">';
                                 }
+                                $image = (empty($pro->def_image) ? (!empty($pro->images) ? explode(',', $pro->images)[0] : '') : $pro->def_image);
                                 ?>
                                 <div class="col-sm-6">
                                     <div class="deal-entry green">
                                         <div class="image ripple-effect">
                                             <a href="<?php echo URL . FRONTEND ?>bid/detail/<?php echo base64_encode($pro->product_id) ?>/" title="#">
-                                                <img src="<?php echo URL ?>public/uploads/product/large/<?php echo $pro->def_image ?>" alt="#" class="img-responsive">
+                                                <img src="<?php echo URL ?>public/uploads/product/large/<?php echo $image ?>" alt="#" class="img-responsive">
                                             </a>
                                             <span class="bought">
                                                 <i class="ti-tag"></i><?php echo $pro->bid_count ?> bids

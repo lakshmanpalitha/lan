@@ -7,12 +7,14 @@
                     if (!empty($this->bid_products)) {
                         $i = 0;
                         foreach ($this->bid_products as $pro) {
-                            if ($i == HOME_SLIDER_DISPLAY_MAX_PRODUCT)
+                            if ($i == HOME_SLIDER_DISPLAY_MAX_PRODUCT){
                                 break;
+                            }
+                            $image = (empty($pro->def_image) ? (!empty($pro->images) ? explode(',', $pro->images)[0] : '') : $pro->def_image);
                             ?>
                             <li>
                                 <div class="col-sm-7 col-lg-8 omega">
-                                    <article class="bg-image entry-lg" data-image-src="<?php echo URL ?>public/uploads/product/large/<?php echo $pro->def_image ?>">
+                                    <article class="bg-image entry-lg" data-image-src="<?php echo URL ?>public/uploads/product/large/<?php echo $image ?>">
                                         <div class="deal-short-entry bg-green">
                                             <p>
                                                 <?php echo $pro->product_short_description ?>
