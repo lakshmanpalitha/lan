@@ -33,6 +33,18 @@
         '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MSK6D6');</script>
 <!-- End Google Tag Manager -->
+
+<!-- Hotjar Tracking Code for lansuwa.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:105902,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 <link href="<?php echo URL . FRONTEND ?>public/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo URL . FRONTEND ?>public/css/themify-icons.css" rel="stylesheet">
 <link href="<?php echo URL . FRONTEND ?>public/css/font-awesome.css" rel="stylesheet">
