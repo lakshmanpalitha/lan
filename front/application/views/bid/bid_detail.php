@@ -106,11 +106,11 @@
                                             </p>
                                         </div>
                                         <ul class="deal-price list-unstyled list-inline">
-<!--                                            <li class="price">-->
-<!--                                                <h3>-->
-<!--                                                    Rs.--><?php ////echo $this->bid_product[0]->product_real_price ?>
-<!--                                                </h3>-->
-<!--                                            </li>-->
+                                            <!--                                            <li class="price">-->
+                                            <!--                                                <h3>-->
+                                            <!--                                                    Rs.--><?php ////echo $this->bid_product[0]->product_real_price     ?>
+                                            <!--                                                </h3>-->
+                                            <!--                                            </li>-->
                                             <li class="buy-now">
                                                 <a style="display:none;" onclick="showAjaxModal('<?php echo base64_encode($this->bid_product[0]->product_id) ?>')" id="index_pro_button_<?php echo $this->bid_product[0]->product_id ?>" class="btn btn-success btn-lg btn-raised ripple-effect btn-block">
                                                     PLACE BID
@@ -133,7 +133,7 @@
                                                         <i class="ti-user">
                                                         </i>
                                                         <b>
-                                                           <span id="sidebar_pro_user_count_<?php echo $this->bid_product[0]->product_id ?>"><?php echo $this->bid_product[0]->count_users ?></span>
+                                                            <span id="sidebar_pro_user_count_<?php echo $this->bid_product[0]->product_id ?>"><?php echo $this->bid_product[0]->count_users ?></span>
                                                         </b>
                                                         Person
                                                     </p>
@@ -174,6 +174,9 @@
 
                                             </div>
                                             <!--/.social sharing -->
+                                            <div id="bider_list">
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -199,86 +202,110 @@
 
     </body>
     <script>
-                                                $(document).ready(function() {
-                                                    bid_info_each('<?php echo base64_encode($this->bid_product[0]->product_id) ?>');
-                                                });
-
-                                                var interval;
-                                                function showAjaxModal(val)
-                                                {
-                                                    loading('display_extra');
-                                                    $('#bid_model').modal('show', {backdrop: 'static'});
-                                                    $("#pro-id").val(val);
-                                                    bidCheck(val);
-
-                                                }
-                                                function bidCheck(val)
-                                                {
-                                                    var nURL = "<?php echo URL . FRONTEND ?>users/jsonCheckAccess/" + val + "/";
-                                                    var param = '';
-                                                    ajaxRequest(nURL, param, function(jsonData) {
-                                                        if (jsonData) {
-                                                            endLoading('display_extra');
-                                                            if (jsonData.success == true) {
-                                                                $('#bid_popup_body').html(jsonData.data)
-                                                            } else {
-                                                                $('#display_extra').html(jsonData.error)
-                                                            }
-                                                        }
+                                                    $(document).ready(function() {
+                                                        bid_info_each('<?php echo base64_encode($this->bid_product[0]->product_id) ?>');
+                                                        biders('<?php echo base64_encode($this->bid_product[0]->product_id) ?>');
                                                     });
-                                                }
-                                                function login() {
-                                                    var pro_id = $("#pro-id").val();
-                                                    var nURL = "<?php echo URL . FRONTEND ?>users/jsonLogin/";
-                                                    var param = $('#user_login_form').serialize();
-                                                    loading('display_extra');
-                                                    ajaxRequest(nURL, param, function(jsonData) {
-                                                        if (jsonData) {
-                                                            endLoading('display_extra');
-                                                            if (jsonData.success == true) {
-                                                                bidCheck(pro_id);
-                                                            } else {
-                                                                $('#display_extra').html(jsonData.error)
-                                                            }
-                                                        }
-                                                    });
-                                                }
-                                                $(document).on("keypress", '#bid_price', function(event) {
-                                                    if ((event.which != 46 || $(this).val().indexOf('.') != -1) &&
-                                                            ((event.which < 48 || event.which > 57) &&
-                                                                    (event.which != 0 && event.which != 8))) {
-                                                        event.preventDefault();
-                                                    }
 
-                                                    var text = $(this).val();
-                                                    if (text.length > 7 && event.which != 0 && event.which != 8) {
-                                                        event.preventDefault();
-                                                    } else
-                                                    if ((text.indexOf('.') != -1) &&
-                                                            (text.substring(text.indexOf('.')).length > 1) &&
-                                                            (event.which != 0 && event.which != 8)) {
-                                                        var num = text.split(".");
-                                                        $(this).val(num[0] + "." + (num[1] * 10));
-                                                        event.preventDefault();
+                                                    var interval;
+                                                    function showAjaxModal(val)
+                                                    {
+                                                        loading('display_extra');
+                                                        $('#bid_model').modal('show', {backdrop: 'static'});
+                                                        $("#pro-id").val(val);
+                                                        bidCheck(val);
 
                                                     }
-                                                });
-
-                                                function bidnow() {
-                                                    var nURL = "<?php echo URL . FRONTEND ?>users/userBid/";
-                                                    var param = $('#user_bid_form').serialize();
-                                                    loading('display_extra');
-                                                    ajaxRequest(nURL, param, function(jsonData) {
-                                                        if (jsonData) {
-                                                            endLoading('display_extra');
-                                                            if (jsonData.success == true) {
-                                                                $('#bid_popup_body').html(jsonData.data)
-                                                            } else {
-                                                                $('#display_extra').html(jsonData.error)
+                                                    function bidCheck(val)
+                                                    {
+                                                        var nURL = "<?php echo URL . FRONTEND ?>users/jsonCheckAccess/" + val + "/";
+                                                        var param = '';
+                                                        ajaxRequest(nURL, param, function(jsonData) {
+                                                            if (jsonData) {
+                                                                endLoading('display_extra');
+                                                                if (jsonData.success == true) {
+                                                                    $('#bid_popup_body').html(jsonData.data)
+                                                                } else {
+                                                                    $('#display_extra').html(jsonData.error)
+                                                                }
                                                             }
+                                                        });
+                                                    }
+                                                    function login() {
+                                                        var pro_id = $("#pro-id").val();
+                                                        var nURL = "<?php echo URL . FRONTEND ?>users/jsonLogin/";
+                                                        var param = $('#user_login_form').serialize();
+                                                        loading('display_extra');
+                                                        ajaxRequest(nURL, param, function(jsonData) {
+                                                            if (jsonData) {
+                                                                endLoading('display_extra');
+                                                                if (jsonData.success == true) {
+                                                                    bidCheck(pro_id);
+                                                                } else {
+                                                                    $('#display_extra').html(jsonData.error)
+                                                                }
+                                                            }
+                                                        });
+                                                    }
+                                                    $(document).on("keypress", '#bid_price', function(event) {
+                                                        if ((event.which != 46 || $(this).val().indexOf('.') != -1) &&
+                                                                ((event.which < 48 || event.which > 57) &&
+                                                                        (event.which != 0 && event.which != 8))) {
+                                                            event.preventDefault();
+                                                        }
+
+                                                        var text = $(this).val();
+                                                        if (text.length > 7 && event.which != 0 && event.which != 8) {
+                                                            event.preventDefault();
+                                                        } else
+                                                        if ((text.indexOf('.') != -1) &&
+                                                                (text.substring(text.indexOf('.')).length > 1) &&
+                                                                (event.which != 0 && event.which != 8)) {
+                                                            var num = text.split(".");
+                                                            $(this).val(num[0] + "." + (num[1] * 10));
+                                                            event.preventDefault();
+
                                                         }
                                                     });
-                                                }
+
+                                                    function bidnow() {
+                                                        var nURL = "<?php echo URL . FRONTEND ?>users/userBid/";
+                                                        var param = $('#user_bid_form').serialize();
+                                                        loading('display_extra');
+                                                        ajaxRequest(nURL, param, function(jsonData) {
+                                                            if (jsonData) {
+                                                                endLoading('display_extra');
+                                                                if (jsonData.success == true) {
+                                                                    $('#bid_popup_body').html(jsonData.data)
+                                                                } else {
+                                                                    $('#display_extra').html(jsonData.error)
+                                                                }
+                                                            }
+                                                        });
+                                                    }
+                                                    function biders(val) {
+                                                        var nURL = "<?php echo URL . FRONTEND ?>bid/bidersList/" + val;
+                                                        var param = '';
+                                                        //loading('display_extra');
+                                                        ajaxRequest(nURL, param, function(jsonData) {
+                                                            if (jsonData) {
+                                                                //endLoading('display_extra');
+                                                                 var Html = '';
+                                                                if (jsonData.success == true) { 
+                                                                    if (jsonData.data) {
+                                                                        Html = Html + '<ul>';
+                                                                        for (var i in jsonData.data) {
+                                                                            Html = Html + '<li class="bider_nm">' + jsonData.data[i].user_l_name + '</li>';
+                                                                            Html = Html + '<li class="bider_prc">' + jsonData.data[i].bid_price + '</li>';
+                                                                            Html = Html + '<li class="bid_tim">' + jsonData.data[i].bid_time + '</li>';
+                                                                        }
+                                                                    }
+                                                                    
+                                                                } 
+                                                                $('#bider_list').html(Html);
+                                                            }
+                                                        });
+                                                    }
 
     </script>
 

@@ -127,6 +127,25 @@ class bidModel extends model {
         return ($result ? $result : false);
     }
 
+    function bidersList($product_id) {
+        $query = "
+            SELECT 
+                bid.bid_price,
+                bid.bid_time,
+                user.user_l_name
+                
+            FROM 
+                tbl_bid bid
+            INNER JOIN
+                tbl_reg_users user
+            ON user.user_id=bid.user_id
+            WHERE                
+                bid.product_id='" . $product_id . "'
+                ORDER BY bid.bid_price ASC LIMIT 10";
+        $result = $this->db->queryMultipleObjects($query);
+        return ($result ? $result : false);
+    }
+
     function addBid($bid) {
         if (!empty($bid)) {
             $result2 = false;

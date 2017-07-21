@@ -60,6 +60,18 @@ class bid extends controller {
         $this->view->render('bid/bid_listing', false, false, $this->module);
     }
 
+    function bidersList($product_id) {
+        if ($product_id) {
+            $product_id = base64_decode($product_id);
+        } else {
+            $product_id = '';
+        }
+        $login_model_bid = $this->loadModel('bid');
+        $bid_list = $login_model_bid->bidersList($product_id);
+        $data = array('success' => true, 'data' => $bid_list, 'error' => '');
+        echo json_encode($data);
+    }
+
 }
 
 ?>
